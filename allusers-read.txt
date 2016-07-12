@@ -1,0 +1,12 @@
+coreo_aws_advisor_alert "allusers-read" do
+  action :define
+  service :s3
+  description "Bucket has permissions which let anyone list the bucket contents"
+  category "dataloss"
+  suggested_action "Remove the entry from the bucket permissions that allows everyone to list the bucket"
+  level "warning"
+  objectives ["bucket_acl"]
+  audit_objects ["grants.grantee.uri", "grants.grantee.permission"]
+  operators ["=~", "=="]
+  alert_when [/AllUsers/i, "read"]
+end
