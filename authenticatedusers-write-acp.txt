@@ -1,0 +1,12 @@
+coreo_aws_advisor_alert "authenticatedusers-write-acp" do
+  action :define
+  service :s3
+  description "Bucket has permissions which let any AWS user modify the permissions"
+  category "dataloss"
+  suggested_action "Remove the entry from the bucket permissions that allows 'Any Authenticated AWS User' to edit permissions"
+  level "danger"
+  objectives ["bucket_acl"]
+  audit_objects ["grants.grantee.uri", "grants.grantee.permission"]
+  operators ["=~", "=="]
+  alert_when [/AuthenticatedUsers/i, "write_acp"]
+end
