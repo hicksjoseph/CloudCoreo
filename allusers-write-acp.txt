@@ -1,0 +1,12 @@
+coreo_aws_advisor_alert "allusers-write-acp" do
+  action :define
+  service :s3
+  description "Bucket has permissions which let all users modify the permissions"
+  category "dataloss"
+  suggested_action "Remove the entry from the bucket permissions that allows everyone to edit permissions"
+  level "danger"
+  objectives ["bucket_acl"]
+  audit_objects ["grants.grantee.uri", "grants.grantee.permission"]
+  operators ["=~", "=="]
+  alert_when [/AllUsers/i, "write_acp"]
+end
