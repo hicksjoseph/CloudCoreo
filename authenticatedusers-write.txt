@@ -1,0 +1,12 @@
+coreo_aws_advisor_alert "authenticatedusers-write" do
+  action :define
+  service :s3
+  description "Bucket has permissions which let any AWS users write to the bucket"
+  category "dataloss"
+  suggested_action "Remove the entry from the bucket permissions that allows 'Any Authenticated AWS User' to write"
+  level "danger"
+  objectives ["bucket_acl"]
+  audit_objects ["grants.grantee.uri", "grants.grantee.permission"]
+  operators ["=~", "=="]
+  alert_when [/AuthenticatedUsers/i, "write"]
+end
