@@ -1,0 +1,21 @@
+User attached policies
+  description "User has custom inline policies attached to it"
+  suggested_action "Use IAM Groups, not inline policies"
+
+
+
+coreo_aws_advisor_alert "user-attached-policies" do
+  action :define
+  service :iam
+  description "User has custom inline policies attached to it"
+  category "insecure"
+  suggested_action "Use IAM Groups, not inline policies"
+  level "medium"
+  id_map "modifiers.user_name"
+  objectives ["users", "user_policies"]
+  formulas ["count", ""]
+  call_modifiers [{}, { :user_name => "users.user_name" }]
+  audit_objects ["", "object.policy_names"]
+  operators ["", ">"]
+  alert_when ["", 0]
+end
