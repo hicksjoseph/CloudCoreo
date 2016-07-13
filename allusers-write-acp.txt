@@ -1,3 +1,36 @@
+Allusers Write ACP
+  description "Bucket has permissions which let all users modify the permissions"
+  suggested_action "Remove the entry from the bucket permissions that allows everyone to edit permissions"
+  
+
+
+"Amazon S3 Bucket Public Access Considerations
+
+Amazon S3 provides a rich set of mechanisms for you to manage access to your buckets and objects. An Access Control List (ACL) is one of these access control mechanisms. ACLs identify which AWS account or groups are allowed to perform what kind of actions. To learn more about the groups and types of permissions, go to Access Control List (ACL) Overview. http://docs.amazonwebservices.com/AmazonS3/latest/dev/ACLOverview.html
+Some have changed default permissions and granted public access to their buckets. Although you can grant public access to your bucket using ACLs, you must take the following issues into consideration: Bucket public "Write ACP" access: This is sometimes referred to as "edit permissions" access. It allows anyone to modify the access control permissions on the bucket. These entities can add grants to the ACL, opening your bucket to more public access than you want. For example, a public WRITE_ACP permission on your bucket enables anyone to modify the ACL and grant permissions such as, for example, grant write permission on your bucket to others.
+You can use ACLs to grant permissions to individual AWS accounts; however, it is strongly recommended that you do not grant public access to your bucket using an ACL.
+https://aws.amazon.com/articles/5050
+
+Suggested Action:
+Remove the entry from the bucket permissions that allows everyone to edit permissions
+
+"Updating ACL to Remove Public Access to Your Buckets
+Use the following steps to remove any public access that you have granted to your bucket via an Access Control List (ACL).
+
+1.       Go to Amazon S3 console at https://console.aws.amazon.com/s3/home
+2.       Right-click on the bucket and click Properties
+3.       In the Properties pane, click the Permissions tab.
+The tab shows a list of grants, one row per grant, in the bucket ACL. Each row identifies the grantee and the permissions granted.
+4.       Select the row that grants permission to everyone as shown in the following example screen shot. "Everyone" refers to the Amazon S3 All User group.
+5.       Uncheck all the permissions granted to everyone (or click x to delete the row). This removes all permissions granted to public.
+6.       Click Save to save the ACL.
+
+To learn more about ACLs, see the following topics in Amazon S3 Developer Guide.
+Access Control List (ACL) Overview - http://docs.amazonwebservices.com/AmazonS3/latest/dev/ACLOverview.html
+Managing ACLs in the AWS Management Console - http://docs.amazonwebservices.com/AmazonS3/latest/dev/ManageACLsUsingConsole.html  "
+https://aws.amazon.com/articles/5050
+
+Code used for this alert - keep in this text file for a while
 coreo_aws_advisor_alert "allusers-write-acp" do
   action :define
   service :s3
