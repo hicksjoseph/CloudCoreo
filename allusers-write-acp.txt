@@ -2,8 +2,6 @@ Allusers Write ACP
   description "Bucket has permissions which let all users modify the permissions"
   suggested_action "Remove the entry from the bucket permissions that allows everyone to edit permissions"
   
-
-
 "Amazon S3 Bucket Public Access Considerations
 
 Amazon S3 provides a rich set of mechanisms for you to manage access to your buckets and objects. An Access Control List (ACL) is one of these access control mechanisms. ACLs identify which AWS account or groups are allowed to perform what kind of actions. To learn more about the groups and types of permissions, go to Access Control List (ACL) Overview. http://docs.amazonwebservices.com/AmazonS3/latest/dev/ACLOverview.html
