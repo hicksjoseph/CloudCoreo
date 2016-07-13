@@ -21,7 +21,7 @@ Use the following steps to remove any public access that you have granted to you
 2.       Right-click on the bucket and click Properties
 3.       In the Properties pane, click the Permissions tab.
 The tab shows a list of grants, one row per grant, in the bucket ACL. Each row identifies the grantee and the permissions granted.
-4.       Select the row that grants permission to everyone as shown in the following example screen shot. "Everyone" refers to the Amazon S3 All User group.
+4.       Select the row that grants permission to everyone. "Everyone" refers to the Amazon S3 All User group.
 5.       Uncheck all the permissions granted to everyone (or click x to delete the row). This removes all permissions granted to public.
 6.       Click Save to save the ACL.
 
