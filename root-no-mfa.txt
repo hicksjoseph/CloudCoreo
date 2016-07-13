@@ -1,0 +1,18 @@
+Root no mfa
+  description "root account does not have MFA enabled"
+  suggested_action "enable MFA on your root account credentials"
+
+coreo_aws_advisor_alert "root-no-mfa" do
+  action :define
+  service :iam
+  description "root account does not have MFA enabled"
+  category "hacking"
+  suggested_action "enable MFA on your root account credentials"
+  level "high"
+  id_map "object.user"
+  objectives ["credential_report"]
+  formulas ["CSV[user=<root_account>]"]
+  audit_objects ["object.content.mfa_active"]
+  operators ["=="]
+  alert_when ["false"]
+end
