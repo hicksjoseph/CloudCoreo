@@ -1,0 +1,18 @@
+Active key no rotation
+  description "User has ACTIVE keys that have not been rotated in the last 90 days"
+  suggested_action "rotate the keypairs"
+
+
+
+coreo_aws_advisor_alert "active-key-no-rotation" do
+  action :define
+  service :iam
+  description "User has ACTIVE keys that have not been rotated in the last 90 days"
+  category "danger"
+  suggested_action "rotate the keypairs"
+  level "medium"
+  objectives ["access_keys", "access_keys"]
+  audit_objects ["access_key_metadata.create_date","access_key_metadata.status"]
+  operators [">", "=="]
+  alert_when ["90.days.ago", "Active"]
+end
