@@ -1,0 +1,19 @@
+No mfa
+  description "User does not have MFA enabled"
+  suggested_action "Find the user and have him/her enable an MFA device"
+
+coreo_aws_advisor_alert "no-mfa" do
+  action :define
+  service :iam
+  description "User does not have MFA enabled"
+  category "warning"
+  suggested_action "Find the user and have him/her enable an MFA device"
+  level "medium"
+  id_map "modifiers.user_name"
+  objectives ["users", "mfa_devices"]
+  formulas ["count", ""]
+  call_modifiers [{}, { :user_name => "users.user_name" }]
+  audit_objects ["", "object.mfa_devices"]
+  operators ["", "<"]
+  alert_when ["", 1]
+end
