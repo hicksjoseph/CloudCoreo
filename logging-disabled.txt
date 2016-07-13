@@ -1,0 +1,12 @@
+coreo_aws_advisor_alert "logging-disabled" do
+  action :define
+  service :s3
+  description "Bucket logging has not been enabled"
+  category "audit"
+  suggested_action "enable logging"
+  level "warning"
+  objectives ["bucket_logging"]
+  audit_objects [""]
+  operators ["=="]
+  alert_when [nil]
+end
