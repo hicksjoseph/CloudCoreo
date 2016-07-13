@@ -1,0 +1,21 @@
+Unused IAM group
+  description "ensure that groups defined within IAM are being used"
+  suggested_action "delete the group"
+
+
+
+coreo_aws_advisor_alert "unusediamgroup" do
+  action :define
+  service :iam
+  description "ensure that groups defined within IAM are being used"
+  category "warning"
+  suggested_action "delete the group"
+  level "medium"
+  link "http://www.google.com"
+  objectives ["groups", "group"]
+  call_modifiers [{}, { :group_name => "groups.group_name" }]
+  formulas ["", "count"]
+  audit_objects ["", "users"]
+  operators ["", "=="]
+  alert_when ["", 0]
+end
