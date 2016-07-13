@@ -1,0 +1,25 @@
+Inactive key no rotation
+  description "User has inactive keys that have not been rotated in the last 90 days"
+  suggested_action "rotate or delete the inactive the keypairs"
+
+Inactive Key Best Practices
+- Insert Inactive Key Best Practices introduction here
+
+How to identify when an access key was last used:
+https://blogs.aws.amazon.com/security/post/Tx1GZCHQC7LR3UT/New-in-IAM-Quickly-Identify-When-an-Access-Key-Was-Last-Used
+
+“Rotating Access Keys
+As a security best practice, we recommend that you, an administrator, regularly rotate (change) the access keys for IAM users in your account. If your users have the necessary permissions, they can rotate their own access keys. For information about how to give your users permissions to rotate their own access keys, see Allow Users to Manage Their Own Passwords, Access Keys, and SSH Keys.
+
+You can also apply a password policy to your account to require that all of your IAM users periodically rotate their passwords,. You can choose how often they must do so. For more information, see Setting an Account Password Policy for IAM Users.
+
+Important
+If you regularly use the AWS root account credentials, we recommend that you also regularly rotate them. The account password policy does not apply to the AWS root account credentials. IAM users cannot manage credentials for the AWS root account, so you must use the AWS root account's credentials (not a user's) to change the AWS root account credentials. Note that we recommend against using the AWS root account for everyday work in AWS.”
+http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_RotateAccessKey
+
+Additional info
+How to rotate access keys for IAM users
+https://blogs.aws.amazon.com/security/post/Tx15CIT22V4J8RP/How-to-rotate-access-keys-for-IAM-users
+
+The National Institute of Standards and Technology provides definitions of appropriate key lengths and provides guidelines for how long keys should be used.
+http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf
