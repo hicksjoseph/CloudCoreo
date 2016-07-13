@@ -2,22 +2,38 @@ Allusers write
   description "Bucket has permissions which let all users write to the bucket"
   suggested_action "Remove the entry from the bucket permissions that allows everyone to write"
 
-
 It is recommended that buckets are not world writeable. When a bucket is world writeable, any user is able to delete or overwrite data which can cause data loss or add to your bucket which can cause you to incur unnecessary costs.
+“it is strongly recommended that you remove any public access grants in your bucket ACL so that your bucket is protected from a potentially malicious user performing operations like listing all your objects, modifying objects or changing your ACLs."
 
-“it is strongly recommended that you remove any public access grants in your bucket ACL so that your bucket is protected from a potentially malicious user performing operations like listing all your objects, modifying objects or changing your ACLs.
+Suggested Action:
+Remove the bucket permissions that allows everyone to write to the bucket.
+
+"Updating ACL to Remove Public Access to Your Buckets
+Use the following steps to remove any public access that you have granted to your bucket via an Access Control List (ACL).
+
+1.       Go to Amazon S3 console at https://console.aws.amazon.com/s3/home
+2.       Right-click on the bucket and click Properties
+3.       In the Properties pane, click the Permissions tab.
+The tab shows a list of grants, one row per grant, in the bucket ACL. Each row identifies the grantee and the permissions granted.
+4.       Select the row that grants permission to everyone. "Everyone" refers to the Amazon S3 All User group.
+5.       Uncheck all the permissions granted to everyone (or click x to delete the row). This removes all permissions granted to public.
+6.       Click Save to save the ACL.
+
+To learn more about ACLs, see the following topics in Amazon S3 Developer Guide.
+Access Control List (ACL) Overview - http://docs.amazonwebservices.com/AmazonS3/latest/dev/ACLOverview.html
+Managing ACLs in the AWS Management Console - http://docs.amazonwebservices.com/AmazonS3/latest/dev/ManageACLsUsingConsole.html  "
 
 Alternatives to Public Access
 Some customers provide public access to their buckets to share their content in Amazon S3 with their users. We recommends against granting public access and provides a number of alternatives that are safer and more secure for both you and your users. However, we know our customers use S3 for a very wide range of personal and business applications, and that there are good reasons why some set of our users may still wish to grant public access. As a powerful storage platform Amazon S3 supports this flexibility for those who understand the risks, need the flexibility and have architected accordingly. We strongly encourage our customers to consider alternatives to public access, and to design carefully and with a full security review if public access is required.
-1.       If your users are comfortable signing up for their own AWS Account, you can use Amazon S3's access controls to grant access to just that AWS Account. A user would then use a tool that allows them to access that shared bucket using their account. Amazon S3 provides a command-line tool, called s3curl, which enables you to share the bucket with your users. There are also 3rd party tools that can be used as well. You can read about how to manage permissions for a bucket (or objects) and grant permissions to additional AWS Accounts in our Amazon S3 Console Documentation. The Amazon S3 developer guide also provides a general overview of how access control works with Amazon S3.
-2.       Using AWS Identity and Access Management it is possible to create an IAM User for your users to employ. If your users do not want to create an Amazon AWS Account and/or you would like to control access for your users then the AWS Identity and Access Management service may be your best choice. Using an IAM User, you can grant your users fine-grained control to your Amazon S3 bucket (or objects) while also ensuring that your account has full control over everything the users do. When creating an IAM User you will need to write an IAM Policy that grants them access to your Amazon S3 bucket (or objects). See the Amazon S3 and IAM documentation for more details
-3.       If you would like to provide your users with a URL that enables them to access your bucket (or objects) then pre-signed URLs are another option to consider. Pre-signed URLs can be used to provide a URL that your users can employ to upload files with predefined names, as well as granting time-limited permission to download objects or list the contents of a bucket. This provides your users with limited access to a specific resource, removing the need to grant public access to your bucket (or objects).
-4.       When pre-signed URLs are too restrictive, another option is Amazon S3's POST support. This feature was specifically designed to enable you to build a web-page that allows your users to upload content to a bucket. While POST is more complicated than pre-signed URLs, it provides more control. See the Amazon S3 POST documentation for more details.
-5.       Recently Amazon announced yet another option, IAM Temporary Credentials, which combines many of the benefits that both option #2 and #4 provide. Using this functionality enables you to leverage the fine grained access control that IAM User policies provides while also reducing your exposure by enabling you to further restrict and limit the request to a predefined time for each one of your users. Previously, you did not have the ability to both restrict the length of time that an individual had access to your Amazon S3 resources as well as providing fine grained access to an object, set o    f objects, or your bucket. See the Amazon S3 documentation for samples of how to add support for IAM Temporary Credentials into you application.”
-
+1. If your users are comfortable signing up for their own AWS Account, you can use Amazon S3's access controls to grant access to just that AWS Account. A user would then use a tool that allows them to access that shared bucket using their account. Amazon S3 provides a command-line tool, called s3curl, which enables you to share the bucket with your users. There are also 3rd party tools that can be used as well. You can read about how to manage permissions for a bucket (or objects) and grant permissions to additional AWS Accounts in our Amazon S3 Console Documentation. The Amazon S3 developer guide also provides a general overview of how access control works with Amazon S3.
+2. Using AWS Identity and Access Management it is possible to create an IAM User for your users to employ. If your users do not want to create an Amazon AWS Account and/or you would like to control access for your users then the AWS Identity and Access Management service may be your best choice. Using an IAM User, you can grant your users fine-grained control to your Amazon S3 bucket (or objects) while also ensuring that your account has full control over everything the users do. When creating an IAM User you will need to write an IAM Policy that grants them access to your Amazon S3 bucket (or objects). See the Amazon S3 and IAM documentation for more details
+3. If you would like to provide your users with a URL that enables them to access your bucket (or objects) then pre-signed URLs are another option to consider. Pre-signed URLs can be used to provide a URL that your users can employ to upload files with predefined names, as well as granting time-limited permission to download objects or list the contents of a bucket. This provides your users with limited access to a specific resource, removing the need to grant public access to your bucket (or objects).
+4. When pre-signed URLs are too restrictive, another option is Amazon S3's POST support. This feature was specifically designed to enable you to build a web-page that allows your users to upload content to a bucket. While POST is more complicated than pre-signed URLs, it provides more control. See the Amazon S3 POST documentation for more details.
+5. Another option, IAM Temporary Credentials, which combines many of the benefits that both option #2 and #4 provide. Using this functionality enables you to leverage the fine grained access control that IAM User policies provides while also reducing your exposure by enabling you to further restrict and limit the request to a predefined time for each one of your users. Previously, you did not have the ability to both restrict the length of time that an individual had access to your Amazon S3 resources as well as providing fine grained access to an object, set of objects, or your bucket. See the Amazon S3 documentation for samples of how to add support for IAM Temporary Credentials into you application.”
 https://aws.amazon.com/articles/5050
 
 
+Code used for this alert - keep in this text file for a while
 coreo_aws_advisor_alert "allusers-write" do
   action :define
   service :s3
