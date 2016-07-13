@@ -1,7 +1,6 @@
 Authenticated Users Write
   description "Bucket has permissions which let any AWS users write to the bucket"
-suggested_action "Remove the entry from the bucket permissions that allows 'Any Authenticated AWS User' to write"
-  
+suggested_action "Remove the bucket permission that allows 'Any Authenticated AWS User' to write"
 
 It is recommended that buckets are not world writeable. When a bucket is world writeable, any user is able to delete or overwrite data which can cause data loss or add to your bucket which can cause you to incur unnecessary costs.
 “it is strongly recommended that you remove any public access grants in your bucket ACL so that your bucket is protected from a potentially malicious user performing operations like listing all your objects, modifying objects or changing your ACLs."
