@@ -10,6 +10,11 @@ Security Groups can be used to secure ports over TCP, UDP, and ICMP protocols. W
 https://aws.amazon.com/articles/1233/
 
 
+  description "security group is unused"
+  suggested_action "delete the group"
+
+
+Code used for this alert - keep in this text file for a while
 coreo_aws_advisor_alert "TCP-1433-0.0.0.0/0" do
   action :define
   service :ec2
