@@ -1,3 +1,20 @@
+Ports range
+  description "this is a alert to run"
+  suggested_action "fix it"
+
+"Text"
+URL citation
+
+Suggested Action
+URL citation
+
+
+Additional info
+URL citation
+
+
+
+Code used for this alert - keep in this text file for a while
 coreo_aws_advisor_alert "ports-range" do
   action :define
   service :ec2
