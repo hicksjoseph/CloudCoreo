@@ -1,0 +1,12 @@
+coreo_aws_advisor_alert "ports-range" do
+  action :define
+  service :ec2
+  description "this is a alert to run"
+  category "vulnerablity"
+  suggested_action "fix it"
+  level "warning"
+  objectives ["security_groups"]
+  audit_objects ["security_group_info.ip_permissions.from_port"]
+  operators ["!="]
+  alert_when ["object[:to_port]"]
+end
