@@ -1,0 +1,12 @@
+coreo_aws_advisor_alert "TCP-1521-0.0.0.0/0" do
+  action :define
+  service :ec2
+  description "security group is unused"
+  category "vulnerablity"
+  suggested_action "delete the group"
+  level "warning"
+  objectives ["","","security_groups"]
+  audit_objects ["security_group_info.ip_permissions.ip_protocol", "security_group_info.ip_permissions.from_port", "security_group_info.ip_permissions.ip_ranges.cidr_ip"]
+  operators ["==","==","=="]
+  alert_when ["tcp", 1521, "0.0.0.0/0"]
+end
