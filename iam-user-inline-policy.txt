@@ -1,3 +1,5 @@
+This definition was previously in the code, but now seems not to be.
+
 User attached policies
   description "User has custom inline policies attached to it"
   suggested_action "Use IAM Groups, not inline policies"
