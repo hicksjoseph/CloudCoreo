@@ -8,6 +8,14 @@ https://aws.amazon.com/iam/details/mfa/
 "A virtual MFA device uses a software application to generate a six-digit authentication code that is compatible with the time-based one-time password (TOTP) standard, as described in RFC 6238. The app can run on mobile hardware devices, including smartphones. With most virtual MFA applications, you can host more than one virtual MFA device, which makes them more convenient than hardware MFA devices."
 http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html
 
+Suggested Action:
+Enable Multi-Factor Authentication for the root cloud user.
+Enabling a Virtual MFA:
+http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-root
+Enabling a Hardware MFA
+http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_physical.html#enable-hw-mfa-for-root
+
+
 coreo_aws_advisor_alert "no-mfa" do
   action :define
   service :iam
