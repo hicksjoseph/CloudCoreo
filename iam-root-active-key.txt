@@ -11,6 +11,9 @@ Suggested Action:
 "If you already have an access key for your account, we recommend that you find places in your applications where you are currently using that key (if any), replace the root access key with an IAM user access key, and then disable and remove the root access key."
 http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html#root-password
 
+Additional info:
+http://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html
+
 coreo_aws_advisor_alert "root-active-key" do
   action :define
   service :iam
