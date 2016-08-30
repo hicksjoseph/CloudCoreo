@@ -1,0 +1,19 @@
+coreo_aws_advisor_alert "old-ssl-policy" do
+  description "security group is unused"
+  suggested_action "delete the group"
+
+
+
+
+coreo_aws_advisor_alert "old-ssl-policy" do
+  action :define
+  service :elb
+  description "security group is unused"
+  category "vulnerablity"
+  suggested_action "delete the group"
+  level "warning"
+  objectives ["load_balancers"]
+  audit_objects ["load_balancer_descriptions.listener_descriptions.policy_names"]
+  operators ["!~"]
+  alert_when [/ELBSecurityPolicy-2015-05/i]
+end
