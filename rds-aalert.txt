@@ -1,0 +1,18 @@
+coreo_aws_advisor_alert "aalert" do
+  description "this is a alert to run"
+  suggested_action "fix it"
+
+
+
+coreo_aws_advisor_alert "aalert" do
+  action :define
+  service :rds
+  description "this is a alert to run"
+  category "vulnerablity"
+  suggested_action "fix it"
+  level "warning"
+  objectives ["db_instances"]
+  audit_objects ["db_instances.backup_retention_period"]
+  operators ["<"]
+  alert_when [30]
+end
