@@ -1,3 +1,5 @@
+This one was not in the comparison list. It is a net new one.
+
 coreo_aws_advisor_alert "ec2-all-ports-open-to-self" do
   action :define
   service :ec2
