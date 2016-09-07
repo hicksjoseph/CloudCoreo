@@ -1,1 +1,24 @@
-Waiting to be pushed up.
+coreo_aws_advisor_alert "ip-address-whitelisted" do
+  description "security group is unused"
+  suggested_action "delete the group"
+
+Deferred. Changing to check for a /32. Will add a check for EC2 classic and EC2 VPC.
+
+
+coreo_aws_advisor_alert "ip-address-whitelisted" do
+  action :define
+  service :ec2
+  description "security group is unused"
+  category "vulnerablity"
+  suggested_action "delete the group"
+  level "warning"
+  objectives ["security_groups"]
+  audit_objects ["security_group_info.ip_permissions.ip_ranges.cidr_ip"]
+  operators ["!="]
+  alert_when [nil]
+end
+
+
+
+
+
