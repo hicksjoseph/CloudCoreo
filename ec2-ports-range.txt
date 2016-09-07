@@ -1,26 +1,9 @@
-Ports range
-  description "this is a alert to run"
-  suggested_action "fix it"
-
-"Text"
-URL citation
-
-Suggested Action
-URL citation
-
-
-Additional info
-URL citation
-
-
-
-Code used for this alert - keep in this text file for a while
-coreo_aws_advisor_alert "ports-range" do
+coreo_aws_advisor_alert "ec2-ports-range" do
   action :define
   service :ec2
-  description "this is a alert to run"
+  description "security group specifies a port range rather than individual ports"
   category "vulnerablity"
-  suggested_action "fix it"
+  suggested_action ""
   level "warning"
   objectives ["security_groups"]
   audit_objects ["security_group_info.ip_permissions.from_port"]
