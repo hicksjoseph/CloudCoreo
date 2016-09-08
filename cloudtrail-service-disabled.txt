@@ -1,25 +1,17 @@
-engine / test / advisor-cloudtrail-defaults / services / config.rb
-Service disabled
-  description "CloudTrail is disabled for the region"
-  suggested_action "Enable CloudTrail logs"
+Cloudtrail Service disabled
 
-It is recommended that CloudTrail logs be enabled for each active region.
+Description
+"CloudTrail is disabled for the region"
 
+Suggested_action_brief
+"Enable CloudTrail logs"
+
+Detail
 “AWS CloudTrail is a web service that records AWS API calls for your account and delivers log files to you. The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, the request parameters, and the response elements returned by the AWS service.
 
 With CloudTrail, you can get a history of AWS API calls for your account, including API calls made via the AWS Management Console, AWS SDKs, command line tools, and higher-level AWS services (such as AWS CloudFormation). The AWS API call history produced by CloudTrail enables security analysis, resource change tracking, and compliance auditing.”
 https://aws.amazon.com/cloudtrail/
 
-coreo_aws_advisor_alert "service-disabled" do
-  action :define
-  service :cloudtrail
-  description "CloudTrail is disabled for the region"
-  category "dataloss"
-  suggested_action "Enable CloudTrail logs"
-  level "warning"
-  objectives ["trails"]
-  formulas ["count"]
-  audit_objects ["trail_list"]
-  operators ["=="]
-  alert_when [0]
-end
+Suggested Action
+Enable CloudTrail logs for each active region.
+http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html
