@@ -1,4 +1,4 @@
-Cloudtrail Service disabled
+Cloudtrail Service is disabled
 
 Description
 "CloudTrail is disabled for the region"
