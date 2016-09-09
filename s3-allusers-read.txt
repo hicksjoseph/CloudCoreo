@@ -1,5 +1,5 @@
 Allusers read
-  description "Bucket has permissions which let anyone list the bucket contents"
+  description "Bucket has permissions (ACL) which let anyone list the bucket contents"
   suggested_action "Remove the entry from the bucket permissions that allows everyone to list the bucket"
   
 "Although you can grant public access to your bucket using ACLs, you must take the following issues into consideration: Bucket public "READ" access: This is sometimes referred to as "list" access. It allows anyone to get a complete list of your bucket content. It does not grant permissions to read content of an object. However, a list of object names can often provide more information than necessary to the public. 
@@ -7,34 +7,10 @@ https://aws.amazon.com/articles/5050
 
 Suggested Action:
 Remove the bucket permission that enables everyone to list the contents of this bucket.
+"Use the following steps to remove any public access that you have granted to your bucket via an Access Control List (ACL):
+https://aws.amazon.com/articles/5050 "
 
-"Updating ACL to Remove Public Access to Your Buckets
-Use the following steps to remove any public access that you have granted to your bucket via an Access Control List (ACL).
-
-1.       Go to Amazon S3 console at https://console.aws.amazon.com/s3/home
-2.       Right-click on the bucket and click Properties
-3.       In the Properties pane, click the Permissions tab.
-The tab shows a list of grants, one row per grant, in the bucket ACL. Each row identifies the grantee and the permissions granted.
-4.       Select the row that grants permission to everyone. "Everyone" refers to the Amazon S3 All User group.
-5.       Uncheck all the permissions granted to everyone (or click x to delete the row). This removes all permissions granted to public.
-6.       Click Save to save the ACL.
-https://aws.amazon.com/articles/5050
-
-
+Additional info
 To learn more about ACLs, see the following topics in Amazon S3 Developer Guide.
 Access Control List (ACL) Overview - http://docs.amazonwebservices.com/AmazonS3/latest/dev/ACLOverview.html
 Managing ACLs in the AWS Management Console - http://docs.amazonwebservices.com/AmazonS3/latest/dev/ManageACLsUsingConsole.html
-
-Code used for this alert - keep in this text file for a while
-coreo_aws_advisor_alert "allusers-read" do
-  action :define
-  service :s3
-  description "Bucket has permissions which let anyone list the bucket contents"
-  category "dataloss"
-  suggested_action "Remove the entry from the bucket permissions that allows everyone to list the bucket"
-  level "warning"
-  objectives ["bucket_acl"]
-  audit_objects ["grants.grantee.uri", "grants.grantee.permission"]
-  operators ["=~", "=="]
-  alert_when [/AllUsers/i, "read"]
-end
