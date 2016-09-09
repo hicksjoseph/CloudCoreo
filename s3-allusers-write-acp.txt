@@ -1,6 +1,6 @@
-All users can write the bucket ACL
+All users can write the bucket ACP / ACL
 Description
-  "Bucket has permissions (ACL) which let all users modify the permissions"
+  "Bucket has permissions (ACP / ACL) which let all users modify the permissions"
   
 Suggested_action_brief
   "Remove the entry from the bucket permissions that allows everyone to edit permissions"
