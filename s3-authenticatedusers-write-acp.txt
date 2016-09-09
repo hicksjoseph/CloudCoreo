@@ -1,6 +1,8 @@
-coreo_aws_advisor_alert "authenticatedusers-write-acp" do
-  description "Bucket has permissions which let any AWS user modify the permissions"
-  suggested_action "Remove the bucket permissions that allows 'Any Authenticated AWS User' to edit permissions"
+All Authenticated AWS users can write bucket ACP / ACL
+ Description
+ "Bucket has permissions which let any AWS user modify the permissions"
+ Suggested_action_brief
+ "Remove the bucket permissions (ACP / ACL) that allows 'Any Authenticated AWS User' to edit permissions"
 
 "Amazon S3 Bucket Public Access Considerations
 
@@ -11,33 +13,10 @@ https://aws.amazon.com/articles/5050
 
 Suggested Action:
 Remove the entry from the bucket permissions that allows Any Authenticated AWS User to edit permissions
+"Use the following steps to remove any public access that you have granted to your bucket via an Access Control List (ACL):
+https://aws.amazon.com/articles/5050 "
 
-"Updating ACL to Remove Public Access to Your Buckets
-Use the following steps to remove any public access that you have granted to your bucket via an Access Control List (ACL).
-
-1.       Go to Amazon S3 console at https://console.aws.amazon.com/s3/home
-2.       Right-click on the bucket and click Properties
-3.       In the Properties pane, click the Permissions tab.
-The tab shows a list of grants, one row per grant, in the bucket ACL. Each row identifies the grantee and the permissions granted.
-4.       Select the row that grants permission to Any Authenticated AWS User. "Any Authenticated AWS User" refers to the Amazon S3 Authenticated AWS User group.
-5.       Uncheck all the permissions granted to everyone (or click x to delete the row). This removes all permissions granted to public.
-6.       Click Save to save the ACL.
-
+Additional info
 To learn more about ACLs, see the following topics in Amazon S3 Developer Guide.
 Access Control List (ACL) Overview - http://docs.amazonwebservices.com/AmazonS3/latest/dev/ACLOverview.html
-Managing ACLs in the AWS Management Console - http://docs.amazonwebservices.com/AmazonS3/latest/dev/ManageACLsUsingConsole.html  "
-https://aws.amazon.com/articles/5050
-
-Code used for this alert - keep in this text file for a while
-coreo_aws_advisor_alert "authenticatedusers-write-acp" do
-  action :define
-  service :s3
-  description "Bucket has permissions which let any AWS user modify the permissions"
-  category "dataloss"
-  suggested_action "Remove the entry from the bucket permissions that allows 'Any Authenticated AWS User' to edit permissions"
-  level "danger"
-  objectives ["bucket_acl"]
-  audit_objects ["grants.grantee.uri", "grants.grantee.permission"]
-  operators ["=~", "=="]
-  alert_when [/AuthenticatedUsers/i, "write_acp"]
-end
+Managing ACLs in the AWS Management Console - http://docs.amazonwebservices.com/AmazonS3/latest/dev/ManageACLsUsingConsole.html
