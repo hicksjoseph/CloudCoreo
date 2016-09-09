@@ -1,0 +1,22 @@
+All users can write the bucket ACL
+Description
+  "Bucket has permissions (ACL) which let all users modify the permissions"
+  
+Suggested_action_brief
+  "Remove the entry from the bucket permissions that allows everyone to edit permissions"
+ 
+Detail 
+"Amazon S3 provides a rich set of mechanisms for you to manage access to your buckets and objects. An Access Control List (ACL) is one of these access control mechanisms. ACLs identify which AWS account or groups are allowed to perform what kind of actions. To learn more about the groups and types of permissions, go to Access Control List (ACL) Overview. http://docs.amazonwebservices.com/AmazonS3/latest/dev/ACLOverview.html
+Some have changed default permissions and granted public access to their buckets. Although you can grant public access to your bucket using ACLs, you must take the following issues into consideration: Bucket public "Write ACP" access: This is sometimes referred to as "edit permissions" access. It allows anyone to modify the access control permissions on the bucket. These entities can add grants to the ACL, opening your bucket to more public access than you want. For example, a public WRITE_ACP permission on your bucket enables anyone to modify the ACL and grant permissions such as, for example, grant write permission on your bucket to others.
+You can use ACLs to grant permissions to individual AWS accounts; however, it is strongly recommended that you do not grant public access to your bucket using an ACL.
+https://aws.amazon.com/articles/5050
+
+Suggested Action:
+Remove the entry from the bucket permissions that allows everyone to edit permissions
+"Use the following steps to remove any public access that you have granted to your bucket via an Access Control List (ACL):
+https://aws.amazon.com/articles/5050 "
+
+Additional info
+To learn more about ACLs, see the following topics in Amazon S3 Developer Guide.
+Access Control List (ACL) Overview - http://docs.amazonwebservices.com/AmazonS3/latest/dev/ACLOverview.html
+Managing ACLs in the AWS Management Console - http://docs.amazonwebservices.com/AmazonS3/latest/dev/ManageACLsUsingConsole.html
