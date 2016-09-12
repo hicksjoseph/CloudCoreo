@@ -1,0 +1,14 @@
+This one was not in the comparison list. It is a net new one.
+
+coreo_aws_advisor_alert "ec2-all-ports-open-to-self" do
+  action :define
+  service :ec2
+  description "security group is unused"
+  category "vulnerablity"
+  suggested_action "delete the group"
+  level "warning"
+  objectives ["security_groups"]
+  audit_objects ["security_group_info.instances_set.network_interface_set.private_ip_address"]
+  operators ["=~"]
+  alert_when [/10/i]
+end

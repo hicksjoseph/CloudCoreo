@@ -1,0 +1,13 @@
+coreo_aws_advisor_alert "only-ip-based-policy" do
+  action :define
+  service :s3
+  description "Bucket is completly readable by the world"
+  category "dataloss"
+  suggested_action "fix it"
+  level "danger"
+  objectives ["bucket_policy"]
+  audit_objects ["policy"]
+  formulas ["jmespath.Statement[*].[Effect, Condition]"]
+  operators ["=~"]
+  alert_when [/"(Allow|Deny)",[^{]*({"IpAddress")[^}]*}}\]/]
+end

@@ -1,0 +1,12 @@
+coreo_aws_advisor_alert "rds-no-auto-minor-version-upgrade" do
+  action :define
+  service :rds
+  description "this is a alert to run"
+  category "vulnerablity"
+  suggested_action "fix it"
+  level "warning"
+  objectives ["db_instances"]
+  audit_objects ["db_instances.auto_minor_version_upgrade"]
+  operators ["=="]
+  alert_when [false]
+end

@@ -1,0 +1,13 @@
+coreo_aws_advisor_alert "no-user-logging" do
+  action :define
+  service :redshift
+  description "possibly out of date clusters"
+  category "vulnerablity"
+  suggested_action "fix it"
+  level "warning"
+  objectives ["cluster_parameter_groups", "cluster_parameters"]
+  call_modifiers [{}, {:parameter_group_name => "parameter_groups.parameter_group_name"}]
+  audit_objects ["", "parameters.parameter_name", "parameters.parameter_value"]
+  operators ["", "==", "=="]
+  alert_when ["", "enable_user_activity_logging", false]
+end

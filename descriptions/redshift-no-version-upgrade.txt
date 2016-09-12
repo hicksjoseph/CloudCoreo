@@ -1,0 +1,12 @@
+coreo_aws_advisor_alert "no-version-upgrade" do
+  action :define
+  service :redshift
+  description "possibly out of date clusters"
+  category "vulnerablity"
+  suggested_action "fix it"
+  level "warning"
+  objectives ["clusters"]
+  audit_objects ["clusters.allow_version_upgrade"]
+  operators ["=="]
+  alert_when [false]
+end
