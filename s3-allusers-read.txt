@@ -1,4 +1,4 @@
-Bucket ACL set for all users to read
+All users can read the affected bucket
   Description
   "Bucket has permissions (ACL) which let anyone list the bucket contents"
   Suggested_action_brief
