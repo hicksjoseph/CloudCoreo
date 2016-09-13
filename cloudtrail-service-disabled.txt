@@ -1,7 +1,7 @@
 Cloudtrail Service is disabled
 
 Description
-"CloudTrail is disabled for the region"
+"CloudTrail logging is not enabled for this region. It should be enabled."
 
 Suggested_action_brief
 "Enable CloudTrail logs"
