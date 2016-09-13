@@ -1,6 +1,6 @@
 ec2-ports-range
-  description "Security group specifies a port range rather than individual ports"
-  suggested_action "Only add rules to your Security group that specify individual ports and don't use port ranges unless they are required"
+  description "Security group specifies a port range rather than individual ports."
+  suggested_action "Only add rules to your Security group that specify individual ports and don't use port ranges unless they are required."
 
 "A security group acts as a virtual firewall for your instance to control inbound and outbound traffic. For each security group, you add rules that control the inbound traffic to instances, and a separate set of rules that control the outbound traffic. For each security group, you add rules that control the inbound traffic to instances, and a separate set of rules that control the outbound traffic.
 The following are the basic parts of a security group rule:
