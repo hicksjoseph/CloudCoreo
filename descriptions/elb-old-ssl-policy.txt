@@ -1,6 +1,6 @@
 coreo_aws_advisor_alert "old-ssl-policy" do
   description "Elastic Load Balancing (ELB) SSL policy is not the latest Amazon predefined SSL policy or is a custom ELB SSL policy."
-  suggested_action " "
+  suggested_action "Always use the current AWS predefined security policy."
 
 "SSL Negotiation Configurations for Classic Load Balancers (ELB SSL security policy)
 Elastic Load Balancing uses an Secure Socket Layer (SSL) negotiation configuration, known as a security policy, to negotiate SSL connections between a client and the load balancer. A security policy is a combination of SSL protocols, SSL ciphers, and the Server Order Preference option. A security policy determines which ciphers and protocols are supported during SSL negotiations between a client and a load balancer. 
