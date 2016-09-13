@@ -2,6 +2,9 @@ Bucket policy World Delete
  Description
  "Bucket policy allows the world to delete the affected bucket"
 
+ Suggested_action_brief
+ "Remove or modify the bucket policy that enables any AWS user to delete the contents of this bucket."
+
 Detail
 S3 bucket policies are a type of access control list but are different than S3 ACLs. S3 bucket policies specify what actions are allowed or denied for which principals on the bucket that the bucket policy is attached to. You attach S3 bucket policies at the bucket level, but the permissions specified in the bucket policy apply to all the objects in the bucket. 
 
@@ -10,7 +13,7 @@ https://aws.amazon.com/articles/5050
 https://blogs.aws.amazon.com/security/post/TxPOJBY6FE360K/IAM-policies-and-Bucket-Policies-and-ACLs-Oh-My-Controlling-Access-to-S3-Resourc
 
 Suggested Action:
-Remove the bucket permission that enables any AWS user to delete the contents of this bucket.
+Remove or modify the bucket policy that enables any AWS user to delete the contents of this bucket.
 See "Updating ACL to Remove Public Access to Your Buckets" - https://aws.amazon.com/articles/5050
 Alternatives to Public Access - https://aws.amazon.com/articles/5050
 To learn more about ACLs, see the following topics in Amazon S3 Developer Guide.
