@@ -2,6 +2,8 @@ All authenticated users can read the affected bucket
  Description
  "Bucket has permissions which let any AWS user list the bucket contents"
 
+Suggested_action_brief "Remove the entry from the bucket permissions that allows 'Any Authenticated AWS User' to list the bucket"
+
 Detail 
 "An S3 ACL is a sub-resource that’s attached to every S3 bucket and object. It defines which AWS accounts or groups are granted access and the type of access. When you create a bucket or an object, Amazon S3 creates a default ACL that grants the resource owner full control over the resource. Some users have changed the S3 default permissions and granted public access to their buckets via S3 ACLs. Although you can grant public access to your bucket using ACLs, you must take the following issues into consideration: Bucket public "READ" access: This is sometimes referred to as "list" access. It allows anyone to get a complete list of your bucket content. It does not grant permissions to read content of an object. However, a list of object names can often provide more information than necessary to the public. You can use ACLs to grant permissions to individual AWS accounts; however, it is strongly recommended that you do not grant public access to your bucket using an ACL."
 https://aws.amazon.com/articles/5050
@@ -11,7 +13,7 @@ https://aws.amazon.com/articles/5050
 https://blogs.aws.amazon.com/security/post/TxPOJBY6FE360K/IAM-policies-and-Bucket-Policies-and-ACLs-Oh-My-Controlling-Access-to-S3-Resourc
 
 Suggested Action:
-Remove the bucket permission that enables any AWS user to list the contents of this bucket.
+Remove the entry from the bucket permissions that allows 'Any Authenticated AWS User' to list the bucket
 
 See "Updating ACL to Remove Public Access to Your Buckets" - https://aws.amazon.com/articles/5050
 To learn more about ACLs, see the following topics in Amazon S3 Developer Guide.
