@@ -1,0 +1,12 @@
+coreo_aws_advisor_alert "publicly-accessible" do
+  action :define
+  service :redshift
+  description "Redshift clusters are publicly accesible to the internet"
+  category "vulnerablity"
+  suggested_action "fix it"
+  level "warning"
+  objectives ["clusters"]
+  audit_objects ["clusters.publicly_accessible"]
+  operators ["=="]
+  alert_when [true]
+end
