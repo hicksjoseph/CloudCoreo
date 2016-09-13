@@ -1,6 +1,6 @@
 All users can write to the affected bucket
   Description
-  "Bucket has permissions which let all users write to the bucket"
+  "Bucket has permissions (ACL) which let all users write to the bucket"
   
   Suggested_action_brief
   "Remove the entry from the bucket permissions that allows everyone to write"
