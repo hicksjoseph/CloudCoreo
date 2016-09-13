@@ -1,6 +1,9 @@
 Bucket policy World List
  Description
  "Bucket policy allows the world to list the contents of the affected bucket"
+ 
+ Suggested_action_brief
+ "Remove or modify the bucket policy that enables the world to list the contents of this bucket."
 
 Detail
 S3 bucket policies are a type of access control list but are different than S3 ACLs. S3 bucket policies specify what actions are allowed or denied for which principals on the bucket that the bucket policy is attached to. You attach S3 bucket policies at the bucket level, but the permissions specified in the bucket policy apply to all the objects in the bucket. 
