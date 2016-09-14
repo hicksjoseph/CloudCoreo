@@ -1,3 +1,10 @@
+Redshift clusters publicly accessible
+
+The affected Redshift clusters is publicly accessible to the world.
+
+Consider whether the affected RDS database should be publicly accessible to the world. If not, modify the option which enables your RDS database to become publicly accessible.
+
+
 coreo_aws_advisor_alert "publicly-accessible" do
   action :define
   service :redshift
