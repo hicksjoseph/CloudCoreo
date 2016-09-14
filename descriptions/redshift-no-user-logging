@@ -1,13 +1,19 @@
-coreo_aws_advisor_alert "no-user-logging" do
-  action :define
-  service :redshift
-  description "possibly out of date clusters"
-  category "vulnerablity"
-  suggested_action "fix it"
-  level "warning"
-  objectives ["cluster_parameter_groups", "cluster_parameters"]
-  call_modifiers [{}, {:parameter_group_name => "parameter_groups.parameter_group_name"}]
-  audit_objects ["", "parameters.parameter_name", "parameters.parameter_value"]
-  operators ["", "==", "=="]
-  alert_when ["", "enable_user_activity_logging", false]
-end
+Redshift user logging disabled
+
+ Description
+ "Redshift user activity logging is disabled."
+
+ Suggested_action_brief
+ "Enable Redshift user activity logging."
+
+Details
+"Amazon Redshift logs information about connections and user activities in your database. These logs help you to monitor the database for security and troubleshooting purposes, which is a process often referred to as database auditing. The logs are stored in the Amazon Simple Storage Service (Amazon S3) buckets for convenient access with data security features for users who are responsible for monitoring activities in the database.
+
+Amazon Redshift logs information in the following log files:
+Connection log — logs authentication attempts, and connections and disconnections.
+User log — logs information about changes to database user definitions.
+User activity log — logs each query before it is run on the database."
+
+Suggested action:
+Enable Redshift user activity logging. "The user activity log is useful primarily for troubleshooting purposes. It tracks information about the types of queries that both the users and the system perform in the database. For the user activity log, you must also enable the enable_user_activity_logging database parameter. The enable_user_activity_logging parameter is disabled (false) by default, but you can set it to true to enable the user activity log."
+http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html
