@@ -1,13 +1,11 @@
-coreo_aws_advisor_alert "no-require-ssl" do
-  action :define
-  service :redshift
-  description "possibly out of date clusters"
-  category "vulnerablity"
-  suggested_action "fix it"
-  level "warning"
-  objectives     ["cluster_parameter_groups", "cluster_parameters"]
-  call_modifiers [{}, {:parameter_group_name => "parameter_groups.parameter_group_name"}]
-  audit_objects  ["", "parameters.parameter_name", "parameters.parameter_value"]
-  operators      ["", "==", "=="]
-  alert_when     ["", "require_ssl", false]
-end
+Redshift connections don't require SSL
+ Description "Connections to Redshift don't currently require the use of SSL encryption."
+ Suggested_action_brief
+ "Enable Redshift to require the use of SSL encrypted connections."
+
+Details
+Amazon Redshift supports Secure Sockets Layer (SSL) connections to encrypt data and server certificates to validate the server certificate that the client connects to. By default, cluster databases accept a connection whether it uses SSL or not. Currently, connections to the affected Redshift cluster don't require the use of SSL encryption.
+
+Suggested Action
+ "Enable Redshift to require the use of SSL encrypted connections. To configure your cluster to require an SSL connection, set the require_SSL parameter to true in the parameter group that is associated with the cluster. To support SSL connections, Amazon Redshift creates and installs a self-signed SSL certificate on each cluster. SSL support in Amazon Redshift is strictly for encrypting the connection between your client and your cluster; it should not be relied on for authenticating the server."
+ http://docs.aws.amazon.com/redshift/latest/mgmt/connecting-ssl-support.html
