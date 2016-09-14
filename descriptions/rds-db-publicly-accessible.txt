@@ -6,7 +6,7 @@ RDS in publicly accessible to the world
  "Consider whether the affected RDS database should be publicly accessible to the world. If not, modify the option which enables your RDS database to become publicly accessible."
 
 Details
-"DB Instances deployed within a VPC can be accessed from the Internet or from EC2 Instances outside the VPC via VPN or bastion hosts that you can launch in your public subnet, or using Amazon RDS's Publicly Accessible option. To use public connectivity, simply create your DB Instances with the Publicly Accessible option set to yes. With Publicly Accessible active, your DB Instances within a VPC will be fully accessible outside your VPC by default." If you do not want your DB Instances accessible from the Internet or outside your VPC, disable the RDS Publicly Accessible option.
+"DB Instances deployed within a VPC can be accessed from the Internet or from EC2 Instances outside the VPC via VPN or bastion hosts that you can launch in your public subnet, or using Amazon RDS's Publicly Accessible option. To use public connectivity, simply create your DB Instances with the Publicly Accessible option set to yes. With Publicly Accessible active, your DB Instances within a VPC will be fully accessible outside your VPC." If you do not want your DB Instances accessible from the Internet or outside your VPC, disable the RDS Publicly Accessible option.
 https://aws.amazon.com/rds/faqs/
 
 Suggested Action
