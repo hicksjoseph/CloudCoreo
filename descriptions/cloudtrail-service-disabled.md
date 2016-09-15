@@ -1,6 +1,6 @@
 ##Cloudtrail Service is disabled
 
-*CloudTrail logging is not enabled for this region. It should be enabled.*
+*CloudTrail logging is not enabled for this region. It should be enabled.*  
 **Suggested Action**  
 *Enable CloudTrail logs*
 
