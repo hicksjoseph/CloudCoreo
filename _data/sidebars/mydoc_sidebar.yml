@@ -1,0 +1,90 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: CloudAudit Definitions
+  version:
+  folders:
+
+  - title: Cloudtrail
+    output: web
+    folderitems:
+
+    - title: Service Disabled
+      url: /cloudtrail-service-disabled.html
+      output: web
+      type: homepage
+
+  - title: EC2
+    output: web
+    folderitems:
+
+    - title: TCP-1433
+      url: /mydoc_ec2-TCP-1433.html
+      output: web
+      type: homepage
+
+    - title: TCP-1521
+      url: /ec2-TCP-1521.html
+      output: web
+      type: homepage
+
+  - title: ELB
+    output: web
+    folderitems:
+
+    - title: Old ELB SSL policy
+      url: /
+      output: web
+
+    - title: 
+      url: /
+      output: web
+
+  - title: IAM
+    output: web
+    folderitems:
+
+    - title: Active keys not being rotated
+      url: /
+      output: web
+
+    - title: Missing password policy
+      url: /
+      output: web
+
+  - title: RDS
+    output: web
+    folderitems:
+
+    - title: RDS Publicly Accessible
+      url: /
+      output: web
+
+    - title: RDS short backup retention 
+      url: /
+      output: web
+
+  - title: Redshift
+    output: web
+    folderitems:
+
+    - title: SSL not required
+      url: /
+      output: web
+
+    - title: No user activity logging
+      url: /
+      output: web
+
+  - title: S3
+    output: web, pdf
+    folderitems:
+
+    - title: World open policy all
+      url: /
+      output: web
+
+    - title: Logging disabled
+      url: /
+      output: web
