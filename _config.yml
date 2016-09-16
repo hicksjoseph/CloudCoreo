@@ -102,4 +102,5 @@ description: "CloudCoreo knowledge base"
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
-url: http://www.cloudcoreo.com
+#url: http://www.cloudcoreo.com
+url: kb.cloudcoreo.com baseurl: /CloudCoreo
