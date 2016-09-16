@@ -3,19 +3,19 @@
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/samplepost.html</loc>
+    <loc>http://kb.cloudcoreo.com/samplepost.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/myupdate.html</loc>
+    <loc>http://kb.cloudcoreo.com/myupdate.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/test-post-from-last-year.html</loc>
+    <loc>http://kb.cloudcoreo.com/test-post-from-last-year.html</loc>
   </url>
   
   
@@ -25,184 +25,196 @@
   
   
   
-  
-  
   <url>
-    <loc>http://www.cloudcoreo.com/index.html</loc>
+    <loc>http://kb.cloudcoreo.com/cloudtrail-service-disabled.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/cloudtrail-service-disabled.html</loc>
+    <loc>http://kb.cloudcoreo.com/mydoc_ec2-TCP-1433.html</loc>
+  </url>
+  
+  
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/index.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/mydoc_ec2-TCP-1433.html</loc>
+    <loc>http://kb.cloudcoreo.com/cloudtrail-service-disabled.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/mydoc_introduction.html</loc>
+    <loc>http://kb.cloudcoreo.com/mydoc_ec2-TCP-1433.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/js/mydoc_scroll.html</loc>
+    <loc>http://kb.cloudcoreo.com/mydoc_introduction.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/news.html</loc>
+    <loc>http://kb.cloudcoreo.com/js/mydoc_scroll.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/news_archive.html</loc>
+    <loc>http://kb.cloudcoreo.com/news.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p1_landing_page.html</loc>
+    <loc>http://kb.cloudcoreo.com/news_archive.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p1_sample1.html</loc>
+    <loc>http://kb.cloudcoreo.com/p1_landing_page.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p1_sample2.html</loc>
+    <loc>http://kb.cloudcoreo.com/p1_sample1.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p1_sample3.html</loc>
+    <loc>http://kb.cloudcoreo.com/p1_sample2.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p1_sample4.html</loc>
+    <loc>http://kb.cloudcoreo.com/p1_sample3.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p1_sample5.html</loc>
+    <loc>http://kb.cloudcoreo.com/p1_sample4.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p1_sample6.html</loc>
+    <loc>http://kb.cloudcoreo.com/p1_sample5.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p1_sample7.html</loc>
+    <loc>http://kb.cloudcoreo.com/p1_sample6.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_landing_page.html</loc>
+    <loc>http://kb.cloudcoreo.com/p1_sample7.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_sample1.html</loc>
+    <loc>http://kb.cloudcoreo.com/p2_landing_page.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_sample10.html</loc>
+    <loc>http://kb.cloudcoreo.com/p2_sample1.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_sample11.html</loc>
+    <loc>http://kb.cloudcoreo.com/p2_sample10.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_sample12.html</loc>
+    <loc>http://kb.cloudcoreo.com/p2_sample11.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_sample13.html</loc>
+    <loc>http://kb.cloudcoreo.com/p2_sample12.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_sample14.html</loc>
+    <loc>http://kb.cloudcoreo.com/p2_sample13.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_sample2.html</loc>
+    <loc>http://kb.cloudcoreo.com/p2_sample14.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_sample3.html</loc>
+    <loc>http://kb.cloudcoreo.com/p2_sample2.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_sample4.html</loc>
+    <loc>http://kb.cloudcoreo.com/p2_sample3.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_sample5.html</loc>
+    <loc>http://kb.cloudcoreo.com/p2_sample4.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_sample6.html</loc>
+    <loc>http://kb.cloudcoreo.com/p2_sample5.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_sample7.html</loc>
+    <loc>http://kb.cloudcoreo.com/p2_sample6.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_sample8.html</loc>
+    <loc>http://kb.cloudcoreo.com/p2_sample7.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://www.cloudcoreo.com/p2_sample9.html</loc>
+    <loc>http://kb.cloudcoreo.com/p2_sample8.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/p2_sample9.html</loc>
   </url>
   
   

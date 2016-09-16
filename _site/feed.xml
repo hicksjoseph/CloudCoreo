@@ -3,10 +3,10 @@
     <channel>
         <title></title>
         <description>CloudCoreo knowledge base</description>
-        <link>http://www.cloudcoreo.com/</link>
-        <atom:link href="http://www.cloudcoreo.com/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 15 Sep 2016 15:27:32 -0700</pubDate>
-        <lastBuildDate>Thu, 15 Sep 2016 15:27:32 -0700</lastBuildDate>
+        <link>http://kb.cloudcoreo.com/</link>
+        <atom:link href="http://kb.cloudcoreo.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Fri, 16 Sep 2016 11:51:07 -0700</pubDate>
+        <lastBuildDate>Fri, 16 Sep 2016 11:51:07 -0700</lastBuildDate>
         <generator>Jekyll v3.2.1</generator>
         
         <item>
@@ -41,8 +41,8 @@
 
 </description>
             <pubDate>Fri, 26 Feb 2016 00:00:00 -0800</pubDate>
-            <link>http://www.cloudcoreo.com/samplepost.html</link>
-            <guid isPermaLink="true">http://www.cloudcoreo.com/samplepost.html</guid>
+            <link>http://kb.cloudcoreo.com/samplepost.html</link>
+            <guid isPermaLink="true">http://kb.cloudcoreo.com/samplepost.html</guid>
             
             <category>news</category>
             
@@ -87,8 +87,8 @@
 
 </description>
             <pubDate>Wed, 24 Feb 2016 00:00:00 -0800</pubDate>
-            <link>http://www.cloudcoreo.com/myupdate.html</link>
-            <guid isPermaLink="true">http://www.cloudcoreo.com/myupdate.html</guid>
+            <link>http://kb.cloudcoreo.com/myupdate.html</link>
+            <guid isPermaLink="true">http://kb.cloudcoreo.com/myupdate.html</guid>
             
             <category>news</category>
             
@@ -121,8 +121,8 @@
 
 </description>
             <pubDate>Sun, 12 Apr 2015 00:00:00 -0700</pubDate>
-            <link>http://www.cloudcoreo.com/test-post-from-last-year.html</link>
-            <guid isPermaLink="true">http://www.cloudcoreo.com/test-post-from-last-year.html</guid>
+            <link>http://kb.cloudcoreo.com/test-post-from-last-year.html</link>
+            <guid isPermaLink="true">http://kb.cloudcoreo.com/test-post-from-last-year.html</guid>
             
             <category>news</category>
             

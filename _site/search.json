@@ -3,14 +3,34 @@
 
 
 
+{
+"title": "Cloudtrail Service is disabled",
+"tags": "",
+"keywords": "",
+"url": "cloudtrail-service-disabled.html",
+"summary": "CloudTrail logging is not enabled for this region. It should be enabled."
+},
+
 
 
 {
-"title": "Getting started with the Documentation Theme for Jekyll",
+"title": "TCP port 1433 is open",
+"tags": "",
+"keywords": "TCP 1433 TCP1433 Security Groups",
+"url": "mydoc_ec2-TCP-1433.html",
+"summary": "Important TCP port is open and / or open to the world."
+},
+
+
+
+
+
+{
+"title": "Getting started with CloudCoreo",
 "tags": "getting_started",
-"keywords": "sample homepage",
+"keywords": "homepage",
 "url": "index.html",
-"summary": "These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll."
+"summary": "These brief instructions will help you get started quickly with CloudCoreo."
 },
 
 
