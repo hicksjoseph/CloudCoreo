@@ -5,6 +5,7 @@ tags: [getting_started]
 sidebar: mydoc_sidebar
 permalink: index.html
 summary: These brief instructions will help you get started quickly with CloudCoreo.
+toc: false
 ---
 
 ### Get Started — No signup necessary!  
