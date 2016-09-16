@@ -12,11 +12,13 @@ topnav_dropdowns:
   folders:
     - title: CloudCoreo Resources
       folderitems:
-        - title: Github Repo
-          external_url: https://github.com/CloudCoreo
+        - title: Website
+          external_url: https://www.cloudcoreo.com
         - title: Docs
           external_url: https://www.cloudcoreo.com/docs
+        - title: Github Repo
+          external_url: https://github.com/CloudCoreo
     - title: Products
       folderitems:
-        - title: CloudCoreo123
+        - title: CloudAudit
           url: /mydoc_introduction.html
