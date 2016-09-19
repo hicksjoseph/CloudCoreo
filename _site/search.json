@@ -116,6 +116,26 @@
 
 
 {
+"title": "Passwords policy doesn&#39;t exist",
+"tags": "",
+"keywords": "",
+"url": "mydoc_iam-missing-password-policy.html",
+"summary": "There currently isn't a password policy to require a certain password length, password expiration, prevent password reuse, and other parameters."
+},
+
+
+
+{
+"title": "Account has multiple active access keys",
+"tags": "",
+"keywords": "",
+"url": "mydoc_iam-multiple-access-keys.html",
+"summary": "The affected account has multiple active AWS access keys."
+},
+
+
+
+{
 "title": "Introduction",
 "tags": "",
 "keywords": "",

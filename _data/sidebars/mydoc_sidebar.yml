@@ -58,6 +58,14 @@ entries:
       url: /mydoc_iam-inactive-key-no-rotation.html
       output: web
 
+    - title: Passwords policy doesn't exist
+      url: /mydoc_iam-missing-password-policy.html
+      output: web
+
+    - title: Multiple active access keys
+      url: /mydoc_iam-multiple-access-keys.html
+      output: web
+
   - title: RDS
     output: web
     folderitems:
