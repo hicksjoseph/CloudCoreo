@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Elastic Load Balancing (ELB) SSL policy is not the latest Amazon predefined SSL policy or is a custom ELB SSL policy.">
+<meta name="keywords" content=" ">
+<title>Old ELB SSL policy | CloudCoreo Knowledge Base</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://kb.cloudcoreo.comfeed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> CloudCoreo Knowledge Base</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">CloudCoreo Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://www.cloudcoreo.com" target="_blank">Website</a></li>
+                        
+                        
+                        
+                        <li><a href="https://www.cloudcoreo.com/docs" target="_blank">Docs</a></li>
+                        
+                        
+                        
+                        <li><a href="https://github.com/CloudCoreo" target="_blank">Github Repo</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="mydoc_introduction.html">CloudAudit</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Old ELB SSL policy page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Old ELB SSL policy">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">CloudAudit Definitions </li>
+    
+    
+    
+    <li>
+        <a href="#">Cloudtrail</a>
+        <ul>
+            
+            
+            
+            <li><a href="cloudtrail-service-disabled.html">Service Disabled</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">EC2</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_tcpportopen.html">TCP port open</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_ec2-ip-address-whitelisted.html">Host IP added to Security Group</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_ec2-ports-range.html">Security group specifies a port range</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_ec2-unrestricted-traffic.html">Security group unrestricted traffic</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">ELB</a>
+        <ul>
+            
+            
+            
+            <li class="active"><a href="mydoc_elb-old-ssl-policy.html">Old ELB SSL policy</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">IAM</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_iam-active-key-no-rotation.html">Active user key not rotated</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_iam-expirepasswords.html">Passwords not set to expire</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_iam-inactive-key-no-rotation.html">Inactive access key not rotated</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">RDS</a>
+        <ul>
+            
+            
+            
+            <li><a href="">RDS Publicly Accessible</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="">RDS short backup retention</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Redshift</a>
+        <ul>
+            
+            
+            
+            <li><a href="">SSL not required</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="">No user activity logging</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">S3</a>
+        <ul>
+            
+            
+            
+            <li><a href="">World open policy all</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="">Logging disabled</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">Old ELB SSL policy</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">Elastic Load Balancing (ELB) SSL policy is not the latest Amazon predefined SSL policy or is a custom ELB SSL policy.</div>
+   
+
+    
+
+    
+
+    
+
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_elb-old-ssl-policy.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    
+
+    
+
+  <h3 id="details">Details</h3>
+<p>SSL Negotiation Configurations for Classic Load Balancers (ELB SSL security policy)
+Elastic Load Balancing uses an Secure Socket Layer (SSL) negotiation configuration, known as a security policy, to negotiate SSL connections between a client and the load balancer. A security policy is a combination of SSL protocols, SSL ciphers, and the Server Order Preference option. A security policy determines which ciphers and protocols are supported during SSL negotiations between a client and a load balancer.</p>
+
+<p>Elastic Load Balancing provides security policies that have predefined SSL negotiation configurations to use to negotiate SSL connections between clients and your load balancer. If you are using the HTTPS/SSL protocol for your listener, you can use one of the predefined security policies, or use your own custom security policy. If you create an HTTPS/SSL listener without associating a security policy, Elastic Load Balancing associates the current predefined security policy, ELBSecurityPolicy-2016-08, with your load balancer.<br />
+<a href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-ssl-security-policy.html">http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-ssl-security-policy.html</a>
+<a href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/ssl-config-update.html">http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/ssl-config-update.html</a>
+<a href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-options.html">http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-options.html</a></p>
+
+<h3 id="suggested-action">Suggested Action</h3>
+<p>“We recommend that you always use the current predefined security policy. The RSA- and DSA-based ciphers are specific to the signing algorithm used to create SSL certificate. Make sure to create an SSL certificate using the signing algorithm that is based on the ciphers that are enabled for your security policy.<br />
+<a href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-table.html">http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-table.html</a></p>
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 CloudCoreo. All rights reserved. <br />
+<span>Page last updated:</span> September 17, 2016<br/> Site last generated: Sep 19, 2016 <br />
+<p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

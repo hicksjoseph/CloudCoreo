@@ -13,44 +13,49 @@ entries:
     - title: Service Disabled
       url: /cloudtrail-service-disabled.html
       output: web
-      type: homepage
 
   - title: EC2
     output: web
     folderitems:
 
-    - title: TCP-1433
-      url: /mydoc_ec2-TCP-1433.html
+    - title: TCP port open
+      url: /mydoc_tcpportopen.html
       output: web
-      type: homepage
 
-    - title: TCP-1521
-      url: /ec2-TCP-1521.html
+    - title: Host IP added to Security Group
+      url: /mydoc_ec2-ip-address-whitelisted.html
       output: web
-      type: homepage
+
+    - title: Security group specifies a port range
+      url: /mydoc_ec2-ports-range.html
+      output: web
+
+    - title: Security group unrestricted traffic
+      url: /mydoc_ec2-unrestricted-traffic.html
+      output: web
 
   - title: ELB
     output: web
     folderitems:
 
     - title: Old ELB SSL policy
-      url: /
-      output: web
-
-    - title: 
-      url: /
+      url: /mydoc_elb-old-ssl-policy.html
       output: web
 
   - title: IAM
     output: web
     folderitems:
 
-    - title: Active keys not being rotated
-      url: /
+    - title: Active user key not rotated
+      url: /mydoc_iam-active-key-no-rotation.html
       output: web
 
-    - title: Missing password policy
-      url: /
+    - title: Passwords not set to expire
+      url: /mydoc_iam-expirepasswords.html
+      output: web
+
+    - title: Inactive access key not rotated
+      url: /mydoc_iam-inactive-key-no-rotation.html
       output: web
 
   - title: RDS
