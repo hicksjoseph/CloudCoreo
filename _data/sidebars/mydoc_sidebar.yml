@@ -66,6 +66,22 @@ entries:
       url: /mydoc_iam-multiple-access-keys.html
       output: web
 
+    - title: MFA not enabled
+      url: /mydoc_iam-no-mfa.html
+      output: web
+
+    - title: Root MFA not enabled
+      url: /mydoc_iam-root-no-mfa.html
+      output: web
+
+    - title: Root user has active password
+      url: /mydoc_iam-root-active-password.html
+      output: web
+
+    - title: Users can reuse old passwords
+      url: /mydoc_iam-passwordreuseprevention.html
+      output: web
+
   - title: RDS
     output: web
     folderitems:

@@ -136,6 +136,46 @@
 
 
 {
+"title": "Multi-Factor Authentication not enabled",
+"tags": "",
+"keywords": "",
+"url": "mydoc_iam-no-mfa.html",
+"summary": "Affected user does not have Multi-Factor Authentication enabled on their account"
+},
+
+
+
+{
+"title": "Users can reuse old passwords",
+"tags": "",
+"keywords": "",
+"url": "mydoc_iam-passwordreuseprevention.html",
+"summary": "The current password policy doesn't prevent users from reusing their old passwords."
+},
+
+
+
+{
+"title": "Root user has active password",
+"tags": "",
+"keywords": "",
+"url": "mydoc_iam-root-active-password.html",
+"summary": "Root user has been logging in with a password."
+},
+
+
+
+{
+"title": "Multi-Factor Authentication not enabled for root account",
+"tags": "",
+"keywords": "",
+"url": "mydoc_iam-root-no-mfa.html",
+"summary": "Root user does not have Multi-Factor Authentication enabled on their cloud account"
+},
+
+
+
+{
 "title": "Introduction",
 "tags": "",
 "keywords": "",
