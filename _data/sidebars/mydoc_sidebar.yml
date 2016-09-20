@@ -107,9 +107,8 @@ entries:
       output: web
 
     - title: RDS no automatic upgrades
-      url: /mydoc_rds-short-backup-retention-period.html
+      url: /mydoc_rds-no-auto-minor-version-upgrade.html
       output: web
-
 
   - title: Redshift
     output: web
