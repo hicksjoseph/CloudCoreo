@@ -150,6 +150,46 @@ entries:
       url: /mydoc_s3-allusers-write.html
       output: web
 
-    - title: All can change bucket permissions
+    - title: All users can change bucket permissions
       url: /mydoc_s3-allusers-write-acp.html
+      output: web
+
+    - title: All AWS users can read bucket
+      url: /mydoc_s3-authenticatedusers-read.html
+      output: web
+
+    - title: All AWS users can change bucket permissions
+      url: /mydoc_s3-authenticatedusers-write-acp.html
+      output: web
+
+    - title: All AWS users can write to bucket
+      url: /mydoc_s3-authenticatedusers-write.html
+      output: web
+
+    - title: Bucket logging not enabled
+      url: /mydoc_s3-logging-disabled.html
+      output: web
+
+    - title: Bucket policy uses IP addresses
+      url: /mydoc_s3-only-ip-based-policy.html
+      output: web
+
+    - title: Bucket policy world All permissions 
+      url: /mydoc_s3-world-open-policy-all.html
+      output: web
+
+    - title: Bucket policy world can Delete
+      url: /mydoc_s3-world-open-policy-delete.html
+      output: web
+
+    - title: Bucket policy world can Get
+      url: /mydoc_s3-world-open-policy-get.html
+      output: web
+
+    - title: Bucket policy world can List
+      url: /mydoc_s3-world-open-policy-list.html
+      output: web
+
+    - title: Bucket policy world can Put
+      url: /mydoc_mydoc_s3-world-open-policy-put.html
       output: web

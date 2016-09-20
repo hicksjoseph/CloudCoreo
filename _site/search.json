@@ -336,6 +336,106 @@
 
 
 {
+"title": "All AWS users can read the affected bucket",
+"tags": "",
+"keywords": "",
+"url": "mydoc_s3-authenticatedusers-read.html",
+"summary": "Bucket has permissions which let any AWS authenticated user list the bucket contents."
+},
+
+
+
+{
+"title": "All authenticated AWS users can write bucket ACP / ACL",
+"tags": "",
+"keywords": "",
+"url": "mydoc_s3-authenticatedusers-write-acp.html",
+"summary": "Bucket has permissions which let any AWS authenticated user modify the permissions."
+},
+
+
+
+{
+"title": "All authenticated AWS users can write to the affected bucket",
+"tags": "",
+"keywords": "",
+"url": "mydoc_s3-authenticatedusers-write.html",
+"summary": "Bucket has permissions which lets any AWS users write to the bucket."
+},
+
+
+
+{
+"title": "S3 bucket logging not enabled",
+"tags": "",
+"keywords": "",
+"url": "mydoc_s3-logging-disabled.html",
+"summary": "S3 bucket logging has not been enabled for the affected resource."
+},
+
+
+
+{
+"title": "Bucket policy uses IP addresses to grant permission",
+"tags": "",
+"keywords": "",
+"url": "mydoc_s3-only-ip-based-policy.html",
+"summary": "Bucket policy grants permissions to any user at an IP address or range to perform operations on objects in the affected bucket."
+},
+
+
+
+{
+"title": "Bucket policy gives world Get, Put, List, and Delete permission",
+"tags": "",
+"keywords": "",
+"url": "mydoc_s3-world-open-policy-all.html",
+"summary": "Bucket policy allows the world to get, put, list, and delete the affected bucket."
+},
+
+
+
+{
+"title": "Bucket policy gives world delete permission",
+"tags": "",
+"keywords": "",
+"url": "mydoc_s3-world-open-policy-delete.html",
+"summary": "Bucket policy allows the world to delete the affected bucket."
+},
+
+
+
+{
+"title": "Bucket policy gives world Get permission",
+"tags": "",
+"keywords": "",
+"url": "mydoc_s3-world-open-policy-get.html",
+"summary": "Bucket policy allows the world to get the contents of the affected bucket."
+},
+
+
+
+{
+"title": "Bucket policy gives world List permission",
+"tags": "",
+"keywords": "",
+"url": "mydoc_s3-world-open-policy-list.html",
+"summary": "Bucket policy allows the world to list the contents of the affected bucket"
+},
+
+
+
+{
+"title": "Bucket policy gives world Put permission",
+"tags": "",
+"keywords": "",
+"url": "mydoc_mydoc_s3-world-open-policy-put.html",
+"summary": "Bucket policy allows the world to put data into the affected bucket."
+},
+
+
+
+{
 "title": "Scroll layout",
 "tags": "special_layouts",
 "keywords": "json, scrolling, scrollto, jquery plugin",

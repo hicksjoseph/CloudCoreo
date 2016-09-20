@@ -11,7 +11,7 @@ folder: mydoc
 toc: false
 ---
 
-### Detail   
+### Details   
 "An S3 ACL is a sub-resource that’s attached to every S3 bucket and object. It defines which AWS accounts or groups are granted access and the type of access. When you create a bucket or an object, Amazon S3 creates a default ACL that grants the resource owner full control over the resource. Some users have changed the S3 default permissions and granted public access to their buckets via S3 ACLs.  
 
 Although you can grant public access to your bucket using ACLs, you must take the following issues into consideration: Bucket public "Write ACP" access: This is sometimes referred to as "edit permissions" access. It allows anyone to modify the access control permissions on the bucket. These entities can add grants to the ACL, opening your bucket to more public access than you want.  
@@ -29,6 +29,6 @@ Sometimes S3 Bucket Policies are sometimes confused with S3 ACLs, which is a sep
 [https://aws.amazon.com/articles/5050](https://aws.amazon.com/articles/5050)  
 [https://blogs.aws.amazon.com/security/post/TxPOJBY6FE360K/IAM-policies-and-Bucket-Policies-and-ACLs-Oh-My-Controlling-Access-to-S3-Resourc](https://blogs.aws.amazon.com/security/post/TxPOJBY6FE360K/IAM-policies-and-Bucket-Policies-and-ACLs-Oh-My-Controlling-Access-to-S3-Resourc)  
 
-### To learn more about ACLs, see the following topics in Amazon S3 Developer Guide.  
+To learn more about ACLs, see the following topics in Amazon S3 Developer Guide.  
 [Access Control List (ACL) Overview](http://docs.amazonwebservices.com/AmazonS3/latest/dev/ACLOverview.html)  
 [Managing ACLs in the AWS Management Console](http://docs.amazonwebservices.com/AmazonS3/latest/dev/ManageACLsUsingConsole.html)

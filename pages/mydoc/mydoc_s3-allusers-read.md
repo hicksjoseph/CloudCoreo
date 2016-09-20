@@ -26,6 +26,6 @@ Sometimes S3 Bucket Policies are sometimes confused with S3 ACLs, which is a sep
 [https://aws.amazon.com/articles/5050](https://aws.amazon.com/articles/5050)  
 [https://blogs.aws.amazon.com/security/post/TxPOJBY6FE360K/IAM-policies-and-Bucket-Policies-and-ACLs-Oh-My-Controlling-Access-to-S3-Resourc](https://blogs.aws.amazon.com/security/post/TxPOJBY6FE360K/IAM-policies-and-Bucket-Policies-and-ACLs-Oh-My-Controlling-Access-to-S3-Resourc)
 
-### To learn more about ACLs, see the following topics in Amazon S3 Developer Guide.  
+To learn more about ACLs, see the following topics in Amazon S3 Developer Guide.  
 [Access Control List (ACL) Overview](http://docs.amazonwebservices.com/AmazonS3/latest/dev/ACLOverview.html)  
 [Managing ACLs in the AWS Management Console](http://docs.amazonwebservices.com/AmazonS3/latest/dev/ManageACLsUsingConsole.html)

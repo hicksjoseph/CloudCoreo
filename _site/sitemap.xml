@@ -226,6 +226,66 @@
   
   
   <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_s3-authenticatedusers-read.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_s3-authenticatedusers-write-acp.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_s3-authenticatedusers-write.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_s3-logging-disabled.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_s3-only-ip-based-policy.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_s3-world-open-policy-all.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_s3-world-open-policy-delete.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_s3-world-open-policy-get.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_s3-world-open-policy-list.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_mydoc_s3-world-open-policy-put.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://kb.cloudcoreo.com/js/mydoc_scroll.html</loc>
   </url>
   
