@@ -216,6 +216,36 @@
 
 
 {
+"title": "RDS is publicly accessible to the world",
+"tags": "",
+"keywords": "",
+"url": "mydoc_rds-db-publicly-accessible.html",
+"summary": "The affected RDS database is publicly accessible to the world."
+},
+
+
+
+{
+"title": "RDS not set to automatically upgrade",
+"tags": "",
+"keywords": "",
+"url": "mydoc_rds-no-auto-minor-version-upgrade.html",
+"summary": "RDS is not set to automatically upgrade minor versions on your database instance"
+},
+
+
+
+{
+"title": "RDS short backup retention period",
+"tags": "",
+"keywords": "",
+"url": "mydoc_rds-short-backup-retention-period.html",
+"summary": "The affected RDS database has a short backup retention period (less than 30 days)."
+},
+
+
+
+{
 "title": "Scroll layout",
 "tags": "special_layouts",
 "keywords": "json, scrolling, scrollto, jquery plugin",

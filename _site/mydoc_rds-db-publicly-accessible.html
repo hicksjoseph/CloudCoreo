@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="User account is using custom inline policies versus using IAM group managed policies.">
+<meta name="description" content="The affected RDS database is publicly accessible to the world.">
 <meta name="keywords" content=" ">
-<title>Account using inline policies | CloudCoreo Knowledge Base</title>
+<title>RDS is publicly accessible to the world | CloudCoreo Knowledge Base</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Account using inline policies page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the RDS is publicly accessible to the world page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Account using inline policies">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="RDS is publicly accessible to the world">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -333,7 +333,7 @@
             
             
             
-            <li class="active"><a href="mydoc_iam-user-attached-policies.html">Account using inline policies</a></li>
+            <li><a href="mydoc_iam-user-attached-policies.html">Account using inline policies</a></li>
             
             
             
@@ -348,7 +348,7 @@
             
             
             
-            <li><a href="mydoc_rds-db-publicly-accessible.html">RDS is Publicly Accessible</a></li>
+            <li class="active"><a href="mydoc_rds-db-publicly-accessible.html">RDS is Publicly Accessible</a></li>
             
             
             
@@ -430,7 +430,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Account using inline policies</h1>
+   <h1 class="post-title-main">RDS is publicly accessible to the world</h1>
 </div>
 
 
@@ -438,7 +438,7 @@
 <div class="post-content">
 
    
-    <div class="summary">User account is using custom inline policies versus using IAM group managed policies.</div>
+    <div class="summary">The affected RDS database is publicly accessible to the world.</div>
    
 
     
@@ -447,31 +447,19 @@
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_iam-user-attached-policies.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_rds-db-publicly-accessible.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
   <h3 id="details">Details</h3>
-<p>Different types of policies are for different use cases. In most cases, we recommend that you use managed policies instead of inline policies. Managed policies provide the following features: Reusability, Central change management, Versioning and rolling back, and Delegating permissions management.”
-<a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#choosing-managed-or-inline">http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#choosing-managed-or-inline</a></p>
+<p>DB Instances deployed within a VPC can be accessed from the Internet or from EC2 Instances outside the VPC via VPN or bastion hosts that you can launch in your public subnet, or using Amazon RDS’s Publicly Accessible option. To use public connectivity, simply create your DB Instances with the Publicly Accessible option set to yes. With Publicly Accessible active, your DB Instances within a VPC will be fully accessible outside your VPC. If you do not want your DB Instances accessible from the Internet or outside your VPC, disable the RDS Publicly Accessible option.<br />
+<a href="https://aws.amazon.com/rds/faqs/">https://aws.amazon.com/rds/faqs/</a></p>
 
 <h3 id="suggested-action">Suggested Action</h3>
-<p>Switch all inline policies to IAM Managed Policies then assign policies to identities (users, groups, and roles).</p>
-
-<p><a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html">Creating a new IAMs policy</a></p>
-
-<h3 id="additional-information">Additional information</h3>
-<p>Using IAM, you apply permissions to IAM users, groups, and roles (which are referred to as principal entities) by creating policies. You can create two types of IAM, or identity-based policies:</p>
-
-<p>Managed policies – Standalone policies that you can attach to multiple users, groups, and roles in your AWS account. Managed policies apply only to identities (users, groups, and roles) - not resources. You can use two types of managed policies:
-AWS managed policies – Managed policies that are created and managed by AWS. If you are new to using policies, we recommend that you start by using AWS managed policies.
-Customer managed policies – Managed policies that you create and manage in your AWS account. Using customer managed policies, you have more precise control over your policies than when using AWS managed policies.</p>
-
-<p>Inline policies – Policies that you create and manage, and that are embedded directly into a single user, group, or role. Resource-based policies are another form of inline policy. Resource-based policies are not discussed here. For more information about resource-based policies, see Identity-Based (IAM) Permissions and Resource-Based Permissions.<br />
-<a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html">http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html</a></p>
-
-<p><a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#choosing-managed-or-inline">Choosing Managed or Inline Policies</a></p>
+<p>Consider whether the affected RDS database should be publicly accessible to the world. If not, modify the option which enables your RDS database to become publicly accessible and/or configure Security Groups. “Security groups control the access that traffic has in and out of a DB instance. Three types of security groups are used with Amazon RDS: DB security groups, VPC security groups, and EC2 security groups. In simple terms, a DB security group controls access to a DB instance that is not in a VPC, a VPC security group controls access to a DB instance (or other AWS instances) inside a VPC, and an EC2 security group controls access to an EC2 instance.<br />
+<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSSecurityGroups.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSSecurityGroups.html
+</a></p>
 
 
     <div class="tags">

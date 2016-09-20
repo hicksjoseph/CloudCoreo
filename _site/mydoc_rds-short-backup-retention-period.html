@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="User account is using custom inline policies versus using IAM group managed policies.">
+<meta name="description" content="The affected RDS database has a short backup retention period (less than 30 days).">
 <meta name="keywords" content=" ">
-<title>Account using inline policies | CloudCoreo Knowledge Base</title>
+<title>RDS short backup retention period | CloudCoreo Knowledge Base</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Account using inline policies page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the RDS short backup retention period page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Account using inline policies">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="RDS short backup retention period">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -333,7 +333,7 @@
             
             
             
-            <li class="active"><a href="mydoc_iam-user-attached-policies.html">Account using inline policies</a></li>
+            <li><a href="mydoc_iam-user-attached-policies.html">Account using inline policies</a></li>
             
             
             
@@ -355,14 +355,14 @@
             
             
             
-            <li><a href="mydoc_rds-short-backup-retention-period.html">RDS short backup retention</a></li>
+            <li class="active"><a href="mydoc_rds-short-backup-retention-period.html">RDS short backup retention</a></li>
             
             
             
             
             
             
-            <li><a href="mydoc_rds-short-backup-retention-period.html">RDS no automatic upgrades</a></li>
+            <li class="active"><a href="mydoc_rds-short-backup-retention-period.html">RDS no automatic upgrades</a></li>
             
             
             
@@ -430,7 +430,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Account using inline policies</h1>
+   <h1 class="post-title-main">RDS short backup retention period</h1>
 </div>
 
 
@@ -438,7 +438,7 @@
 <div class="post-content">
 
    
-    <div class="summary">User account is using custom inline policies versus using IAM group managed policies.</div>
+    <div class="summary">The affected RDS database has a short backup retention period (less than 30 days).</div>
    
 
     
@@ -447,31 +447,18 @@
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_iam-user-attached-policies.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_rds-short-backup-retention-period.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
   <h3 id="details">Details</h3>
-<p>Different types of policies are for different use cases. In most cases, we recommend that you use managed policies instead of inline policies. Managed policies provide the following features: Reusability, Central change management, Versioning and rolling back, and Delegating permissions management.”
-<a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#choosing-managed-or-inline">http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#choosing-managed-or-inline</a></p>
+<p>Amazon RDS creates a storage volume snapshot of your DB instance, backing up the entire DB instance and not just individual databases. Automated backups automatically back up your DB instance during a specific, user-definable backup window, and keeps the backups for a limited, user-specified period of time (called the backup retention period); you can later recover your database to any point in time during that retention period. You can set the backup retention period when you create a DB instance.  If you don’t set the backup retention period, Amazon RDS uses a default period retention period of one day. You can modify the backup retention period; valid values are 0 (for no backup retention) to a maximum of 35 days.</p>
 
 <h3 id="suggested-action">Suggested Action</h3>
-<p>Switch all inline policies to IAM Managed Policies then assign policies to identities (users, groups, and roles).</p>
-
-<p><a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html">Creating a new IAMs policy</a></p>
-
-<h3 id="additional-information">Additional information</h3>
-<p>Using IAM, you apply permissions to IAM users, groups, and roles (which are referred to as principal entities) by creating policies. You can create two types of IAM, or identity-based policies:</p>
-
-<p>Managed policies – Standalone policies that you can attach to multiple users, groups, and roles in your AWS account. Managed policies apply only to identities (users, groups, and roles) - not resources. You can use two types of managed policies:
-AWS managed policies – Managed policies that are created and managed by AWS. If you are new to using policies, we recommend that you start by using AWS managed policies.
-Customer managed policies – Managed policies that you create and manage in your AWS account. Using customer managed policies, you have more precise control over your policies than when using AWS managed policies.</p>
-
-<p>Inline policies – Policies that you create and manage, and that are embedded directly into a single user, group, or role. Resource-based policies are another form of inline policy. Resource-based policies are not discussed here. For more information about resource-based policies, see Identity-Based (IAM) Permissions and Resource-Based Permissions.<br />
-<a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html">http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html</a></p>
-
-<p><a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#choosing-managed-or-inline">Choosing Managed or Inline Policies</a></p>
+<p>“Modify the backup retention period to increase it to greater than 30 days.”<br />
+<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.BackingUpAndRestoringAmazonRDSInstances.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.BackingUpAndRestoringAmazonRDSInstances.html</a>
+<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html#USER_WorkingWithAutomatedBackups.Enabling">Working with Automated Backups</a></p>
 
 
     <div class="tags">

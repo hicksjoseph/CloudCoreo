@@ -98,13 +98,18 @@ entries:
     output: web
     folderitems:
 
-    - title: RDS Publicly Accessible
-      url: /
+    - title: RDS is Publicly Accessible
+      url: /mydoc_rds-db-publicly-accessible.html
       output: web
 
-    - title: RDS short backup retention 
-      url: /
+    - title: RDS short backup retention
+      url: /mydoc_rds-short-backup-retention-period.html
       output: web
+
+    - title: RDS no automatic upgrades
+      url: /mydoc_rds-short-backup-retention-period.html
+      output: web
+
 
   - title: Redshift
     output: web
