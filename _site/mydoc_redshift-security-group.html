@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Specific host IP address added to Security Group">
+<meta name="description" content="Redshift default TCP port 5439 is open, potentially to the world.">
 <meta name="keywords" content=" ">
-<title>Host IP added to Security Group | CloudCoreo Knowledge Base</title>
+<title>Redshift default TCP port 5439 is open to the world | CloudCoreo Knowledge Base</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Host IP added to Security Group page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Redshift default TCP port 5439 is open to the world page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Host IP added to Security Group">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Redshift default TCP port 5439 is open to the world">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -212,7 +212,7 @@
             
             
             
-            <li class="active"><a href="mydoc_ec2-ip-address-whitelisted.html">Host IP added to Security Group</a></li>
+            <li><a href="mydoc_ec2-ip-address-whitelisted.html">Host IP added to Security Group</a></li>
             
             
             
@@ -412,7 +412,7 @@
             
             
             
-            <li><a href="mydoc_redshift-security-group.html">Redshift TCP port open</a></li>
+            <li class="active"><a href="mydoc_redshift-security-group.html">Redshift TCP port open</a></li>
             
             
             
@@ -465,7 +465,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Host IP added to Security Group</h1>
+   <h1 class="post-title-main">Redshift default TCP port 5439 is open to the world</h1>
 </div>
 
 
@@ -473,7 +473,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Specific host IP address added to Security Group</div>
+    <div class="summary">Redshift default TCP port 5439 is open, potentially to the world.</div>
    
 
     
@@ -482,20 +482,42 @@
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_ec2-ip-address-whitelisted.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/medic/mydoc_redshift-security-group.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
   <h3 id="detail">Detail</h3>
-<p>Security groups enable you to control traffic to your instance, including the kind of traffic that can reach your instance. For example, you can allow computers from only your home network to access your instance using SSH. If your instance is a web server, you can allow all IP addresses to access your instance via HTTP, so that external users can browse the content on your web server.<br />
-<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html</a></p>
+<p>The Redshift default TCP port 5439 is open, potentially to the world.</p>
 
-<p>Having a host IP address in a Security Group itself is not necessarily a problem, however, it might indicate improper access or temporary access that was never removed. For internal access between instances in an AWS region, it is best practice to add the other Security Group to the target Security Group to grant access for those instances. This alert checks for a /32 host address added to a Security Group (ip-address-whitelisted).</p>
+<p>In order to prevent unauthorized users from gaining privileged access to your virtual server and planting malware or stealing data, you need to make sure that important ports/protocols are only accessible by trusted IP addresses and networks. For example, remote administration ports like 22 (SSH) and 3389 (RDP) should only allow access from your private network or bastion hosts, and not the entire Internet (which is specified in security groups as 0.0.0.0/0).In addition to remote administration ports 22 and 3389, there are several other ports that allow privileged or database access. Make sure you restrict these ports to IPs or subnets you trust, and don’t allow public Internet access (0.0.0.0/0) to them.</p>
+
+<ul>
+  <li>Ports 20, 21, 22, 23 are checked to see if they are open at all (even privately), including being open to the world (0.0.0.0/0).</li>
+  <li>Ports 1433, 1521, 27017, 3306, 3389, 5432, 5439 are checked to see if they are open to the world (0.0.0.0/0).<br />
+<a href="https://aws.amazon.com/articles/1233/">https://aws.amazon.com/articles/1233/</a></li>
+</ul>
 
 <h3 id="suggested-action">Suggested Action</h3>
-<p>Review Security Group to ensure that the host ip address added is to allowed access. Decide who requires access to your instance; for example, a single host or a specific network that you trust. You can check the public IP address of your local computer using a service, (for example: http://checkip.amazonaws.com ).<br />
-<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html</a></p>
+<p>Security Groups can be used to secure ports over TCP, UDP, and ICMP protocols. We recommend that you open only those ports that must be open for your service to operate. Consider deleting or modifying the affected security group.
+<a href="https://aws.amazon.com/articles/1233/">https://aws.amazon.com/articles/1233/</a></p>
+
+<h3 id="additional-information">Additional Information</h3>
+<p>Here is a list of some of the common ports you should consider locking down:<br />
+* 22 (SSH)<br />
+* 23 (Telnet)<br />
+* 20/21 (FTP)<br />
+* 1433 (MS-SQL)<br />
+* 1434 (MS-SQL Monitor)<br />
+* 1521 (Oracle)<br />
+* 3389 (RDP)<br />
+* 3306 (MySQL)<br />
+* 3389 (MS Terminal Server-RDP)<br />
+* 4333 (MSQL)<br />
+* 5432 (Postgres)<br />
+* 5439 (Redshift)<br />
+* 5500 (VNC-RDP)<br />
+* 27017 (MongoDB)</p>
 
 
     <div class="tags">

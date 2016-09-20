@@ -114,22 +114,42 @@ entries:
     output: web
     folderitems:
 
-    - title: SSL not required
-      url: /
+    - title: Cluster data not encrypted
+      url: /mydoc_redshift-encrypted.html
       output: web
 
-    - title: No user activity logging
-      url: /
+    - title: Redshift connections not SSL
+      url: /mydoc_redshift-no-require-ssl.html
+      output: web
+
+    - title: User activity logging disabled
+      url: /mydoc_redshift-no-user-logging.html
+      output: web
+
+    - title: Automatic upgrades not enabled
+      url: /mydoc_redshift-no-version-upgrade.html
+      output: web
+
+    - title: Cluster is publicly accessible
+      url: /mydoc_redshift-publicly-accessible.html
+      output: web
+
+    - title: Redshift TCP port open
+      url: /mydoc_redshift-security-group.html
       output: web
 
   - title: S3
     output: web, pdf
     folderitems:
 
-    - title: World open policy all
-      url: /
+    - title: All users can list bucket
+      url: /mydoc_s3-allusers-read.html
       output: web
 
-    - title: Logging disabled
-      url: /
+    - title: All users can write to bucket
+      url: /mydoc_s3-allusers-write.html
+      output: web
+
+    - title: All can change bucket permissions
+      url: /mydoc_s3-allusers-write-acp.html
       output: web

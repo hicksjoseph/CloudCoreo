@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Specific host IP address added to Security Group">
+<meta name="description" content="Redshift cluster data in the affected cluster is not encrypted at rest.">
 <meta name="keywords" content=" ">
-<title>Host IP added to Security Group | CloudCoreo Knowledge Base</title>
+<title>Redshift cluster data is not encrypted at rest | CloudCoreo Knowledge Base</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Host IP added to Security Group page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Redshift cluster data is not encrypted at rest page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Host IP added to Security Group">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Redshift cluster data is not encrypted at rest">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -212,7 +212,7 @@
             
             
             
-            <li class="active"><a href="mydoc_ec2-ip-address-whitelisted.html">Host IP added to Security Group</a></li>
+            <li><a href="mydoc_ec2-ip-address-whitelisted.html">Host IP added to Security Group</a></li>
             
             
             
@@ -377,7 +377,7 @@
             
             
             
-            <li><a href="mydoc_redshift-encrypted.html">Cluster data not encrypted</a></li>
+            <li class="active"><a href="mydoc_redshift-encrypted.html">Cluster data not encrypted</a></li>
             
             
             
@@ -465,7 +465,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Host IP added to Security Group</h1>
+   <h1 class="post-title-main">Redshift cluster data is not encrypted at rest</h1>
 </div>
 
 
@@ -473,7 +473,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Specific host IP address added to Security Group</div>
+    <div class="summary">Redshift cluster data in the affected cluster is not encrypted at rest.</div>
    
 
     
@@ -482,20 +482,19 @@
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_ec2-ip-address-whitelisted.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_redshift-encrypted.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
-  <h3 id="detail">Detail</h3>
-<p>Security groups enable you to control traffic to your instance, including the kind of traffic that can reach your instance. For example, you can allow computers from only your home network to access your instance using SSH. If your instance is a web server, you can allow all IP addresses to access your instance via HTTP, so that external users can browse the content on your web server.<br />
-<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html</a></p>
-
-<p>Having a host IP address in a Security Group itself is not necessarily a problem, however, it might indicate improper access or temporary access that was never removed. For internal access between instances in an AWS region, it is best practice to add the other Security Group to the target Security Group to grant access for those instances. This alert checks for a /32 host address added to a Security Group (ip-address-whitelisted).</p>
+  <h3 id="details">Details</h3>
+<p>In Amazon Redshift, you can enable database encryption for your clusters to help protect data at rest. When you enable encryption for a cluster, the data blocks and system metadata are encrypted for the cluster and its snapshots. Redshift cluster data in the affected cluster is not encrypted at rest.</p>
 
 <h3 id="suggested-action">Suggested Action</h3>
-<p>Review Security Group to ensure that the host ip address added is to allowed access. Decide who requires access to your instance; for example, a single host or a specific network that you trust. You can check the public IP address of your local computer using a service, (for example: http://checkip.amazonaws.com ).<br />
-<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html</a></p>
+<p>Encryption is an optional, immutable setting of a cluster. To encrypt the data in all your user-created tables, you can enable cluster encryption when you launch the cluster. If you want to go from an encrypted cluster to an unencrypted cluster or the other way around, you must unload your data from the existing cluster and reload it in a new cluster with the chosen encryption setting.</p>
+
+<p>Though encryption is an optional setting in Amazon Redshift, we recommend enabling it for clusters that contain sensitive data. Additionally, you might be required to use encryption depending on the guidelines or regulations that govern your data. For example, the Payment Card Industry Data Security Standard (PCI DSS), the Sarbanes-Oxley Act (SOX), the Health Insurance Portability and Accountability Act (HIPAA), and other such regulations provide guidelines for handling specific types of data.<br />
+<a href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html">http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html</a></p>
 
 
     <div class="tags">

@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Specific host IP address added to Security Group">
+<meta name="description" content="Bucket has permissions (ACL) which let anyone list the bucket contents.">
 <meta name="keywords" content=" ">
-<title>Host IP added to Security Group | CloudCoreo Knowledge Base</title>
+<title>All users can list the affected bucket | CloudCoreo Knowledge Base</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Host IP added to Security Group page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the All users can list the affected bucket page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Host IP added to Security Group">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="All users can list the affected bucket">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -212,7 +212,7 @@
             
             
             
-            <li class="active"><a href="mydoc_ec2-ip-address-whitelisted.html">Host IP added to Security Group</a></li>
+            <li><a href="mydoc_ec2-ip-address-whitelisted.html">Host IP added to Security Group</a></li>
             
             
             
@@ -427,7 +427,7 @@
             
             
             
-            <li><a href="mydoc_s3-allusers-read.html">All users can list bucket</a></li>
+            <li class="active"><a href="mydoc_s3-allusers-read.html">All users can list bucket</a></li>
             
             
             
@@ -465,7 +465,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Host IP added to Security Group</h1>
+   <h1 class="post-title-main">All users can list the affected bucket</h1>
 </div>
 
 
@@ -473,7 +473,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Specific host IP address added to Security Group</div>
+    <div class="summary">Bucket has permissions (ACL) which let anyone list the bucket contents.</div>
    
 
     
@@ -482,20 +482,29 @@
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_ec2-ip-address-whitelisted.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_s3-allusers-read.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
-  <h3 id="detail">Detail</h3>
-<p>Security groups enable you to control traffic to your instance, including the kind of traffic that can reach your instance. For example, you can allow computers from only your home network to access your instance using SSH. If your instance is a web server, you can allow all IP addresses to access your instance via HTTP, so that external users can browse the content on your web server.<br />
-<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html</a></p>
+  <h3 id="details">Details</h3>
+<p>An S3 ACL is a sub-resource that’s attached to every S3 bucket and object. It defines which AWS accounts or groups are granted access and the type of access. When you create a bucket or an object, Amazon S3 creates a default ACL that grants the resource owner full control over the resource. Some users have changed the S3 default permissions and granted public access to their buckets via S3 ACLs.</p>
 
-<p>Having a host IP address in a Security Group itself is not necessarily a problem, however, it might indicate improper access or temporary access that was never removed. For internal access between instances in an AWS region, it is best practice to add the other Security Group to the target Security Group to grant access for those instances. This alert checks for a /32 host address added to a Security Group (ip-address-whitelisted).</p>
+<p>Although you can grant public access to your bucket using ACLs, you must take the following issues into consideration: Bucket public “READ” access: This is sometimes referred to as “list” access. It allows anyone to get a complete list of your bucket content. It does not grant permissions to read content of an object. However, a list of object names can often provide more information than necessary to the public. You can use ACLs to grant permissions to individual AWS accounts; however, it is strongly recommended that you do not grant public access to your bucket using an ACL.”
+<a href="https://aws.amazon.com/articles/5050">https://aws.amazon.com/articles/5050</a><br />
+<a href="https://blogs.aws.amazon.com/security/post/TxPOJBY6FE360K/IAM-policies-and-Bucket-Policies-and-ACLs-Oh-My-Controlling-Access-to-S3-Resourc">https://blogs.aws.amazon.com/security/post/TxPOJBY6FE360K/IAM-policies-and-Bucket-Policies-and-ACLs-Oh-My-Controlling-Access-to-S3-Resourc</a></p>
 
 <h3 id="suggested-action">Suggested Action</h3>
-<p>Review Security Group to ensure that the host ip address added is to allowed access. Decide who requires access to your instance; for example, a single host or a specific network that you trust. You can check the public IP address of your local computer using a service, (for example: http://checkip.amazonaws.com ).<br />
-<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html</a></p>
+<p>Remove the bucket permission that enables everyone to list the contents of this bucket. Use the following steps to remove any public access that you have granted to your bucket via an Access Control List (ACL): <a href="https://aws.amazon.com/articles/5050">https://aws.amazon.com/articles/5050</a> .</p>
+
+<h3 id="additional-information">Additional Information</h3>
+<p>Sometimes S3 Bucket Policies are sometimes confused with S3 ACLs, which is a separate S3 feature. S3 bucket policies are a type of access control list but are different than S3 ACLs. S3 bucket policies specify what actions are allowed or denied for which principals on the bucket that the bucket policy is attached to. You attach S3 bucket policies at the bucket level, but the permissions specified in the bucket policy apply to all the objects in the bucket. As a general rule, we recommend using S3 bucket policies or IAM policies for access control. S3 ACLs is a legacy access control mechanism that predates IAM. However, if you already use S3 ACLs and you find them sufficient, there is no need to change.
+<a href="https://aws.amazon.com/articles/5050">https://aws.amazon.com/articles/5050</a><br />
+<a href="https://blogs.aws.amazon.com/security/post/TxPOJBY6FE360K/IAM-policies-and-Bucket-Policies-and-ACLs-Oh-My-Controlling-Access-to-S3-Resourc">https://blogs.aws.amazon.com/security/post/TxPOJBY6FE360K/IAM-policies-and-Bucket-Policies-and-ACLs-Oh-My-Controlling-Access-to-S3-Resourc</a></p>
+
+<h3 id="to-learn-more-about-acls-see-the-following-topics-in-amazon-s3-developer-guide">To learn more about ACLs, see the following topics in Amazon S3 Developer Guide.</h3>
+<p><a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/ACLOverview.html">Access Control List (ACL) Overview</a><br />
+<a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/ManageACLsUsingConsole.html">Managing ACLs in the AWS Management Console</a></p>
 
 
     <div class="tags">

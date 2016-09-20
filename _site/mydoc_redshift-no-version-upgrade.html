@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Specific host IP address added to Security Group">
+<meta name="description" content="Redshift automatic major version upgrades not enabled.">
 <meta name="keywords" content=" ">
-<title>Host IP added to Security Group | CloudCoreo Knowledge Base</title>
+<title>Redshift automatic major version upgrades not enabled. | CloudCoreo Knowledge Base</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Host IP added to Security Group page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Redshift automatic major version upgrades not enabled. page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Host IP added to Security Group">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Redshift automatic major version upgrades not enabled.">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -212,7 +212,7 @@
             
             
             
-            <li class="active"><a href="mydoc_ec2-ip-address-whitelisted.html">Host IP added to Security Group</a></li>
+            <li><a href="mydoc_ec2-ip-address-whitelisted.html">Host IP added to Security Group</a></li>
             
             
             
@@ -398,7 +398,7 @@
             
             
             
-            <li><a href="mydoc_redshift-no-version-upgrade.html">Automatic upgrades not enabled</a></li>
+            <li class="active"><a href="mydoc_redshift-no-version-upgrade.html">Automatic upgrades not enabled</a></li>
             
             
             
@@ -465,7 +465,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Host IP added to Security Group</h1>
+   <h1 class="post-title-main">Redshift automatic major version upgrades not enabled.</h1>
 </div>
 
 
@@ -473,7 +473,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Specific host IP address added to Security Group</div>
+    <div class="summary">Redshift automatic major version upgrades not enabled.</div>
    
 
     
@@ -482,20 +482,17 @@
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_ec2-ip-address-whitelisted.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_redshift-no-version-upgrade.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
-  <h3 id="detail">Detail</h3>
-<p>Security groups enable you to control traffic to your instance, including the kind of traffic that can reach your instance. For example, you can allow computers from only your home network to access your instance using SSH. If your instance is a web server, you can allow all IP addresses to access your instance via HTTP, so that external users can browse the content on your web server.<br />
-<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html</a></p>
-
-<p>Having a host IP address in a Security Group itself is not necessarily a problem, however, it might indicate improper access or temporary access that was never removed. For internal access between instances in an AWS region, it is best practice to add the other Security Group to the target Security Group to grant access for those instances. This alert checks for a /32 host address added to a Security Group (ip-address-whitelisted).</p>
+  <h3 id="details">Details</h3>
+<p>Amazon Redshift provides a setting, Allow Version Upgrade, to specify whether to automatically upgrade the Amazon Redshift engine in your cluster if a new version of the engine becomes available. This setting does not affect the database version upgrades, which are applied during the maintenance window that you specify for your cluster. Amazon Redshift engine upgrades are major version upgrades, and Amazon Redshift database upgrades are minor version upgrades. You can disable automatic version upgrades for major versions only.</p>
 
 <h3 id="suggested-action">Suggested Action</h3>
-<p>Review Security Group to ensure that the host ip address added is to allowed access. Decide who requires access to your instance; for example, a single host or a specific network that you trust. You can check the public IP address of your local computer using a service, (for example: http://checkip.amazonaws.com ).<br />
-<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html</a></p>
+<p>Enable major version upgrades by setting Allow Version Upgrade to true. This will allow major version upgrades to be applied automatically to the cluster during the maintenance window.<br />
+<a href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html</a></p>
 
 
     <div class="tags">

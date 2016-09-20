@@ -246,6 +246,96 @@
 
 
 {
+"title": "Redshift cluster data is not encrypted at rest",
+"tags": "",
+"keywords": "",
+"url": "mydoc_redshift-encrypted.html",
+"summary": "Redshift cluster data in the affected cluster is not encrypted at rest."
+},
+
+
+
+{
+"title": "Redshift connections not SSL",
+"tags": "",
+"keywords": "",
+"url": "mydoc_redshift-no-require-ssl.html",
+"summary": "Connections to Redshift aren't set to require the use of SSL encryption."
+},
+
+
+
+{
+"title": "Redshift user activity logging disabled",
+"tags": "",
+"keywords": "",
+"url": "mydoc_redshift-no-user-logging.html",
+"summary": "Redshift user activity logging is disabled."
+},
+
+
+
+{
+"title": "Redshift automatic major version upgrades not enabled.",
+"tags": "",
+"keywords": "",
+"url": "mydoc_redshift-no-version-upgrade.html",
+"summary": "Redshift automatic major version upgrades not enabled."
+},
+
+
+
+{
+"title": "Redshift cluster is publicly accessible",
+"tags": "",
+"keywords": "",
+"url": "mydoc_redshift-publicly-accessible.html",
+"summary": "The affected Redshift cluster is publicly accessible to the world."
+},
+
+
+
+{
+"title": "Redshift default TCP port 5439 is open to the world",
+"tags": "",
+"keywords": "",
+"url": "mydoc_redshift-security-group.html",
+"summary": "Redshift default TCP port 5439 is open, potentially to the world."
+},
+
+
+
+{
+"title": "All users can list the affected bucket",
+"tags": "",
+"keywords": "",
+"url": "mydoc_s3-allusers-read.html",
+"summary": "Bucket has permissions (ACL) which let anyone list the bucket contents."
+},
+
+
+
+{
+"title": "All users can write the bucket ACP / ACL",
+"tags": "",
+"keywords": "",
+"url": "mydoc_s3-allusers-write-acp.html",
+"summary": "Bucket has permissions (ACP / ACL) which let all users modify the permissions"
+},
+
+
+
+{
+"title": "All users can write to the affected bucket",
+"tags": "",
+"keywords": "",
+"url": "mydoc_s3-allusers-write.html",
+"summary": "Bucket has permissions (ACL) which let all users write to the bucket."
+},
+
+
+
+{
 "title": "Scroll layout",
 "tags": "special_layouts",
 "keywords": "json, scrolling, scrollto, jquery plugin",

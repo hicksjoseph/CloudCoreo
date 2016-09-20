@@ -172,6 +172,60 @@
   
   
   <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_redshift-encrypted.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_redshift-no-require-ssl.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_redshift-no-user-logging.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_redshift-no-version-upgrade.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_redshift-publicly-accessible.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_redshift-security-group.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_s3-allusers-read.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_s3-allusers-write-acp.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_s3-allusers-write.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://kb.cloudcoreo.com/js/mydoc_scroll.html</loc>
   </url>
   
