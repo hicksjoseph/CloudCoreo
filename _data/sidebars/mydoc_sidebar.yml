@@ -82,6 +82,18 @@ entries:
       url: /mydoc_iam-passwordreuseprevention.html
       output: web
 
+    - title: Active root Access Key
+      url: /mydoc_iam-root-active-key.html
+      output: web
+
+    - title: Unused or empty IAM group
+      url: /mydoc_iam-unusediamgroup.html
+      output: web
+
+    - title: Account using inline policies
+      url: /mydoc_iam-user-attached-policies.html
+      output: web
+
   - title: RDS
     output: web
     folderitems:

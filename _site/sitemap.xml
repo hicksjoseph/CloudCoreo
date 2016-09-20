@@ -118,6 +118,12 @@
   
   
   <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_iam-root-active-key.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://kb.cloudcoreo.com/mydoc_iam-root-active-password.html</loc>
   </url>
   
@@ -125,6 +131,18 @@
   
   <url>
     <loc>http://kb.cloudcoreo.com/mydoc_iam-root-no-mfa.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_iam-unusediamgroup.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_iam-user-attached-policies.html</loc>
   </url>
   
   

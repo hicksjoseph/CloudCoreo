@@ -11,7 +11,7 @@ folder: mydoc
 toc: false
 ---
 
-### Description  
+### Details  
 You should set a password policy on your AWS account to specify complexity requirements and mandatory rotation periods for your IAM users' passwords. You can use a password policy to do these things:  
 * Set a minimum password length.  
 * Require specific character types, including uppercase letters, lowercase letters, numbers, and non-alphanumeric characters.  

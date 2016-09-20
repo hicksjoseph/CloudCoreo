@@ -156,6 +156,16 @@
 
 
 {
+"title": "Active root Access Key",
+"tags": "",
+"keywords": "",
+"url": "mydoc_iam-root-active-key.html",
+"summary": "Root user has an Access Key that is active"
+},
+
+
+
+{
 "title": "Root user has active password",
 "tags": "",
 "keywords": "",
@@ -171,6 +181,26 @@
 "keywords": "",
 "url": "mydoc_iam-root-no-mfa.html",
 "summary": "Root user does not have Multi-Factor Authentication enabled on their cloud account"
+},
+
+
+
+{
+"title": "Unused or empty IAM group",
+"tags": "",
+"keywords": "",
+"url": "mydoc_iam-unusediamgroup.html",
+"summary": "There is an IAM group defined without any users in it and therefore unused."
+},
+
+
+
+{
+"title": "Account using inline policies",
+"tags": "",
+"keywords": "",
+"url": "mydoc_iam-user-attached-policies.html",
+"summary": "User account is using custom inline policies versus using IAM group managed policies."
 },
 
 

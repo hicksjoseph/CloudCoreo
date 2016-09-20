@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
+<meta name="description" content="There is an IAM group defined without any users in it and therefore unused.">
 <meta name="keywords" content=" ">
-<title>Navigation pages | CloudCoreo Knowledge Base</title>
+<title>Unused or empty IAM group | CloudCoreo Knowledge Base</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -136,7 +136,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Navigation pages page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Unused or empty IAM group page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -152,7 +152,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Navigation pages">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Unused or empty IAM group">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -332,7 +332,7 @@
             
             
             
-            <li><a href="mydoc_iam-unusediamgroup.html">Unused or empty IAM group</a></li>
+            <li class="active"><a href="mydoc_iam-unusediamgroup.html">Unused or empty IAM group</a></li>
             
             
             
@@ -429,7 +429,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Navigation pages</h1>
+   <h1 class="post-title-main">Unused or empty IAM group</h1>
 </div>
 
 
@@ -437,29 +437,8 @@
 <div class="post-content">
 
    
-
-    
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
+    <div class="summary">There is an IAM group defined without any users in it and therefore unused.</div>
+   
 
     
 
@@ -467,143 +446,18 @@ $('#toc').on('click', 'a', function() {
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/tags/tag_navigation.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_iam-unusediamgroup.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
-  <p>The following pages and posts are tagged with <button type="button" style="cursor: default" class="btn btn-default navbar-btn">navigation</button></p>
-<table><thead><tr><th>Title</th><th>Type</th><th>Excerpt</th></tr></thead>
-    <tbody>
-    
-  
-    
-   
-    
-   
-    
-   
-    
-   
-    
-        
-     
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-        
-     
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
+  <h3 id="details">Details</h3>
+<p>When users leave your organization or services are no longer used, it is important to find the credentials that they were using and ensure that they are no longer operational. Ideally, you delete credentials if they are no longer needed. You can always recreate them at a later date if the need arises. At the very least you should change the credentials so that the former users no longer have access. IAM groups that are defined without any users are unused groups. Of course, the definition of “unused” can vary and usually means a credential that has not been used within a specified period of time. Unused groups can not only add complexity to your environment, they may create a security vulnerability by making it difficult to see if unauthorized privilege has been granted.<br />
+<a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_finding-unused.html">http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_finding-unused.html</a></p>
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-   </tbody>
-</table>
-
-<p>[]:</p>
-
-<p>[]:</p>
-
-<p>[]:</p>
-
-<p>[]:</p>
-
-<p>[]:</p>
-
-<p>[]:</p>
-
+<h3 id="suggested-action">Suggested Action</h3>
+<p>Ensure that groups defined within IAM have active users in them. If the groups don’t have active users or are not being used, delete the unused IAM group. Remove IAM user credentials (that is, passwords, access keys, and groups) that are not needed. For example, an IAM user that is used for an application does not need a password (passwords are necessary only to sign in to AWS websites). Similarly, if a user does not and will never use access keys, there’s no reason for the user to have them. Also, passwords and access keys that have not been used recently might be good candidates for removal.<br />
+<a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#remove-credentials">http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#remove-credentials</a></p>
 
 
     <div class="tags">
@@ -620,7 +474,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2016 CloudCoreo. All rights reserved. <br />
- Site last generated: Sep 19, 2016 <br />
+<span>Page last updated:</span> September 17, 2016<br/> Site last generated: Sep 19, 2016 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>

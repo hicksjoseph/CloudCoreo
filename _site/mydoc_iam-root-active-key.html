@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
+<meta name="description" content="Root user has an Access Key that is active">
 <meta name="keywords" content=" ">
-<title>Navigation pages | CloudCoreo Knowledge Base</title>
+<title>Active root Access Key | CloudCoreo Knowledge Base</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -136,7 +136,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Navigation pages page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Active root Access Key page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -152,7 +152,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Navigation pages">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Active root Access Key">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -325,7 +325,7 @@
             
             
             
-            <li><a href="mydoc_iam-root-active-key.html">Active root Access Key</a></li>
+            <li class="active"><a href="mydoc_iam-root-active-key.html">Active root Access Key</a></li>
             
             
             
@@ -429,7 +429,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Navigation pages</h1>
+   <h1 class="post-title-main">Active root Access Key</h1>
 </div>
 
 
@@ -437,29 +437,8 @@
 <div class="post-content">
 
    
-
-    
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
+    <div class="summary">Root user has an Access Key that is active</div>
+   
 
     
 
@@ -467,143 +446,21 @@ $('#toc').on('click', 'a', function() {
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/tags/tag_navigation.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_iam-root-active-key.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
-  <p>The following pages and posts are tagged with <button type="button" style="cursor: default" class="btn btn-default navbar-btn">navigation</button></p>
-<table><thead><tr><th>Title</th><th>Type</th><th>Excerpt</th></tr></thead>
-    <tbody>
-    
-  
-    
-   
-    
-   
-    
-   
-    
-   
-    
-        
-     
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-        
-     
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
+  <h3 id="details">Details</h3>
+<p>One of the best ways to protect your account is to not have an access key for your root account. Unless you must have a root access key (which is very rare), it is best not to generate one. Instead, the recommended best practice is to create one or more AWS Identity and Access Management (IAM) users, give them the necessary permissions, and use IAM users for everyday interaction with AWS.</p>
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+<p>An access key is required in order to sign requests that you make using the AWS Command Line Tools, the AWS SDKs, or direct API calls. Anyone who has the access key for your root account has unrestricted access to all the resources in your account, including billing information. You cannot restrict the permissions for your root account.<br />
+<a href="http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html#root-password">http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html#root-password</a></p>
 
-   </tbody>
-</table>
-
-<p>[]:</p>
-
-<p>[]:</p>
-
-<p>[]:</p>
-
-<p>[]:</p>
-
-<p>[]:</p>
-
-<p>[]:</p>
-
+<h3 id="suggested-action">Suggested Action</h3>
+<p>If you already have an access key for your account, we recommend that you find places in your applications where you are currently using that key (if any), replace the root access key with an IAM user access key, and then disable and remove the root access key.
+<a href="http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html#root-password">http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html#root-password</a><br />
+<a href="http://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html">http://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html</a></p>
 
 
     <div class="tags">
@@ -620,7 +477,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2016 CloudCoreo. All rights reserved. <br />
- Site last generated: Sep 19, 2016 <br />
+<span>Page last updated:</span> September 17, 2016<br/> Site last generated: Sep 19, 2016 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>
