@@ -64,6 +64,12 @@
   
   
   <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_ec2-tcpportopen.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://kb.cloudcoreo.com/mydoc_ec2-unrestricted-traffic.html</loc>
   </url>
   
@@ -280,19 +286,13 @@
   
   
   <url>
-    <loc>http://kb.cloudcoreo.com/mydoc_mydoc_s3-world-open-policy-put.html</loc>
+    <loc>http://kb.cloudcoreo.com/mydoc_s3-world-open-policy-put.html</loc>
   </url>
   
   
   
   <url>
     <loc>http://kb.cloudcoreo.com/js/mydoc_scroll.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://kb.cloudcoreo.com/mydoc_tcpportopen.html</loc>
   </url>
   
   

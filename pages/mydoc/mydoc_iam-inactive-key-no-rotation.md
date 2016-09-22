@@ -1,5 +1,5 @@
 ---
-title: Inactive access key not rotated
+title: Inactive user Access Key not rotated
 tags:
 keywords: ""
 last_updated: "September 17, 2016"

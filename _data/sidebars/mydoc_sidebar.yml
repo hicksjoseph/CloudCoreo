@@ -46,7 +46,7 @@ entries:
     output: web
     folderitems:
 
-    - title: Active user key not rotated
+    - title: Active user Access Key not rotated
       url: /mydoc_iam-active-key-no-rotation.html
       output: web
 
@@ -54,7 +54,7 @@ entries:
       url: /mydoc_iam-expirepasswords.html
       output: web
 
-    - title: Inactive access key not rotated
+    - title: Inactive user Access Key not rotated
       url: /mydoc_iam-inactive-key-no-rotation.html
       output: web
 

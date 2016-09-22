@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bucket policy allows the world to put data into the affected bucket.">
-<meta name="keywords" content=" ">
-<title>Bucket policy gives world Put permission | CloudCoreo Knowledge Base</title>
+<meta name="description" content="Important TCP port is open, potentially to the world.">
+<meta name="keywords" content=" TCP port open Security Groups">
+<title>TCP port is open | CloudCoreo Knowledge Base</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Bucket policy gives world Put permission page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the TCP port is open page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Bucket policy gives world Put permission">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="TCP port is open">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -205,7 +205,7 @@
             
             
             
-            <li><a href="mydoc_tcpportopen.html">TCP port open</a></li>
+            <li class="active"><a href="mydoc_ec2-tcpportopen.html">TCP port open</a></li>
             
             
             
@@ -256,7 +256,7 @@
             
             
             
-            <li><a href="mydoc_iam-active-key-no-rotation.html">Active user key not rotated</a></li>
+            <li><a href="mydoc_iam-active-key-no-rotation.html">Active user Access Key not rotated</a></li>
             
             
             
@@ -270,7 +270,7 @@
             
             
             
-            <li><a href="mydoc_iam-inactive-key-no-rotation.html">Inactive access key not rotated</a></li>
+            <li><a href="mydoc_iam-inactive-key-no-rotation.html">Inactive user Access Key not rotated</a></li>
             
             
             
@@ -511,7 +511,7 @@
             
             
             
-            <li class="active"><a href="mydoc_mydoc_s3-world-open-policy-put.html">Bucket policy world can Put</a></li>
+            <li><a href="mydoc_s3-world-open-policy-put.html">Bucket policy world can Put</a></li>
             
             
             
@@ -535,7 +535,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Bucket policy gives world Put permission</h1>
+   <h1 class="post-title-main">TCP port is open</h1>
 </div>
 
 
@@ -543,7 +543,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Bucket policy allows the world to put data into the affected bucket.</div>
+    <div class="summary">Important TCP port is open, potentially to the world.</div>
    
 
     
@@ -552,27 +552,24 @@
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_mydoc_s3-world-open-policy-put.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages/mydoc/mydoc_ec2-tcpportopen.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
   <h3 id="details">Details</h3>
-<p>The bucket policy allows the world to put data into the affected bucket. S3 bucket policies are a type of access control list but are different than S3 ACLs. S3 bucket policies specify what actions are allowed or denied for which principals on the bucket that the bucket policy is attached to. You attach S3 bucket policies at the bucket level, but the permissions specified in the bucket policy apply to all the objects in the bucket.</p>
+<p>In order to prevent [unauthorized users] from gaining privileged access to your virtual server and planting malware or stealing data, you need to make sure that important ports/protocols are only accessible by trusted IP addresses and networks. For example, remote administration ports like 22 (SSH) and 3389 (RDP) should only allow access from your private network or bastion hosts, and not the entire Internet (which is specified in security groups as 0.0.0.0/0).In addition to remote administration ports 22 and 3389, there are several other ports that allow privileged or database access. Make sure you restrict these ports to IPs or subnets you trust, and don’t allow public Internet access (0.0.0.0/0) to them.</p>
 
-<p>An S3 Bucket Policy has been added that grants public access to your bucket.  Put access has been granted to the world on the affected bucket. This allows anyone to put (and overwrite) data in your bucket. You can use bucket policies to grant permissions to individual AWS accounts; however, it is strongly recommended that you do not grant public access to your bucket unless you are absolutely certain. Consider alternative methods to provide public access to your buckets.<br />
-<a href="https://aws.amazon.com/articles/5050">https://aws.amazon.com/articles/5050</a><br />
-<a href="https://blogs.aws.amazon.com/security/post/TxPOJBY6FE360K/IAM-policies-and-Bucket-Policies-and-ACLs-Oh-My-Controlling-Access-to-S3-Resourc">https://blogs.aws.amazon.com/security/post/TxPOJBY6FE360K/IAM-policies-and-Bucket-Policies-and-ACLs-Oh-My-Controlling-Access-to-S3-Resourc</a></p>
+<p>Here is a list of [some of the] common ports you should consider locking down: 20/21 - FTP, 22 - SSH, 23 - Telnet, 1433 - MSSQL Server, 1434 - MSSQL Monitor, 1521 - Oracle database, 3389 - RDP, 3306 - MySQL, 3389 - Microsoft Terminal Server (RDP), 4333 - MSQL, 5432 - PostgreSQL, 5500 - VNC RDP, 27017 - MongoDB.<br />
+<a href="https://aws.amazon.com/articles/1233/">https://aws.amazon.com/articles/1233/</a></p>
+
+<p>Ports 20, 21, 22, 23 are checked to see if they are open at all (even privately), including being open to the world (0.0.0.0/0).
+Ports 1433, 1521, 27017, 3306, 3389, 5432 are checked to see if they are open to the world (0.0.0.0/0).</p>
 
 <h3 id="suggested-action">Suggested Action</h3>
-<p>Remove the bucket permission that enables the world to put (and overwrite) data in this bucket. See <a href="https://aws.amazon.com/articles/5050">Updating ACL to Remove Public Access to Your Buckets</a></p>
+<p>Security Groups can be used to secure ports over TCP, UDP, and ICMP protocols. We recommend that you open only those ports that must be open for your service to operate.” Consider deleting or modifying the affected security group.<br />
+<a href="https://aws.amazon.com/articles/1233/">https://aws.amazon.com/articles/1233/</a></p>
 
-<h3 id="additional-information">Additional Information</h3>
-<p>See <a href="https://aws.amazon.com/articles/5050">Alternatives to Public Access</a> for more information.</p>
-
-<p>To learn more about ACLs, see the following topics in Amazon S3 Developer Guide.<br />
-<a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/ACLOverview.html">Access Control List (ACL) Overview</a><br />
-<a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/ManageACLsUsingConsole.html">Managing ACLs in the AWS Management Console</a></p>
 
 
     <div class="tags">
@@ -589,7 +586,7 @@
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2016 CloudCoreo. All rights reserved. <br />
-<span>Page last updated:</span> September 17, 2016<br/> Site last generated: Sep 20, 2016 <br />
+<span>Page last updated:</span> September 17, 2016<br/> Site last generated: Sep 22, 2016 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>

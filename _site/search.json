@@ -66,6 +66,16 @@
 
 
 {
+"title": "TCP port is open",
+"tags": "",
+"keywords": "TCP port open Security Groups",
+"url": "mydoc_ec2-tcpportopen.html",
+"summary": "Important TCP port is open, potentially to the world."
+},
+
+
+
+{
 "title": "Security group unrestricted traffic",
 "tags": "",
 "keywords": "",
@@ -86,7 +96,7 @@
 
 
 {
-"title": "Active user key not rotated",
+"title": "Active user Access Key not rotated",
 "tags": "",
 "keywords": "",
 "url": "mydoc_iam-active-key-no-rotation.html",
@@ -106,7 +116,7 @@
 
 
 {
-"title": "Inactive access key not rotated",
+"title": "Inactive user Access Key not rotated",
 "tags": "",
 "keywords": "",
 "url": "mydoc_iam-inactive-key-no-rotation.html",
@@ -429,7 +439,7 @@
 "title": "Bucket policy gives world Put permission",
 "tags": "",
 "keywords": "",
-"url": "mydoc_mydoc_s3-world-open-policy-put.html",
+"url": "mydoc_s3-world-open-policy-put.html",
 "summary": "Bucket policy allows the world to put data into the affected bucket."
 },
 
@@ -441,16 +451,6 @@
 "keywords": "json, scrolling, scrollto, jquery plugin",
 "url": "jsmydoc_scroll.html",
 "summary": "This page demonstrates how you the integration of a script called ScrollTo, which is used here to link definitions of a JSON code sample to a list of definitions for that particular term. The scenario here is that the JSON blocks are really long, with extensive nesting and subnesting, which makes it difficult for tables below the JSON to adequately explain the term in a usable way."
-},
-
-
-
-{
-"title": "TCP port is open",
-"tags": "",
-"keywords": "TCP port open Security Groups",
-"url": "mydoc_tcpportopen.html",
-"summary": "Important TCP port is open, potentially to the world."
 },
 
 
