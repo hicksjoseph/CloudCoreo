@@ -6,7 +6,7 @@ last_updated: "September 17, 2016"
 summary: Important TCP port is open, potentially to the world.
 published: true
 sidebar: mydoc_sidebar
-permalink: mydoc_tcpportopen.html
+permalink: mydoc_ec2-tcpportopen.html
 folder: mydoc
 toc: false
 ---

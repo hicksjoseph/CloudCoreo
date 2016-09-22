@@ -19,7 +19,7 @@ entries:
     folderitems:
 
     - title: TCP port open
-      url: /mydoc_tcpportopen.html
+      url: /mydoc_ec2-tcpportopen.html
       output: web
 
     - title: Host IP added to Security Group
@@ -191,5 +191,5 @@ entries:
       output: web
 
     - title: Bucket policy world can Put
-      url: /mydoc_mydoc_s3-world-open-policy-put.html
+      url: /mydoc_s3-world-open-policy-put.html
       output: web

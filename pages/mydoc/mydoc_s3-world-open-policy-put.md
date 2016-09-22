@@ -6,7 +6,7 @@ last_updated: "September 17, 2016"
 summary: Bucket policy allows the world to put data into the affected bucket.
 published: true
 sidebar: mydoc_sidebar
-permalink: mydoc_mydoc_s3-world-open-policy-put.html
+permalink: mydoc_s3-world-open-policy-put.html
 folder: mydoc
 toc: false
 ---
