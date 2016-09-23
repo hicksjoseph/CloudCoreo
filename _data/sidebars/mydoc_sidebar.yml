@@ -22,15 +22,15 @@ entries:
       url: /mydoc_ec2-tcpportopen.html
       output: web
 
-    - title: Host IP added to Security Group
+    - title: Security Group contains IP address
       url: /mydoc_ec2-ip-address-whitelisted.html
       output: web
 
-    - title: Security group specifies a port range
+    - title: Security group contains a port range
       url: /mydoc_ec2-ports-range.html
       output: web
 
-    - title: Security group unrestricted traffic
+    - title: Security group allows unrestricted traffic
       url: /mydoc_ec2-unrestricted-traffic.html
       output: web
 
@@ -38,7 +38,7 @@ entries:
     output: web
     folderitems:
 
-    - title: Old ELB SSL policy
+    - title: ELB is using old SSL policy
       url: /mydoc_elb-old-ssl-policy.html
       output: web
 
@@ -58,7 +58,7 @@ entries:
       url: /mydoc_iam-inactive-key-no-rotation.html
       output: web
 
-    - title: Passwords policy doesn't exist
+    - title: Password policy doesn't exist
       url: /mydoc_iam-missing-password-policy.html
       output: web
 
@@ -78,12 +78,12 @@ entries:
       url: /mydoc_iam-root-active-password.html
       output: web
 
-    - title: Users can reuse old passwords
-      url: /mydoc_iam-passwordreuseprevention.html
+    - title: Root user has active Access Key
+      url: /mydoc_iam-root-active-key.html
       output: web
 
-    - title: Active root Access Key
-      url: /mydoc_iam-root-active-key.html
+    - title: Users can reuse old passwords
+      url: /mydoc_iam-passwordreuseprevention.html
       output: web
 
     - title: Unused or empty IAM group

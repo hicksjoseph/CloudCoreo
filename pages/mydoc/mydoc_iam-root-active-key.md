@@ -1,5 +1,5 @@
 ---
-title: Active root Access Key
+title: Root user has active Access Key
 tags:
 keywords: ""
 last_updated: "September 17, 2016"

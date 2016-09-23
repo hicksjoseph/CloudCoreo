@@ -1,5 +1,5 @@
 ---
-title: Old ELB SSL policy
+title: ELB is using old SSL policy
 tags:
 keywords: ""
 last_updated: "September 17, 2016"

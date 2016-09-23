@@ -1,5 +1,5 @@
 ---
-title: All AWS users can read the affected bucket
+title: All authenticated AWS users can read the affected bucket
 tags:
 keywords: ""
 last_updated: "September 17, 2016"

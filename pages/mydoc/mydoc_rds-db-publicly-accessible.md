@@ -1,9 +1,9 @@
 ---
-title: RDS is publicly accessible to the world
+title: RDS is Publicly Accessible to the world
 tags:
 keywords: ""
 last_updated: "September 17, 2016"
-summary: The affected RDS database is publicly accessible to the world.
+summary: The affected RDS database is Publicly Accessible to the world.
 published: true
 sidebar: mydoc_sidebar
 permalink: mydoc_rds-db-publicly-accessible.html
@@ -16,6 +16,6 @@ DB Instances deployed within a VPC can be accessed from the Internet or from EC2
 [https://aws.amazon.com/rds/faqs/](https://aws.amazon.com/rds/faqs/)  
 
 ### Suggested Action  
-Consider whether the affected RDS database should be publicly accessible to the world. If not, modify the option which enables your RDS database to become publicly accessible and/or configure Security Groups. "Security groups control the access that traffic has in and out of a DB instance. Three types of security groups are used with Amazon RDS: DB security groups, VPC security groups, and EC2 security groups. In simple terms, a DB security group controls access to a DB instance that is not in a VPC, a VPC security group controls access to a DB instance (or other AWS instances) inside a VPC, and an EC2 security group controls access to an EC2 instance.  
+Consider whether the affected RDS database should be Publicly Accessible to the world. If not, modify the option which enables your RDS database to become Publicly Accessible and/or configure Security Groups. "Security groups control the access that traffic has in and out of a DB instance. Three types of security groups are used with Amazon RDS: DB security groups, VPC security groups, and EC2 security groups. In simple terms, a DB security group controls access to a DB instance that is not in a VPC, a VPC security group controls access to a DB instance (or other AWS instances) inside a VPC, and an EC2 security group controls access to an EC2 instance.  
 [http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSSecurityGroups.html
 ](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSSecurityGroups.html)

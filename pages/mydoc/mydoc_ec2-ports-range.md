@@ -1,9 +1,9 @@
 ---
-title: Security group specifies a port range        
+title: Security group contains a port range
 tags:
 keywords: ""
 last_updated: "September 17, 2016"
-summary: Security group specifies a port range rather than individual ports.
+summary: Security group contains a port range rather than specifying individual ports.
 published: true
 sidebar: mydoc_sidebar
 permalink: mydoc_ec2-ports-range.html

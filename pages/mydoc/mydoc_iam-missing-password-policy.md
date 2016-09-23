@@ -1,5 +1,5 @@
 ---
-title: Passwords policy doesn't exist
+title: Password policy doesn't exist
 tags:
 keywords: ""
 last_updated: "September 17, 2016"

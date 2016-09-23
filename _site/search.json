@@ -46,21 +46,21 @@
 
 
 {
-"title": "Host IP added to Security Group",
+"title": "Security Group contains IP address",
 "tags": "",
 "keywords": "",
 "url": "mydoc_ec2-ip-address-whitelisted.html",
-"summary": "Specific host IP address added to Security Group"
+"summary": "Security Group contains IP address"
 },
 
 
 
 {
-"title": "Security group specifies a port range",
+"title": "Security group contains a port range",
 "tags": "",
 "keywords": "",
 "url": "mydoc_ec2-ports-range.html",
-"summary": "Security group specifies a port range rather than individual ports."
+"summary": "Security group contains a port range rather than specifying individual ports."
 },
 
 
@@ -76,7 +76,7 @@
 
 
 {
-"title": "Security group unrestricted traffic",
+"title": "Security group allows unrestricted traffic",
 "tags": "",
 "keywords": "",
 "url": "mydoc_ec2-unrestricted-traffic.html",
@@ -86,7 +86,7 @@
 
 
 {
-"title": "Old ELB SSL policy",
+"title": "ELB is using old SSL policy",
 "tags": "",
 "keywords": "",
 "url": "mydoc_elb-old-ssl-policy.html",
@@ -126,7 +126,7 @@
 
 
 {
-"title": "Passwords policy doesn&#39;t exist",
+"title": "Password policy doesn&#39;t exist",
 "tags": "",
 "keywords": "",
 "url": "mydoc_iam-missing-password-policy.html",
@@ -166,7 +166,7 @@
 
 
 {
-"title": "Active root Access Key",
+"title": "Root user has active Access Key",
 "tags": "",
 "keywords": "",
 "url": "mydoc_iam-root-active-key.html",
@@ -226,11 +226,11 @@
 
 
 {
-"title": "RDS is publicly accessible to the world",
+"title": "RDS is Publicly Accessible to the world",
 "tags": "",
 "keywords": "",
 "url": "mydoc_rds-db-publicly-accessible.html",
-"summary": "The affected RDS database is publicly accessible to the world."
+"summary": "The affected RDS database is Publicly Accessible to the world."
 },
 
 
@@ -286,7 +286,7 @@
 
 
 {
-"title": "Redshift automatic major version upgrades not enabled.",
+"title": "Redshift automatic major version upgrades not enabled",
 "tags": "",
 "keywords": "",
 "url": "mydoc_redshift-no-version-upgrade.html",
@@ -346,7 +346,7 @@
 
 
 {
-"title": "All AWS users can read the affected bucket",
+"title": "All authenticated AWS users can read the affected bucket",
 "tags": "",
 "keywords": "",
 "url": "mydoc_s3-authenticatedusers-read.html",
@@ -356,11 +356,11 @@
 
 
 {
-"title": "All authenticated AWS users can write bucket ACP / ACL",
+"title": "",
 "tags": "",
 "keywords": "",
-"url": "mydoc_s3-authenticatedusers-write-acp.html",
-"summary": "Bucket has permissions which let any AWS authenticated user modify the permissions."
+"url": "pagesmydocmydoc_s3-authenticatedusers-write-acp.html",
+"summary": ""
 },
 
 

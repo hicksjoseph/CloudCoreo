@@ -1,5 +1,5 @@
 ---
-title: Security group unrestricted traffic
+title: Security group allows unrestricted traffic
 tags:
 keywords: ""
 last_updated: "September 17, 2016"

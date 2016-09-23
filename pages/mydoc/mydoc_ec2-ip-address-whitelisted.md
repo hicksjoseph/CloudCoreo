@@ -1,9 +1,9 @@
 ---
-title: Host IP added to Security Group
+title: Security Group contains IP address
 tags:
 keywords: ""
 last_updated: "September 17, 2016"
-summary: Specific host IP address added to Security Group
+summary: Security Group contains IP address
 published: true
 sidebar: mydoc_sidebar
 permalink: mydoc_ec2-ip-address-whitelisted.html

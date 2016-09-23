@@ -1,6 +1,5 @@
 ---
-title: All authenticated AWS users can change bucket permissions
-All authenticated AWS users can write bucket ACP / ACL
+title: All authenticated AWS users can write bucket ACP / ACL
 tags:
 keywords: ""
 last_updated: "September 17, 2016"
