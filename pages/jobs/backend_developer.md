@@ -11,7 +11,7 @@ folder: jobs
 toc: false
 ---
 
-CloudCoreo is looking for Back End Developers who are passionate about their craft, who thrive on challenge and who believe in success through collaboration – people who would complement our existing team of developers! We are looking for a Back End Developer who specializes in Ruby and integrating with AWS. You’ll work on an agile team, building the infrastructure for the CloudCoreo service. You'll be working with or around technologies such as Amazon Lambda, DynamoDB, MySQL, MongoDB, AngularJS, Node.js, Ruby, Javascript, Python, Linux, CD / CI (Jenkins), Github, Chef, and JIRA. Join us at our beautiful Seattle office (South Lake Union) and work on cutting edge technologies with a team that knows how to move fast and accurately.  
+CloudCoreo is looking for architecht level Back End Developers who are passionate about their craft, who thrive on challenge and who believe in success through collaboration – people who would complement our existing team of developers! We are looking for a Back End Developer who specializes in Ruby and/or GO with substantial Linux systems experience. You’ll work on an agile team, building the engine and infrastructure for the CloudCoreo service. You'll be working with or around technologies such as DynamoDB, MySQL, MongoDB, AngularJS, Node.js, GO, Ruby, Javascript, Python, Linux, CD / CI (Jenkins), Github, Chef, and JIRA, Docker and Kubernetes. Join us at our beautiful Seattle office (South Lake Union) and work on cutting edge technologies with a team that knows how to move fast and accurately.  
 
 Our guiding principle is that by helping our users we help our business. As a Developer in the core team, you’ll be a key part of the idea generation process, working on a startup team that takes full ownership of the platform. You’ll work side by side with designers, back end developers, product owners, and copywriters to conceive, analyze, hand code & test your ideas. You’ll be given the freedom to make meaningful and measurable improvements impacting cloud users.  
 
@@ -19,20 +19,21 @@ Our ideal candidate has an excellent eye for detail, pragmatic approach and an a
 
 ### Responsibilities:  
 * Build, maintain and refine high performance, scalable systems, serving an essential function in all groundwork, infrastructure and product discussions from conception to completion  
-* Develop elegant solutions to complex problems  
+* Develop elegant solutions to complex problems across distribued and loosely coupled systems  
 * Contribute to a future-ready, high quality and performant code base  
 * Share technical solutions and product ideas through design review, code review and technology discussions  
 
 ### Desired skills:  
-* 5+ years of experience in a relevant role, preferably in a commercial environment
-* Expert understanding of core back-end web technologies including Ruby
+* 10+ years of experience in a relevant role
+* Expert understanding of core back-end web technologies including Ruby, GO, Python or similar
 * Experienced Architect level developer
-* Analytical mind for back end processing using Ruby
+* Analytical mind for back end processing and distrubuted systems
+* Experience with container technologies
 * Ability to write high-performance, reusable code
 * Experience understanding complex workflows
 * Experience integrating with AWS using AWS APIs
 * Knowledge of version control systems
-* Bachelor or graduate degree in Computer Science or a related technical field
+* Bachelor or graduate degree in Computer Science, Electrical Engineering or a related technical field
 * Proven problem solver
 * Compiler knowledge is a plus
 
