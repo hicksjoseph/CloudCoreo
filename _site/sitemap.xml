@@ -32,6 +32,12 @@
   
   
   <url>
+    <loc>http://kb.cloudcoreo.com/index.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://kb.cloudcoreo.com/cloudtrail-service-disabled.html</loc>
   </url>
   
@@ -39,6 +45,18 @@
   
   <url>
     <loc>http://kb.cloudcoreo.com/mydoc_ec2-TCP-1433.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_iam-inactive-key-no-rotation.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/mydoc_awsrolepolicy.html</loc>
   </url>
   
   
@@ -160,7 +178,7 @@
   
   
   <url>
-    <loc>http://kb.cloudcoreo.com/mydoc_introduction.html</loc>
+    <loc>http://kb.cloudcoreo.com/index.html</loc>
   </url>
   
   
@@ -311,6 +329,12 @@
   
   <url>
     <loc>http://kb.cloudcoreo.com/news_archive.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://kb.cloudcoreo.com/conceptdocs_overview.html</loc>
   </url>
   
   

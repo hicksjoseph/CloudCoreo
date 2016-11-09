@@ -1,0 +1,40 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Documentation
+  version:
+  folders:
+
+  - title: Concept Docs
+    output: web
+    folderitems:
+
+    - title: CloudCoreo CLI
+      url: /cli.html
+      output: web
+
+    - title: Cloud Services
+      url: /cloudservices.html
+      output: web
+
+    - title: Configuration Files
+      url: /configurationfiles.html
+      output: web
+
+    - title: Directory Structure
+      url: /directorystructure.html
+      output: web
+
+    - title: Overview
+      url: /overview.md
+      output: web
+
+    - title: Variables
+      url: /variables.html
+      output: web
+
+    - title: CloudCoreo Web UI
+      url: /webapp.html
+      output: web
+

@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="These brief instructions will help you get started quickly with CloudCoreo.">
-<meta name="keywords" content="getting_started,  homepage">
-<title>Getting started with CloudCoreo | CloudCoreo Knowledge Base</title>
+<meta name="description" content="Knowledge base Home.">
+<meta name="keywords" content=" ">
+<title>Introduction | CloudCoreo Knowledge Base</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -94,12 +94,6 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- entries without drop-downs appear here -->
                 
-                
-                
-                <li><a href="backend_developer.html">Jobs</a></li>
-                
-                
-                
                 <!-- entries with drop-downs appear here -->
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
                 
@@ -110,10 +104,6 @@
                         
                         
                         <li><a href="https://www.cloudcoreo.com" target="_blank">Website</a></li>
-                        
-                        
-                        
-                        <li><a href="https://www.cloudcoreo.com/docs" target="_blank">Docs</a></li>
                         
                         
                         
@@ -136,7 +126,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo knowledge base feedback f eedback&body=I have some feedback about the Getting started with CloudCoreo page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Introduction page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -152,7 +142,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Getting started with CloudCoreo">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Introduction">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -541,7 +531,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Getting started with CloudCoreo</h1>
+   <h1 class="post-title-main">Introduction</h1>
 </div>
 
 
@@ -549,7 +539,7 @@
 <div class="post-content">
 
    
-    <div class="summary">These brief instructions will help you get started quickly with CloudCoreo.</div>
+    <div class="summary">Knowledge base Home.</div>
    
 
     
@@ -558,71 +548,31 @@
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/_pages//index.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/mydoc/index.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
-  <h3 id="get-started--no-signup-necessary">Get Started — No signup necessary!</h3>
+  <h2 id="overview">Overview</h2>
 
-<p>Are you ready to take your cloud infrastructure to the next level? CloudCoreo makes it simple to get up and running quickly in the cloud. The fastest way to go from zero to deployed is to use our CLI tool, built in Node.</p>
+<p>This site provides more details for the CloudAudit alerts. Use the sidebar to navigate to the particular alert that you are looking for.</p>
 
-<p>The following steps outline the process of deploying a VPC (virtual private cloud) in Amazon Web Services.</p>
+<h2 id="aws-services">AWS Services</h2>
 
-<h3 id="download-pre-requisite-tools-nodejs-git">Download pre-requisite tools: Nodejs, Git,</h3>
-<p>There are just a few things you need to have handy before diving into the deployment setup, including Git and Node.js.</p>
+<p>Currently, CloudCoreo CloudAudit supports a number of AWS services, including:</p>
 
-<p>CloudCoreo uses git and git concepts.
-If you don’t already have Git, go ahead and download and install it.</p>
-
-<p>Our CLI is built in Node.js. This means you need Node installed, or specifically npm. 
-Go get Node before moving on.</p>
-
-<p>CloudCoreo also requires the use of AWS access keys to be able to deploy to the cloud. We never store your credentials. Follow this tutorial to obtain keys if you don’t already have them.</p>
-
-<h3 id="install-the-cloudcoreo-cli">Install the CloudCoreo CLI</h3>
-<p>The CloudCoreo CLI allows full control over your CloudCoreo account. The cloudcoreo “solo” subcommands allow many operations and deployment options.</p>
-
-<p>$ npm install -g cloudcoreo-cli</p>
-
-<h3 id="create-your-deployment-project">Create Your Deployment Project</h3>
-<p>A CloudCoreo composition is defined by a single repository in Git, or in the case of the “solo” subcommand, a directory:</p>
-
-<p>$ mkdir -p ~/composition1 
-$ cd ~/composition1</p>
-
-<p>Pull down the public CloudCoreo github repository for a sample VPC composition:</p>
-
-<p>$ coreo composition extend vpc-network-only_284bd</p>
-
-<h3 id="deploy-the-composition">Deploy the composition</h3>
-<p>$ coreo solo run</p>
-
-<p>The CLI will ask you for the keys to the AWS account you would like us to integrate with. If you already have the AWS CLI set up, we’ll see those keys and apply them. Otherwise, just enter the keys on the command line.</p>
-
-<h3 id="verify-what-was-built-in-aws">Verify what was built in AWS</h3>
-<p>After completing the steps above to deploy you will end up with the following, assuming you left all the defaults alone:
-* 1 VPC (10.11.0.0/16)
-* 1 Internet Gateway
-* 3 Public Subnets
-* 3 Private Subnets
-* 3 Private Route Tables
-* 1 Public Route Table</p>
-
-<h3 id="connect-with-cloudcoreo-to-find-out-more">Connect with CloudCoreo to find out more</h3>
-<p>info at cloudcoreo dot com</p>
-
+<ul>
+  <li>Cloudtrail</li>
+  <li>EC2</li>
+  <li>ELB</li>
+  <li>IAM</li>
+  <li>RDS</li>
+  <li>Redshift</li>
+  <li>S3</li>
+</ul>
 
 
     <div class="tags">
-        
-        <b>Tags: </b>
-        
-        
-        
-        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
-        
-        
         
     </div>
 
@@ -636,7 +586,7 @@ $ cd ~/composition1</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2016 CloudCoreo. All rights reserved. <br />
- Site last generated: Oct 3, 2016 <br />
+ Site last generated: Nov 8, 2016 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>

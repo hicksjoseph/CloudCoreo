@@ -11,7 +11,7 @@ site_title: CloudCoreo Knowledge Base
 company_name: CloudCoreo
 # this appears in the footer
 
-github_editme_path: CloudCoreo/CloudCoreo/tree/gh-pages
+github_editme_path: CloudCoreo/CloudCoreo/tree/gh-pages/pages
 #github_editme_path: tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/pages/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
@@ -29,7 +29,7 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: CloudCoreo knowledge base feedback
+feedback_subject_line: CloudCoreo feedback
 
 feedback_email: info@cloudcoreo.com
 # used as a contact email for the Feedback link in the top navigation bar
@@ -94,11 +94,13 @@ defaults:
 sidebars:
 - home_sidebar
 - mydoc_sidebar
+- jobs_sidebar
+- faq_sidebar
+- concept_sidebar
 #- product1_sidebar
 #- product2_sidebar
-#- other
 
-description: "CloudCoreo knowledge base"
+description: "CloudCoreo Documentation"
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only

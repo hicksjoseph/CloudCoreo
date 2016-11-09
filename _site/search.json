@@ -14,6 +14,16 @@
 
 
 {
+"title": "Getting started with CloudCoreo",
+"tags": "getting_started",
+"keywords": "homepage",
+"url": "index.html",
+"summary": "These brief instructions will help you get started quickly with CloudCoreo."
+},
+
+
+
+{
 "title": "Cloudtrail Service is disabled",
 "tags": "",
 "keywords": "",
@@ -33,14 +43,34 @@
 
 
 
+{
+"title": "Inactive user Access Key not rotated",
+"tags": "",
+"keywords": "",
+"url": "mydoc_iam-inactive-key-no-rotation.html",
+"summary": "User has inactive keys that have not been rotated in the last 90 days."
+},
+
 
 
 {
-"title": "Getting started with CloudCoreo",
-"tags": "getting_started",
-"keywords": "homepage",
+"title": "What is the best way to grant CloudCoreo access to my AWS account?",
+"tags": "",
+"keywords": "",
+"url": "mydoc_awsrolepolicy.html",
+"summary": "Granting CloudCoreo access to your AWS account."
+},
+
+
+
+
+
+{
+"title": "Introduction",
+"tags": "",
+"keywords": "",
 "url": "index.html",
-"summary": "These brief instructions will help you get started quickly with CloudCoreo."
+"summary": "Knowledge base Home."
 },
 
 
@@ -229,8 +259,8 @@
 "title": "Introduction",
 "tags": "",
 "keywords": "",
-"url": "mydoc_introduction.html",
-"summary": ""
+"url": "index.html",
+"summary": "Knowledge base Home."
 },
 
 
@@ -481,6 +511,16 @@
 "keywords": "news, blog, updates, release notes, announcements",
 "url": "news_archive.html",
 "summary": ""
+},
+
+
+
+{
+"title": "Concept Overview",
+"tags": "",
+"keywords": "",
+"url": "conceptdocs_overview.html",
+"summary": "CloudCoreo Concept Overview"
 },
 
 

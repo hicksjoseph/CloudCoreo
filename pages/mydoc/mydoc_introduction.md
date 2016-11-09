@@ -1,8 +1,10 @@
 ---
 title: Introduction
 sidebar: mydoc_sidebar
-permalink: mydoc_introduction.html
+permalink: index.html
 folder: mydoc
+summary: Knowledge base Home.
+toc: false
 ---
 
 ## Overview
@@ -20,9 +22,3 @@ Currently, CloudCoreo CloudAudit supports a number of AWS services, including:
 * RDS
 * Redshift
 * S3
-
-## Getting started
-
-To get started, see [Getting Started][index].
-
-{% include links.html %}
