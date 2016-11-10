@@ -96,9 +96,7 @@ sidebars:
 - mydoc_sidebar
 - jobs_sidebar
 - faq_sidebar
-- concept_sidebar
-#- product1_sidebar
-#- product2_sidebar
+- conceptdocs_sidebar
 
 description: "CloudCoreo Documentation"
 # the description is used in the feed.xml file

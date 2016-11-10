@@ -11,7 +11,7 @@ entries:
     folderitems:
 
     - title: Service Disabled
-      url: /cloudtrail-service-disabled.html
+      url: /mydoc_cloudtrail-service-disabled.html
       output: web
 
   - title: EC2

@@ -1,3 +1,16 @@
+---
+title: CloudCoreo Directory structure
+summary: CloudCoreo Directory structure
+tags:
+keywords: ""
+last_updated: "November 9, 2016"
+published: true
+sidebar: conceptdocs_sidebar
+permalink: conceptdocs_directorystructure.html
+folder: conceptdocs
+toc: false
+---
+
 ## Directory Structure
 CloudCoreo relies on convention over configuration for the most part, achieving simplicity and flexibility. Each repository can contain whatever you want, which is useful for running scripts or laying down solid code. There are some directories that we reserve the right to, and below you'll see a list of those directories and their functions.
 

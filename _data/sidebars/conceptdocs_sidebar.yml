@@ -10,31 +10,35 @@ entries:
     output: web
     folderitems:
 
-    - title: CloudCoreo CLI
-      url: /cli.html
+    - title: Overview
+      url: /conceptdocs_overview.html
       output: web
 
-    - title: Cloud Services
-      url: /cloudservices.html
+    - title: Composite Creation
+      url: /conceptdocs_compositecreation.html
+      output: web
+
+    - title: Advanced Composite Creation
+      url: /conceptdocs_advancedcomposites.html
+      output: web
+
+    - title: CloudCoreo CLI
+      url: /conceptdocs_cli.html
       output: web
 
     - title: Configuration Files
-      url: /configurationfiles.html
+      url: /conceptdocs_configurationfiles.html
       output: web
 
     - title: Directory Structure
-      url: /directorystructure.html
-      output: web
-
-    - title: Overview
-      url: /overview.md
+      url: /conceptdocs_directorystructure.html
       output: web
 
     - title: Variables
-      url: /variables.html
+      url: /conceptdocs_variables.html
       output: web
 
     - title: CloudCoreo Web UI
-      url: /webapp.html
+      url: /conceptdocs_webui.html
       output: web
 

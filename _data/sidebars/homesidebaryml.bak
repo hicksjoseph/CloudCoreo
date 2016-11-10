@@ -8,7 +8,7 @@ entries:
   - title: Products
     output: web
     folderitems:
-    - title: Theme instructions
+    - title: 
       url: /mydoc_introduction.html
       output: web
     - title: Product 1

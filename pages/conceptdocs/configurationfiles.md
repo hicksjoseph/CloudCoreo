@@ -1,3 +1,16 @@
+---
+title: CloudCoreo Configuration files
+summary: CloudCoreo Configuration files
+tags:
+keywords: ""
+last_updated: "November 9, 2016"
+published: true
+sidebar: conceptdocs_sidebar
+permalink: conceptdocs_configurationfiles.html
+folder: conceptdocs
+toc: false
+---
+
 ## Configuration Files
 There are a few configuration files that exist in the CloudCoreo convention. These files are all able to be overridden.
 

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CloudCoreo Advanced Composite creation">
+<meta name="keywords" content=" ">
+<title>Advanced Composite creation | CloudCoreo Knowledge Base</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://kb.cloudcoreo.comfeed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> CloudCoreo Knowledge Base</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">CloudCoreo Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://www.cloudcoreo.com" target="_blank">Website</a></li>
+                        
+                        
+                        
+                        <li><a href="https://github.com/CloudCoreo" target="_blank">Github Repo</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="mydoc_introduction.html">CloudAudit</a></li>
+                        
+                        
+                        
+                        <li><a href="conceptdocs_overview.html">Concept Docs</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Advanced Composite creation page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Advanced Composite creation">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Documentation </li>
+    
+    
+    
+    <li>
+        <a href="#">Concept Docs</a>
+        <ul>
+            
+            
+            
+            <li><a href="conceptdocs_overview.html">Overview</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_compositecreation.html">Composite Creation</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="conceptdocs_advancedcomposites.html">Advanced Composite Creation</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_cli.html">CloudCoreo CLI</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_configurationfiles.html">Configuration Files</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_directorystructure.html">Directory Structure</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_variables.html">Variables</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_webui.html">CloudCoreo Web UI</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">Advanced Composite creation</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">CloudCoreo Advanced Composite creation</div>
+   
+
+    
+
+    
+
+    
+
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/conceptdocs/conceptdocs_advancedcomposites.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    
+
+    
+
+  <p>Insert introduction and context text here.</p>
+
+<h3 id="overriding-resources">Overriding Resources</h3>
+<p>The <code class="highlighter-rouge">services/</code> directory honors the hierarchy we’ve already gone over. The difference, though, is that in the <code class="highlighter-rouge">config.rb</code> file each resource is override-able on an individual basis.</p>
+
+<p>For instance, say we have the following directory structure and files:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;repo-dir&gt;/extends/services/config.rb</code>and</li>
+  <li><code class="highlighter-rouge">&lt;repo-dir&gt;/services/config.rb</code></li>
+</ul>
+
+<p>Based on that, we know that anything in the <code class="highlighter-rouge">extends/services</code> directory will be run <strong><em>before</em></strong> the root services directory. While this is true, it also means that the resources are compiled before running. Simply, <strong><em>any resource in the root level <code class="highlighter-rouge">services/config.rb</code> file will override any resource located in the <code class="highlighter-rouge">extends/services/config.rb</code> file, where the key is the <code class="highlighter-rouge">&lt;resource&gt; "&lt;name&gt;" do</code> line</em></strong>.</p>
+
+<p><strong>Note:</strong> Within CloudCoreo, the key is defined as the name of the resource. There can only be one key/name of resource within an individual stack. For instance, if you have a <em>coreo_aws_ec2_instance “my-instance”</em> block somewhere and again have a <em>coreo_aws_ec2_instance “my-instance”</em> block close to the root, the root will win! It will override the first block. Simply put, the resource name is the key and vice versa.</p>
+
+<p>This follows the rule regarding overrides we talk about above. Since the resource names are effectively keys, as we get closer and closer to the root, they are added to the compilation stack in the defined order and overwrite (override) the previously added resources.</p>
+
+<p>Let’s illlustrate this with an example utilizing the directory and file structure we have already described:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;repo-dir&gt;/extends/services/config.rb</code></li>
+  <li><code class="highlighter-rouge">&lt;repo-dir&gt;/services/config.rb</code></li>
+</ul>
+
+<p>Assume we have a <strong>VPC</strong> resource in the <code class="highlighter-rouge">extends/services/config.rb</code> file as follows:<br />
+~~~<br />
+coreo_aws_vpc_vpc “${VPC_NAME}” do
+  action :sustain
+  cidr “12.0.0.0/16”
+  internet_gateway true
+end
+~~~</p>
+
+<p>This doesn’t do us any good because we can’t clone this to different environments. We need to have templating and variables, and we want to add some tags to the VPC. We can override this resource by keying off the <code class="highlighter-rouge">&lt;resource&gt; "&lt;name&gt;" do</code> line and placing the new block in the root <code class="highlighter-rouge">services/config.rb</code> file. So, within the <code class="highlighter-rouge">&lt;repo-dir&gt;/services/config.rb</code> file we call out a new VPC as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>coreo_aws_vpc_vpc "${VPC_NAME}" do
+  action :sustain
+  cidr "${VPC_CIDR}"
+  internet_gateway true
+  tags [
+     "Name=${VPC_NAME_TAG}",
+     "Team=${VPC_TEAM}"
+  ]
+end
+</code></pre>
+</div>
+
+<p>See the <em>key</em> as the first line? In this case it is <code class="highlighter-rouge">coreo_aws_vpc_vpc "${VPC_NAME}" do</code>. This means that as CloudCoreo is compiling the resources, it will see the VPC resource in the root last and will replace any existing blocks with this same resource key. The important part is that CloudCoreo will honor the positioning of the resources that it’s overriding and simply override the block. We call this <strong><em>anchoring</em></strong>.</p>
+
+<h3 id="anchoring">Anchoring</h3>
+<p>Anchoring is what CloudCoreo does with overridden resources. The key (<code class="highlighter-rouge">&lt;resource&gt; "&lt;name&gt;" do</code>) that is being overridden becomes an anchor for all pre-requisite resources found in an overriding file. That’s a mouthful! Here’s an abstract example (pay no attention to the blocks as they are irrelevant and shortened for clarity) using our standard directory structure:</p>
+
+<ul>
+  <li>
+    <repo-dir>/extends/services/config.rb
+</repo-dir>
+  </li>
+  <li>
+    <repo-dir>/services/config.rb
+
+</repo-dir>
+  </li>
+</ul>
+<p>In our extends/services/config.rb file we will have a <strong><em>subnet definition</em></strong> and an <strong><em>elastic load balancer</em></strong>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>coreo_aws_vpc_subnet 'public-subnet' do
+   vpc 'my-vpc'
+   map_public_ip_on_launch true
+end
+
+coreo_aws_ec2_elb 'my-elb' do
+   type 'public'
+   subnet 'public-subnet'
+end
+</code></pre>
+</div>
+
+<p>This is not adequate! First of all we want the ELB to contain a security group and we want it to be an <code class="highlighter-rouge">internal</code> load balancer, not public. To achieve this, move to your root <code class="highlighter-rouge">services/config.rb</code> file and add your key resource. This will become an anchor, and we can modify anything other than the key itself.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>coreo_aws_ec2_elb 'my-elb' do
+   type 'internal'
+   subnet 'private-subnet'
+   security_groups ['my-elb-sg']
+end
+</code></pre>
+</div>
+
+<p>This one is modified correctly, but we are missing some pieces: the private subnet and the security groups. Re-edit your file with the knowledge that your anchor brings along all the pieces that it requires. Our new root-level <code class="highlighter-rouge">services/config.rb</code> file looks as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>coreo_aws_vpc_subnet 'private-subnet' do
+   vpc 'my-vpc'
+   map_public_ip_on_launch false
+end
+
+coreo_aws_ec2_securityGroup 'my-elb-sg' do
+   vpc 'my-vpc'
+   allows [ 
+            { 
+              :direction =&gt; :ingress,
+              :protocol =&gt; :tcp,
+              :ports =&gt; ${INGRESS_PORTS},
+              :cidrs =&gt; ${INGRESS_CIDRS}
+            }
+          ]
+end
+
+coreo_aws_ec2_elb 'my-elb' do
+   type 'internal'
+   subnet 'private-subnet'
+   security_groups ['my-elb-sg']
+end
+</code></pre>
+</div>
+
+<p>The <strong><em>anchor</em></strong> in this is the ELB resource. Anything above that has not already overridden something will be considered a pre-requisite of the resource doing the overriding (the key). The root level <code class="highlighter-rouge">services/config.rb</code> file’s coreo_aws_ec2_elb resource block will override the one found in the <code class="highlighter-rouge">extends/services/config.rb</code> file. Not only that, but all the resources above the key in the root level will maintain order and override with the key.</p>
+
+<p>The final compilation will be a merge of the two files with the <em>anchor</em> located in the same place as the original, with any other non-overriding resources preceding it from the overriding file. The compiled version becomes:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>coreo_aws_vpc_subnet 'public-subnet' do
+   vpc 'my-vpc'
+   map_public_ip_on_launch true
+end
+
+coreo_aws_vpc_subnet 'private-subnet' do
+   vpc 'my-vpc'
+   map_public_ip_on_launch false
+end
+
+coreo_aws_ec2_securityGroup 'my-elb-sg' do
+   vpc 'my-vpc'
+   allows [ 
+            { 
+              :direction =&gt; :ingress,
+              :protocol =&gt; :tcp,
+              :ports =&gt; ${INGRESS_PORTS},
+              :cidrs =&gt; ${INGRESS_CIDRS}
+            }
+          ]
+end
+
+coreo_aws_ec2_elb 'my-elb' do
+   type 'internal'
+   subnet 'private-subnet'
+   security_groups ['my-elb-sg']
+end
+</code></pre>
+</div>
+
+<p>The <em>‘public-subnet’</em> resource has been included from the <code class="highlighter-rouge">extends/services/config.rb</code> file, while the <em>‘my-elb’</em> from the     extends/services/config.rb   essentially becomes the <em>‘private-subnet’</em> + <em>‘my-elb-sg’</em> + <em>‘my-elb’</em>.</p>
+
+<hr />
+
+<p>As you build new Composites, you will need to reference the <a href="http://docs.cloudcoreo.com/docs/frames/index"><em>CloudCoreo API Documentation</em></a> to know what options and parameters that you can use in your Composites.</p>
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 CloudCoreo. All rights reserved. <br />
+<span>Page last updated:</span> November 9, 2016<br/> Site last generated: Nov 9, 2016 <br />
+<p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

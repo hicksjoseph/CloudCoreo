@@ -4,6 +4,16 @@
 
 
 {
+"title": "Advanced Composite creation",
+"tags": "",
+"keywords": "",
+"url": "conceptdocs_advancedcomposites.html",
+"summary": "CloudCoreo Advanced Composite creation"
+},
+
+
+
+{
 "title": "Backend Developer",
 "tags": "",
 "keywords": "backend developer job jobs careers",
@@ -14,11 +24,11 @@
 
 
 {
-"title": "Getting started with CloudCoreo",
-"tags": "getting_started",
-"keywords": "homepage",
-"url": "index.html",
-"summary": "These brief instructions will help you get started quickly with CloudCoreo."
+"title": "CloudCoreo CLI - Coreo",
+"tags": "",
+"keywords": "",
+"url": "conceptdocs_cli.html",
+"summary": "CloudCoreo CLI - Coreo"
 },
 
 
@@ -29,6 +39,36 @@
 "keywords": "",
 "url": "cloudtrail-service-disabled.html",
 "summary": "CloudTrail logging is not enabled for this region. It should be enabled."
+},
+
+
+
+{
+"title": "Composite creation",
+"tags": "",
+"keywords": "",
+"url": "conceptdocs_compositecreation.html",
+"summary": "CloudCoreo Composite creation"
+},
+
+
+
+{
+"title": "CloudCoreo Configuration files",
+"tags": "",
+"keywords": "",
+"url": "conceptdocs_configurationfiles.html",
+"summary": "CloudCoreo Configuration files"
+},
+
+
+
+{
+"title": "CloudCoreo Directory structure",
+"tags": "",
+"keywords": "",
+"url": "conceptdocs_directorystructure.html",
+"summary": "CloudCoreo Directory structure"
 },
 
 
@@ -79,7 +119,7 @@
 "title": "Cloudtrail Service is disabled",
 "tags": "",
 "keywords": "",
-"url": "cloudtrail-service-disabled.html",
+"url": "mydoc_cloudtrail-service-disabled.html",
 "summary": "CloudTrail logging is not enabled for this region. It should be enabled."
 },
 
@@ -568,6 +608,26 @@
 
 
 
+
+
+
+{
+"title": "CloudCoreo Variables",
+"tags": "",
+"keywords": "",
+"url": "conceptdocs_variables.html",
+"summary": "CloudCoreo Variables"
+},
+
+
+
+{
+"title": "CloudCoreo WebUI",
+"tags": "",
+"keywords": "",
+"url": "conceptdocs_webui.html",
+"summary": "CloudCoreo WebUI"
+},
 
 
 

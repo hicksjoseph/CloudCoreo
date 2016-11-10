@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CloudCoreo CLI - Coreo">
+<meta name="keywords" content=" ">
+<title>CloudCoreo CLI - Coreo | CloudCoreo Knowledge Base</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://kb.cloudcoreo.comfeed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> CloudCoreo Knowledge Base</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">CloudCoreo Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://www.cloudcoreo.com" target="_blank">Website</a></li>
+                        
+                        
+                        
+                        <li><a href="https://github.com/CloudCoreo" target="_blank">Github Repo</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="mydoc_introduction.html">CloudAudit</a></li>
+                        
+                        
+                        
+                        <li><a href="conceptdocs_overview.html">Concept Docs</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the CloudCoreo CLI - Coreo page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="CloudCoreo CLI - Coreo">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Documentation </li>
+    
+    
+    
+    <li>
+        <a href="#">Concept Docs</a>
+        <ul>
+            
+            
+            
+            <li><a href="conceptdocs_overview.html">Overview</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_compositecreation.html">Composite Creation</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_advancedcomposites.html">Advanced Composite Creation</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="conceptdocs_cli.html">CloudCoreo CLI</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_configurationfiles.html">Configuration Files</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_directorystructure.html">Directory Structure</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_variables.html">Variables</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_webui.html">CloudCoreo Web UI</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">CloudCoreo CLI - Coreo</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">CloudCoreo CLI - Coreo</div>
+   
+
+    
+
+    
+
+    
+
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/conceptdocs/conceptdocs_cli.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    
+
+    
+
+  <h1 id="cloudcoreo-cli">CloudCoreo CLI</h1>
+<p>======================================================================</p>
+
+<h2 id="install">Install</h2>
+
+<p>Installation of the <a href="http://www.cloudcoreo.com/">CloudCoreo</a> CLI tool is simple and managed via NPM. For a global install (recommended) run:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install -g cloudcoreo-cli
+</code></pre>
+</div>
+
+<h2 id="commands">Commands</h2>
+
+<p>The following is a list of commands that can be run with the CLI tool. This is auto-generated.</p>
+
+<h5 id="options">Options</h5>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>-h, --help output usage information
+-V, --version output the version number
+</code></pre>
+</div>
+
+<p>The <a href="http://www.cloudcoreo.com/">CloudCoreo</a> CLI uses git-style subcommands.
+For help, try:
+<code class="highlighter-rouge">
+coreo help &lt;command&gt;
+</code>
+or
+<code class="highlighter-rouge">
+coreo &lt;command&gt; help &lt;subcommand&gt;
+</code></p>
+
+<h3 id="coreo-init">coreo init</h3>
+
+<p>The init command houses everything necessary to create new AppStacks
+#### Options</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>-h, --help output usage information
+-V, --version output the version number
+-D, --directory &lt;fully-qualified-path&gt; the working directory
+</code></pre>
+</div>
+<p>#### Actions</p>
+
+<h5 id="action-new-stack">Action: new-stack</h5>
+
+<p>new description</p>
+
+<h6 id="options-1">Options:</h6>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>-h, --help output usage information
+-s, --stack-type &lt;stack type&gt; What will this stack be? (server | stack)
+</code></pre>
+</div>
+<p>###### Examples:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+Excluding the -D (--directory) option assumes your working directory is
+where your AppStack exists
+
+$ coreo init new-stack -s server
+$ coreo init new-stack --stack-type stack
+</code></pre>
+</div>
+
+<h3 id="coreo-stack">coreo stack</h3>
+
+<p>Subcommands and Actions housed within the stack command will handle all types of AppStack manipulation
+#### Options</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>-h, --help output usage information
+-V, --version output the version number
+-D, --directory &lt;fully-qualified-path&gt; the working directory
+</code></pre>
+</div>
+<p>#### Actions</p>
+
+<h5 id="action-add">Action: add</h5>
+
+<p>Add a sibling stack</p>
+
+<h6 id="options-2">Options:</h6>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>-h, --help output usage information
+-s, --stack-type &lt;stack type&gt; What will this stack be? (server | stack)
+-n, --stack-name &lt;stack name&gt; The name you would like to give to the sibling stack
+-g, --from-git &lt;git ssh url&gt; The git ssh url from which this stack will be extended.
+</code></pre>
+</div>
+<p>###### Examples:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+Excluding the -D (--directory) option assumes your working directory is
+where your AppStack exists
+
+This command will add a VPN server to your AppStack
+
+$ coreo stack add -s "server" -g "git@github.com:CloudCoreo/servers-vpn.git" -n "vpn"
+$ coreo stack add --stack-type "server" --from-git "git@github.com:CloudCoreo/servers-vpn.git" -stack-name "vpn"
+</code></pre>
+</div>
+<p>##### Action: extend</p>
+
+<p>Extend a stack</p>
+
+<h6 id="options-3">Options:</h6>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>-h, --help output usage information
+-g, --from-git &lt;git ssh url&gt; The git ssh url from which this stack will be extended.
+</code></pre>
+</div>
+<p>###### Examples:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+Excluding the -D (--directory) option assumes your working directory is
+where your AppStack exists
+
+This command will set your AppStack up to extend the CloudCoreo VPC
+
+$ coreo stack extend -g git@github.com:cloudcoreo/cloudcoreo-vpc
+</code></pre>
+</div>
+
+<h3 id="coreo-account">coreo account</h3>
+
+<p>work on a CloudCoreo Account
+#### Options</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>-h, --help output usage information
+-V, --version output the version number
+</code></pre>
+</div>
+<p>#### Actions</p>
+
+<h5 id="action-create">Action: create</h5>
+
+<p>create a new CloudCoreo account</p>
+
+<h6 id="options-4">Options:</h6>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>-h, --help output usage information
+-u, --username &lt;username&gt; What username to use on your new account
+-e, --email &lt;email&gt; What email address to use on your new account
+</code></pre>
+</div>
+<p>###### Examples:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+This will create a new CloudCoreo account and key pairs
+which can be used for accessing your account via the CLI tool.
+
+The CLI tool will create a $HOME/.cloudcoreo directory and add a
+config file with a JSON representation of the key pair and your username
+
+$ coreo account create -u my_new_username -e me@example.com
+</code></pre>
+</div>
+
+<h3 id="coreo-solo">coreo solo</h3>
+
+<p>run processes on a stack without a CloudCoreo Account
+#### Options</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>-h, --help output usage information
+</code></pre>
+</div>
+<p>#### Actions</p>
+
+<h5 id="action-run">Action: run</h5>
+
+<p>create a new CloudCoreo account</p>
+
+<h6 id="options-5">Options:</h6>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>-h, --help output usage information
+-p, --profile &lt;profile&gt; the CloudCoreo profile to use. if it does not exist, it will be created and associated with the cloud account
+-a, --access-key-id &lt;access-key-id&gt; What amazon aws access key id to use
+-e, --secret-access-key &lt;secret-access-key&gt; The secret access key associated with the corresponding access key id
+-r, --region &lt;region&gt; The region in which this should be launched. If nothing is specified, it will look to launch in the default region supplied by a aws cli config file. If there is no cli config specified, an error will occur.
+</code></pre>
+</div>
+<p>###### Examples:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+This will create a new CloudCoreo account and key pairs
+which can be used for accessing your account via the CLI tool.
+
+The CLI tool will create a $HOME/.cloudcoreo directory and add a
+config file with a JSON representation of the key pair and your username
+
+$ coreo account create -u my_new_username -e me@example.com
+</code></pre>
+</div>
+
+<hr />
+
+<p>CLI Getting Started Example</p>
+
+<p>CloudCoreo makes it simple to get up and running quickly in the cloud.</p>
+
+<h3 id="download-git-and-the-cloudcoreo-cli">Download git and the CloudCoreo CLI</h3>
+
+<p>CloudCoreo uses git and git concepts.
+If you don’t already have Git, download and install it.</p>
+
+<p>CloudCoreo requires the use of AWS access keys to be able to deploy to the cloud. CloudCoreo never stores your credentials.</p>
+
+<h3 id="install-the-cloudcoreo-cli">Install the CloudCoreo CLI</h3>
+<p>The CloudCoreo CLI allows full control over your CloudCoreo account.</p>
+
+<p>$ (Insert instructions for downloading and installing the CLI)</p>
+
+<h3 id="create-your-deployment-project">Create Your Deployment Project</h3>
+<p>The following steps outline the process of deploying a VPC (virtual private cloud) in Amazon Web Services.</p>
+
+<p>A CloudCoreo Composition is defined by a single repository in Git a directory:</p>
+
+<p>$ mkdir -p ~/composition1<br />
+$ cd ~/composition1</p>
+
+<p>Pull down the public CloudCoreo github repository for a sample VPC composition:</p>
+
+<p>$ (Insert the new CLI command) vpc-network-only_284bd</p>
+
+<h3 id="deploy-the-composition">Deploy the composition</h3>
+<p>$ (insert new cli command)</p>
+
+<p>The CLI will ask you for the keys to the AWS account you would like us to integrate with. If you already have the AWS CLI set up, we’ll see those keys and apply them.</p>
+
+<h3 id="verify-what-was-built-in-aws">Verify what was built in AWS</h3>
+<p>After completing the steps above to deploy you will end up with the following, assuming you left all the defaults alone:
+* 1 VPC (10.11.0.0/16)
+* 1 Internet Gateway
+* 3 Public Subnets
+* 3 Private Subnets
+* 3 Private Route Tables
+* 1 Public Route Table</p>
+
+<h3 id="next-steps--call-to-action">Next steps / call to action</h3>
+
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 CloudCoreo. All rights reserved. <br />
+<span>Page last updated:</span> November 9, 2016<br/> Site last generated: Nov 9, 2016 <br />
+<p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

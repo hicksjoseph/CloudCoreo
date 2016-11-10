@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CloudCoreo Variables">
+<meta name="keywords" content=" ">
+<title>CloudCoreo Variables | CloudCoreo Knowledge Base</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://kb.cloudcoreo.comfeed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> CloudCoreo Knowledge Base</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">CloudCoreo Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://www.cloudcoreo.com" target="_blank">Website</a></li>
+                        
+                        
+                        
+                        <li><a href="https://github.com/CloudCoreo" target="_blank">Github Repo</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="mydoc_introduction.html">CloudAudit</a></li>
+                        
+                        
+                        
+                        <li><a href="conceptdocs_overview.html">Concept Docs</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the CloudCoreo Variables page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="CloudCoreo Variables">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Documentation </li>
+    
+    
+    
+    <li>
+        <a href="#">Concept Docs</a>
+        <ul>
+            
+            
+            
+            <li><a href="conceptdocs_overview.html">Overview</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_compositecreation.html">Composite Creation</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_advancedcomposites.html">Advanced Composite Creation</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_cli.html">CloudCoreo CLI</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_configurationfiles.html">Configuration Files</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_directorystructure.html">Directory Structure</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="conceptdocs_variables.html">Variables</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_webui.html">CloudCoreo Web UI</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">CloudCoreo Variables</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">CloudCoreo Variables</div>
+   
+
+    
+
+    
+
+    
+
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/conceptdocs/conceptdocs_variables.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    
+
+    
+
+  <h2 id="variables">Variables</h2>
+
+<p>The root directory can contain a <code class="highlighter-rouge">config.yaml</code> file to define variables for use in the stack. Variables allow a user to create many copies of CloudCoreo stacks without creating conflict (unless conflict is desired, of course). There are a number of properties that can be set. Here is an example <code class="highlighter-rouge">config.yaml</code> file:
+<code class="highlighter-rouge">
+variables:
+  MY_DNS_ZONE:
+    default: cloudcoreo.com
+    description: this dns zone variable is used for setting up route53 entries
+    required: true
+    type: string
+    overrides:
+      - stack-tomcat:DNS_ZONE
+  SWAP_SIZE_IN_GB:
+    default: 2
+    description: create a swap file of this size in gigabytes
+    required: false
+    type: number
+  SERVER_AMI:
+    description: the ami to launch
+    switch: INSTANCE::region
+    cases:
+      us-east-1: ami-1ecae776
+      us-west-1: ami-d114f295
+      us-west-2: ami-e7527ed7
+    type: case
+</code>
+### property: default
+The default value of a variable is applied if no user input is specified and no parent directory re-sets the default. For instance, if a user sets a value in the web UI, it will override the default.</p>
+
+<p>Similarly, if a parent directory sets a new default it will override the current default.
+### property: description
+The description is exposed in the web-ui as a tool-tip to the users utilizing the stack.
+### property: required
+A variable is made to be required by setting the required property to ‘true’. Required variables <em>must</em> be supplied to launch a stack. If they are not, CloudCoreo will flag them as errors and force the user to input valid data. Here’s an example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>MY_VAR:
+  default: hi
+  definition: this says hi
+  required: true
+</code></pre>
+</div>
+
+<h3 id="property-overrides">property: overrides</h3>
+<p>Overrides allow you to effectively take ownership of or rename a variable used in extended stacks. This is useful if your stack includes multiples of the same stack but you wish the variables to be set differently.</p>
+
+<p>In the following stack structure <code class="highlighter-rouge">my-stack</code> is the the one being created. Also, the same stack has been added twice, perhaps a web server and a scheduler. The directory structure might look like this:
+<code class="highlighter-rouge">
+my-stack/
+├── config.yaml
+├── stack-scheduler
+│   └── config.yaml
+└── stack-webserver
+    └── config.yaml
+</code>
+Both of these <code class="highlighter-rouge">stack-*</code> directories are pointers to the exact same external stack.</p>
+
+<p>Now, look at the <code class="highlighter-rouge">config.yaml</code> in the <code class="highlighter-rouge">stack-*</code> directories. Knowing that each of these stacks are identical, we also know that the <code class="highlighter-rouge">config.yaml</code> files are identical. Check it out:
+<code class="highlighter-rouge">
+variables:
+  DNS_ENTRY:
+    default: my-server.example.com
+    required: true
+    type: string
+    description: this is the dns record to assign to the server
+</code></p>
+
+<p>Adding the <code class="highlighter-rouge">DNS_ENTRY</code> variable to your top level under-your-control <code class="highlighter-rouge">config.yaml</code> file allows you to override all of the <code class="highlighter-rouge">DNS_ENTRY</code> values below you. This is global though, meaning that it will change <strong>both</strong> the <code class="highlighter-rouge">stack-scheduler</code> value and the <code class="highlighter-rouge">stack-webserver</code> value, as well as anything below them.</p>
+
+<p>Here, both stacks will get the same variable, which isn’t good in this case. Assuming this variable is used to manage DNS, it means that the DNS records will stomp on each other and one record won’t have an entry.</p>
+
+<p>We can’t have that! The answer is <code class="highlighter-rouge">overrides</code>.</p>
+
+<p>When you add an overrides property to a <code class="highlighter-rouge">config.yaml</code> file in the <code class="highlighter-rouge">&lt;stack&gt;::&lt;name&gt;</code> format, it modifies the variable(s) it calls out, and <em>only</em> those variables. It also modifies the variable <strong>starting in the stack</strong>, and then everything from that stack down. If the <code class="highlighter-rouge">&lt;stack&gt;::</code> is left out, it will modify the variable in all stacks. Let’s whip up an example with our directory structure:
+<code class="highlighter-rouge">
+my-stack/
+├── config.yaml      | empty file
+├── stack-scheduler
+│   └── config.yaml  | DNS_ENTRY variable, default "my-server.example.com"
+└── stack-webserver 
+    └── config.yaml  | DNS_ENTRY variable, default "my-server.example.com"
+</code>
+We can <em>override</em> this by adding a new variable to the top level <code class="highlighter-rouge">config.yaml</code> file, calling out an override on <code class="highlighter-rouge">DNS_ENTRY</code>. So:
+<code class="highlighter-rouge">
+MY_NEW_DNS:
+  overrides:
+    - DNS_ENTRY
+  default: my-new-dns.example.com
+</code>
+Whatever the <code class="highlighter-rouge">MY_NEW_DNS</code> variable is set to will also be propagated down to all <code class="highlighter-rouge">DNS_ENTRY</code> values in all stacks added ‘under’ this <code class="highlighter-rouge">config.yaml</code>. Any stack inheriting or adding this stack must use <code class="highlighter-rouge">MY_NEW_DNS</code> because <code class="highlighter-rouge">DNS_ENTRY</code> effectively no longer exists (it has been overridden).</p>
+
+<p>If the <code class="highlighter-rouge">&lt;stack&gt;::</code> notation is used the same rules apply, but this time only to the stack(s) it calls out. For instance, if you change our override property slightly:
+<code class="highlighter-rouge">
+MY_NEW_DNS:
+  overrides:
+    - stack-scheduler::DNS_ENTRY
+  default: my-new-dns.example.com
+</code>
+You will have added a <code class="highlighter-rouge">stack-scheduler::</code> prefix to the overrides <code class="highlighter-rouge">DNS_ENTRY</code> entry. This will override <code class="highlighter-rouge">DNS_ENTRY</code> within the <code class="highlighter-rouge">stack-scheduler</code> and <strong><em>not</em></strong> in the <code class="highlighter-rouge">stack-webserver</code>. The <code class="highlighter-rouge">stack-webserver</code> will still honor any entries for <code class="highlighter-rouge">DNS_ENTRY</code> and will know nothing of the <code class="highlighter-rouge">MY_NEW_DNS</code> variable that has been added.</p>
+
+<h3 id="property-type">property: type</h3>
+<p>The <code class="highlighter-rouge">type</code> property exists mostly for validation.
+#### string
+The <code class="highlighter-rouge">string</code> type is fairly self-explanatory. This expects a string value and will treat the validation as such.
+#### number
+The <code class="highlighter-rouge">number</code> type validates numbers. This can be integers, floats etc.
+#### array
+The <code class="highlighter-rouge">array</code> type expects arrays in the yaml file. It will also display in the web-ui as a list.
+#### case
+The <code class="highlighter-rouge">case</code> type is used in order to select values without asking the user for input. For instance:
+<code class="highlighter-rouge">
+MY_SWAP_GB:
+  switch: SIZE
+    cases:
+      m3.medium: 1
+      m3.large: 1.5
+      m3.xlarge: 2
+    type: case
+</code>
+In this case an AMI will be selected based on the region. The user has no option of which AMI is selected, but instead it is selected for them based on the value of the region.</p>
+
+<h3 id="instance-variables">Instance Variables</h3>
+<p>Instance variables are variables set by the AppStack that is actually running. You can use them simply by adding the <code class="highlighter-rouge">INSTANCE::</code> prefix to the variable you wish to use.
+#### <code class="highlighter-rouge">INSTANCE::region</code>
+This will return a string representing the region in which the AppStack instance is requested to run.</p>
+
+<h3 id="stack-variables">Stack Variables</h3>
+<p>Stack variables are set during runtime and can be used to access various values created during the stack creation/update runtime. Access STACK variables using <code class="highlighter-rouge">STACK::</code>.</p>
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 CloudCoreo. All rights reserved. <br />
+<span>Page last updated:</span> November 9, 2016<br/> Site last generated: Nov 9, 2016 <br />
+<p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

@@ -6,7 +6,7 @@ last_updated: "September 15, 2016"
 summary: CloudTrail logging is not enabled for this region. It should be enabled.
 published: true
 sidebar: mydoc_sidebar
-permalink: cloudtrail-service-disabled.html
+permalink: mydoc_cloudtrail-service-disabled.html
 folder: mydoc
 toc: false
 ---
