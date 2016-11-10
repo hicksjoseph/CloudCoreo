@@ -97,6 +97,7 @@ sidebars:
 - jobs_sidebar
 - faq_sidebar
 - conceptdocs_sidebar
+- althome_sidebar
 
 description: "CloudCoreo Documentation"
 # the description is used in the feed.xml file
