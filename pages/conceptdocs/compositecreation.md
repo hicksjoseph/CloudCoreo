@@ -23,7 +23,7 @@ We define a ***resource*** as the actual cloud service you are interacting with,
 
 The structure of a Cloud Resource is:  
 
-~~~  
+~~~ ruby  
 <resource> "<name>" do
     <property1> <value>
     <property2> <value>
@@ -33,7 +33,7 @@ end
 
 Here is an example of a VPC Cloud Resource:
 
-~~~  
+~~~ ruby  
 coreo_aws_vpc_vpc "my-vpc" do
   action :sustain
   cidr "12.0.0.0/16"
@@ -54,7 +54,7 @@ Plans allow variables to be inserted into the system at runtime, allowing a sing
 
 The look of the variables is similar to *bash* but many "bash-isms" do not apply. To define a variable use `${ }` to contain it, for example `${VARIABLE_NAME}`. Let's see what the previous example of the VPC Cloud Resource would be look like with the use of variables for VPC name and VPC cidr octets:  
 
-~~~
+~~~ ruby
 coreo_aws_vpc_vpc "${VPC_NAME}" do
   action :sustain
   cidr "${VPC_OCTETS}/16"
@@ -62,13 +62,13 @@ coreo_aws_vpc_vpc "${VPC_NAME}" do
 end
 ~~~  
 
-Plan variables are defined in the `config.yaml` file. Within the `config.yaml` file, you can now call out a `VPC_NAME` and `VPC_OCTETS` variables and apply defaults. In this case, the variable `VPC_NAME` and `VPC_OCTETS` will show up in the web UI for any users to modify.  This is what the `config.yaml` would look like in this case:
+Plan variables are defined in the `config.yaml` file which resides in the `<repo-dir>` base directory. Within the `config.yaml` file, you can now call out a `VPC_NAME` and `VPC_OCTETS` variables and apply defaults. In this case, the variable `VPC_NAME` and `VPC_OCTETS` will show up in the web UI for any users to modify.  This is what the `config.yaml` would look like in this case:
 
-~~~
+~~~ ruby
 variables:
     VPC_NAME:
         required: true
-        description: Enter the name of the name of the VPC. (Default is test-vpc)
+        description: Enter the name of the VPC. (Default is test-vpc)
         default: test-vpc
     VPC_OCTETS:
         required: true
@@ -76,15 +76,44 @@ variables:
         default: 10.11.0.0
 ~~~
 
+### Plan Variables
+There are a few fields in the `config.yaml` file that control the behavior of the WebUI. These are `required`, `description`, and `default`.
 
-*Discuss a little more about the `config.yaml` file here: required, description, and default.*
+* `default:`
+You use the `default` field to pre-populate the default value for your particular variable when a Plan is created and when no other value has been entered. Valid entries for this field are whatever is appropriate for your particular variable.  
 
-required: true  
-description: Enter the /16 CIDR address / network of the VPC. (Default is 10.11.0.0)  
-default: 10.11.0.0  
+`default: 10.11.0.0`  
+
+or  
+
+`default: us-east-1,eu-west-1,ap-southeast-1`   
+
+
+* `required:`
+You use the `required` field to indicate whether the WebUI requires this variable to have a value entered when a Plan is created. Valid entries for this field are true or false.  
+
+`required: true`  
+
+or  
+
+`required: false`   
+
+* `description:`
+You use the `description` field to enter a human readable description that will show as a tooltip in the WebUI for the particular variable when a Plan is created. Valid entries for this field are any plain text (yaml compatible) enclosed in double quotes `" "`.  
+
+`description: "This is a sample description"`  
+
+or  
+
+`description: "Enter the value for this variable. Valid values are apple, ball, and/or cat."`   
+
+
+**Note:** Be careful when you edit your config.yaml file since this file **cannot contain tab characters**. When you do line spacing, use spaces instead. 
+
+-----
 
 These are the basics concepts of Composite creation. Learn more about Advanced Composite creation at [*Advanced Composites*](http://kb.cloudcoreo.com/conceptdocs/advancedcomposites.html/) .  
 
----
+-----
 
 As you build new Composites, you will need to reference the [*CloudCoreo API Documentation*](http://docs.cloudcoreo.com/docs/frames/index) to know what options and parameters that you can use in your Composites.  

@@ -2,11 +2,11 @@
 
 entries:
 - title: sidebar
-  product: Documentation
+  product: CloudCoreo Documentation
   version:
   folders:
 
-  - title: Concept Docs
+  - title: Getting Started
     output: web
     folderitems:
 
@@ -18,16 +18,12 @@ entries:
       url: /conceptdocs_compositecreation.html
       output: web
 
+  - title: Advanced Topics
+    output: web
+    folderitems:
+
     - title: Advanced Composite Creation
       url: /conceptdocs_advancedcomposites.html
-      output: web
-
-    - title: CloudCoreo CLI
-      url: /conceptdocs_cli.html
-      output: web
-
-    - title: Configuration Files
-      url: /conceptdocs_configurationfiles.html
       output: web
 
     - title: Directory Structure
@@ -38,7 +34,14 @@ entries:
       url: /conceptdocs_variables.html
       output: web
 
+  - title: WebUI and CLI
+    output: web
+    folderitems:
+
     - title: CloudCoreo Web UI
       url: /conceptdocs_webui.html
       output: web
 
+    - title: CloudCoreo CLI
+      url: /conceptdocs_cli.html
+      output: web

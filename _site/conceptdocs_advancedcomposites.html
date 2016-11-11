@@ -180,12 +180,12 @@
 
 
 <ul id="mysidebar" class="nav">
-    <li class="sidebarTitle">Documentation </li>
+    <li class="sidebarTitle">CloudCoreo Documentation </li>
     
     
     
     <li>
-        <a href="#">Concept Docs</a>
+        <a href="#">Getting Started</a>
         <ul>
             
             
@@ -202,23 +202,17 @@
             
             
             
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Advanced Topics</a>
+        <ul>
+            
             
             
             <li class="active"><a href="conceptdocs_advancedcomposites.html">Advanced Composite Creation</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="conceptdocs_cli.html">CloudCoreo CLI</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="conceptdocs_configurationfiles.html">Configuration Files</a></li>
             
             
             
@@ -237,9 +231,24 @@
             
             
             
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">WebUI and CLI</a>
+        <ul>
+            
             
             
             <li><a href="conceptdocs_webui.html">CloudCoreo Web UI</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_cli.html">CloudCoreo CLI</a></li>
             
             
             
@@ -311,7 +320,7 @@
 </ul>
 
 <p>Assume we have a <strong>VPC</strong> resource in the <code class="highlighter-rouge">extends/services/config.rb</code> file as follows:<br />
-~~~<br />
+~~~ ruby<br />
 coreo_aws_vpc_vpc “${VPC_NAME}” do
   action :sustain
   cidr “12.0.0.0/16”
@@ -321,15 +330,15 @@ end
 
 <p>This doesn’t do us any good because we can’t clone this to different environments. We need to have templating and variables, and we want to add some tags to the VPC. We can override this resource by keying off the <code class="highlighter-rouge">&lt;resource&gt; "&lt;name&gt;" do</code> line and placing the new block in the root <code class="highlighter-rouge">services/config.rb</code> file. So, within the <code class="highlighter-rouge">&lt;repo-dir&gt;/services/config.rb</code> file we call out a new VPC as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>coreo_aws_vpc_vpc "${VPC_NAME}" do
-  action :sustain
-  cidr "${VPC_CIDR}"
-  internet_gateway true
-  tags [
-     "Name=${VPC_NAME_TAG}",
-     "Team=${VPC_TEAM}"
-  ]
-end
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">coreo_aws_vpc_vpc</span> <span class="s2">"${VPC_NAME}"</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:sustain</span>
+  <span class="n">cidr</span> <span class="s2">"${VPC_CIDR}"</span>
+  <span class="n">internet_gateway</span> <span class="kp">true</span>
+  <span class="n">tags</span> <span class="p">[</span>
+     <span class="s2">"Name=${VPC_NAME_TAG}"</span><span class="p">,</span>
+     <span class="s2">"Team=${VPC_TEAM}"</span>
+  <span class="p">]</span>
+<span class="k">end</span>
 </code></pre>
 </div>
 
@@ -351,52 +360,52 @@ end
 </ul>
 <p>In our extends/services/config.rb file we will have a <strong><em>subnet definition</em></strong> and an <strong><em>elastic load balancer</em></strong>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>coreo_aws_vpc_subnet 'public-subnet' do
-   vpc 'my-vpc'
-   map_public_ip_on_launch true
-end
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">coreo_aws_vpc_subnet</span> <span class="s1">'public-subnet'</span> <span class="k">do</span>
+   <span class="n">vpc</span> <span class="s1">'my-vpc'</span>
+   <span class="n">map_public_ip_on_launch</span> <span class="kp">true</span>
+<span class="k">end</span>
 
-coreo_aws_ec2_elb 'my-elb' do
-   type 'public'
-   subnet 'public-subnet'
-end
+<span class="n">coreo_aws_ec2_elb</span> <span class="s1">'my-elb'</span> <span class="k">do</span>
+   <span class="n">type</span> <span class="s1">'public'</span>
+   <span class="n">subnet</span> <span class="s1">'public-subnet'</span>
+<span class="k">end</span>
 </code></pre>
 </div>
 
 <p>This is not adequate! First of all we want the ELB to contain a security group and we want it to be an <code class="highlighter-rouge">internal</code> load balancer, not public. To achieve this, move to your root <code class="highlighter-rouge">services/config.rb</code> file and add your key resource. This will become an anchor, and we can modify anything other than the key itself.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>coreo_aws_ec2_elb 'my-elb' do
-   type 'internal'
-   subnet 'private-subnet'
-   security_groups ['my-elb-sg']
-end
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">coreo_aws_ec2_elb</span> <span class="s1">'my-elb'</span> <span class="k">do</span>
+   <span class="n">type</span> <span class="s1">'internal'</span>
+   <span class="n">subnet</span> <span class="s1">'private-subnet'</span>
+   <span class="n">security_groups</span> <span class="p">[</span><span class="s1">'my-elb-sg'</span><span class="p">]</span>
+<span class="k">end</span>
 </code></pre>
 </div>
 
 <p>This one is modified correctly, but we are missing some pieces: the private subnet and the security groups. Re-edit your file with the knowledge that your anchor brings along all the pieces that it requires. Our new root-level <code class="highlighter-rouge">services/config.rb</code> file looks as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>coreo_aws_vpc_subnet 'private-subnet' do
-   vpc 'my-vpc'
-   map_public_ip_on_launch false
-end
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">coreo_aws_vpc_subnet</span> <span class="s1">'private-subnet'</span> <span class="k">do</span>
+   <span class="n">vpc</span> <span class="s1">'my-vpc'</span>
+   <span class="n">map_public_ip_on_launch</span> <span class="kp">false</span>
+<span class="k">end</span>
 
-coreo_aws_ec2_securityGroup 'my-elb-sg' do
-   vpc 'my-vpc'
-   allows [ 
-            { 
-              :direction =&gt; :ingress,
-              :protocol =&gt; :tcp,
-              :ports =&gt; ${INGRESS_PORTS},
-              :cidrs =&gt; ${INGRESS_CIDRS}
-            }
-          ]
-end
+<span class="n">coreo_aws_ec2_securityGroup</span> <span class="s1">'my-elb-sg'</span> <span class="k">do</span>
+   <span class="n">vpc</span> <span class="s1">'my-vpc'</span>
+   <span class="n">allows</span> <span class="p">[</span> 
+            <span class="p">{</span> 
+              <span class="ss">:direction</span> <span class="o">=&gt;</span> <span class="ss">:ingress</span><span class="p">,</span>
+              <span class="ss">:protocol</span> <span class="o">=&gt;</span> <span class="ss">:tcp</span><span class="p">,</span>
+              <span class="ss">:ports</span> <span class="o">=&gt;</span> <span class="err">$</span><span class="p">{</span><span class="no">INGRESS_PORTS</span><span class="p">},</span>
+              <span class="ss">:cidrs</span> <span class="o">=&gt;</span> <span class="err">$</span><span class="p">{</span><span class="no">INGRESS_CIDRS</span><span class="p">}</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+<span class="k">end</span>
 
-coreo_aws_ec2_elb 'my-elb' do
-   type 'internal'
-   subnet 'private-subnet'
-   security_groups ['my-elb-sg']
-end
+<span class="n">coreo_aws_ec2_elb</span> <span class="s1">'my-elb'</span> <span class="k">do</span>
+   <span class="n">type</span> <span class="s1">'internal'</span>
+   <span class="n">subnet</span> <span class="s1">'private-subnet'</span>
+   <span class="n">security_groups</span> <span class="p">[</span><span class="s1">'my-elb-sg'</span><span class="p">]</span>
+<span class="k">end</span>
 </code></pre>
 </div>
 
@@ -404,37 +413,51 @@ end
 
 <p>The final compilation will be a merge of the two files with the <em>anchor</em> located in the same place as the original, with any other non-overriding resources preceding it from the overriding file. The compiled version becomes:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>coreo_aws_vpc_subnet 'public-subnet' do
-   vpc 'my-vpc'
-   map_public_ip_on_launch true
-end
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">coreo_aws_vpc_subnet</span> <span class="s1">'public-subnet'</span> <span class="k">do</span>
+   <span class="n">vpc</span> <span class="s1">'my-vpc'</span>
+   <span class="n">map_public_ip_on_launch</span> <span class="kp">true</span>
+<span class="k">end</span>
 
-coreo_aws_vpc_subnet 'private-subnet' do
-   vpc 'my-vpc'
-   map_public_ip_on_launch false
-end
+<span class="n">coreo_aws_vpc_subnet</span> <span class="s1">'private-subnet'</span> <span class="k">do</span>
+   <span class="n">vpc</span> <span class="s1">'my-vpc'</span>
+   <span class="n">map_public_ip_on_launch</span> <span class="kp">false</span>
+<span class="k">end</span>
 
-coreo_aws_ec2_securityGroup 'my-elb-sg' do
-   vpc 'my-vpc'
-   allows [ 
-            { 
-              :direction =&gt; :ingress,
-              :protocol =&gt; :tcp,
-              :ports =&gt; ${INGRESS_PORTS},
-              :cidrs =&gt; ${INGRESS_CIDRS}
-            }
-          ]
-end
+<span class="n">coreo_aws_ec2_securityGroup</span> <span class="s1">'my-elb-sg'</span> <span class="k">do</span>
+   <span class="n">vpc</span> <span class="s1">'my-vpc'</span>
+   <span class="n">allows</span> <span class="p">[</span> 
+            <span class="p">{</span> 
+              <span class="ss">:direction</span> <span class="o">=&gt;</span> <span class="ss">:ingress</span><span class="p">,</span>
+              <span class="ss">:protocol</span> <span class="o">=&gt;</span> <span class="ss">:tcp</span><span class="p">,</span>
+              <span class="ss">:ports</span> <span class="o">=&gt;</span> <span class="err">$</span><span class="p">{</span><span class="no">INGRESS_PORTS</span><span class="p">},</span>
+              <span class="ss">:cidrs</span> <span class="o">=&gt;</span> <span class="err">$</span><span class="p">{</span><span class="no">INGRESS_CIDRS</span><span class="p">}</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+<span class="k">end</span>
 
-coreo_aws_ec2_elb 'my-elb' do
-   type 'internal'
-   subnet 'private-subnet'
-   security_groups ['my-elb-sg']
-end
+<span class="n">coreo_aws_ec2_elb</span> <span class="s1">'my-elb'</span> <span class="k">do</span>
+   <span class="n">type</span> <span class="s1">'internal'</span>
+   <span class="n">subnet</span> <span class="s1">'private-subnet'</span>
+   <span class="n">security_groups</span> <span class="p">[</span><span class="s1">'my-elb-sg'</span><span class="p">]</span>
+<span class="k">end</span>
 </code></pre>
 </div>
 
 <p>The <em>‘public-subnet’</em> resource has been included from the <code class="highlighter-rouge">extends/services/config.rb</code> file, while the <em>‘my-elb’</em> from the     extends/services/config.rb   essentially becomes the <em>‘private-subnet’</em> + <em>‘my-elb-sg’</em> + <em>‘my-elb’</em>.</p>
+
+<hr />
+
+<p>Add this to more information about boot scripts.
+### Script Order
+The configuration file that travels along with, and is located in, the <code class="highlighter-rouge">boot-scripts</code> directory is defined by the <code class="highlighter-rouge">order.yaml</code> file. The format is yaml, which means that tab indentations are an error. Here is an example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>order:  
+    - install_packages.sh
+    - run_chef.sh
+</code></pre>
+</div>
+
+<p>CloudCoreo will run (as root) each script in order. The process is to <strong>chmod +x</strong> the files and run with a **./<filename>** So make sure the shebang is correct.</filename></p>
 
 <hr />
 

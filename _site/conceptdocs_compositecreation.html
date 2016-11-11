@@ -180,12 +180,12 @@
 
 
 <ul id="mysidebar" class="nav">
-    <li class="sidebarTitle">Documentation </li>
+    <li class="sidebarTitle">CloudCoreo Documentation </li>
     
     
     
     <li>
-        <a href="#">Concept Docs</a>
+        <a href="#">Getting Started</a>
         <ul>
             
             
@@ -202,23 +202,17 @@
             
             
             
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Advanced Topics</a>
+        <ul>
+            
             
             
             <li><a href="conceptdocs_advancedcomposites.html">Advanced Composite Creation</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="conceptdocs_cli.html">CloudCoreo CLI</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="conceptdocs_configurationfiles.html">Configuration Files</a></li>
             
             
             
@@ -237,9 +231,24 @@
             
             
             
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">WebUI and CLI</a>
+        <ul>
+            
             
             
             <li><a href="conceptdocs_webui.html">CloudCoreo Web UI</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_cli.html">CloudCoreo CLI</a></li>
             
             
             
@@ -297,21 +306,21 @@
 
 <p>The structure of a Cloud Resource is:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;resource&gt; "&lt;name&gt;" do
-    &lt;property1&gt; &lt;value&gt;
-    &lt;property2&gt; &lt;value&gt;
-    &lt;property3&gt; &lt;value&gt;
-end
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">resource</span><span class="o">&gt;</span> <span class="s2">"&lt;name&gt;"</span> <span class="k">do</span>
+    <span class="o">&lt;</span><span class="n">property1</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">property2</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">property3</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+<span class="k">end</span>
 </code></pre>
 </div>
 
 <p>Here is an example of a VPC Cloud Resource:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>coreo_aws_vpc_vpc "my-vpc" do
-  action :sustain
-  cidr "12.0.0.0/16"
-  internet_gateway true
-end
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">coreo_aws_vpc_vpc</span> <span class="s2">"my-vpc"</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:sustain</span>
+  <span class="n">cidr</span> <span class="s2">"12.0.0.0/16"</span>
+  <span class="n">internet_gateway</span> <span class="kp">true</span>
+<span class="k">end</span>
 </code></pre>
 </div>
 
@@ -330,33 +339,67 @@ end
 
 <p>The look of the variables is similar to <em>bash</em> but many “bash-isms” do not apply. To define a variable use <code class="highlighter-rouge">${ }</code> to contain it, for example <code class="highlighter-rouge">${VARIABLE_NAME}</code>. Let’s see what the previous example of the VPC Cloud Resource would be look like with the use of variables for VPC name and VPC cidr octets:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>coreo_aws_vpc_vpc "${VPC_NAME}" do
-  action :sustain
-  cidr "${VPC_OCTETS}/16"
-  internet_gateway true
-end
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">coreo_aws_vpc_vpc</span> <span class="s2">"${VPC_NAME}"</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:sustain</span>
+  <span class="n">cidr</span> <span class="s2">"${VPC_OCTETS}/16"</span>
+  <span class="n">internet_gateway</span> <span class="kp">true</span>
+<span class="k">end</span>
 </code></pre>
 </div>
 
-<p>Plan variables are defined in the <code class="highlighter-rouge">config.yaml</code> file. Within the <code class="highlighter-rouge">config.yaml</code> file, you can now call out a <code class="highlighter-rouge">VPC_NAME</code> and <code class="highlighter-rouge">VPC_OCTETS</code> variables and apply defaults. In this case, the variable <code class="highlighter-rouge">VPC_NAME</code> and <code class="highlighter-rouge">VPC_OCTETS</code> will show up in the web UI for any users to modify.  This is what the <code class="highlighter-rouge">config.yaml</code> would look like in this case:</p>
+<p>Plan variables are defined in the <code class="highlighter-rouge">config.yaml</code> file which resides in the <code class="highlighter-rouge">&lt;repo-dir&gt;</code> base directory. Within the <code class="highlighter-rouge">config.yaml</code> file, you can now call out a <code class="highlighter-rouge">VPC_NAME</code> and <code class="highlighter-rouge">VPC_OCTETS</code> variables and apply defaults. In this case, the variable <code class="highlighter-rouge">VPC_NAME</code> and <code class="highlighter-rouge">VPC_OCTETS</code> will show up in the web UI for any users to modify.  This is what the <code class="highlighter-rouge">config.yaml</code> would look like in this case:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>variables:
-    VPC_NAME:
-        required: true
-        description: Enter the name of the name of the VPC. (Default is test-vpc)
-        default: test-vpc
-    VPC_OCTETS:
-        required: true
-        description: Enter the /16 CIDR address / network of the VPC. (Default is 10.11.0.0)
-        default: 10.11.0.0
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="ss">variables:
+    </span><span class="no">VPC_NAME</span><span class="p">:</span>
+        <span class="ss">required: </span><span class="kp">true</span>
+        <span class="ss">description: </span><span class="no">Enter</span> <span class="n">the</span> <span class="nb">name</span> <span class="n">of</span> <span class="n">the</span> <span class="no">VPC</span><span class="o">.</span> <span class="p">(</span><span class="no">Default</span> <span class="n">is</span> <span class="nb">test</span><span class="o">-</span><span class="n">vpc</span><span class="p">)</span>
+        <span class="ss">default: </span><span class="nb">test</span><span class="o">-</span><span class="n">vpc</span>
+    <span class="no">VPC_OCTETS</span><span class="p">:</span>
+        <span class="ss">required: </span><span class="kp">true</span>
+        <span class="ss">description: </span><span class="no">Enter</span> <span class="n">the</span> <span class="sr">/16 CIDR address /</span> <span class="n">network</span> <span class="n">of</span> <span class="n">the</span> <span class="no">VPC</span><span class="o">.</span> <span class="p">(</span><span class="no">Default</span> <span class="n">is</span> <span class="mi">10</span><span class="o">.</span><span class="mi">11</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
+        <span class="ss">default: </span><span class="mi">10</span><span class="o">.</span><span class="mi">11</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span>
 </code></pre>
 </div>
 
-<p><em>Discuss a little more about the <code class="highlighter-rouge">config.yaml</code> file here: required, description, and default.</em></p>
+<h3 id="plan-variables">Plan Variables</h3>
+<p>There are a few fields in the <code class="highlighter-rouge">config.yaml</code> file that control the behavior of the WebUI. These are <code class="highlighter-rouge">required</code>, <code class="highlighter-rouge">description</code>, and <code class="highlighter-rouge">default</code>.</p>
 
-<p>required: true<br />
-description: Enter the /16 CIDR address / network of the VPC. (Default is 10.11.0.0)<br />
-default: 10.11.0.0</p>
+<ul>
+  <li><code class="highlighter-rouge">default:</code>
+You use the <code class="highlighter-rouge">default</code> field to pre-populate the default value for your particular variable when a Plan is created and when no other value has been entered. Valid entries for this field are whatever is appropriate for your particular variable.</li>
+</ul>
+
+<p><code class="highlighter-rouge">default: 10.11.0.0</code></p>
+
+<p>or</p>
+
+<p><code class="highlighter-rouge">default: us-east-1,eu-west-1,ap-southeast-1</code></p>
+
+<ul>
+  <li><code class="highlighter-rouge">required:</code>
+You use the <code class="highlighter-rouge">required</code> field to indicate whether the WebUI requires this variable to have a value entered when a Plan is created. Valid entries for this field are true or false.</li>
+</ul>
+
+<p><code class="highlighter-rouge">required: true</code></p>
+
+<p>or</p>
+
+<p><code class="highlighter-rouge">required: false</code></p>
+
+<ul>
+  <li><code class="highlighter-rouge">description:</code>
+You use the <code class="highlighter-rouge">description</code> field to enter a human readable description that will show as a tooltip in the WebUI for the particular variable when a Plan is created. Valid entries for this field are any plain text (yaml compatible) enclosed in double quotes <code class="highlighter-rouge">" "</code>.</li>
+</ul>
+
+<p><code class="highlighter-rouge">description: "This is a sample description"</code></p>
+
+<p>or</p>
+
+<p><code class="highlighter-rouge">description: "Enter the value for this variable. Valid values are apple, ball, and/or cat."</code></p>
+
+<p><strong>Note:</strong> Be careful when you edit your config.yaml file since this file <strong>cannot contain tab characters</strong>. When you do line spacing, use spaces instead.</p>
+
+<hr />
 
 <p>These are the basics concepts of Composite creation. Learn more about Advanced Composite creation at <a href="http://kb.cloudcoreo.com/conceptdocs/advancedcomposites.html/"><em>Advanced Composites</em></a> .</p>
 

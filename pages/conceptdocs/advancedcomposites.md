@@ -34,7 +34,7 @@ Let's illlustrate this with an example utilizing the directory and file structur
 * `<repo-dir>/services/config.rb`
 
 Assume we have a **VPC** resource in the `extends/services/config.rb` file as follows:  
-~~~  
+~~~ ruby  
 coreo_aws_vpc_vpc "${VPC_NAME}" do
   action :sustain
   cidr "12.0.0.0/16"
@@ -44,7 +44,7 @@ end
 
 This doesn't do us any good because we can't clone this to different environments. We need to have templating and variables, and we want to add some tags to the VPC. We can override this resource by keying off the `<resource> "<name>" do` line and placing the new block in the root `services/config.rb` file. So, within the `<repo-dir>/services/config.rb` file we call out a new VPC as follows:  
 
-~~~  
+~~~ ruby  
 coreo_aws_vpc_vpc "${VPC_NAME}" do
   action :sustain
   cidr "${VPC_CIDR}"
@@ -66,7 +66,7 @@ Anchoring is what CloudCoreo does with overridden resources. The key (`<resource
 
 In our extends/services/config.rb file we will have a ***subnet definition*** and an ***elastic load balancer***:  
 
-~~~  
+~~~ ruby  
 coreo_aws_vpc_subnet 'public-subnet' do
    vpc 'my-vpc'
    map_public_ip_on_launch true
@@ -80,7 +80,7 @@ end
 
 This is not adequate! First of all we want the ELB to contain a security group and we want it to be an `internal` load balancer, not public. To achieve this, move to your root `services/config.rb` file and add your key resource. This will become an anchor, and we can modify anything other than the key itself.
 
-~~~  
+~~~ ruby  
 coreo_aws_ec2_elb 'my-elb' do
    type 'internal'
    subnet 'private-subnet'
@@ -90,7 +90,7 @@ end
 
 This one is modified correctly, but we are missing some pieces: the private subnet and the security groups. Re-edit your file with the knowledge that your anchor brings along all the pieces that it requires. Our new root-level `services/config.rb` file looks as follows:
 
-~~~  
+~~~ ruby  
 coreo_aws_vpc_subnet 'private-subnet' do
    vpc 'my-vpc'
    map_public_ip_on_launch false
@@ -119,7 +119,7 @@ The ***anchor*** in this is the ELB resource. Anything above that has not alread
 
 The final compilation will be a merge of the two files with the *anchor* located in the same place as the original, with any other non-overriding resources preceding it from the overriding file. The compiled version becomes:  
 
-~~~  
+~~~ ruby  
 coreo_aws_vpc_subnet 'public-subnet' do
    vpc 'my-vpc'
    map_public_ip_on_launch true
@@ -151,6 +151,20 @@ end
 
 The *'public-subnet'* resource has been included from the `extends/services/config.rb` file, while the *'my-elb'* from the     extends/services/config.rb   essentially becomes the *'private-subnet'* + *'my-elb-sg'* + *'my-elb'*.  
 
----
+------
+
+Add this to more information about boot scripts.
+### Script Order
+The configuration file that travels along with, and is located in, the `boot-scripts` directory is defined by the `order.yaml` file. The format is yaml, which means that tab indentations are an error. Here is an example:  
+
+```  
+order:  
+    - install_packages.sh
+    - run_chef.sh
+```  
+
+CloudCoreo will run (as root) each script in order. The process is to **chmod +x** the files and run with a **./<filename>** So make sure the shebang is correct.
+
+-----
 
 As you build new Composites, you will need to reference the [*CloudCoreo API Documentation*](http://docs.cloudcoreo.com/docs/frames/index) to know what options and parameters that you can use in your Composites.  

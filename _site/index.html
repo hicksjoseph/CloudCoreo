@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CloudCoreo Knowledge Base Home">
+<meta name="description" content="Knowledge base Home.">
 <meta name="keywords" content=" ">
-<title>CloudCoreo Knowledge Base Home | CloudCoreo Knowledge Base</title>
+<title>Introduction | CloudCoreo Knowledge Base</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the CloudCoreo Knowledge Base Home page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Introduction page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="CloudCoreo Knowledge Base Home">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Introduction">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -180,66 +180,338 @@
 
 
 <ul id="mysidebar" class="nav">
-    <li class="sidebarTitle">Documentation </li>
+    <li class="sidebarTitle">CloudAudit Definitions </li>
     
     
     
     <li>
-        <a href="#">Concept Docs</a>
+        <a href="#">Cloudtrail</a>
         <ul>
             
             
             
-            <li><a href="conceptdocs_overview.html">Overview</a></li>
+            <li><a href="mydoc_cloudtrail-service-disabled.html">Service Disabled</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">EC2</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_ec2-tcpportopen.html">TCP port open</a></li>
             
             
             
             
             
             
-            <li><a href="conceptdocs_compositecreation.html">Composite Creation</a></li>
+            <li><a href="mydoc_ec2-ip-address-whitelisted.html">Security Group contains IP address</a></li>
             
             
             
             
             
             
-            <li><a href="conceptdocs_advancedcomposites.html">Advanced Composite Creation</a></li>
+            <li><a href="mydoc_ec2-ports-range.html">Security group contains a port range</a></li>
             
             
             
             
             
             
-            <li><a href="conceptdocs_cli.html">CloudCoreo CLI</a></li>
+            <li><a href="mydoc_ec2-unrestricted-traffic.html">Security group allows unrestricted traffic</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">ELB</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_elb-old-ssl-policy.html">ELB is using old SSL policy</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">IAM</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_iam-active-key-no-rotation.html">Active user Access Key not rotated</a></li>
             
             
             
             
             
             
-            <li><a href="conceptdocs_configurationfiles.html">Configuration Files</a></li>
+            <li><a href="mydoc_iam-expirepasswords.html">Passwords not set to expire</a></li>
             
             
             
             
             
             
-            <li><a href="conceptdocs_directorystructure.html">Directory Structure</a></li>
+            <li><a href="mydoc_iam-inactive-key-no-rotation.html">Inactive user Access Key not rotated</a></li>
             
             
             
             
             
             
-            <li><a href="conceptdocs_variables.html">Variables</a></li>
+            <li><a href="mydoc_iam-missing-password-policy.html">Password policy doesn't exist</a></li>
             
             
             
             
             
             
-            <li><a href="conceptdocs_webui.html">CloudCoreo Web UI</a></li>
+            <li><a href="mydoc_iam-multiple-access-keys.html">Multiple active access keys</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_iam-no-mfa.html">MFA not enabled</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_iam-root-no-mfa.html">Root MFA not enabled</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_iam-root-active-password.html">Root user has active password</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_iam-root-active-key.html">Root user has active Access Key</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_iam-passwordreuseprevention.html">Users can reuse old passwords</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_iam-unusediamgroup.html">Unused or empty IAM group</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_iam-user-attached-policies.html">Account using inline policies</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">RDS</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_rds-db-publicly-accessible.html">RDS is Publicly Accessible</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_rds-short-backup-retention-period.html">RDS short backup retention</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_rds-no-auto-minor-version-upgrade.html">RDS no automatic upgrades</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Redshift</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_redshift-encrypted.html">Cluster data not encrypted</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_redshift-no-require-ssl.html">Redshift connections not SSL</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_redshift-no-user-logging.html">User activity logging disabled</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_redshift-no-version-upgrade.html">Automatic upgrades not enabled</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_redshift-publicly-accessible.html">Cluster is publicly accessible</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_redshift-security-group.html">Redshift TCP port open</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">S3</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_s3-allusers-read.html">All users can list bucket</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_s3-allusers-write.html">All users can write to bucket</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_s3-allusers-write-acp.html">All users can change bucket permissions</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_s3-authenticatedusers-read.html">All AWS users can read bucket</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_s3-authenticatedusers-write-acp.html">All AWS users can change bucket permissions</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_s3-authenticatedusers-write.html">All AWS users can write to bucket</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_s3-logging-disabled.html">Bucket logging not enabled</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_s3-only-ip-based-policy.html">Bucket policy uses IP addresses</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_s3-world-open-policy-all.html">Bucket policy world All permissions</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_s3-world-open-policy-delete.html">Bucket policy world can Delete</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_s3-world-open-policy-get.html">Bucket policy world can Get</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_s3-world-open-policy-list.html">Bucket policy world can List</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_s3-world-open-policy-put.html">Bucket policy world can Put</a></li>
             
             
             
@@ -263,7 +535,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">CloudCoreo Knowledge Base Home</h1>
+   <h1 class="post-title-main">Introduction</h1>
 </div>
 
 
@@ -271,7 +543,7 @@
 <div class="post-content">
 
    
-    <div class="summary">CloudCoreo Knowledge Base Home</div>
+    <div class="summary">Knowledge base Home.</div>
    
 
     
@@ -280,32 +552,28 @@
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/mydocs/index.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/mydoc/index.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
-  <h2 id="welcome-to-cloudcoreo-knowledge-base">Welcome to CloudCoreo Knowledge Base</h2>
+  <h2 id="overview">Overview</h2>
 
-<p>This site provides documentation for CloudCoreo concepts, Composite creation, and provides more details for the CloudAudit alerts.<br />
-Use the sidebar on the left to navigate to the particular alert or the Products navigation at the top.</p>
+<p>This site provides more details for the CloudAudit alerts. Use the sidebar to navigate to the particular alert that you are looking for.</p>
 
-<p>This Knowledge Base is hosted on github. If you find any errors or would like to make modifications, please modify and submit a Pull Request.</p>
-
-<h3 id="aws-services">AWS Services</h3>
+<h2 id="aws-services">AWS Services</h2>
 
 <p>Currently, CloudCoreo CloudAudit supports a number of AWS services, including:</p>
 
 <ul>
-  <li><a href="http://kb.cloudcoreo.com/mydoc_cloudtrail-service-disabled.html"><em>Cloudtrail</em></a></li>
-  <li><a href="http://kb.cloudcoreo.com/mydoc_ec2-tcpportopen.html"><em>EC2</em></a></li>
-  <li><a href="http://kb.cloudcoreo.com/mydoc_elb-old-ssl-policy.html"><em>ELB</em></a></li>
-  <li><a href="http://kb.cloudcoreo.com/mydoc_iam-active-key-no-rotation.html"><em>IAM</em></a></li>
-  <li><a href="http://kb.cloudcoreo.com/mydoc_rds-db-publicly-accessible.html"><em>RDS</em></a></li>
-  <li><a href="http://kb.cloudcoreo.com/mydoc_redshift-encrypted.html"><em>Redshift</em></a></li>
-  <li><a href="http://kb.cloudcoreo.com/mydoc_s3-allusers-read.html"><em>S3</em></a></li>
+  <li>Cloudtrail</li>
+  <li>EC2</li>
+  <li>ELB</li>
+  <li>IAM</li>
+  <li>RDS</li>
+  <li>Redshift</li>
+  <li>S3</li>
 </ul>
-
 
 
     <div class="tags">
@@ -322,7 +590,7 @@ Use the sidebar on the left to navigate to the particular alert or the Products 
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2016 CloudCoreo. All rights reserved. <br />
-<span>Page last updated:</span> November 9, 2016<br/> Site last generated: Nov 10, 2016 <br />
+ Site last generated: Nov 10, 2016 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>
