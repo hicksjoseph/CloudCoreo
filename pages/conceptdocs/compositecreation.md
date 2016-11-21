@@ -3,7 +3,7 @@ title: Composite creation
 summary: CloudCoreo Composite creation
 tags:
 keywords: ""
-last_updated: "November 9, 2016"
+last_updated: "November 20, 2016"
 published: true
 sidebar: conceptdocs_sidebar
 permalink: conceptdocs_compositecreation.html
@@ -11,8 +11,8 @@ folder: conceptdocs
 toc: false
 ---
 
-## Composite creation
-CloudCoreo enables users to create and layer inheritable cloud reference designs called Composites.  Composites make it easy for teams to reuse, extend, combine, and distribute changes to any cloud infrastructure design. A Composite can specify a single micro-service, a group of services, a complex application, or entire data center definition. Composites include a true software based inheritance approach that makes them a better fundamental building block for cloud infrastructure lifecycle management. A Composite specifies the desired end state of your cloud deployment, including all required resources and service dependencies.  Any supported cloud resource can be included in your design from including networking, security, storage, compute as well as container and serverless functions offered by a cloud provider.  
+## Composite creation  
+CloudCoreo enables users to create and layer inheritable cloud reference designs called Composites. A Composite specifies the desired end state of your cloud deployment, including all required resources and service dependencies.  Any supported cloud resource can be included in your design from including networking, security, storage, compute as well as container and serverless functions offered by a cloud provider.  
 
 ### Composites  
 There are a number of files and directories that comprise a Composite. These files are stored as part of a repository (repo) in git, the popular version control system. Github and Bitbucket are two examples of hosted git repository services. 

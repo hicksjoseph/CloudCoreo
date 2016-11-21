@@ -1,6 +1,6 @@
 ---
-title: Advanced Composite creation
-summary: CloudCoreo Advanced Composite creation
+title: Advanced Composites part 2 - Overriding and Anchoring
+summary: CloudCoreo Advanced Composites part 2 - Overriding and Anchoring
 tags:
 keywords: ""
 last_updated: "November 20, 2016"
@@ -11,10 +11,29 @@ folder: conceptdocs
 toc: false
 ---
 
-Insert introduction and context text here.
+## Advanced Composites
+CloudCoreo enables users to create and layer inheritable cloud reference designs called Composites.  Composites make it easy for teams to reuse, extend, combine, and distribute changes to any cloud infrastructure design. A Composite can specify a single micro-service, a group of services, a complex application, or entire data center definition. Composites include a true software based inheritance approach that makes them a better fundamental building block for cloud infrastructure lifecycle management.  
+Extra text from the directory structure definition page about overrides that should live here and be incorporated in:
+"The paths should be considered relative to the parent of this directory.
+
+If you have a directory structure like this...
+
+```
++-- parent
+|   +-- overrides
+|   |   +-- composite-a
+|   |   |   +-- boot-scripts
+|   |   |   |   +-- order.yaml
+|   +-- composite-a
+|   |   +-- boot-scripts
+|   |   |   +-- order.yaml
+```
+The `order.yaml` file will be ignored in the `composite-a directory`, and instead the `overrides/composite-a order.yaml` file will be used, because the directory structure within the override directory matches the structure of the parent."
 
 
 ### Overriding Resources
+One of the key aspects of inheriting Composites from others is the ability to override any aspect of that inheritance.  
+
 The `services/` directory honors the hierarchy we've already gone over. The difference, though, is that in the `config.rb` file each resource is override-able on an individual basis.
 
 For instance, say we have the following directory structure and files:
