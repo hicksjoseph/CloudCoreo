@@ -33,6 +33,7 @@ Any subdirectory beginning with `composite-` is reserved in CloudCoreo. The infr
 ```
  `composite-tomcat`
  `composite-mongodb`
+ ```  
 
 **Insert tree diagram here with an example `composite-` directory highlighted with bold. 
 
