@@ -3,11 +3,11 @@ title: CloudCoreo Knowledge Base Home
 summary: CloudCoreo Knowledge Base Home
 tags:
 keywords: ""
-last_updated: "November 9, 2016"
+last_updated: "November 10, 2016"
 published: true
 sidebar: althome_sidebar
 permalink: index.html
-folder: mydocs
+folder:
 toc: false
 ---
 
@@ -16,7 +16,8 @@ toc: false
 This site provides documentation for CloudCoreo concepts, Composite creation, and provides more details for the CloudAudit alerts.  
 Use the sidebar on the left to navigate to the particular alert or the Products navigation at the top.
 
-This Knowledge Base is hosted on github. If you find any errors or would like to make modifications, please modify and submit a Pull Request.
+This Knowledge Base is hosted on github. If you find any errors or would like to make modifications, please [Edit in github](https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages).*  
+
 
 ### AWS Services
 
@@ -29,4 +30,8 @@ Currently, CloudCoreo CloudAudit supports a number of AWS services, including:
 * [*RDS*](http://kb.cloudcoreo.com/mydoc_rds-db-publicly-accessible.html)
 * [*Redshift*](http://kb.cloudcoreo.com/mydoc_redshift-encrypted.html)
 * [*S3*](http://kb.cloudcoreo.com/mydoc_s3-allusers-read.html)  
+
+xyzzy
+
+xyzzy  
 
