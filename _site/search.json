@@ -24,16 +24,6 @@
 
 
 {
-"title": "Cloudtrail Service is disabled",
-"tags": "",
-"keywords": "",
-"url": "cloudtrail-service-disabled.html",
-"summary": "CloudTrail logging is not enabled for this region. It should be enabled."
-},
-
-
-
-{
 "title": "Composite creation",
 "tags": "",
 "keywords": "",
@@ -49,16 +39,6 @@
 "keywords": "",
 "url": "conceptdocs_directorystructure.html",
 "summary": "CloudCoreo Directory structure"
-},
-
-
-
-{
-"title": "TCP port 1433 is open",
-"tags": "",
-"keywords": "TCP 1433 TCP1433 Security Groups",
-"url": "mydoc_ec2-TCP-1433.html",
-"summary": "Important TCP port is open and / or open to the world."
 },
 
 
