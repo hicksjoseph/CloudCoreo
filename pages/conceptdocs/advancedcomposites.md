@@ -11,9 +11,6 @@ folder: conceptdocs
 toc: false
 ---
 
-Insert introduction and context text here.
-
-
 ### Overriding Resources
 The `services/` directory honors the hierarchy we've already gone over. The difference, though, is that in the `config.rb` file each resource is override-able on an individual basis.
 
