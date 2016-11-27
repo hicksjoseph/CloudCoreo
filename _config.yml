@@ -2,17 +2,16 @@
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: CloudCoreo Knowledge Base
+topnav_title: CloudCoreo Documentation
 # this appears on the top navigation bar next to the home button
 
-site_title: CloudCoreo Knowledge Base
+site_title: CloudCoreo Documentation
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: CloudCoreo
 # this appears in the footer
 
 github_editme_path: CloudCoreo/CloudCoreo/tree/gh-pages/pages
-#github_editme_path: tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/pages/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 disqus_shortname: 
@@ -92,7 +91,7 @@ defaults:
 # these are defaults used for the frontmatter for these file types
 
 sidebars:
-- home_sidebar
+#- home_sidebar
 - mydoc_sidebar
 - jobs_sidebar
 - faq_sidebar

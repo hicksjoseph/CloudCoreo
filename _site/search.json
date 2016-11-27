@@ -4,11 +4,11 @@
 
 
 {
-"title": "Advanced Composite creation",
+"title": "Advanced Composites part 2 - Overriding and Anchoring",
 "tags": "",
 "keywords": "",
 "url": "conceptdocs_advancedcomposites.html",
-"summary": "CloudCoreo Advanced Composite creation"
+"summary": "CloudCoreo Advanced Composites part 2 - Overriding and Anchoring"
 },
 
 
@@ -54,11 +54,31 @@
 
 
 {
-"title": "CloudCoreo Directory structure",
+"title": "Advanced Composites part 3 - Composite Creation Best Practices",
+"tags": "",
+"keywords": "",
+"url": "conceptdocs_bestpractices.html",
+"summary": "CloudCoreo Advanced Composites part 3 - Composite Creation Best Practices"
+},
+
+
+
+{
+"title": "Composite boot scripts, execution order, and examples",
+"tags": "",
+"keywords": "",
+"url": "conceptdocs_bootscripts.html",
+"summary": "CloudCoreo Composite boot scripts, execution order, and examples"
+},
+
+
+
+{
+"title": "Advanced Composites part 1 - CloudCoreo Directory structure",
 "tags": "",
 "keywords": "",
 "url": "conceptdocs_directorystructure.html",
-"summary": "CloudCoreo Directory structure"
+"summary": "CloudCoreo Advanced Composites part 1 - CloudCoreo Directory structure"
 },
 
 
@@ -96,11 +116,21 @@
 
 
 {
-"title": "CloudCoreo Knowledge Base Home",
+"title": "Concept Overview",
 "tags": "",
 "keywords": "",
-"url": "index.html",
-"summary": "CloudCoreo Knowledge Base Home"
+"url": "conceptdocs_overview.html",
+"summary": "CloudCoreo Concept Overview"
+},
+
+
+
+{
+"title": "Concept Overview",
+"tags": "",
+"keywords": "",
+"url": "conceptdocs_overview.html",
+"summary": "CloudCoreo Concept Overview"
 },
 
 
@@ -281,16 +311,6 @@
 "keywords": "",
 "url": "mydoc_iam-user-attached-policies.html",
 "summary": "User account is using custom inline policies versus using IAM group managed policies."
-},
-
-
-
-{
-"title": "Introduction",
-"tags": "",
-"keywords": "",
-"url": "index.html",
-"summary": "Knowledge base Home."
 },
 
 

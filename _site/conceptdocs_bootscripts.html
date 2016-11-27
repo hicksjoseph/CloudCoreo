@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
+<meta name="description" content="CloudCoreo Composite boot scripts, execution order, and examples">
 <meta name="keywords" content=" ">
-<title> | CloudCoreo Documentation</title>
+<title>Composite boot scripts, execution order, and examples | CloudCoreo Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the  page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Composite boot scripts, execution order, and examples page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Composite boot scripts, execution order, and examples">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -250,7 +250,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main"></h1>
+   <h1 class="post-title-main">Composite boot scripts, execution order, and examples</h1>
 </div>
 
 
@@ -258,29 +258,8 @@
 <div class="post-content">
 
    
-
-    
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
+    <div class="summary">CloudCoreo Composite boot scripts, execution order, and examples</div>
+   
 
     
 
@@ -288,28 +267,19 @@ $('#toc').on('click', 'a', function() {
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages//titlepage.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/conceptdocs/conceptdocs_bootscripts.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
-  <div class="printTitleArea">
-    <div class="printTitle"></div>
-    <div class="printSubtitle"></div>
-    <div class="lastGeneratedDate">Last generated: November 26, 2016</div>
-    <hr />
+  <p>As an example, if your directory structure contains the following paths CloudCoreo will run each script in the <code class="highlighter-rouge">extends/composite-example/extends/boot-scripts/order.yaml</code> file before moving on to the <code class="highlighter-rouge">extends/composite-example/boot-scripts/order.yaml</code>:</p>
 
-    <div class="printTitleImage">
-        <img src="http://kb.cloudcoreo.com//images/company_logo_big.png"/>
-    </div>
+<ul>
+  <li><code class="highlighter-rouge">extends/composite-example/extends/boot-scripts</code></li>
+  <li><code class="highlighter-rouge">extends/composite-example/boot-scripts</code></li>
+</ul>
 
-    <div class="copyrightBoilerplate">
-        <p>&copy; 2016 Your company. This is a boilerplate copyright statement... All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
-        </p>
-
-    </div>
-
-</div>
+<p>As a matter of fact, each of the scripts in the base directory can be overridden at any point.</p>
 
 
     <div class="tags">
@@ -326,7 +296,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2016 CloudCoreo. All rights reserved. <br />
- Site last generated: Nov 26, 2016 <br />
+<span>Page last updated:</span> November 20, 2016<br/> Site last generated: Nov 26, 2016 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>

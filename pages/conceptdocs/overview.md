@@ -3,7 +3,7 @@ title: Concept Overview
 summary: CloudCoreo Concept Overview
 tags:
 keywords: ""
-last_updated: "November 9, 2016"
+last_updated: "November 26, 2016"
 published: true
 sidebar: conceptdocs_sidebar
 permalink: conceptdocs_overview.html

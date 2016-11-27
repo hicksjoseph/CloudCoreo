@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CloudCoreo Advanced Composite creation">
+<meta name="description" content="CloudCoreo Advanced Composites part 2 - Overriding and Anchoring">
 <meta name="keywords" content=" ">
-<title>Advanced Composite creation | CloudCoreo Knowledge Base</title>
+<title>Advanced Composites part 2 - Overriding and Anchoring | CloudCoreo Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -88,7 +88,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> CloudCoreo Knowledge Base</span></a>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> CloudCoreo Documentation</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -114,7 +114,7 @@
                 </li>
                 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         
                         
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Advanced Composite creation page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Advanced Composites part 2 - Overriding and Anchoring page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Advanced Composite creation">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Advanced Composites part 2 - Overriding and Anchoring">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -234,28 +234,6 @@
         </ul>
         
         
-    
-    <li>
-        <a href="#">WebUI and CLI</a>
-        <ul>
-            
-            
-            
-            <li><a href="conceptdocs_webui.html">CloudCoreo Web UI</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="conceptdocs_cli.html">CloudCoreo CLI</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
         
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
@@ -272,7 +250,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Advanced Composite creation</h1>
+   <h1 class="post-title-main">Advanced Composites part 2 - Overriding and Anchoring</h1>
 </div>
 
 
@@ -280,7 +258,7 @@
 <div class="post-content">
 
    
-    <div class="summary">CloudCoreo Advanced Composite creation</div>
+    <div class="summary">CloudCoreo Advanced Composites part 2 - Overriding and Anchoring</div>
    
 
     
@@ -294,9 +272,28 @@
 
     
 
-  <p>Insert introduction and context text here.</p>
+  <h2 id="advanced-composites">Advanced Composites</h2>
+<p>CloudCoreo enables users to create and layer inheritable cloud reference designs called Composites.  Composites make it easy for teams to reuse, extend, combine, and distribute changes to any cloud infrastructure design. A Composite can specify a single micro-service, a group of services, a complex application, or entire data center definition. Composites include a true software based inheritance approach that makes them a better fundamental building block for cloud infrastructure lifecycle management.<br />
+Extra text from the directory structure definition page about overrides that should live here and be incorporated in:
+“The paths should be considered relative to the parent of this directory.</p>
+
+<p>If you have a directory structure like this…</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>+-- parent
+|   +-- overrides
+|   |   +-- composite-a
+|   |   |   +-- boot-scripts
+|   |   |   |   +-- order.yaml
+|   +-- composite-a
+|   |   +-- boot-scripts
+|   |   |   +-- order.yaml
+</code></pre>
+</div>
+<p>The <code class="highlighter-rouge">order.yaml</code> file will be ignored in the <code class="highlighter-rouge">composite-a directory</code>, and instead the <code class="highlighter-rouge">overrides/composite-a order.yaml</code> file will be used, because the directory structure within the override directory matches the structure of the parent.”</p>
 
 <h3 id="overriding-resources">Overriding Resources</h3>
+<p>One of the key aspects of inheriting Composites from others is the ability to override any aspect of that inheritance.</p>
+
 <p>The <code class="highlighter-rouge">services/</code> directory honors the hierarchy we’ve already gone over. The difference, though, is that in the <code class="highlighter-rouge">config.rb</code> file each resource is override-able on an individual basis.</p>
 
 <p>For instance, say we have the following directory structure and files:</p>
@@ -478,7 +475,7 @@ The configuration file that travels along with, and is located in, the <code cla
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2016 CloudCoreo. All rights reserved. <br />
-<span>Page last updated:</span> November 9, 2016<br/> Site last generated: Nov 10, 2016 <br />
+<span>Page last updated:</span> November 20, 2016<br/> Site last generated: Nov 26, 2016 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>

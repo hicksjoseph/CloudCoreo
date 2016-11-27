@@ -10,7 +10,7 @@ topnav_dropdowns:
           external_url: https://www.cloudcoreo.com
         - title: Github Repo
           external_url: https://github.com/CloudCoreo
-    - title: Products
+    - title: Documentation
       folderitems:
         - title: CloudAudit
           url: /index.html

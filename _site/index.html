@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Knowledge base Home.">
+<meta name="description" content="CloudCoreo Concept Overview">
 <meta name="keywords" content=" ">
-<title>Introduction | CloudCoreo Knowledge Base</title>
+<title>Concept Overview | CloudCoreo Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -88,7 +88,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> CloudCoreo Knowledge Base</span></a>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> CloudCoreo Documentation</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -114,15 +114,15 @@
                 </li>
                 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         
                         
-                        <li class="dropdownActive"><a href="index.html">CloudAudit</a></li>
+                        <li><a href="index.html">CloudAudit</a></li>
                         
                         
                         
-                        <li><a href="conceptdocs_overview.html">Concept Docs</a></li>
+                        <li class="dropdownActive"><a href="conceptdocs_overview.html">Concept Docs</a></li>
                         
                         
                     </ul>
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Introduction page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Concept Overview page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Introduction">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Concept Overview">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -180,17 +180,24 @@
 
 
 <ul id="mysidebar" class="nav">
-    <li class="sidebarTitle">CloudAudit Definitions </li>
+    <li class="sidebarTitle">CloudCoreo Documentation </li>
     
     
     
     <li>
-        <a href="#">Cloudtrail</a>
+        <a href="#">Getting Started</a>
         <ul>
             
             
             
-            <li><a href="mydoc_cloudtrail-service-disabled.html">Service Disabled</a></li>
+            <li class="active"><a href="conceptdocs_overview.html">Overview</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_compositecreation.html">Composite Creation</a></li>
             
             
             
@@ -200,318 +207,26 @@
         
     
     <li>
-        <a href="#">EC2</a>
+        <a href="#">Advanced Topics</a>
         <ul>
             
             
             
-            <li><a href="mydoc_ec2-tcpportopen.html">TCP port open</a></li>
+            <li><a href="conceptdocs_advancedcomposites.html">Advanced Composite Creation</a></li>
             
             
             
             
             
             
-            <li><a href="mydoc_ec2-ip-address-whitelisted.html">Security Group contains IP address</a></li>
+            <li><a href="conceptdocs_directorystructure.html">Directory Structure</a></li>
             
             
             
             
             
             
-            <li><a href="mydoc_ec2-ports-range.html">Security group contains a port range</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_ec2-unrestricted-traffic.html">Security group allows unrestricted traffic</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">ELB</a>
-        <ul>
-            
-            
-            
-            <li><a href="mydoc_elb-old-ssl-policy.html">ELB is using old SSL policy</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">IAM</a>
-        <ul>
-            
-            
-            
-            <li><a href="mydoc_iam-active-key-no-rotation.html">Active user Access Key not rotated</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_iam-expirepasswords.html">Passwords not set to expire</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_iam-inactive-key-no-rotation.html">Inactive user Access Key not rotated</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_iam-missing-password-policy.html">Password policy doesn't exist</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_iam-multiple-access-keys.html">Multiple active access keys</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_iam-no-mfa.html">MFA not enabled</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_iam-root-no-mfa.html">Root MFA not enabled</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_iam-root-active-password.html">Root user has active password</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_iam-root-active-key.html">Root user has active Access Key</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_iam-passwordreuseprevention.html">Users can reuse old passwords</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_iam-unusediamgroup.html">Unused or empty IAM group</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_iam-user-attached-policies.html">Account using inline policies</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">RDS</a>
-        <ul>
-            
-            
-            
-            <li><a href="mydoc_rds-db-publicly-accessible.html">RDS is Publicly Accessible</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_rds-short-backup-retention-period.html">RDS short backup retention</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_rds-no-auto-minor-version-upgrade.html">RDS no automatic upgrades</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Redshift</a>
-        <ul>
-            
-            
-            
-            <li><a href="mydoc_redshift-encrypted.html">Cluster data not encrypted</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_redshift-no-require-ssl.html">Redshift connections not SSL</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_redshift-no-user-logging.html">User activity logging disabled</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_redshift-no-version-upgrade.html">Automatic upgrades not enabled</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_redshift-publicly-accessible.html">Cluster is publicly accessible</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_redshift-security-group.html">Redshift TCP port open</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">S3</a>
-        <ul>
-            
-            
-            
-            <li><a href="mydoc_s3-allusers-read.html">All users can list bucket</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_s3-allusers-write.html">All users can write to bucket</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_s3-allusers-write-acp.html">All users can change bucket permissions</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_s3-authenticatedusers-read.html">All AWS users can read bucket</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_s3-authenticatedusers-write-acp.html">All AWS users can change bucket permissions</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_s3-authenticatedusers-write.html">All AWS users can write to bucket</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_s3-logging-disabled.html">Bucket logging not enabled</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_s3-only-ip-based-policy.html">Bucket policy uses IP addresses</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_s3-world-open-policy-all.html">Bucket policy world All permissions</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_s3-world-open-policy-delete.html">Bucket policy world can Delete</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_s3-world-open-policy-get.html">Bucket policy world can Get</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_s3-world-open-policy-list.html">Bucket policy world can List</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="mydoc_s3-world-open-policy-put.html">Bucket policy world can Put</a></li>
+            <li><a href="conceptdocs_variables.html">Variables</a></li>
             
             
             
@@ -535,7 +250,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Introduction</h1>
+   <h1 class="post-title-main">Concept Overview</h1>
 </div>
 
 
@@ -543,7 +258,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Knowledge base Home.</div>
+    <div class="summary">CloudCoreo Concept Overview</div>
    
 
     
@@ -552,28 +267,50 @@
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/mydoc/index.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/conceptdocs/conceptdocs_overview.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
-  <h2 id="overview">Overview</h2>
+  <h2 id="what-is-cloudcoreo">What is CloudCoreo</h2>
+<p>CloudCoreo provides a platform for cloud operations that enables teams to automate the deployment, security and maintenance of their cloud infrastructure. Our solution delivers a modern Infrastructure-as-Software approach for both DevOps and SecOps teams to seamlessly model and actively manage their cloud environment. CloudCoreo enables customers to leverage leading cloud designs, scale their design concepts across large teams,  deploy quickly and correctly, find and fix vulnerabilities, track all changes, as well as drive cloud consistency and compliance.</p>
 
-<p>This site provides more details for the CloudAudit alerts. Use the sidebar to navigate to the particular alert that you are looking for.</p>
+<h2 id="what-is-a-composite">What is a Composite?</h2>
+<p>CloudCoreo enables users to create and layer inheritable cloud reference designs called Composites.  Composites make it easy for teams to reuse, extend, combine, and distribute changes to any cloud infrastructure design. A Composite can specify a single micro-service, a group of services, a complex application, or entire data center definition. Composites include a true software based inheritance approach that makes them a better fundamental building block for cloud infrastructure lifecycle management.</p>
 
-<h2 id="aws-services">AWS Services</h2>
-
-<p>Currently, CloudCoreo CloudAudit supports a number of AWS services, including:</p>
+<h3 id="composite-include">Composite include:</h3>
 
 <ul>
-  <li>Cloudtrail</li>
-  <li>EC2</li>
-  <li>ELB</li>
-  <li>IAM</li>
-  <li>RDS</li>
-  <li>Redshift</li>
-  <li>S3</li>
+  <li>
+    <p><strong>Cloud Resources and Dependencies</strong><br />
+A Composite specifies the desired end state of your cloud deployment, including all required resources and service dependencies.  Any supported cloud resource can be included in your design from including networking, security, storage, compute as well as container and serverless functions offered by a cloud provider.</p>
+  </li>
+  <li>
+    <p><strong>Chains</strong><br />
+Chains provide an event program that allow users to search, filter and write conditions on any data set. Functions enable users to create smart logic within a Composite creating a reference design that can take dynamic actions.  Functions can be can be specified between any step of a Composite without breaking the service dependencies of the associate cloud resources.</p>
+  </li>
+  <li>
+    <p><strong>Panels</strong><br />
+To improve operational efficiency, Composites also include the ability to define custom UIs and operational tasks called Panels.  You can easily define and change how resources are presented in the CloudCoreo UI as a part of the definition of a Composite.</p>
+  </li>
+  <li>
+    <p><strong>Hub</strong><br />
+CloudCoreo offers three levels of reference architecture designs: Certified Composites, Approved Composites, Community Composites. The Hub provides a collection of these composites that can be easily leveraged and extended into your own git repos.  Community Composites are contributed reference designs that have not be actively tested or validated by CloudCoreo. Users are free to share and leverage this content.</p>
+  </li>
+  <li>
+    <p><strong>Plans</strong><br />
+Composites are used to generate one or more Composite Plans.  A Plan is an instance of your infrastructure design that includes your specified deployment variables and policy controls.</p>
+
+    <p>The Coreo Engine uses a Plan to deploy and maintain the set of running cloud infrastructure resources.  Plans can be used to partition and drive separate infrastructure and cloud policies. Updating a group Plans can be done simply by making a change to the parent Composite design.</p>
+  </li>
+  <li>
+    <p><strong>Cloud Resources</strong><br />
+CloudCoreo gives you a view into the running cloud Infrastructure resources that have been provisioned by our platform. Each Plan has a set of associate Cloud Resources that are being managed and are under active change control. You can easily define and change how Cloud Resources are presented in the CloudCoreo UI as a part of the definition of the Composite.</p>
+  </li>
 </ul>
+
+<hr />
+<p><em>If you find mistakes or see that something is missing in these docs, please <a href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages">Edit in github</a>.</em></p>
 
 
     <div class="tags">
@@ -590,7 +327,7 @@
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2016 CloudCoreo. All rights reserved. <br />
- Site last generated: Nov 10, 2016 <br />
+<span>Page last updated:</span> November 26, 2016<br/> Site last generated: Nov 26, 2016 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>

@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CloudCoreo Directory structure">
+<meta name="description" content="CloudCoreo Advanced Composites part 1 - CloudCoreo Directory structure">
 <meta name="keywords" content=" ">
-<title>CloudCoreo Directory structure | CloudCoreo Knowledge Base</title>
+<title>Advanced Composites part 1 - CloudCoreo Directory structure | CloudCoreo Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -88,7 +88,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> CloudCoreo Knowledge Base</span></a>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> CloudCoreo Documentation</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -114,7 +114,7 @@
                 </li>
                 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         
                         
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the CloudCoreo Directory structure page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Advanced Composites part 1 - CloudCoreo Directory structure page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="CloudCoreo Directory structure">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Advanced Composites part 1 - CloudCoreo Directory structure">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -234,28 +234,6 @@
         </ul>
         
         
-    
-    <li>
-        <a href="#">WebUI and CLI</a>
-        <ul>
-            
-            
-            
-            <li><a href="conceptdocs_webui.html">CloudCoreo Web UI</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="conceptdocs_cli.html">CloudCoreo CLI</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
         
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
@@ -272,7 +250,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">CloudCoreo Directory structure</h1>
+   <h1 class="post-title-main">Advanced Composites part 1 - CloudCoreo Directory structure</h1>
 </div>
 
 
@@ -280,7 +258,7 @@
 <div class="post-content">
 
    
-    <div class="summary">CloudCoreo Directory structure</div>
+    <div class="summary">CloudCoreo Advanced Composites part 1 - CloudCoreo Directory structure</div>
    
 
     
@@ -295,68 +273,82 @@
     
 
   <h2 id="directory-structure">Directory Structure</h2>
-<p>CloudCoreo relies on convention over configuration for the most part, achieving simplicity and flexibility. Each repository can contain whatever you want, which is useful for running scripts or laying down solid code. There are some directories that we reserve the right to, and below you’ll see a list of those directories and their functions.</p>
+<p>CloudCoreo relies on <a href="https://en.wikipedia.org/wiki/Coding_conventions">convention</a> instead of configuration for enabling advanced Composite functionality. There are a number of files and directories that comprise a Composite. These files are stored as part of a repository (repo) in git, the popular version control system. Github and Bitbucket are two examples of hosted git repository services. While each Composite / repository can include any files and code that you would like, there are some directories are reserved for CloudCoreo advanced functionality. In this document, we list those directories and their functions.</p>
 
-<p>The directory structure precisely relates to how CloudCoreo actually works. The convention we have defined dictates what gets overridden, what runs during the boot of a server, what runs as Cloud Services, and more.  The <a href="https://github.com/CloudCoreo/cloudcoreo-cli">CLI Tool</a> will do much of the work for you, but you should still know what it all means. That’s where this page, and the wealth of knowledge included in it, is going to come in handy. Read on!</p>
+<p>The CloudCoreo convention around directory structure precisely dictates to how Composites are actually compiled and executed. The directory structure specifies execution aspects such as inherited infrastructure, server boot script run order, inheritence overrides, and more.  The <a href="http://kb.cloudcoreo.com/conceptdocs_cli.html">CloudCoreo CLI</a> will do much of the work in setting up the correct directory structure, but understanding what each directory convention does is essential.</p>
 
-<h3 id="extends">extends</h3>
-<p><code class="highlighter-rouge">extends</code> is one of the most basic, but important, concepts in CloudCoreo. This directory enables you to <strong>leverage the work of others</strong> and bring it all within your own deployment. You can literally crowdsource your stack, which saves you oodles of time.</p>
+<h3 id="extending-and-inheriting-composites-from-others">Extending and Inheriting Composites from others</h3>
+<p>Often when using Composites, you will want to leverage the best practices of others by inheriting their base infrastructure deployments. You can do this by extending other’s Composites and then adding and/or modifying the execution of their infrastructure to meet your needs. This also allows you to continually inherit changes to their original, if desired, so that you can always be up to date with your infrastructure definitions (and potentially security) or override as aspect of the inherited Composite.</p>
 
-<p><code class="highlighter-rouge">extends</code> is the base for anything you are doing in this stack. <strong>Any and all work defined in <code class="highlighter-rouge">extends</code> will be completed before moving on to the parent directory.</strong></p>
+<p>You inherit the base infrastructure of others when you <code class="highlighter-rouge">extend</code> a Composite using the <a href="http://kb.cloudcoreo.com/conceptdocs_cli.html">CloudCoreo CLI</a>. This process creates an <code class="highlighter-rouge">extends</code> directory in your Composite’s repository. Because you are using the base infrastructure of others, anything defined via the <code class="highlighter-rouge">extends</code> directory will be compiled and executed first. <strong>All infrastructure defined in <code class="highlighter-rouge">extends</code> will be completed first before executing anything in any other directory in the Composite repository.</strong></p>
 
-<h3 id="stack-">stack-*</h3>
-<p>Any subdirectory beginning with <code class="highlighter-rouge">stack-</code> is reserved in CloudCoreo. The work in these directories is completed after the <code class="highlighter-rouge">extends</code> directory (if it exists) but before anything else in the current repository. This makes it suitable to <em>add an external stack</em> to your stack.</p>
+<p><strong>Insert tree diagram here with this <code class="highlighter-rouge">extends-</code> directory highlighted with bold.</strong></p>
 
-<p>When adding a stack, consider the needs of people <em>overriding</em> or <em>extending</em> your stack in the future. For instance, creating blank directories for dropping in bits of code and overrides will make everyone’s life easier in the future. To help ease the administration efforts of creating these directories, use <code class="highlighter-rouge">stack-</code> in the CLI tool.</p>
+<p><strong>Questions: Can there be multiple <code class="highlighter-rouge">extends-</code> directories? If so, in what order will they execute between each other? I think that they will execute alphabetically.</strong></p>
 
-<p><strong>But what does <code class="highlighter-rouge">stack-</code> do?!</strong></p>
+<p><strong>Insert link to more information about inheritance and extends.</strong></p>
 
-<p>Say you want to add a stack from Git (github.com:example/tomcat.git) into your own stack and call it ‘tomcat’. The ideal directory structure would require you to create a <code class="highlighter-rouge">stack-tomcat</code> directory to signify that it’s special within the CloudCoreo framework. Next, create an <code class="highlighter-rouge">extends</code> directory inside that, and extend the stack into this directory. Now you are utilizing both concepts. Because you used a <code class="highlighter-rouge">stack-*</code> directory to the <code class="highlighter-rouge">&lt;repository-dir&gt;</code>, it will run <strong>after</strong> <code class="highlighter-rouge">&lt;repository-dir&gt;/extends</code>. Because you have added the stack to <code class="highlighter-rouge">&lt;repository-dir&gt;/stack-tomcat/extends</code> it will run <strong>before</strong> everything else inside the <code class="highlighter-rouge">stack-tomcat*</code> directory. Now, anyone utilizing your stack has a convenient place to insert configuration and setup between your stack and the added Tomcat stack.</p>
+<h3 id="composite-">composite-</h3>
+<p>Any subdirectory beginning with <code class="highlighter-rouge">composite-</code> is reserved in CloudCoreo. The infrastructure specification in these directories is executed after any infrastructure in the <code class="highlighter-rouge">extends</code> directory at the Composite repository root (if it exists) but before anything else in the current repository. An example of a <code class="highlighter-rouge">composite-</code> directory might be a directory for your tomcat server definition or MongoDB cluster creation.  For example</p>
+
+<p><code class="highlighter-rouge">
+ `composite-tomcat`
+ `composite-mongodb`
+</code></p>
+
+<p>**Insert tree diagram here with an example <code class="highlighter-rouge">composite-</code> directory highlighted with bold.</p>
+
+<p>Using the <code class="highlighter-rouge">composite-</code> directory enables you to specify your own infrastructure that will execute after any <code class="highlighter-rouge">extends-</code> directories in the root of the Composite repository.  **Discuss and give examples of what files would exist in the <code class="highlighter-rouge">composite-</code> directory and what those files might contain.</p>
+
+<p><strong>Insert link to more information about the composite directory and more examples.</strong></p>
 
 <h3 id="services">services</h3>
-<p>The <code class="highlighter-rouge">services</code> directory exists to define the stack’s interaction with the cloud provider in which the server is launched; specifically, the <code class="highlighter-rouge">&lt;repository-dir&gt;/services/config.rb file</code>. This is in-depth enough to contain its own documentation section!</p>
+<p>The <code class="highlighter-rouge">services</code> directory exists to define the composite’s interaction with the particular cloud provider in which the infrastructure is being created. Infrastructure specification is kept in the <code class="highlighter-rouge">config.rb</code> file (<code class="highlighter-rouge">&lt;repo-dir&gt;/services/config.rb</code>) with variables defined in <code class="highlighter-rouge">config.yaml</code> file (<code class="highlighter-rouge">&lt;repo-dir&gt;/config.yaml</code>). Read more about the services directory, config.rb, and config.yaml <a href="http://kb.cloudcoreo.com/conceptdocs_compositecreation.html">here</a>.</p>
 
 <h3 id="boot-scripts">boot-scripts</h3>
-<p>The <code class="highlighter-rouge">&lt;repository-dir&gt;/boot-scripts</code> directory exists to define boot time configuration of a server. If this directory exists, CloudCoreo will run scripts as defined by:</p>
+<p>The <code class="highlighter-rouge">boot-scripts</code> directory exists to enable you to specify boot time configuration of a particular server. The <code class="highlighter-rouge">boot-scripts</code> directory can exist in one or more places in the Composite repository depending on your infrastructure requirements. You can create a <code class="highlighter-rouge">boot-scripts</code> directory in the root of the repository directory, in a composite- directory, and/or an extends directory. If the boot-scripts directory exists in any of these locations, the Composite will execute the boot scripts in a particular order which is:</p>
 
 <ol>
-  <li>The directory layout (<code class="highlighter-rouge">extends</code>, <code class="highlighter-rouge">stack-*</code>, etc.)</li>
-  <li>Then the order defined in the <code class="highlighter-rouge">order.yaml</code> file within this directory</li>
+  <li>The CloudCoreo directory execution convention (<code class="highlighter-rouge">extends</code>, <code class="highlighter-rouge">composite-*</code>). For example:
+    <ol>
+      <li><code class="highlighter-rouge">&lt;repo-dir&gt;/extends/boot-scripts</code>)</li>
+      <li><code class="highlighter-rouge">&lt;repo-dir&gt;/overrides/boot-scripts</code>)</li>
+      <li><code class="highlighter-rouge">&lt;repo-dir&gt;/composite-/boot-scripts</code>)</li>
+    </ol>
+  </li>
+  <li>The order specified in an <code class="highlighter-rouge">order.yaml</code> file that is created inside of the particular <code class="highlighter-rouge">boot-scripts</code> directory.</li>
 </ol>
 
-<p>As an example, if your directory structure contains the following paths CloudCoreo will run each script in the <code class="highlighter-rouge">extends/stack-example/extends/boot-scripts/order.yaml</code> file before moving on to the <code class="highlighter-rouge">extends/stack-example/boot-scripts/order.yaml</code>:</p>
-
-<ul>
-  <li><code class="highlighter-rouge">extends/stack-example/extends/boot-scripts</code></li>
-  <li><code class="highlighter-rouge">extends/stack-example/boot-scripts</code></li>
-</ul>
-
-<p>As a matter of fact, each of the scripts in the base directory can be overridden at any point.</p>
+<p><strong>To learn more about boot scripts and examples of execution order, read more <a href="http://kb.cloudcoreo.com/conceptdocs_bootscripts.html">here</a></strong>
+<strong>To learn more about the format of the <code class="highlighter-rouge">order.yaml</code> file and to see examples, read more <a href="http://kb.cloudcoreo.com/conceptdocs_orderdotyaml.html">here</a>)</strong></p>
 
 <h3 id="operational-scripts">operational-scripts</h3>
-<p>The files contained within the <code class="highlighter-rouge">&lt;repository-dir&gt;/operational-scripts</code> directory are scripts you might want to run on an ad-hoc basis from the CloudCoreo GUI or CLI. The structure and scripts within this directory honor the order and overrides defined within the rest of this document.</p>
+<p>The files contained within the <code class="highlighter-rouge">&lt;repo-dir&gt;/operational-scripts</code> directory are scripts you can execute as needed on the particular server from the CloudCoreo WebUI or CLI.</p>
+
+<p><strong>To learn more about operational scripts and to see examples, read more <a href="http://kb.cloudcoreo.com/conceptdocs_operationalscripts.html">here</a></strong></p>
+
+<p><strong>Previously, the CloudCoreo docs specified that “The structure and scripts within the <code class="highlighter-rouge">operational-scripts</code> directory honor the order and overrides defined within the rest of this document.” However, since these operational-scripts are not execution order dependent, a review of the behavior is necessary before documenting the behavior.</strong></p>
 
 <h3 id="shutdown-scripts">shutdown-scripts</h3>
-<p>The <code class="highlighter-rouge">&lt;repository-dir&gt;/shutdown-scripts</code> directory contains scripts that CloudCoreo will <strong>attempt</strong> to run. These are not guaranteed because many times failures are a complete loss of a system, with no warning whatsoever. The structure and scripts within this directory honor the order and overrides defined within the rest of this document.</p>
+<p>The <code class="highlighter-rouge">&lt;repo-dir&gt;/shutdown-scripts</code> directory contains scripts that CloudCoreo will attempt to run when the particular server is shutting down.</p>
+
+<p><strong>These scripts are used to….. For example, …..</strong></p>
+
+<p><strong>Note:</strong> These scripts are not guaranteed to execute because servers can shut down abnormally or abpruptly.</p>
+
+<p>The <code class="highlighter-rouge">shutdown-scripts</code> directory can exist in one or more places in the Composite repository depending on your infrastructure requirements. You can create a <code class="highlighter-rouge">shutdown-scripts</code> directory in the root of the repository directory, in a composite- directory, and/or an extends directory. If the shutdown-scripts directory exists in any of these locations, the Composite will execute the shutdown scripts in this order:</p>
+
+<p><strong>Previously, the CloudCoreo docs specified that “The structure and scripts within the <code class="highlighter-rouge">shutdown-scripts</code> directory honor the order and overrides defined within the rest of this document.” However, since these operational-scripts are not execution order dependent, a review of the behavior is necessary before documenting the behavior.</strong></p>
 
 <h3 id="overrides">overrides</h3>
-<p>Anything contained in this directory will act as an override for the stack in which it is contained.</p>
+<p>When inheriting and extending other’s Composites, you will often need to modifying or prevent the execution of certain aspects of the inherited infrastructure to meet your needs. This is accomplished by the use of the <code class="highlighter-rouge">overrides</code> directory and the Composite infrastructure specifications contained therein. Anything contained in the <code class="highlighter-rouge">overrides</code> directory will act as an override for the Composite in which it is contained. You can override any aspect of a Composite (including Composite inheritance).</p>
 
-<p>The paths should be considered relative to the parent of this directory.</p>
+<p>The <code class="highlighter-rouge">overrides</code> directory can exist in one or more places in the Composite repository depending on your infrastructure requirements. You can create an <code class="highlighter-rouge">overrides</code> directory in the root of the repository directory, in a composite- directory, and/or an extends directory. If the overrides directory exists in any of these locations, the Composite will override any inherited infrastructure definition that is defined using the exact same convention and structure of the infrastructure specification that it is overriding. The infrastructure specification specified in any particular <code class="highlighter-rouge">overrides</code> directory executes per a specified order.</p>
 
-<p>If you have a directory structure like this…</p>
+<p><strong>To learn more about the overrides directory and to see examples as well as execution order, read more <a href="http://kb.cloudcoreo.com/conceptdocs_advancedcomposites.html">here</a></strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>+-- parent
-|   +-- overrides
-|   |   +-- stack-a
-|   |   |   +-- boot-scripts
-|   |   |   |   +-- order.yaml
-|   +-- stack-a
-|   |   +-- boot-scripts
-|   |   |   +-- order.yaml
-</code></pre>
-</div>
-<p>The <code class="highlighter-rouge">order.yaml</code> file will be ignored in the <code class="highlighter-rouge">stack-a directory</code>, and instead the <code class="highlighter-rouge">overrides/stack-a order.yaml</code> file will be used, because the directory structure within the override directory matches the structure of the parent.</p>
+<hr />
+
 
 
     <div class="tags">
@@ -373,7 +365,7 @@
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2016 CloudCoreo. All rights reserved. <br />
-<span>Page last updated:</span> November 9, 2016<br/> Site last generated: Nov 10, 2016 <br />
+<span>Page last updated:</span> November 20, 2016<br/> Site last generated: Nov 26, 2016 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>
