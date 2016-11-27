@@ -34,6 +34,7 @@ Let's illlustrate this with an example utilizing the directory and file structur
 * `<repo-dir>/services/config.rb`
 
 Assume we have a **VPC** resource in the `extends/services/config.rb` file as follows:  
+
 ~~~ ruby  
 coreo_aws_vpc_vpc "${VPC_NAME}" do
   action :sustain

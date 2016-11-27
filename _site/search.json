@@ -24,16 +24,6 @@
 
 
 {
-"title": "CloudCoreo CLI - Coreo",
-"tags": "",
-"keywords": "",
-"url": "conceptdocs_cli.html",
-"summary": "CloudCoreo CLI - Coreo"
-},
-
-
-
-{
 "title": "Cloudtrail Service is disabled",
 "tags": "",
 "keywords": "",
@@ -96,11 +86,11 @@
 
 
 {
-"title": "CloudCoreo Knowledge Base Home",
+"title": "Concept Overview",
 "tags": "",
 "keywords": "",
 "url": "index.html",
-"summary": "CloudCoreo Knowledge Base Home"
+"summary": "CloudCoreo Concept Overview"
 },
 
 
@@ -281,16 +271,6 @@
 "keywords": "",
 "url": "mydoc_iam-user-attached-policies.html",
 "summary": "User account is using custom inline policies versus using IAM group managed policies."
-},
-
-
-
-{
-"title": "Introduction",
-"tags": "",
-"keywords": "",
-"url": "index.html",
-"summary": "Knowledge base Home."
 },
 
 
@@ -607,16 +587,6 @@
 "keywords": "",
 "url": "conceptdocs_variables.html",
 "summary": "CloudCoreo Variables"
-},
-
-
-
-{
-"title": "CloudCoreo WebUI",
-"tags": "",
-"keywords": "",
-"url": "conceptdocs_webui.html",
-"summary": "CloudCoreo WebUI"
 },
 
 

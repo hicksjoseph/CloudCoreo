@@ -33,15 +33,3 @@ entries:
     - title: Variables
       url: /conceptdocs_variables.html
       output: web
-
-  - title: WebUI and CLI
-    output: web
-    folderitems:
-
-    - title: CloudCoreo Web UI
-      url: /conceptdocs_webui.html
-      output: web
-
-    - title: CloudCoreo CLI
-      url: /conceptdocs_cli.html
-      output: web
