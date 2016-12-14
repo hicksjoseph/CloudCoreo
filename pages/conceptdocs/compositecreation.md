@@ -112,7 +112,7 @@ or
 
 -----
 
-These are the basics concepts of Composite creation. Learn more about Advanced Composite creation at [*Advanced Composites*](http://kb.cloudcoreo.com/conceptdocs/advancedcomposites.html/) .  
+These are the basics concepts of Composite creation. Learn more about Advanced Composite creation at [*Advanced Composites*](http://kb.cloudcoreo.com/conceptdocs_advancedcomposites.html).  
 
 -----
 
