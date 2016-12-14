@@ -114,6 +114,3 @@ or
 
 These are the basics concepts of Composite creation. Learn more about Advanced Composite creation at [*Advanced Composites*](http://kb.cloudcoreo.com/conceptdocs_advancedcomposites.html).  
 
------
-
-As you build new Composites, you will need to reference the [*CloudCoreo API Documentation*](http://docs.cloudcoreo.com/docs/frames/index) to know what options and parameters that you can use in your Composites.  
