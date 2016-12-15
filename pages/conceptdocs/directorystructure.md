@@ -58,7 +58,7 @@ Anything contained in this directory will act as an override for the stack in wh
 The paths should be considered relative to the parent of this directory.
 
 If you have a directory structure like this...
-
+ 
 ```
 +-- parent
 |   +-- overrides
