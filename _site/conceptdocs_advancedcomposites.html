@@ -424,20 +424,6 @@
 
 <hr />
 
-<p>Add this to more information about boot scripts.
-### Script Order
-The configuration file that travels along with, and is located in, the <code class="highlighter-rouge">boot-scripts</code> directory is defined by the <code class="highlighter-rouge">order.yaml</code> file. The format is yaml, which means that tab indentations are an error. Here is an example:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>order:  
-    - install_packages.sh
-    - run_chef.sh
-</code></pre>
-</div>
-
-<p>CloudCoreo will run (as root) each script in order. The process is to <strong>chmod +x</strong> the files and run with a **./<filename>** So make sure the shebang is correct.</filename></p>
-
-<hr />
-
 <p>As you build new Composites, you will need to reference the <a href="http://docs.cloudcoreo.com/docs/frames/index"><em>CloudCoreo API Documentation</em></a> to know what options and parameters that you can use in your Composites.</p>
 
 
@@ -455,7 +441,7 @@ The configuration file that travels along with, and is located in, the <code cla
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2016 CloudCoreo. All rights reserved. <br />
-<span>Page last updated:</span> November 20, 2016<br/> Site last generated: Nov 26, 2016 <br />
+<span>Page last updated:</span> November 20, 2016<br/> Site last generated: Dec 27, 2016 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>

@@ -149,20 +149,6 @@ end
 
 The *'public-subnet'* resource has been included from the `extends/services/config.rb` file, while the *'my-elb'* from the     extends/services/config.rb   essentially becomes the *'private-subnet'* + *'my-elb-sg'* + *'my-elb'*.  
 
-------
-
-Add this to more information about boot scripts.
-### Script Order
-The configuration file that travels along with, and is located in, the `boot-scripts` directory is defined by the `order.yaml` file. The format is yaml, which means that tab indentations are an error. Here is an example:  
-
-```  
-order:  
-    - install_packages.sh
-    - run_chef.sh
-```  
-
-CloudCoreo will run (as root) each script in order. The process is to **chmod +x** the files and run with a **./<filename>** So make sure the shebang is correct.
-
 -----
 
 As you build new Composites, you will need to reference the [*CloudCoreo API Documentation*](http://docs.cloudcoreo.com/docs/frames/index) to know what options and parameters that you can use in your Composites.  

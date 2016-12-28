@@ -22,12 +22,12 @@ entries:
     output: web
     folderitems:
 
-    - title: Advanced Composite Creation
-      url: /conceptdocs_advancedcomposites.html
-      output: web
-
     - title: Directory Structure
       url: /conceptdocs_directorystructure.html
+      output: web
+
+    - title: Overriding Inheritance and Anchoring
+      url: /conceptdocs_advancedcomposites.html
       output: web
 
     - title: Variables

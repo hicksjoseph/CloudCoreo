@@ -3,7 +3,7 @@ title: CloudCoreo Directory structure
 summary: CloudCoreo Directory structure
 tags:
 keywords: ""
-last_updated: "November 9, 2016"
+last_updated: "December 27, 2016"
 published: true
 sidebar: conceptdocs_sidebar
 permalink: conceptdocs_directorystructure.html
@@ -11,62 +11,60 @@ folder: conceptdocs
 toc: false
 ---
 
-## Directory Structure
-CloudCoreo relies on convention over configuration for the most part, achieving simplicity and flexibility. Each repository can contain whatever you want, which is useful for running scripts or laying down solid code. There are some directories that we reserve the right to, and below you'll see a list of those directories and their functions.
+## Composite / Repository Directory Structure
+CloudCoreo relies on convention over configuration for the most part, achieving simplicity and flexibility. Since the basic structure of a Composite is that only one Composite is contained within a particular repository, a repository can contain whatever code you would like to build your infrastructure using CloudCoreo. However, there are some directories that CloudCoreo reserves for certain functions.
 
-The directory structure precisely relates to how CloudCoreo actually works. The convention we have defined dictates what gets overridden, what runs during the boot of a server, what runs as Cloud Services, and more.  The [CLI Tool](https://github.com/CloudCoreo/cloudcoreo-cli) will do much of the work for you, but you should still know what it all means. That's where this page, and the wealth of knowledge included in it, is going to come in handy. Read on!
+The CloudCoreo directory naming structure directly conveys what each CloudCoreo reserved directory actually does. For example, the `overrides` directory specifies which inherited directives will be overridden so as to enable modified inherited behavior or perhaps to not execute the inherited directives at all. Another example is the `boot-scripts` directory which contains and specifies the scripts that will run when a particular server boots.  
 
-### extends
-`extends` is one of the most basic, but important, concepts in CloudCoreo. This directory enables you to **leverage the work of others** and bring it all within your own deployment. You can literally crowdsource your stack, which saves you oodles of time.
+Here is a list of the CloudCoreo reserved directories and their function.  
 
-`extends` is the base for anything you are doing in this stack. **Any and all work defined in `extends` will be completed before moving on to the parent directory.**
+### services  
+The `services` directory is where you can use code to definte cloud infrastructure such as servers, VPCs, Load Balancers, DNS, or other infrastructure. The `services` directory is also where you would define audit definitions for your cloud deployments. When using the `services` directory, infrastructure code goes into the `<repository-dir>/services/config.rb` file while variable definitions for the WebUI live in the `<repository-dir>/config.yaml` file.  
 
-### stack-*
-Any subdirectory beginning with `stack-` is reserved in CloudCoreo. The work in these directories is completed after the `extends` directory (if it exists) but before anything else in the current repository. This makes it suitable to *add an external stack* to your stack.
+To learn more about the `services` directory, see [Composite Creation](http://kb.cloudcoreo.com/conceptdocs_compositecreation.html)
 
-When adding a stack, consider the needs of people *overriding* or *extending* your stack in the future. For instance, creating blank directories for dropping in bits of code and overrides will make everyone's life easier in the future. To help ease the administration efforts of creating these directories, use `stack-` in the CLI tool.
+### extends  
+The `extends` directory is a type of symbolic link that points to a different git repository. The `extends` directory enables you to inherit infrastructure definition from a different Composite (repositories) as a base Composite definition. By using the `extends` directory to point to other Composites (repositories), you can **leverage the best practice code of others** for use your own deployments. Many Composites are based on and inherited from other Composites via use of the `extends` directory. "Golden Master" Composites can be created for commonly created infrastructure so that other people can extend them to create Composites that combines many "Golden Master" Composites that can be used for day-to-day deployment and operation of their infrastructure.  
 
-**But what does `stack-` do?!**
+Any code in the `extends` directory will execute first before any other code in the current Composite (repository) in which it is contained. The use of this directory is required when inheriting from a different Composite, but is optional otherwise. Only one `extends` directory can exist at the root level of a Composite repository, however a Composite may have other `extends` directories contained within some of the other directories listed below.  
 
-Say you want to add a stack from Git (github.com:example/tomcat.git) into your own stack and call it 'tomcat'. The ideal directory structure would require you to create a `stack-tomcat` directory to signify that it's special within the CloudCoreo framework. Next, create an `extends` directory inside that, and extend the stack into this directory. Now you are utilizing both concepts. Because you used a `stack-*` directory to the `<repository-dir>`, it will run **after** `<repository-dir>/extends`. Because you have added the stack to `<repository-dir>/stack-tomcat/extends` it will run **before** everything else inside the `stack-tomcat*` directory. Now, anyone utilizing your stack has a convenient place to insert configuration and setup between your stack and the added Tomcat stack.
+### stack  
+The stack- directory is a way to organize related infrastructure components into a modular and easy to understand structure. You may want to group certain similar configuration components together in a `stack-` directory for ease of understanding, editing, and related execution order. An example of the usage of a `stack-` directory would be to group together  configuration for a tomcat server deployment and might be labeled `stack-tomcat`. Other examples of a `stack-` directory might be for a MySQL deployment, labelled `stack-mysql` or a time-series Cassandra deployment, labelled `stack-cassandra-timeseries`. You can create `stack-` directories with anything following `stack-` (`stack-anything`). The use of this directory is optional otherwise.  
 
-### services
-The `services` directory exists to define the stack's interaction with the cloud provider in which the server is launched; specifically, the `<repository-dir>/services/config.rb file`. This is in-depth enough to contain its own documentation section!
+The configuration in a `stack-` directory is executed after the code in the root repository `extends` directory (if exists) and before any other code in the rest of the resposity. You may have multiple `stack-` directories in a Composite / repository, but their execution order will be indeterminate. There are no limits on the number of `stack-` directories you can have in a composite. The use of `stack-` directories can be very powerful for creating infrastructure, including constructs where you can include an `extends-` directory inside of a `stack-` directory or even have nested `stack-` directories. Learn more about this in [Composite Tricks and Tips](http://kb.cloudcoreo.com).  
 
-### boot-scripts
-The `<repository-dir>/boot-scripts` directory exists to define boot time configuration of a server. If this directory exists, CloudCoreo will run scripts as defined by:
+### boot-scripts  
+The `<repository-dir>/boot-scripts` directory is used for scripts that define boot time configuration of a server. The use of this directory is optional otherwise.  
 
-1. The directory layout (`extends`, `stack-*`, etc.)
-1. Then the order defined in the `order.yaml` file within this directory
+To add a script to the boot time execution of scripts that run at server start up, copy the file(s) to the `boot-scripts` directory and add the file name to the correct `order.yaml` file. Here is an example `order.yaml` file containing the list of scripts in the correct execution order.  
 
-As an example, if your directory structure contains the following paths CloudCoreo will run each script in the `extends/stack-example/extends/boot-scripts/order.yaml` file before moving on to the `extends/stack-example/boot-scripts/order.yaml`:
+~~~~
+script-order:
+ - install_docker.sh
+ - start_docker.sh
+ - update_route_tables.sh  
+~~~~
 
-* `extends/stack-example/extends/boot-scripts`
-* `extends/stack-example/boot-scripts`
+The overall order that boot scripts will be run is defined by:  
+1. The directory structure.  
+2. Then the order defined in the `order.yaml` file within this directory  
 
-As a matter of fact, each of the scripts in the base directory can be overridden at any point.
+For example, boot scripts in the `<repository-dir>/extends` will run before scripts at the root of the Composite.
 
-### operational-scripts
-The files contained within the `<repository-dir>/operational-scripts` directory are scripts you might want to run on an ad-hoc basis from the CloudCoreo GUI or CLI. The structure and scripts within this directory honor the order and overrides defined within the rest of this document.
+Note: A script must be copied to the appropriate `boot-script` directory and defined in the correct `order.yaml` file for it to run at server startup. Any file that is placed into the boot-scripts directory will be copied to the server at boot time.  
 
-### shutdown-scripts
-The `<repository-dir>/shutdown-scripts` directory contains scripts that CloudCoreo will **attempt** to run. These are not guaranteed because many times failures are a complete loss of a system, with no warning whatsoever. The structure and scripts within this directory honor the order and overrides defined within the rest of this document.
+### operational-scripts  
+The `<repository-dir>/operational-scripts` directory is used for scripts that you may want to run on the server on an ad-hoc basis from the CloudCoreo GUI or CLI. The use of this directory is optional otherwise.  
 
-### overrides
-Anything contained in this directory will act as an override for the stack in which it is contained.
+### shutdown-scripts  
+The `<repository-dir>/shutdown-scripts` directory contains scripts that you want to run when a server shuts down. CloudCoreo will attempt to run these scripts, but their execution is not guaranteed due to unpredicatble server shutdown by the cloud and other situations that improperly terminate a server.  
 
-The paths should be considered relative to the parent of this directory.
+### overrides  
+The `<repository-dir>/overrides` directory contains code and files that will override the execution plan from inherited Composites or preceding directories.  
 
-If you have a directory structure like this...
+Read more about how overrides work in [Introduction to overrides](http://kb.cloudcoreo.com/) .  
 
-```
-+-- parent
-|   +-- overrides
-|   |   +-- stack-a
-|   |   |   +-- boot-scripts
-|   |   |   |   +-- order.yaml
-|   +-- stack-a
-|   |   +-- boot-scripts
-|   |   |   +-- order.yaml
-```
-The `order.yaml` file will be ignored in the `stack-a directory`, and instead the `overrides/stack-a order.yaml` file will be used, because the directory structure within the override directory matches the structure of the parent.
+The CloudCoreo CLI is an essential tool if you will be creating Composites from the very beginning. The CLI can initialize a repository with all of the directories required for proper Composite construction ( use `coreo init` ).  Otherwise, cloning an existing repository or or creating the appropriate directories manually can also be a useful way to get started with Composites.  
+
+Read more about the [CloudCoreo CLI](http://kb.cloudcoreo.com/conceptdocs_cli.html) .  
+

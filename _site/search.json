@@ -86,6 +86,16 @@
 
 
 {
+"title": "Global Cloudtrail is not enabled",
+"tags": "",
+"keywords": "",
+"url": "mydoc_cloudtrail-trail-with-global.html",
+"summary": "Global CloudTrail logging is not enabled. It should be enabled."
+},
+
+
+
+{
 "title": "Security Group contains IP address",
 "tags": "",
 "keywords": "",
