@@ -164,6 +164,16 @@ If you have a directory structure like this...
 ```
 The `order.yaml` file will be ignored in the `composite-a directory`, and instead the `overrides/composite-a order.yaml` file will be used, because the directory structure within the override directory matches the structure of the parent.
 
+-----
+
+
+From Composite Creation:
+-----
+Put this back in:
+
+As you build new Composites, you will need to reference the [*CloudCoreo API Documentation*](http://docs.cloudcoreo.com/docs/frames/index) to know what options and parameters that you can use in your Composites.  
+
+
 
 
 
