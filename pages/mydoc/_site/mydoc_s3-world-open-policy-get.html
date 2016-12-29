@@ -1,0 +1,16 @@
+<h3 id="details">Details</h3>
+<p>The bucket policy allows the world to get the contents of the affected bucket. S3 bucket policies are a type of access control list but are different than S3 ACLs. S3 bucket policies specify what actions are allowed or denied for which principals on the bucket that the bucket policy is attached to. You attach S3 bucket policies at the bucket level, but the permissions specified in the bucket policy apply to all the objects in the bucket.</p>
+
+<p>An S3 Bucket Policy has been added that grants public access to your bucket.  Get access has been granted to the world on the affected bucket. This allows anyone to get your bucket content. You can use bucket policies to grant permissions to individual AWS accounts; however, it is strongly recommended that you do not grant public access to your bucket unless you are absolutely certain. Consider alternative methods to provide public access to your buckets.<br />
+<a href="https://aws.amazon.com/articles/5050">https://aws.amazon.com/articles/5050</a><br />
+<a href="https://blogs.aws.amazon.com/security/post/TxPOJBY6FE360K/IAM-policies-and-Bucket-Policies-and-ACLs-Oh-My-Controlling-Access-to-S3-Resourc">https://blogs.aws.amazon.com/security/post/TxPOJBY6FE360K/IAM-policies-and-Bucket-Policies-and-ACLs-Oh-My-Controlling-Access-to-S3-Resourc</a></p>
+
+<h3 id="suggested-action">Suggested Action</h3>
+<p>Remove the bucket permission that enables the world to get the contents of this bucket. See <a href="https://aws.amazon.com/articles/5050">Updating ACL to Remove Public Access to Your Buckets</a></p>
+
+<h3 id="additional-information">Additional Information</h3>
+<p>See <a href="https://aws.amazon.com/articles/5050">Alternatives to Public Access</a> for more information.</p>
+
+<p>To learn more about ACLs, see the following topics in Amazon S3 Developer Guide.<br />
+<a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/ACLOverview.html">Access Control List (ACL) Overview</a><br />
+<a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/ManageACLsUsingConsole.html">Managing ACLs in the AWS Management Console</a></p>

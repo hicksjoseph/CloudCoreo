@@ -1,0 +1,10 @@
+<h3 id="details">Details</h3>
+<p>One of the best ways to protect your account is to not have an access key for your root account. Unless you must have a root access key (which is very rare), it is best not to generate one. Instead, the recommended best practice is to create one or more AWS Identity and Access Management (IAM) users, give them the necessary permissions, and use IAM users for everyday interaction with AWS.</p>
+
+<p>An access key is required in order to sign requests that you make using the AWS Command Line Tools, the AWS SDKs, or direct API calls. Anyone who has the access key for your root account has unrestricted access to all the resources in your account, including billing information. You cannot restrict the permissions for your root account.<br />
+<a href="http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html#root-password">http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html#root-password</a></p>
+
+<h3 id="suggested-action">Suggested Action</h3>
+<p>If you already have an access key for your account, we recommend that you find places in your applications where you are currently using that key (if any), replace the root access key with an IAM user access key, and then disable and remove the root access key.
+<a href="http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html#root-password">http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html#root-password</a><br />
+<a href="http://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html">http://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html</a></p>

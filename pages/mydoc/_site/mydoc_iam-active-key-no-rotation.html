@@ -1,0 +1,13 @@
+<h3 id="details">Details</h3>
+<p>As a security best practice, we recommend that you, an administrator, regularly rotate (change) the access keys for IAM users in your account. If your users have the necessary permissions, they can rotate their own access keys. For information about how to give your users permissions to rotate their own access keys, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_delegate-permissions_examples.html#creds-policies-credentials">Allow Users to Manage Their Own Passwords, Access Keys, and SSH Keys</a>.</p>
+
+<p>You can also apply a password policy to your account to require that all of your IAM users periodically rotate their passwords,. You can choose how often they must do so. For more information, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html">Setting an Account Password Policy for IAM Users</a>.</p>
+
+<h3 id="suggested-action">Suggested Action</h3>
+<p>We recommend that you also regularly rotate them user account keys. Ideally, you should reduce or eliminate your use of AWS keys and reduce the number of keys used entirely. In many scenarios, you don’t need a long-term access key that never expires (as you have with an IAM user). Instead, you can create IAM roles and generate temporary security credentials.<br />
+<a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access keys.html#Using_RotateAccessKey">http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access keys.html#Using_RotateAccessKey</a>
+<a href="http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html">http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html</a></p>
+
+<p>If you must use keys, rotate them regularly. You can create, modify, or view AWS keys <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey">here</a> .</p>
+
+<p>Also consider using <a href="http://docs.aws.amazon.com/kms/latest/developerguide/overview.html">Amazon’s Key Management Service</a> .</p>

@@ -1,0 +1,28 @@
+<h3 id="details">Details</h3>
+<p>Global CloudTrail logging is not enabled. It should be enabled.</p>
+
+<p>AWS CloudTrail is a web service that records AWS API calls for your account and delivers log files to you. The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, the request parameters, and the response elements returned by the AWS service.</p>
+
+<p>With CloudTrail, you can get a history of AWS API calls for your account, including API calls made via the AWS Management Console, AWS SDKs, command line tools, and higher-level AWS services (such as AWS CloudFormation). The AWS API call history produced by CloudTrail enables security analysis, resource change tracking, and compliance auditing.</p>
+
+<p>A trail can be applied to all regions or a single region. As a best practice, create a trail that applies to all regions. If you have a single region trail, you should enable the Include global services option. A trail that applies to all regions has the following advantages:</p>
+
+<ul>
+  <li>The configuration settings for the trail apply consistently across all regions.</li>
+  <li>You receive log files from all regions in a single S3 bucket and optionally in a CloudWatch Logs log group.</li>
+  <li>If you configured an Amazon SNS topic for the trail, SNS notifications about log file deliveries in all regions are sent to that single SNS topic.</li>
+  <li>You manage trail configuration for all regions from one location.</li>
+  <li>You immediately receive events from a new region. When a new region launches, CloudTrail automatically creates a trail for you in the new region * with the same settings as your original trail.</li>
+  <li>You can create trails in regions that you don’t use often to monitor for unusual activity.</li>
+</ul>
+
+<p>For most services, events are sent to the region where the action happened. For global services such as IAM, AWS STS, and Amazon CloudFront, events are delivered to any trail that has the Include global services option enabled.</p>
+
+<p><a href="https://aws.amazon.com/cloudtrail/">https://aws.amazon.com/cloudtrail/</a>
+<a href="https://aws.amazon.com/cloudtrail/faqs/">https://aws.amazon.com/cloudtrail/faqs/</a>
+http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html</p>
+
+<h3 id="suggested-action">Suggested Action</h3>
+<p>Enable CloudTrail logs for each active region.<br />
+<a href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html">http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html</a></p>
+

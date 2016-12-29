@@ -136,6 +136,26 @@
 
 
 {
+"title": "ELB is using most recent Amazon SSL policy",
+"tags": "",
+"keywords": "",
+"url": "mydoc_elb-current-ssl-policy.html",
+"summary": "Elastic Load Balancing (ELB) SSL policy is current (most recent Amazon predefined SSL policy)."
+},
+
+
+
+{
+"title": "Classic ELB Inventory results",
+"tags": "",
+"keywords": "",
+"url": "mydoc_elb-inventory.html",
+"summary": "Classic Elastic Load Balancing (ELB) Inventory results."
+},
+
+
+
+{
 "title": "ELB is using old SSL policy",
 "tags": "",
 "keywords": "",

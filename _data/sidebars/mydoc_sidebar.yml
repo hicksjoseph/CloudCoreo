@@ -42,8 +42,16 @@ entries:
     output: web
     folderitems:
 
-    - title: ELB is using old SSL policy
+    - title: ELB using old SSL policy
       url: /mydoc_elb-old-ssl-policy.html
+      output: web
+
+    - title: ELB using most current SSL policy
+      url: /mydoc_elb-current-ssl-policy.html
+      output: web
+
+    - title: Classic ELB Inventory
+      url: /mydoc_elb-inventory.html
       output: web
 
   - title: IAM
