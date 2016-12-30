@@ -96,6 +96,16 @@
 
 
 {
+"title": "EC2 instance - Alert to Kill",
+"tags": "",
+"keywords": "",
+"url": "mydoc_ec2-alert-to-kill.html",
+"summary": "EC2 - Alert to Kill - Checks for instances with improper or no tags then kills any matching instances within the first 5 minutes."
+},
+
+
+
+{
 "title": "EC2 Inventory results",
 "tags": "",
 "keywords": "",

@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="All IP addresses are allowed to access resources in the affected security group.">
+<meta name="description" content="EC2 - Alert to Kill - Checks for instances with improper or no tags then kills any matching instances within the first 5 minutes.">
 <meta name="keywords" content=" ">
-<title>Security group allows unrestricted traffic | CloudCoreo Documentation</title>
+<title>EC2 instance - Alert to Kill | CloudCoreo Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Security group allows unrestricted traffic page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the EC2 instance - Alert to Kill page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Security group allows unrestricted traffic">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="EC2 instance - Alert to Kill">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -233,7 +233,7 @@
             
             
             
-            <li class="active"><a href="mydoc_ec2-unrestricted-traffic.html">Security group allows unrestricted traffic</a></li>
+            <li><a href="mydoc_ec2-unrestricted-traffic.html">Security group allows unrestricted traffic</a></li>
             
             
             
@@ -247,7 +247,7 @@
             
             
             
-            <li><a href="mydoc_ec2-alert-to-kill.html">EC2 instance - Alert to Kill</a></li>
+            <li class="active"><a href="mydoc_ec2-alert-to-kill.html">EC2 instance - Alert to Kill</a></li>
             
             
             
@@ -570,7 +570,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Security group allows unrestricted traffic</h1>
+   <h1 class="post-title-main">EC2 instance - Alert to Kill</h1>
 </div>
 
 
@@ -578,7 +578,7 @@
 <div class="post-content">
 
    
-    <div class="summary">All IP addresses are allowed to access resources in the affected security group.</div>
+    <div class="summary">EC2 - Alert to Kill - Checks for instances with improper or no tags then kills any matching instances within the first 5 minutes.</div>
    
 
     
@@ -587,20 +587,24 @@
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/mydoc/mydoc_ec2-unrestricted-traffic.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/mydoc/mydoc_ec2-alert-to-kill.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
   <h3 id="details">Details</h3>
-<p>“A security group acts as a virtual firewall that controls the traffic for one or more instances. When you launch an instance, you associate one or more security groups with the instance. You add rules to each security group that allow traffic to or from its associated instances. You can modify the rules for a security group at any time; the new rules are automatically applied to all instances that are associated with the security group. When AWS decides whether to allow traffic to reach an instance, it evaluates all the rules from all of the security groups that are associated with that instance.”
-<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html</a></p>
+<p>This alert checks for instances with improper (or no) tags then generates a kill list / script to kill any matching instances in the specified region. This alert matches instance tags with tags that you specify and does not indicate that you have a problem with your EC2 instances. This alert has been nicknamed: “Alert to Kill”.</p>
 
-<p>If you enable 0.0.0.0/0 in a security group, you enable all IP addresses to access your instance on the specified port (or perhaps any port). This might be acceptable for a short time in a test environment or for certain specific circumstances, but it’s generally unsafe for production environments.</p>
+<p>A number of variables can be set / modified via the CloudCoreo WebUI or via the <code class="highlighter-rouge">&lt;repository directory&gt;/config.yaml</code> file.<br />
+* Matching tags can be specified / modified<br />
+* Multiple tags can be combined together for a more accurate match<br />
+* The frequency of how often EC2 instances are checked can be specified / modified<br />
+* You can specify / modify the instance age after which the instance will not be killed</p>
+
+<p>Read more about <a href="https://aws.amazon.com/ec2/">EC2 Instances</a> .</p>
 
 <h3 id="suggested-action">Suggested Action</h3>
-<p>The best practice in production is to restrict access to the minimum specific set of IP address or ports necessary. Review your Security Groups against your real world requirements and change them as necessary. Learn more about how to edit and delete rules from your Security Groups:<br />
-<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#deleting-security-group-rule">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#deleting-security-group-rule</a></p>
+<p>None. This alert matches instance tags with tags that you specify and does not indicate that you have a problem with your EC2 instances.</p>
 
 
     <div class="tags">
@@ -617,7 +621,7 @@
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2016 CloudCoreo. All rights reserved. <br />
-<span>Page last updated:</span> September 17, 2016<br/> Site last generated: Dec 30, 2016 <br />
+<span>Page last updated:</span> December 30, 2016<br/> Site last generated: Dec 30, 2016 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>

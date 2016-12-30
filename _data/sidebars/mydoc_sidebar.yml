@@ -42,6 +42,10 @@ entries:
       url: /mydoc_ec2-inventory.html
       output: web
 
+    - title: EC2 instance - Alert to Kill
+      url: /mydoc_ec2-alert-to-kill.html
+      output: web
+
   - title: ELB
     output: web
     folderitems:
