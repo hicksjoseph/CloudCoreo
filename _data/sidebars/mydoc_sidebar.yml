@@ -38,6 +38,10 @@ entries:
       url: /mydoc_ec2-unrestricted-traffic.html
       output: web
 
+    - title: EC2 Inventory
+      url: /mydoc_ec2-inventory.html
+      output: web
+
   - title: ELB
     output: web
     folderitems:

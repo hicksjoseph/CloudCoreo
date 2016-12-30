@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Security group contains a port range rather than specifying individual ports.">
+<meta name="description" content="EC2 Inventory results.">
 <meta name="keywords" content=" ">
-<title>Security group contains a port range | CloudCoreo Documentation</title>
+<title>EC2 Inventory results | CloudCoreo Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Security group contains a port range page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the EC2 Inventory results page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Security group contains a port range">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="EC2 Inventory results">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -226,7 +226,7 @@
             
             
             
-            <li class="active"><a href="mydoc_ec2-ports-range.html">Security group contains a port range</a></li>
+            <li><a href="mydoc_ec2-ports-range.html">Security group contains a port range</a></li>
             
             
             
@@ -240,7 +240,7 @@
             
             
             
-            <li><a href="mydoc_ec2-inventory.html">EC2 Inventory</a></li>
+            <li class="active"><a href="mydoc_ec2-inventory.html">EC2 Inventory</a></li>
             
             
             
@@ -563,7 +563,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Security group contains a port range</h1>
+   <h1 class="post-title-main">EC2 Inventory results</h1>
 </div>
 
 
@@ -571,7 +571,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Security group contains a port range rather than specifying individual ports.</div>
+    <div class="summary">EC2 Inventory results.</div>
    
 
     
@@ -580,23 +580,18 @@
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/mydoc/mydoc_ec2-ports-range.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/mydoc/mydoc_ec2-inventory.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
   <h3 id="details">Details</h3>
-<p>A security group acts as a virtual firewall for your instance to control inbound and outbound traffic. For each security group, you add rules that control the inbound traffic to instances, and a separate set of rules that control the outbound traffic. For each security group, you add rules that control the inbound traffic to instances, and a separate set of rules that control the outbound traffic.
-The following are the basic parts of a security group rule:
-(Inbound rules only) The source of the traffic (CIDR range or security group) and the destination port or port range.
-(Outbound rules only) The destination for the traffic (CIDR range or security group) and the destination port or port range.
-Any protocol that has a standard protocol number.”
-http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html</p>
+<p>This alert is an Inventory of the instances in Amazon EC2. The resources list all of the current EC2 instances in a particular region in any state (running, stopped, starting, etc). Region selection can be controlled via the CloudCoreo WebUI and/or the <code class="highlighter-rouge">&lt;repository directory&gt;/config.yaml</code> file. This alert is an Inventory check and does not indicate that you have a problem with your EC2 instances.</p>
 
-<p>It is the best practice to specify specific ports versus a range of ports. When specifying a range of ports, there is the potential to open more ports than is necessary for your application, which can introduce security vulnerabilities into your environment.</p>
+<p>Read more about <a href="https://aws.amazon.com/ec2/">EC2 Instances</a> .</p>
 
 <h3 id="suggested-action">Suggested Action</h3>
-<p>When creating or modifying your security groups, only add rules to your Security group that specify individual ports and don’t use port ranges unless they are required.</p>
+<p>None. This alert is an Inventory check and does not indicate that you have a problem with your EC2 instances.</p>
 
 
     <div class="tags">
@@ -613,7 +608,7 @@ http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html</p
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2016 CloudCoreo. All rights reserved. <br />
-<span>Page last updated:</span> September 17, 2016<br/> Site last generated: Dec 29, 2016 <br />
+<span>Page last updated:</span> December 29, 2016<br/> Site last generated: Dec 29, 2016 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>
