@@ -106,6 +106,16 @@
 
 
 {
+"title": "EC2 instance - Alert to Kill",
+"tags": "",
+"keywords": "",
+"url": "mydoc_ec2-alert-to-kill.html",
+"summary": "EC2 - Alert to Kill - Checks for instances with improper or no tags then kills any matching instances within the first 5 minutes."
+},
+
+
+
+{
 "title": "EC2 Inventory results",
 "tags": "",
 "keywords": "",
@@ -351,6 +361,16 @@
 "keywords": "",
 "url": "mydoc_redshift-no-require-ssl.html",
 "summary": "Connections to Redshift aren't set to require the use of SSL encryption."
+},
+
+
+
+{
+"title": "Redshift user activity logging disabled",
+"tags": "",
+"keywords": "",
+"url": "mydoc_redshift-no-user-logging.html",
+"summary": "Redshift user activity logging is disabled."
 },
 
 

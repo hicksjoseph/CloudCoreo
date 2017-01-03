@@ -142,8 +142,12 @@ entries:
       url: /mydoc_redshift-no-require-ssl.html
       output: web
 
-    - title: User activity logging disabled
+    - title: Database user logging disabled
       url: /mydoc_redshift-no-user-logging.html
+      output: web
+
+    - title: User activity logging disabled
+      url: /mydoc_redshift-no-user-activity-logging.html
       output: web
 
     - title: Automatic upgrades not enabled
