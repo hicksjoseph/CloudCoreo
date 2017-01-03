@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
+<meta name="description" content="Alerts if an EC2 instance was not launched from the latest Amazon Linux AMI">
 <meta name="keywords" content=" ">
-<title>Mobile Pages | CloudCoreo Documentation</title>
+<title>EC2 instance not launched from latest Amazon Linux AMI | CloudCoreo Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Mobile Pages page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the EC2 instance not launched from latest Amazon Linux AMI page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Mobile Pages">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="EC2 instance not launched from latest Amazon Linux AMI">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -254,7 +254,7 @@
             
             
             
-            <li><a href="mydoc_ec2-amazon-linux-not-latest.html">Instance not from latest Amazon Linux AMI</a></li>
+            <li class="active"><a href="mydoc_ec2-amazon-linux-not-latest.html">Instance not from latest Amazon Linux AMI</a></li>
             
             
             
@@ -584,7 +584,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Mobile Pages</h1>
+   <h1 class="post-title-main">EC2 instance not launched from latest Amazon Linux AMI</h1>
 </div>
 
 
@@ -592,29 +592,8 @@
 <div class="post-content">
 
    
-
-    
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
+    <div class="summary">Alerts if an EC2 instance was not launched from the latest Amazon Linux AMI</div>
+   
 
     
 
@@ -622,199 +601,21 @@ $('#toc').on('click', 'a', function() {
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/tags/tag_mobile.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/mydoc/mydoc_ec2-amazon-linux-not-latest.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
-  <p>The following pages and posts are tagged with <button type="button" style="cursor: default" class="btn btn-default navbar-btn">mobile</button></p>
-<table><thead><tr><th>Title</th><th>Type</th><th>Excerpt</th></tr></thead>
-    <tbody>
-    
-  
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-        
-     
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
+  <h3 id="details">Details</h3>
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+<p>Alerts if an EC2 instance was not launched from the latest Amazon Linux AMI</p>
 
-   </tbody>
-</table>
+<p>This alert checks for instances that were not launched from the latest Amazon Linux AMI. This alert matches the AWS instance_id against the list of Amazon Linux AMI IDs in the variable $AWS_LINUX_AMI in <code class="highlighter-rouge">audit-aws-ec2-aws-linux-check/config.yaml</code>. This list can be modified and updated by modifying the <code class="highlighter-rouge">config.yaml</code> file. If notified of a violation, it does not necessarily indicate that you have a problem with your EC2 instances.</p>
 
+<p>Read more about <a href="https://aws.amazon.com/ec2/">EC2 Instances</a> and about <a href="https://aws.amazon.com/amazon-linux-ami/">Amazon Linux AMIs</a> .</p>
+
+<h3 id="suggested-action">Suggested Action</h3>
+<p>None. This alert checks for instances that were not launched from the latest Amazon Linux AMI. it does not necessarily indicate that you have a problem with your EC2 instances.</p>
 
 
     <div class="tags">
@@ -831,7 +632,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 CloudCoreo. All rights reserved. <br />
- Site last generated: Jan 3, 2017 <br />
+<span>Page last updated:</span> January 3, 2017<br/> Site last generated: Jan 3, 2017 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>

@@ -106,11 +106,11 @@
 
 
 {
-"title": "EC2 instance - Alert to Kill",
+"title": "EC2 instance not launched from latest Amazon Linux AMI",
 "tags": "",
 "keywords": "",
-"url": "mydoc_ec2-alert-to-kill.html",
-"summary": "EC2 - Alert to Kill - Checks for instances with improper or no tags then kills any matching instances within the first 5 minutes."
+"url": "mydoc_ec2-amazon-linux-not-latest.html",
+"summary": "Alerts if an EC2 instance was not launched from the latest Amazon Linux AMI"
 },
 
 

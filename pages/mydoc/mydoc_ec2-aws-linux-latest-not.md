@@ -1,26 +1,23 @@
 ---
-title: EC2 instance - Alert to Kill
+title: EC2 instance not launched from latest Amazon Linux AMI
 tags:
 keywords: ""
-last_updated: "December 30, 2016"
-summary: EC2 - Alert to Kill - Checks for instances with improper or no tags then kills any matching instances within the first 5 minutes.
+last_updated: "January 3, 2017"
+summary: Alerts if an EC2 instance was not launched from the latest Amazon Linux AMI
 published: true
 sidebar: mydoc_sidebar
-permalink: mydoc_ec2-alert-to-kill.html
+permalink: mydoc_ec2-amazon-linux-not-latest.html
 folder: mydoc
 toc: false
 ---
 
 ### Details  
-This alert checks for instances with improper (or no) tags then generates a kill list / script to kill any matching instances in the specified region. This alert matches instance tags with tags that you specify and does not indicate that you have a problem with your EC2 instances. This alert has been nicknamed: "Alert to Kill".  
 
-A number of variables can be set / modified via the CloudCoreo WebUI or via the `<repository directory>/config.yaml` file.  
-* Matching tags can be specified / modified  
-* Multiple tags can be combined together for a more accurate match  
-* The frequency of how often EC2 instances are checked can be specified / modified  
-* You can specify / modify the instance age after which the instance will not be killed  
+Alerts if an EC2 instance was not launched from the latest Amazon Linux AMI
 
-Read more about [EC2 Instances](https://aws.amazon.com/ec2/) .
+This alert checks for instances that were not launched from the latest Amazon Linux AMI. This alert matches the AWS instance_id against the list of Amazon Linux AMI IDs in the variable $AWS_LINUX_AMI in `audit-aws-ec2-aws-linux-check/config.yaml`. This list can be modified and updated by modifying the `config.yaml` file. If notified of a violation, it does not necessarily indicate that you have a problem with your EC2 instances.  
+
+Read more about [EC2 Instances](https://aws.amazon.com/ec2/) and about [Amazon Linux AMIs](https://aws.amazon.com/amazon-linux-ami/) .  
 
 ### Suggested Action
-None. This alert matches instance tags with tags that you specify and does not indicate that you have a problem with your EC2 instances.  
+None. This alert checks for instances that were not launched from the latest Amazon Linux AMI. it does not necessarily indicate that you have a problem with your EC2 instances.  
