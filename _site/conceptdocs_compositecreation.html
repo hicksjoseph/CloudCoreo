@@ -331,41 +331,7 @@
 </code></pre>
 </div>
 
-<h3 id="plan-variables">Plan Variables</h3>
-<p>There are a few fields in the <code class="highlighter-rouge">config.yaml</code> file that control the behavior of the WebUI. These are <code class="highlighter-rouge">required</code>, <code class="highlighter-rouge">description</code>, and <code class="highlighter-rouge">default</code>.</p>
-
-<ul>
-  <li><code class="highlighter-rouge">default:</code>
-You use the <code class="highlighter-rouge">default</code> field to pre-populate the default value for your particular variable when a Plan is created and when no other value has been entered. Valid entries for this field are whatever is appropriate for your particular variable.</li>
-</ul>
-
-<p><code class="highlighter-rouge">default: 10.11.0.0</code></p>
-
-<p>or</p>
-
-<p><code class="highlighter-rouge">default: us-east-1,eu-west-1,ap-southeast-1</code></p>
-
-<ul>
-  <li><code class="highlighter-rouge">required:</code>
-You use the <code class="highlighter-rouge">required</code> field to indicate whether the WebUI requires this variable to have a value entered when a Plan is created. Valid entries for this field are true or false.</li>
-</ul>
-
-<p><code class="highlighter-rouge">required: true</code></p>
-
-<p>or</p>
-
-<p><code class="highlighter-rouge">required: false</code></p>
-
-<ul>
-  <li><code class="highlighter-rouge">description:</code>
-You use the <code class="highlighter-rouge">description</code> field to enter a human readable description that will show as a tooltip in the WebUI for the particular variable when a Plan is created. Valid entries for this field are any plain text (yaml compatible) enclosed in double quotes <code class="highlighter-rouge">" "</code>.</li>
-</ul>
-
-<p><code class="highlighter-rouge">description: "This is a sample description"</code></p>
-
-<p>or</p>
-
-<p><code class="highlighter-rouge">description: "Enter the value for this variable. Valid values are apple, ball, and/or cat."</code></p>
+<p>Read more about <a href="http://kb.cloudcoreo.com/conceptdocs_variables.html">CloudCoreo Variables</a> .</p>
 
 <p><strong>Note:</strong> Be careful when you edit your config.yaml file since this file <strong>cannot contain tab characters</strong>. When you do line spacing, use spaces instead.</p>
 

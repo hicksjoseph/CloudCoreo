@@ -76,37 +76,7 @@ variables:
         default: 10.11.0.0
 ~~~
 
-### Plan Variables
-There are a few fields in the `config.yaml` file that control the behavior of the WebUI. These are `required`, `description`, and `default`.
-
-* `default:`
-You use the `default` field to pre-populate the default value for your particular variable when a Plan is created and when no other value has been entered. Valid entries for this field are whatever is appropriate for your particular variable.  
-
-`default: 10.11.0.0`  
-
-or  
-
-`default: us-east-1,eu-west-1,ap-southeast-1`   
-
-
-* `required:`
-You use the `required` field to indicate whether the WebUI requires this variable to have a value entered when a Plan is created. Valid entries for this field are true or false.  
-
-`required: true`  
-
-or  
-
-`required: false`   
-
-* `description:`
-You use the `description` field to enter a human readable description that will show as a tooltip in the WebUI for the particular variable when a Plan is created. Valid entries for this field are any plain text (yaml compatible) enclosed in double quotes `" "`.  
-
-`description: "This is a sample description"`  
-
-or  
-
-`description: "Enter the value for this variable. Valid values are apple, ball, and/or cat."`   
-
+Read more about [CloudCoreo Variables](http://kb.cloudcoreo.com/conceptdocs_variables.html) .  
 
 **Note:** Be careful when you edit your config.yaml file since this file **cannot contain tab characters**. When you do line spacing, use spaces instead. 
 
