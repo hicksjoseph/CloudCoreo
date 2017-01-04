@@ -2,11 +2,11 @@
 
 entries:
 - title: sidebar
-  product: CloudCoreo Documentation
+  product: CloudCoreo Concepts
   version:
   folders:
 
-  - title: Getting Started
+  - title: Composite Concepts 
     output: web
     folderitems:
 
@@ -18,16 +18,12 @@ entries:
       url: /conceptdocs_compositecreation.html
       output: web
 
-  - title: Advanced Topics
-    output: web
-    folderitems:
-
-    - title: Advanced Composite Creation
-      url: /conceptdocs_advancedcomposites.html
-      output: web
-
     - title: Directory Structure
       url: /conceptdocs_directorystructure.html
+      output: web
+
+    - title: Overriding Inheritance and Anchoring
+      url: /conceptdocs_advancedcomposites.html
       output: web
 
     - title: Variables
