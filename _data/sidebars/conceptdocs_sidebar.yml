@@ -2,11 +2,11 @@
 
 entries:
 - title: sidebar
-  product: CloudCoreo Documentation
+  product: CloudCoreo Concepts
   version:
   folders:
 
-  - title: Getting Started
+  - title: Composite Concepts 
     output: web
     folderitems:
 
@@ -17,10 +17,6 @@ entries:
     - title: Composite Creation
       url: /conceptdocs_compositecreation.html
       output: web
-
-  - title: Advanced Topics
-    output: web
-    folderitems:
 
     - title: Directory Structure
       url: /conceptdocs_directorystructure.html

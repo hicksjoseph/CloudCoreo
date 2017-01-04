@@ -62,7 +62,7 @@ coreo_aws_vpc_vpc "${VPC_NAME}" do
 end
 ~~~  
 
-Plan variables are defined in the `config.yaml` file which resides in the `<repo-dir>` base directory. Within the `config.yaml` file, you can now call out a `VPC_NAME` and `VPC_OCTETS` variables and apply defaults. In this case, the variable `VPC_NAME` and `VPC_OCTETS` will show up in the web UI for any users to modify.  This is what the `config.yaml` would look like in this case:
+Plan variables are defined in the `config.yaml` file which resides in the `<repository-directory>` base directory. Within the `config.yaml` file, you can now call out a `VPC_NAME` and `VPC_OCTETS` variables and apply defaults. In this case, the variable `VPC_NAME` and `VPC_OCTETS` will show up in the web UI for any users to modify.  This is what the `config.yaml` would look like in this case:
 
 ~~~ ruby
 variables:

@@ -15,7 +15,7 @@ entries:
       output: web
 
     - title: Global Cloudtrail not enabled
-      url: /cloudtrail-trail-with-global.html
+      url: /mydoc_cloudtrail-trail-with-global.html
       output: web
 
   - title: EC2

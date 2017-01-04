@@ -272,133 +272,77 @@
 
     
 
-  <h2 id="variables">Variables</h2>
+  <p><strong>Note:</strong> Be careful when you edit your config.yaml file since this file <strong>cannot contain tab characters</strong>. When you do line spacing, use spaces instead.</p>
 
-<p>The root directory can contain a <code class="highlighter-rouge">config.yaml</code> file to define variables for use in the stack. Variables allow a user to create many copies of CloudCoreo stacks without creating conflict (unless conflict is desired, of course). There are a number of properties that can be set. Here is an example <code class="highlighter-rouge">config.yaml</code> file:
-<code class="highlighter-rouge">
-variables:
+<h2 id="composite-variables">Composite Variables</h2>
+
+<p>Composite variables are a great way to enable a variety of user defined options for your Composites as you create Plans to build and audit your infrastructure. These variables are implemented with variable definitions in your Composite code and are exposed in the WebUI via the contents of the <code class="highlighter-rouge">&lt;repository-directory&gt;/config.yaml</code>. This file is optional for Composites, but required if you will be defining and exposing variables in your Composite.</p>
+
+<h3 id="plan-variables">Plan Variables</h3>
+<p>There are a few fields in the <code class="highlighter-rouge">config.yaml</code> file that control the behavior of the WebUI. These are <code class="highlighter-rouge">required</code>, <code class="highlighter-rouge">description</code>, <code class="highlighter-rouge">default</code>, <code class="highlighter-rouge">type</code>, and <code class="highlighter-rouge">overrides</code>.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">default:</code>
+You use the <code class="highlighter-rouge">default</code> field to pre-populate the default value for your particular variable when a Plan is created and when no other value has been entered. Valid entries for this field are whatever is appropriate for your particular variable. If a value for a particular variable is set via the WebUI, that value will be used instead of the value specified in <code class="highlighter-rouge">default</code>.</li>
+</ul>
+
+<p>Example entries for the <code class="highlighter-rouge">default:</code> field include:<br />
+<code class="highlighter-rouge">default: 10.11.0.0</code><br />
+<code class="highlighter-rouge">default: us-east-1,eu-west-1,ap-southeast-1</code> <br />
+<code class="highlighter-rouge">default: notify</code></p>
+
+<ul>
+  <li><code class="highlighter-rouge">required:</code>
+You use the <code class="highlighter-rouge">required</code> field to indicate whether the WebUI requires this variable to have a value entered when a Plan is created. Valid entries for this field are true or false.  Required variables <em>must</em> be supplied in order to Add and Run a Plan. If required variables are not supplied, CloudCoreo will display an error in the WebUI.</li>
+</ul>
+
+<p>Example entries for the <code class="highlighter-rouge">required:</code> field include:<br />
+<code class="highlighter-rouge">required: true</code><br />
+<code class="highlighter-rouge">required: false</code></p>
+
+<p>Example entries for the <code class="highlighter-rouge">description:</code> field include:<br />
+* <code class="highlighter-rouge">description:</code>
+You use the <code class="highlighter-rouge">description</code> field to enter a human readable description that will show as a tooltip in the WebUI for the particular variable when a Plan is created. Valid entries for this field are any plain text (yaml compatible) enclosed in double quotes <code class="highlighter-rouge">" "</code>.</p>
+
+<p><code class="highlighter-rouge">description: "This is a sample description"</code><br />
+<code class="highlighter-rouge">description: "Enter the value for this variable. Valid values are apple, ball, and/or cat."</code></p>
+
+<ul>
+  <li><code class="highlighter-rouge">type:</code>
+You use the <code class="highlighter-rouge">type</code> field to define the type of input that this variable accepts. The type will also change how the variable input is displayed in the WebUI. Valid entries for this field include <code class="highlighter-rouge">array</code>, <code class="highlighter-rouge">string</code>, <code class="highlighter-rouge">number</code>, and <code class="highlighter-rouge">case</code>.</li>
+</ul>
+
+<p>Example entries for the <code class="highlighter-rouge">type:</code> field include:</p>
+
+<p><code class="highlighter-rouge">type: string</code><br />
+<code class="highlighter-rouge">type: array</code></p>
+
+<p>Here is an example <code class="highlighter-rouge">config.yaml</code> file showing a few different <code class="highlighter-rouge">type:</code> statements :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>variables:
   MY_DNS_ZONE:
-    default: cloudcoreo.com
-    description: this dns zone variable is used for setting up route53 entries
+    default: example.com
+    description: This dns zone variable is used for setting up Route53 DNS entries.
     required: true
     type: string
-    overrides:
-      - stack-tomcat:DNS_ZONE
+
   SWAP_SIZE_IN_GB:
     default: 2
-    description: create a swap file of this size in gigabytes
+    description: What size swap file would you like to create? (Gigabytes)
     required: false
     type: number
+
   SERVER_AMI:
-    description: the ami to launch
+    description: Which AMI should the instance be launched from?
     switch: INSTANCE::region
     cases:
       us-east-1: ami-1ecae776
       us-west-1: ami-d114f295
       us-west-2: ami-e7527ed7
-    type: case
-</code>
-### property: default
-The default value of a variable is applied if no user input is specified and no parent directory re-sets the default. For instance, if a user sets a value in the web UI, it will override the default.</p>
-
-<p>Similarly, if a parent directory sets a new default it will override the current default.
-### property: description
-The description is exposed in the web-ui as a tool-tip to the users utilizing the stack.
-### property: required
-A variable is made to be required by setting the required property to ‘true’. Required variables <em>must</em> be supplied to launch a stack. If they are not, CloudCoreo will flag them as errors and force the user to input valid data. Here’s an example:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>MY_VAR:
-  default: hi
-  definition: this says hi
-  required: true
+    type: array
 </code></pre>
 </div>
 
-<h3 id="property-overrides">property: overrides</h3>
-<p>Overrides allow you to effectively take ownership of or rename a variable used in extended stacks. This is useful if your stack includes multiples of the same stack but you wish the variables to be set differently.</p>
-
-<p>In the following stack structure <code class="highlighter-rouge">my-stack</code> is the the one being created. Also, the same stack has been added twice, perhaps a web server and a scheduler. The directory structure might look like this:
-<code class="highlighter-rouge">
-my-stack/
-├── config.yaml
-├── stack-scheduler
-│   └── config.yaml
-└── stack-webserver
-    └── config.yaml
-</code>
-Both of these <code class="highlighter-rouge">stack-*</code> directories are pointers to the exact same external stack.</p>
-
-<p>Now, look at the <code class="highlighter-rouge">config.yaml</code> in the <code class="highlighter-rouge">stack-*</code> directories. Knowing that each of these stacks are identical, we also know that the <code class="highlighter-rouge">config.yaml</code> files are identical. Check it out:
-<code class="highlighter-rouge">
-variables:
-  DNS_ENTRY:
-    default: my-server.example.com
-    required: true
-    type: string
-    description: this is the dns record to assign to the server
-</code></p>
-
-<p>Adding the <code class="highlighter-rouge">DNS_ENTRY</code> variable to your top level under-your-control <code class="highlighter-rouge">config.yaml</code> file allows you to override all of the <code class="highlighter-rouge">DNS_ENTRY</code> values below you. This is global though, meaning that it will change <strong>both</strong> the <code class="highlighter-rouge">stack-scheduler</code> value and the <code class="highlighter-rouge">stack-webserver</code> value, as well as anything below them.</p>
-
-<p>Here, both stacks will get the same variable, which isn’t good in this case. Assuming this variable is used to manage DNS, it means that the DNS records will stomp on each other and one record won’t have an entry.</p>
-
-<p>We can’t have that! The answer is <code class="highlighter-rouge">overrides</code>.</p>
-
-<p>When you add an overrides property to a <code class="highlighter-rouge">config.yaml</code> file in the <code class="highlighter-rouge">&lt;stack&gt;::&lt;name&gt;</code> format, it modifies the variable(s) it calls out, and <em>only</em> those variables. It also modifies the variable <strong>starting in the stack</strong>, and then everything from that stack down. If the <code class="highlighter-rouge">&lt;stack&gt;::</code> is left out, it will modify the variable in all stacks. Let’s whip up an example with our directory structure:
-<code class="highlighter-rouge">
-my-stack/
-├── config.yaml      | empty file
-├── stack-scheduler
-│   └── config.yaml  | DNS_ENTRY variable, default "my-server.example.com"
-└── stack-webserver 
-    └── config.yaml  | DNS_ENTRY variable, default "my-server.example.com"
-</code>
-We can <em>override</em> this by adding a new variable to the top level <code class="highlighter-rouge">config.yaml</code> file, calling out an override on <code class="highlighter-rouge">DNS_ENTRY</code>. So:
-<code class="highlighter-rouge">
-MY_NEW_DNS:
-  overrides:
-    - DNS_ENTRY
-  default: my-new-dns.example.com
-</code>
-Whatever the <code class="highlighter-rouge">MY_NEW_DNS</code> variable is set to will also be propagated down to all <code class="highlighter-rouge">DNS_ENTRY</code> values in all stacks added ‘under’ this <code class="highlighter-rouge">config.yaml</code>. Any stack inheriting or adding this stack must use <code class="highlighter-rouge">MY_NEW_DNS</code> because <code class="highlighter-rouge">DNS_ENTRY</code> effectively no longer exists (it has been overridden).</p>
-
-<p>If the <code class="highlighter-rouge">&lt;stack&gt;::</code> notation is used the same rules apply, but this time only to the stack(s) it calls out. For instance, if you change our override property slightly:
-<code class="highlighter-rouge">
-MY_NEW_DNS:
-  overrides:
-    - stack-scheduler::DNS_ENTRY
-  default: my-new-dns.example.com
-</code>
-You will have added a <code class="highlighter-rouge">stack-scheduler::</code> prefix to the overrides <code class="highlighter-rouge">DNS_ENTRY</code> entry. This will override <code class="highlighter-rouge">DNS_ENTRY</code> within the <code class="highlighter-rouge">stack-scheduler</code> and <strong><em>not</em></strong> in the <code class="highlighter-rouge">stack-webserver</code>. The <code class="highlighter-rouge">stack-webserver</code> will still honor any entries for <code class="highlighter-rouge">DNS_ENTRY</code> and will know nothing of the <code class="highlighter-rouge">MY_NEW_DNS</code> variable that has been added.</p>
-
-<h3 id="property-type">property: type</h3>
-<p>The <code class="highlighter-rouge">type</code> property exists mostly for validation.
-#### string
-The <code class="highlighter-rouge">string</code> type is fairly self-explanatory. This expects a string value and will treat the validation as such.
-#### number
-The <code class="highlighter-rouge">number</code> type validates numbers. This can be integers, floats etc.
-#### array
-The <code class="highlighter-rouge">array</code> type expects arrays in the yaml file. It will also display in the web-ui as a list.
-#### case
-The <code class="highlighter-rouge">case</code> type is used in order to select values without asking the user for input. For instance:
-<code class="highlighter-rouge">
-MY_SWAP_GB:
-  switch: SIZE
-    cases:
-      m3.medium: 1
-      m3.large: 1.5
-      m3.xlarge: 2
-    type: case
-</code>
-In this case an AMI will be selected based on the region. The user has no option of which AMI is selected, but instead it is selected for them based on the value of the region.</p>
-
-<h3 id="instance-variables">Instance Variables</h3>
-<p>Instance variables are variables set by the AppStack that is actually running. You can use them simply by adding the <code class="highlighter-rouge">INSTANCE::</code> prefix to the variable you wish to use.
-#### <code class="highlighter-rouge">INSTANCE::region</code>
-This will return a string representing the region in which the AppStack instance is requested to run.</p>
-
-<h3 id="stack-variables">Stack Variables</h3>
-<p>Stack variables are set during runtime and can be used to access various values created during the stack creation/update runtime. Access STACK variables using <code class="highlighter-rouge">STACK::</code>.</p>
 
 
     <div class="tags">
@@ -415,7 +359,7 @@ This will return a string representing the region in which the AppStack instance
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 CloudCoreo. All rights reserved. <br />
-<span>Page last updated:</span> November 9, 2016<br/> Site last generated: Jan 3, 2017 <br />
+<span>Page last updated:</span> January 3, 2017<br/> Site last generated: Jan 3, 2017 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>

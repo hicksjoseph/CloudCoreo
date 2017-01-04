@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="There is an IAM group defined without any users in it and therefore unused.">
+<meta name="description" content="EC2 Security Group is unused">
 <meta name="keywords" content=" ">
-<title>Unused or empty IAM group | CloudCoreo Documentation</title>
+<title>Unused EC2 Security Group | CloudCoreo Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Unused or empty IAM group page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Unused EC2 Security Group page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Unused or empty IAM group">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Unused EC2 Security Group">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -368,7 +368,7 @@
             
             
             
-            <li class="active"><a href="mydoc_iam-unusediamgroup.html">Unused or empty IAM group</a></li>
+            <li><a href="mydoc_iam-unusediamgroup.html">Unused or empty IAM group</a></li>
             
             
             
@@ -584,7 +584,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Unused or empty IAM group</h1>
+   <h1 class="post-title-main">Unused EC2 Security Group</h1>
 </div>
 
 
@@ -592,7 +592,7 @@
 <div class="post-content">
 
    
-    <div class="summary">There is an IAM group defined without any users in it and therefore unused.</div>
+    <div class="summary">EC2 Security Group is unused</div>
    
 
     
@@ -601,18 +601,20 @@
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/mydoc/mydoc_iam-unusediamgroup.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/mydoc/mydoc_ec2-unused-security-group.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
-  <h3 id="details">Details</h3>
-<p>When users leave your organization or services are no longer used, it is important to find the credentials that they were using and ensure that they are no longer operational. Ideally, you delete credentials if they are no longer needed. You can always recreate them at a later date if the need arises. At the very least you should change the credentials so that the former users no longer have access. IAM groups that are defined without any users are unused groups. Of course, the definition of “unused” can vary and usually means a credential that has not been used within a specified period of time. Unused groups can not only add complexity to your environment, they may create a security vulnerability by making it difficult to see if unauthorized privilege has been granted.<br />
-<a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_finding-unused.html">http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_finding-unused.html</a></p>
+  <h3 id="detail">Detail</h3>
+<p>Security groups enable you to control traffic to your instance, including the kind of traffic that can reach your instance. For example, you can allow computers from only your home network to access your instance using SSH. If your instance is a web server, you can allow all IP addresses to access your instance via HTTP, so that external users can browse the content on your web server.<br />
+<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html</a></p>
+
+<p>The affected Security Group is unused since it is not attached to any EC2 instances or Elastic Load Balancers (ELBs). Having an unused Security Group is not necessarily a problem, however, it might indicate improper or temporary access that was never removed. For internal access between instances in an AWS region, it is best practice to add the other Security Group to the target Security Group to grant access for those instances.</p>
 
 <h3 id="suggested-action">Suggested Action</h3>
-<p>Ensure that groups defined within IAM have active users in them. If the groups don’t have active users or are not being used, delete the unused IAM group. Remove IAM user credentials (that is, passwords, access keys, and groups) that are not needed. For example, an IAM user that is used for an application does not need a password (passwords are necessary only to sign in to AWS websites). Similarly, if a user does not and will never use access keys, there’s no reason for the user to have them. Also, passwords and access keys that have not been used recently might be good candidates for removal.<br />
-<a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#remove-credentials">http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#remove-credentials</a></p>
+<p>Review your security groups to ensure that you don’t have unused or unneeded security groups. Decide who requires access to your instance; for example, a single host or a specific network that you trust.<br />
+<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html</a></p>
 
 
     <div class="tags">
@@ -629,7 +631,7 @@
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 CloudCoreo. All rights reserved. <br />
-<span>Page last updated:</span> September 17, 2016<br/> Site last generated: Jan 3, 2017 <br />
+<span>Page last updated:</span> January 3, 2017<br/> Site last generated: Jan 3, 2017 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>

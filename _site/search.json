@@ -166,6 +166,16 @@
 
 
 {
+"title": "Unused EC2 Security Group",
+"tags": "",
+"keywords": "",
+"url": "mydoc_ec2-unused-security-group.html",
+"summary": "EC2 Security Group is unused"
+},
+
+
+
+{
 "title": "ELB is using most recent Amazon SSL policy",
 "tags": "",
 "keywords": "",

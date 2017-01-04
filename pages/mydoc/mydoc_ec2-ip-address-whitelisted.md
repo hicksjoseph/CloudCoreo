@@ -18,5 +18,5 @@ Security groups enable you to control traffic to your instance, including the ki
 Having a host IP address in a Security Group itself is not necessarily a problem, however, it might indicate improper access or temporary access that was never removed. For internal access between instances in an AWS region, it is best practice to add the other Security Group to the target Security Group to grant access for those instances. This alert checks for a /32 host address added to a Security Group (ip-address-whitelisted).  
 
 ### Suggested Action  
-Review Security Group to ensure that the host ip address added is to allowed access. Decide who requires access to your instance; for example, a single host or a specific network that you trust. You can check the public IP address of your local computer using a service, (for example: http://checkip.amazonaws.com ).  
+Review your security groups to ensure that the host ip address added is to allowed access. Decide who requires access to your instance; for example, a single host or a specific network that you trust. You can check the public IP address of your local computer using a service, (for example: http://checkip.amazonaws.com ).  
 [http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html)
