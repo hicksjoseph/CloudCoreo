@@ -20,4 +20,4 @@ This alert checks for instances that were not launched from the latest Amazon Li
 Read more about [EC2 Instances](https://aws.amazon.com/ec2/) and about [Amazon Linux AMIs](https://aws.amazon.com/amazon-linux-ami/) .  
 
 ### Suggested Action
-None. This alert checks for instances that were not launched from the latest Amazon Linux AMI. it does not necessarily indicate that you have a problem with your EC2 instances.  
+This alert checks for instances that were not launched from the latest Amazon Linux AMI. If you run Amazon Linux, verify that you launch instances from the latest Amazon Linux AMIs. It does not necessarily indicate that you have a problem with your EC2 instances.  
