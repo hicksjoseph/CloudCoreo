@@ -1,4 +1,5 @@
-# CloudCoreo Knowledgebase 1st draft complete
+# CloudCoreo Knowledgebase
 
-In phase 1 of the knowledge base, there are applicable text and blurbs from other sources and attributed where appropriate.
-These pages live CloudCoreo/CloudCoreo gh_pages branch.
+The CloudCoreo Knowledgebase contains applicable text and blurbs from other sources (attributed where appropriate).
+
+These pages live in github [CloudCoreo/CloudCoreo gh_pages](https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages) branch.
