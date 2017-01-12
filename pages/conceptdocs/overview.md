@@ -34,7 +34,7 @@ CloudCoreo offers three levels of reference architecture designs: Certified Comp
 * **Plans**  
 Composites are used to generate one or more Composite Plans.  A Plan is an instance of your infrastructure design that includes your specified deployment variables and policy controls.  
 
-The Coreo Engine uses a Plan to deploy and maintain the set of running cloud infrastructure resources.  Plans can be used to partition and drive separate infrastructure and cloud policies. Updating a group Plans can be done simply by making a change to the parent Composite design.  
+  The Coreo Engine uses a Plan to deploy and maintain the set of running cloud infrastructure resources.  Plans can be used to partition and drive separate infrastructure and cloud policies. Updating a group Plans can be done simply by making a change to the parent Composite design.  
 
 * **Cloud Resources**  
 CloudCoreo gives you a view into the running cloud Infrastructure resources that have been provisioned by our platform. Each Plan has a set of associate Cloud Resources that are being managed and are under active change control. You can easily define and change how Cloud Resources are presented in the CloudCoreo UI as a part of the definition of the Composite.  
