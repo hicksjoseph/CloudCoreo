@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
+<meta name="description" content="CloudCoreo Concept Overview">
 <meta name="keywords" content=" ">
-<title> | CloudCoreo Documentation</title>
+<title>Concept Overview | CloudCoreo Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -122,7 +122,7 @@
                         
                         
                         
-                        <li><a href="conceptdocs_overview.html">Concept Docs</a></li>
+                        <li class="dropdownActive"><a href="conceptdocs_overview.html">Concept Docs</a></li>
                         
                         
                     </ul>
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the  page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Concept Overview page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Concept Overview">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -190,7 +190,7 @@
             
             
             
-            <li><a href="conceptdocs_overview.html">Overview</a></li>
+            <li class="active"><a href="conceptdocs_overview.html">Overview</a></li>
             
             
             
@@ -242,7 +242,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main"></h1>
+   <h1 class="post-title-main">Concept Overview</h1>
 </div>
 
 
@@ -250,29 +250,8 @@
 <div class="post-content">
 
    
-
-    
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
+    <div class="summary">CloudCoreo Concept Overview</div>
+   
 
     
 
@@ -280,30 +259,51 @@ $('#toc').on('click', 'a', function() {
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages//tocpage.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/conceptdocs/conceptdocs_overview.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
-  <!-- new page -->
-<div id="navig">
-    <h1>Table of Contents</h1>
+  <h2 id="what-is-cloudcoreo">What is CloudCoreo</h2>
+<p>CloudCoreo provides a platform for cloud operations that enables teams to automate the deployment, security and maintenance of their cloud infrastructure. Our solution delivers a modern Infrastructure-as-Software approach for both DevOps and SecOps teams to seamlessly model and actively manage their cloud environment. CloudCoreo enables customers to leverage leading cloud designs, scale their design concepts across large teams, deploy quickly and correctly, find and fix vulnerabilities, track all changes, as well as drive cloud consistency and compliance.</p>
 
-    
+<h2 id="what-is-a-composite">What is a Composite?</h2>
+<p>CloudCoreo enables users to create and layer inheritable cloud reference designs called Composites.  Composites make it easy for teams to reuse, extend, combine, and distribute changes to any cloud infrastructure design. A Composite can specify a single micro-service, a group of services, a complex application, or entire data center definition. Composites include a true software based inheritance approach that makes them a better fundamental building block for cloud infrastructure lifecycle management.</p>
 
+<h3 id="composite-include">Composite include:</h3>
 
+<ul>
+  <li>
+    <p><strong>Cloud Resources and Dependencies</strong><br />
+A Composite specifies the desired end state of your cloud deployment, including all required resources and service dependencies.  Any supported cloud resource can be included in your design from including networking, security, storage, compute as well as container and serverless functions offered by a cloud provider.</p>
+  </li>
+  <li>
+    <p><strong>Runners</strong><br />
+Runners provide an event program that allow users to search, filter and write conditions on any data set. Functions enable users to create smart logic within a Composite creating a reference design that can take dynamic actions.  Functions can be can be specified between any step of a Composite without breaking the service dependencies of the associate cloud resources.</p>
+  </li>
+  <li>
+    <p><strong>Panels</strong><br />
+To improve operational efficiency, Composites also include the ability to define custom UIs and operational tasks called Panels.  You can easily define and change how resources are presented in the CloudCoreo UI as a part of the definition of a Composite.</p>
+  </li>
+  <li>
+    <p><strong>Hub</strong><br />
+CloudCoreo offers three levels of reference architecture designs: Certified Composites, Approved Composites, Community Composites. The Hub provides a collection of these composites that can be easily leveraged and extended into your own git repos.  Community Composites are contributed reference designs that have not be actively tested or validated by CloudCoreo. Users are free to share and leverage this content.</p>
+  </li>
+  <li>
+    <p><strong>Plans</strong><br />
+Composites are used to generate one or more Composite Plans.  A Plan is an instance of your infrastructure design that includes your specified deployment variables and policy controls.</p>
+  </li>
+</ul>
 
+<p>The Coreo Engine uses a Plan to deploy and maintain the set of running cloud infrastructure resources.  Plans can be used to partition and drive separate infrastructure and cloud policies. Updating a group Plans can be done simply by making a change to the parent Composite design.</p>
 
+<ul>
+  <li><strong>Cloud Resources</strong><br />
+CloudCoreo gives you a view into the running cloud Infrastructure resources that have been provisioned by our platform. Each Plan has a set of associate Cloud Resources that are being managed and are under active change control. You can easily define and change how Cloud Resources are presented in the CloudCoreo UI as a part of the definition of the Composite.</li>
+</ul>
 
-
-
-
-
-
-    <ul id="mysidebar" class="nav">
-        
-    </ul>
-</div>
+<hr />
+<p><em>If you find mistakes or see that something is missing in these docs, please <a href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages">Edit in github</a>.</em></p>
 
 
     <div class="tags">
@@ -320,7 +320,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 CloudCoreo. All rights reserved. <br />
- Site last generated: Jan 12, 2017 <br />
+<span>Page last updated:</span> January 12, 2016<br/> Site last generated: Jan 12, 2017 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>
