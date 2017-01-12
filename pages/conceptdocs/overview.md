@@ -3,7 +3,7 @@ title: Concept Overview
 summary: CloudCoreo Concept Overview
 tags:
 keywords: ""
-last_updated: "November 9, 2016"
+last_updated: "January 12, 2016"
 published: true
 sidebar: conceptdocs_sidebar
 permalink: conceptdocs_overview.html
@@ -12,7 +12,7 @@ toc: false
 ---
 
 ## What is CloudCoreo  
-CloudCoreo provides a platform for cloud operations that enables teams to automate the deployment, security and maintenance of their cloud infrastructure. Our solution delivers a modern Infrastructure-as-Software approach for both DevOps and SecOps teams to seamlessly model and actively manage their cloud environment. CloudCoreo enables customers to leverage leading cloud designs, scale their design concepts across large teams,  deploy quickly and correctly, find and fix vulnerabilities, track all changes, as well as drive cloud consistency and compliance.  
+CloudCoreo provides a platform for cloud operations that enables teams to automate the deployment, security and maintenance of their cloud infrastructure. Our solution delivers a modern Infrastructure-as-Software approach for both DevOps and SecOps teams to seamlessly model and actively manage their cloud environment. CloudCoreo enables customers to leverage leading cloud designs, scale their design concepts across large teams, deploy quickly and correctly, find and fix vulnerabilities, track all changes, as well as drive cloud consistency and compliance.  
 
 ## What is a Composite?  
 CloudCoreo enables users to create and layer inheritable cloud reference designs called Composites.  Composites make it easy for teams to reuse, extend, combine, and distribute changes to any cloud infrastructure design. A Composite can specify a single micro-service, a group of services, a complex application, or entire data center definition. Composites include a true software based inheritance approach that makes them a better fundamental building block for cloud infrastructure lifecycle management.
@@ -22,13 +22,11 @@ CloudCoreo enables users to create and layer inheritable cloud reference designs
 * **Cloud Resources and Dependencies**  
 A Composite specifies the desired end state of your cloud deployment, including all required resources and service dependencies.  Any supported cloud resource can be included in your design from including networking, security, storage, compute as well as container and serverless functions offered by a cloud provider.  
 
-* **Chains**  
-Chains provide an event program that allow users to search, filter and write conditions on any data set. Functions enable users to create smart logic within a Composite creating a reference design that can take dynamic actions.  Functions can be can be specified between any step of a Composite without breaking the service dependencies of the associate cloud resources.  
-
+* **Runners**  
+Runners provide an event program that allow users to search, filter and write conditions on any data set. Functions enable users to create smart logic within a Composite creating a reference design that can take dynamic actions.  Functions can be can be specified between any step of a Composite without breaking the service dependencies of the associate cloud resources.  
 
 * **Panels**  
 To improve operational efficiency, Composites also include the ability to define custom UIs and operational tasks called Panels.  You can easily define and change how resources are presented in the CloudCoreo UI as a part of the definition of a Composite.  
-
 
 * **Hub**  
 CloudCoreo offers three levels of reference architecture designs: Certified Composites, Approved Composites, Community Composites. The Hub provides a collection of these composites that can be easily leveraged and extended into your own git repos.  Community Composites are contributed reference designs that have not be actively tested or validated by CloudCoreo. Users are free to share and leverage this content.  
@@ -36,11 +34,10 @@ CloudCoreo offers three levels of reference architecture designs: Certified Comp
 * **Plans**  
 Composites are used to generate one or more Composite Plans.  A Plan is an instance of your infrastructure design that includes your specified deployment variables and policy controls.  
 
-    The Coreo Engine uses a Plan to deploy and maintain the set of running cloud infrastructure resources.  Plans can be used to partition and drive separate infrastructure and cloud policies. Updating a group Plans can be done simply by making a change to the parent Composite design.  
+The Coreo Engine uses a Plan to deploy and maintain the set of running cloud infrastructure resources.  Plans can be used to partition and drive separate infrastructure and cloud policies. Updating a group Plans can be done simply by making a change to the parent Composite design.  
 
 * **Cloud Resources**  
 CloudCoreo gives you a view into the running cloud Infrastructure resources that have been provisioned by our platform. Each Plan has a set of associate Cloud Resources that are being managed and are under active change control. You can easily define and change how Cloud Resources are presented in the CloudCoreo UI as a part of the definition of the Composite.  
-  
   
   
 -----  
