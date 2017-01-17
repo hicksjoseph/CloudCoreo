@@ -21,7 +21,7 @@ Here is a list of the CloudCoreo reserved directories and their function.
 ### services  
 The `services` directory is where you can use code to definte cloud infrastructure such as servers, VPCs, Load Balancers, DNS, or other infrastructure. The `services` directory is also where you would define audit definitions for your cloud deployments. When using the `services` directory, infrastructure code goes into the `<repository-dir>/services/config.rb` file while variable definitions for the WebUI live in the `<repository-dir>/config.yaml` file.  
 
-To learn more about the `services` directory, see [Composite Creation](http://kb.cloudcoreo.com/conceptdocs_compositecreation.html)
+To learn more about the `services` directory, see [Composite Creation](conceptdocs_compositecreation.html)
 
 ### extends  
 The `extends` directory is a type of symbolic link that points to a different git repository. The `extends` directory enables you to inherit infrastructure definition from a different Composite (repositories) as a base Composite definition. By using the `extends` directory to point to other Composites (repositories), you can **leverage the best practice code of others** for use your own deployments. Many Composites are based on and inherited from other Composites via use of the `extends` directory. "Golden Master" Composites can be created for commonly created infrastructure so that other people can extend them to create Composites that combines many "Golden Master" Composites that can be used for day-to-day deployment and operation of their infrastructure.  
@@ -66,5 +66,5 @@ Read more about how overrides work in [Introduction to overrides](http://kb.clou
 
 The CloudCoreo CLI is an essential tool if you will be creating Composites from the very beginning. The CLI can initialize a repository with all of the directories required for proper Composite construction ( use `coreo init` ).  Otherwise, cloning an existing repository or or creating the appropriate directories manually can also be a useful way to get started with Composites.  
 
-Read more about the [CloudCoreo CLI](http://kb.cloudcoreo.com/conceptdocs_cli.html) .  
+Read more about the [CloudCoreo CLI](conceptdocs_cli.html) .  
 
