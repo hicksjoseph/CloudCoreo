@@ -17,7 +17,7 @@ CloudCoreo provides a platform for cloud operations that enables teams to automa
 ## What is a Composite?  
 CloudCoreo enables users to create and layer inheritable cloud reference designs called Composites.  Composites make it easy for teams to reuse, extend, combine, and distribute changes to any cloud infrastructure design. A Composite can specify a single micro-service, a group of services, a complex application, or entire data center definition. Composites include a true software based inheritance approach that makes them a better fundamental building block for cloud infrastructure lifecycle management.
 
-### Composite include:  
+### Composites include:  
 
 * **Cloud Resources and Dependencies**  
 A Composite specifies the desired end state of your cloud deployment, including all required resources and service dependencies.  Any supported cloud resource can be included in your design from including networking, security, storage, compute as well as container and serverless functions offered by a cloud provider.  
@@ -29,7 +29,7 @@ Runners provide an event program that allow users to search, filter and write co
 To improve operational efficiency, Composites also include the ability to define custom UIs and operational tasks called Panels.  You can easily define and change how resources are presented in the CloudCoreo UI as a part of the definition of a Composite.  
 
 * **Hub**  
-CloudCoreo offers three levels of reference architecture designs: Certified Composites, Approved Composites, Community Composites. The Hub provides a collection of these composites that can be easily leveraged and extended into your own git repos.  Community Composites are contributed reference designs that have not be actively tested or validated by CloudCoreo. Users are free to share and leverage this content.  
+CloudCoreo offers three levels of reference architecture designs: Certified Composites, Approved Composites, Community Composites. The Hub provides a collection of these composites that can be easily leveraged and extended into your own git repos.  Community Composites are contributed reference designs that have not been actively tested or validated by CloudCoreo. Users are free to share and leverage this content.  
 
 * **Plans**  
 Composites are used to generate one or more Composite Plans.  A Plan is an instance of your infrastructure design that includes your specified deployment variables and policy controls.
