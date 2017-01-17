@@ -171,7 +171,7 @@ From Composite Creation:
 -----
 Put this back in:
 
-As you build new Composites, you will need to reference the [*CloudCoreo API Documentation*](http://docs.cloudcoreo.com/docs/frames/index) to know what options and parameters that you can use in your Composites.  
+As you build new Composites, you will need to reference the [*CloudCoreo API Documentation*](http://beta.api.docs.cloudcoreo.com/docs/frames) to know what options and parameters that you can use in your Composites.  
 
 
 --------
