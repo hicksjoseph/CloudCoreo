@@ -274,7 +274,7 @@
 <h3 id="services">services</h3>
 <p>The <code class="highlighter-rouge">services</code> directory is where you can use code to definte cloud infrastructure such as servers, VPCs, Load Balancers, DNS, or other infrastructure. The <code class="highlighter-rouge">services</code> directory is also where you would define audit definitions for your cloud deployments. When using the <code class="highlighter-rouge">services</code> directory, infrastructure code goes into the <code class="highlighter-rouge">&lt;repository-dir&gt;/services/config.rb</code> file while variable definitions for the WebUI live in the <code class="highlighter-rouge">&lt;repository-dir&gt;/config.yaml</code> file.</p>
 
-<p>To learn more about the <code class="highlighter-rouge">services</code> directory, see <a href="http://kb.cloudcoreo.com/conceptdocs_compositecreation.html">Composite Creation</a></p>
+<p>To learn more about the <code class="highlighter-rouge">services</code> directory, see <a href="conceptdocs_compositecreation.html">Composite Creation</a></p>
 
 <h3 id="extends">extends</h3>
 <p>The <code class="highlighter-rouge">extends</code> directory is a type of symbolic link that points to a different git repository. The <code class="highlighter-rouge">extends</code> directory enables you to inherit infrastructure definition from a different Composite (repositories) as a base Composite definition. By using the <code class="highlighter-rouge">extends</code> directory to point to other Composites (repositories), you can <strong>leverage the best practice code of others</strong> for use your own deployments. Many Composites are based on and inherited from other Composites via use of the <code class="highlighter-rouge">extends</code> directory. “Golden Master” Composites can be created for commonly created infrastructure so that other people can extend them to create Composites that combines many “Golden Master” Composites that can be used for day-to-day deployment and operation of their infrastructure.</p>
@@ -319,7 +319,7 @@
 
 <p>The CloudCoreo CLI is an essential tool if you will be creating Composites from the very beginning. The CLI can initialize a repository with all of the directories required for proper Composite construction ( use <code class="highlighter-rouge">coreo init</code> ).  Otherwise, cloning an existing repository or or creating the appropriate directories manually can also be a useful way to get started with Composites.</p>
 
-<p>Read more about the <a href="http://kb.cloudcoreo.com/conceptdocs_cli.html">CloudCoreo CLI</a> .</p>
+<p>Read more about the <a href="conceptdocs_cli.html">CloudCoreo CLI</a> .</p>
 
 
 
@@ -337,7 +337,7 @@
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 CloudCoreo. All rights reserved. <br />
-<span>Page last updated:</span> December 27, 2016<br/> Site last generated: Jan 16, 2017 <br />
+<span>Page last updated:</span> December 27, 2016<br/> Site last generated: Jan 17, 2017 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>

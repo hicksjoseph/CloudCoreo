@@ -76,10 +76,10 @@ variables:
         default: 10.11.0.0
 ~~~
 
-Read more about [CloudCoreo Variables](http://kb.cloudcoreo.com/conceptdocs_variables.html) .  
+Read more about [CloudCoreo Variables](conceptdocs_variables.html) .  
 
 **Note:** Be careful when you edit your config.yaml file since this file **cannot contain tab characters**. When you do line spacing, use spaces instead. 
 
 -----
 
-These are the basics concepts of Composite creation. Learn more about Advanced Composite creation at [*Advanced Composites*](http://kb.cloudcoreo.com/conceptdocs/advancedcomposites.html) .  
+These are the basics concepts of Composite creation. Learn more about Advanced Composite creation at [*Advanced Composites*](conceptdocs_advancedcomposites.html) .  
