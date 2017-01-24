@@ -151,4 +151,4 @@ The *'public-subnet'* resource has been included from the `extends/services/conf
 
 -----
 
-As you build new Composites, you will need to reference the [*CloudCoreo API Documentation*](http://beta.api.docs.cloudcoreo.com/docs/frames) to know what options and parameters that you can use in your Composites.  
+As you build new Composites, you will need to reference the [*CloudCoreo API Documentation*](http://beta.api.docs.cloudcoreo.com/) to know what options and parameters that you can use in your Composites.  
