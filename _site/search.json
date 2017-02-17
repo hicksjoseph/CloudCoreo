@@ -34,6 +34,16 @@
 
 
 {
+"title": "What is the best way to grant CloudCoreo access to my AWS account?",
+"tags": "",
+"keywords": "",
+"url": "mydoc_awsrolepolicy.html",
+"summary": "Granting CloudCoreo access to your AWS account."
+},
+
+
+
+{
 "title": "CloudCoreo Directory structure",
 "tags": "",
 "keywords": "",
@@ -44,20 +54,10 @@
 
 
 {
-"title": "Inactive user Access Key not rotated",
-"tags": "",
-"keywords": "",
-"url": "mydoc_iam-inactive-key-no-rotation.html",
-"summary": "User has inactive keys that have not been rotated in the last 90 days."
-},
-
-
-
-{
 "title": "What is the best way to grant CloudCoreo access to my AWS account?",
 "tags": "",
 "keywords": "",
-"url": "mydoc_awsrolepolicy.html",
+"url": "faq_awsrolepolicy.html",
 "summary": "Granting CloudCoreo access to your AWS account."
 },
 
