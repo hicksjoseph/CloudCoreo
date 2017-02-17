@@ -33,8 +33,9 @@ Have an administrative user in the target Cloud Account (AWS) create a Cross-Acc
 + The Role and/or Role permissions can be disabled / deleted at any time, for example, after a one-time Audit is performed on a target Cloud Account (AWS)
   + Deleting the Role would disable the ability to constantly and consistent perform a security audit or deploy infrastructure in the target Cloud Account.
 
-![Create a Cross-Account Access Role in IAM](http://kb.cloudcoreo.com/images/awsrole2.png "Adding a Cloud Account in the CloudCoreo Web UI")
-######Adding a Cloud Account Using a Cross-Account Access Role in the CloudCoreo Web UI######
+> ######Adding a Cloud Account Using a Cross-Account Access Role in the CloudCoreo Web UI######
+>
+> ![Create a Cross-Account Access Role in IAM](http://kb.cloudcoreo.com/images/awsrole2.png "Adding a Cloud Account in the CloudCoreo Web UI")
 
 ####Option 2 | Provide an IAM user’s Access and Secret Key####
 
@@ -64,8 +65,9 @@ Provide CloudCoreo with an IAM user’s Access and Secret Key. CloudCoreo then c
 + It is recommended that the AWS Access keys provided to CloudCoreo immediately be inactivated and deleted.
 + Optionally, AWS user account that generated the keys that were provided to CloudCoreo can also immediately be inactivated and/or deleted.
 
-![Provide an IAM user’s Access and Secret Key](http://kb.cloudcoreo.com/images/awsrole1.png "Adding a Cloud Account in the CloudCoreo Web UI")
-######Adding a Cloud Account Using a Access Keys in the CloudCoreo Web UI######
+> ######Adding a Cloud Account Using a Access Keys in the CloudCoreo Web UI######
+>
+>![Provide an IAM user’s Access and Secret Key](http://kb.cloudcoreo.com/images/awsrole1.png "Adding a Cloud Account in the CloudCoreo Web UI")
 
 ---
 
