@@ -16,3 +16,6 @@ topnav_dropdowns:
           url: /mydoc_cloudtrail-service-disabled.html
         - title: Concept Docs
           url: /conceptdocs_overview.html
+        - title: FAQs
+          url: /faq_awsrolepolicy.html
+

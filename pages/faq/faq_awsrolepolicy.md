@@ -2,7 +2,7 @@
 title: What is the best way to grant CloudCoreo access to my AWS account?
 tags:
 keywords: ""
-last_updated: "February 17, 2017"
+last_updated: "February 23, 2017"
 summary: Granting CloudCoreo access to your AWS account.
 published: true
 sidebar: faq_sidebar
