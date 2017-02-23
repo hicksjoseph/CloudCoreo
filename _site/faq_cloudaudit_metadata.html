@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CloudCoreo is looking for Passionate DevOps Engineers. To apply, email joe@cloudcoreo.com">
-<meta name="keywords" content=" devops developer job jobs careers">
-<title>Passionate DevOps Engineer | CloudCoreo Documentation</title>
+<meta name="description" content="CloudCoreo Audit metadata guidelines">
+<meta name="keywords" content=" ">
+<title>CloudCoreo Audit metadata guidelines | CloudCoreo Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -130,7 +130,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Passionate DevOps Engineer page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the CloudCoreo Audit metadata guidelines page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -146,7 +146,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Passionate DevOps Engineer">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="CloudCoreo Audit metadata guidelines">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -242,7 +242,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Passionate DevOps Engineer</h1>
+   <h1 class="post-title-main">CloudCoreo Audit metadata guidelines</h1>
 </div>
 
 
@@ -250,7 +250,7 @@
 <div class="post-content">
 
    
-    <div class="summary">CloudCoreo is looking for Passionate DevOps Engineers. To apply, email joe@cloudcoreo.com</div>
+    <div class="summary">CloudCoreo Audit metadata guidelines</div>
    
 
     
@@ -259,53 +259,56 @@
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/jobs/passionate_devops.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/faq/faq_cloudaudit_metadata.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
-  <p>CloudCoreo is looking for DevOps Engineers who are passionate about their craft, who thrive on challenge and who believe in success through collaboration – people who would complement our existing team of developers! We are looking for a DevOps Engineer who specializes in AWS and/or Azure orchestration and automation. You’ll work on an agile team, building the infrastructure for the CloudCoreo service. You’ll be working with or around technologies such as Amazon Lambda, DynamoDB, MySQL, MongoDB, AngularJS, Node.js, Ruby, Javascript, Python, Linux, CD / CI (Jenkins), Github, Chef, and JIRA. Join us at our beautiful Seattle office (South Lake Union) and work on cutting edge technologies with a team that knows how to move fast and accurately.</p>
+  <h2 id="cloudcoreo-audit-metadata-guidelines">CloudCoreo Audit metadata guidelines</h2>
 
-<p>Our ideal candidate has an excellent eye for detail, a pragmatic approach, and an absolute commitment to making sure features are well implemented. We make our decisions based on experiments, testing, and user research, so you should be excited by taking a data-led approach to development. If you’re an advocate for the user, and are looking to work in an agile, collaborative environment then we would like to hear from you!</p>
+<p>There are a number of recommended metadata fields that should be added to an Alert Definition / Rule as part of an Audit Composite. These include Display Name, Description, Details, Suggestion Action, Additional Information, Category, Level, and Link.</p>
 
-<h3 id="responsibilities">Responsibilities:</h3>
-<ul>
-  <li>Work with DevOps and Engineering teams to design and build scalable and efficient deployment automation frameworks, following best practices for quality, testability and operability</li>
-  <li>Development of tools to manage and monitor complex applications and networks across a world-wide massively scalable, low latency environment</li>
-  <li>Stay current on state of the art technologies and make recommendations for how these may be used to improve our systems</li>
-  <li>Provide mentorship to other team members</li>
-  <li>Play key role in recruiting and evaluating candidates for open positions</li>
-  <li>Participate in an on-call rotation.</li>
-</ul>
+<h3 id="category">Category</h3>
+<p>Enter a Category name from the list below (or your own category) where you will group Alerts / Rules of the same type together. This is useful for sorting Alerts / Rules in the CloudCoreo WebUI. If you enter a Category that is not from the list below, it may not sort properly in the Plan Results Panel in the CloudCoreo WebUI.<br />
+* Security<br />
+* Scale<br />
+* Dataloss<br />
+* Reliability<br />
+* Availability<br />
+* Performance<br />
+* Visibility<br />
+* Audit<br />
+* Access<br />
+* Policy<br />
+* Cost</p>
 
-<h3 id="desired-skills">Desired skills:</h3>
-<ul>
-  <li>Bachelor’s degree in CS or equivalent work experience and 5+ years of practical development experience</li>
-  <li>Experience building automation/configuration management infrastructure using: Puppet, Chef, Ansible, and/or CloudFormation</li>
-  <li>Experience with deployment of production code</li>
-  <li>Strong background in Linux administration</li>
-  <li>Background in scripting languages like Python, Perl, and/or Ruby</li>
-  <li>Experience using AWS and other cloud services</li>
-  <li>Experience using a wide variety of open source technologies: MySQL, MongoDB, Linux, Jenkins, Github, Chef, and others</li>
-  <li>Knowledge of best practices and operations in an always-up, always-available service</li>
-  <li>Experience using Git and continuous delivery build systems (Jenkins preferred)</li>
-  <li>Experience and preference for working within an Agile/Scrum environment</li>
-  <li>Experience working on a small team where each team member has a lot of ownership and each individual can make a big impact.</li>
-</ul>
+<h3 id="level">Level</h3>
+<p>Enter a Level from the list below (or your own Level) where you will group Alerts / Rules of the same Level together. This is useful for sorting Alerts / Rules in the CloudCoreo WebUI. If you enter a Level that is not from the list below, it may not sort properly in the Plan Results Panel in the CloudCoreo WebUI. The current recommended Levels are based on syslog error levels ( https://en.wikipedia.org/wiki/Syslog#Severity_level ).<br />
+* Emergency - System is unusable<br />
+* Critical - Critical conditions<br />
+* Error - Error conditions<br />
+* Warning - May indicate that an error will occur if action is not taken.<br />
+* Notice - Events that are unusual, but not error conditions.<br />
+* Informational - Normal operational messages that require no action.<br />
+* Debug - Information useful to developers for debugging the application.</p>
 
-<h3 id="nice-to-have">Nice to have:</h3>
-<ul>
-  <li>Experience with production quality development using Go</li>
-  <li>Experience with Kubernetes or Mesosphere</li>
-  <li>Existing Github account with projects you can share with the team.</li>
-</ul>
+<h3 id="link">Link</h3>
+<p>The Link field is displayed (and clickable) in the Alert / Rule violation card under “More Info” in the CloudCoreo WebUI. You can add your best practice article or alert violation or other canonical information source to inform the users what the alert is checking for and to help guide the your users who encounter this Alert / Rule violation. It is possible to add the article to the CloudCoreo Knowledge Base via github pull request to the Knowledge Base github repository.</p>
 
-<h3 id="about-cloudcoreo">About CloudCoreo</h3>
-<p>CloudCoreo builds tools to help Enterprises moving to the cloud avoid downtime and attacks. Innovation can happen too quickly for any team. The DevOps process is challenging to implement well. CloudCoreo fixes DevOps. CloudCoreo is a focused, funded, startup in the stage when your contribution still matters and your equity stake can be meaningful. Come be a part of building a company and defining the culture / benefits that will make CloudCoreo the best company you have ever worked at.</p>
+<h3 id="display-name">Display Name</h3>
+<p>The name that you would like the Alert / Rule to show on the alert violation card.</p>
 
-<p>CloudCoreo offers competitive compensation including stock options, Medical, Dental, Vision, Disability, 401K, and unlimited vacation - we are believers in work life balance but want individuals that will work hard when necessary and then take time off to recharge.  We offer an international, result-driven, fun, and dynamic environment. If scale and complexity excite you, CloudCoreo is the place to be.</p>
+<h3 id="description">Description</h3>
+<p>The description that you would like the Alert / Rule to show on the alert violation card.</p>
 
-<p><strong>To Apply, email: joe@cloudcoreo.com</strong></p>
+<h3 id="details">Details</h3>
+<p>Any detailed information that you would like the Alert / Rule to show on the alert violation card.</p>
+
+<h3 id="suggested-action">Suggested Action</h3>
+<p>Any suggestions for actions that you would like the Alert / Rule to show on the alert violation card.</p>
+
+<h3 id="additional-information">Additional information</h3>
+<p>Any additional information that you would like the Alert / Rule to show on the alert violation card.</p>
 
 
 
@@ -323,7 +326,7 @@
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 CloudCoreo. All rights reserved. <br />
-<span>Page last updated:</span> October 3, 2016<br/> Site last generated: Feb 23, 2017 <br />
+<span>Page last updated:</span> February 23, 2017<br/> Site last generated: Feb 23, 2017 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>
