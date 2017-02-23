@@ -264,56 +264,97 @@
 
     
 
-  <p>CloudCoreo Service Cloud Account (AWS) access and permissions FAQ</p>
+  <h2 id="cloudcoreo-service-cloud-account-aws-access-and-permissions-faq">CloudCoreo Service Cloud Account (AWS) Access and Permissions FAQ</h2>
 
-<p>Granting CloudCoreo Access to your Cloud Account (AWS)</p>
+<h3 id="granting-cloudcoreo-access-to-your-cloud-account-aws">Granting CloudCoreo Access to your Cloud Account (AWS)</h3>
 
 <p>The ability for the CloudCoreo Service to perform any function in your Cloud Account (AWS) is completely governed by the AWS IAM Role that you create which is used by the AWS AssumeRole functionality control (IAM Roles).</p>
 
 <p>Currently, there are two ways to add a Cloud Account (AWS) to the CloudCoreo Service:</p>
 
+<h4 id="option-1--create-a-cross-account-access-role-in-iam">Option 1 | Create a Cross-Account Access Role in IAM</h4>
+
 <p>Have an administrative user in the target Cloud Account (AWS) create a Cross-Account Access Role in IAM using the CloudCoreo Service AWS “Account ID” and “External ID” to grant access to only the CloudCoreo Service.</p>
 
-<p>The Role privileges can be set to the minimum required by the CloudCoreo Service to perform the requested function.
-Auditing a target Cloud Account only requires a ‘SecurityAudit’ role, while deploying or creating AWS objects such as EC2 instances may require ‘AdministrativeAccess’ or other access permissions.
-Role privileges can be configured very granularly as needed (eg Read Only access for just one AWS service)</p>
+<ul>
+  <li>The Role privileges can be set to the minimum required by the CloudCoreo Service to perform the requested function.
+    <ul>
+      <li>Auditing a target Cloud Account only requires a ‘SecurityAudit’ role, while deploying or creating AWS objects such as EC2 instances may require ‘AdministrativeAccess’ or other access permissions.</li>
+      <li>Role privileges can be configured very granularly as needed (eg Read Only access for just one AWS service)</li>
+    </ul>
+  </li>
+  <li>
+    <p>The Role ARN is then supplied to CloudCoreo Service (see CloudCoreo WebUI picture below)</p>
+  </li>
+  <li>The Role and/or Role permissions can be disabled / deleted at any time, for example, after a one-time Audit is performed on a target Cloud Account (AWS)
+    <ul>
+      <li>Deleting the Role would disable the ability to constantly and consistent perform a security audit or deploy infrastructure in the target Cloud Account.</li>
+    </ul>
+  </li>
+</ul>
 
-<p>The Role ARN is then supplied to CloudCoreo Service (see CloudCoreo WebUI picture below)</p>
+<blockquote>
+  <h6 id="adding-a-cloud-account-using-a-cross-account-access-role-in-the-cloudcoreo-web-ui">Adding a Cloud Account Using a Cross-Account Access Role in the CloudCoreo Web UI</h6>
 
-<p>The Role and/or Role permissions can be disabled / deleted at any time, for example, after a one-time Audit is performed on a target Cloud Account (AWS)
-Deleting the Role would disable the ability to constantly and consistent perform a security audit or deploy infrastructure in the target Cloud Account.</p>
+  <p><img src="http://kb.cloudcoreo.com/images/awsrole2.png" alt="Create a Cross-Account Access Role in IAM" title="Adding a Cloud Account in the CloudCoreo Web UI" /></p>
+</blockquote>
 
-<p>Insert first picture here - images/awsrole1.png</p>
+<h4 id="option-2--provide-an-iam-users-access-and-secret-key">Option 2 | Provide an IAM user’s Access and Secret Key</h4>
 
-<p>Provide CloudCoreo with an IAM user’s Access and Secret Key. CloudCoreo then creates a Role in the target Cloud Account (AWS) using the Access keys provided.
-The Access and Secret Keys are not stored and are only used to create a Role for the CloudCoreo Service.
- AWS credentials are never written to disk.
-By default, the CloudCoreo service creates an Role named CloudCoreoAssumedRole with full privileges (except for user creation) in the target Cloud Account.
-Here is the IAM Policy attached to the CloudCoreoAssumedRole in the target account:</p>
+<p>Provide CloudCoreo with an IAM user’s Access and Secret Key. CloudCoreo then creates a Role in the target Cloud Account (AWS) using the Access keys provided.</p>
 
-<p>{ “Version”: “2012-10-17”,
-    “Statement”: [
-        { “Action”: [ “<em>” ], “Effect”: “Allow”, “Resource”: “</em>” },
-        { “Action”: [ “iam:CreateUser” ], “Effect”: “Deny”, “Resource”: “*”  } ] }</p>
+<ul>
+  <li>The Access and Secret Keys are not stored and are only used to create a Role for the CloudCoreo Service.
+    <ul>
+      <li>AWS credentials are never written to disk.</li>
+    </ul>
+  </li>
+  <li>By default, the CloudCoreo service creates an Role named CloudCoreoAssumedRole with full privileges (except for user creation) in the target Cloud Account.
+    <ul>
+      <li>Here is the IAM Policy attached to the CloudCoreoAssumedRole in the target account:</li>
+    </ul>
+  </li>
+</ul>
 
-<p>The Access Keys provided to the CloudCoreo Service can be from any AWS user in the target Cloud Account that has at least the following minimum permissions. (These permissions allow CloudCoreo to create the necessary Role.)</p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="nt">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-10-17"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Statement"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w"> </span><span class="nt">"Action"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"*"</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="nt">"Effect"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Allow"</span><span class="p">,</span><span class="w"> </span><span class="nt">"Resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="w"> </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w"> </span><span class="nt">"Action"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"iam:CreateUser"</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="nt">"Effect"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Deny"</span><span class="p">,</span><span class="w"> </span><span class="nt">"Resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
 
-<p>{  “Version”: “2012-10-17”,
-  “Statement”: [
-     { “Effect”: “Allow”,
-        “Action”: [ “iam:GetUser”, “iam:CreatePolicy”, “iam:GetPolicy”, “iam:CreateRole”, “iam:GetRole”, “iam:AttachRolePolicy” ],
-        “Resource”: “*” } ] }</p>
+<ul>
+  <li>The Access Keys provided to the CloudCoreo Service can be from any AWS user in the target Cloud Account that has at least the following minimum permissions. (These permissions allow CloudCoreo to create the necessary Role.)</li>
+</ul>
 
-<p>It is recommended that the AWS Access keys provided to CloudCoreo immediately be inactivated and deleted.
-Optionally, AWS user account that generated the keys that were provided to CloudCoreo can also immediately be inactivated and/or deleted.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">  </span><span class="nt">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-10-17"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"Statement"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="p">{</span><span class="w"> </span><span class="nt">"Effect"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Allow"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"Action"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"iam:GetUser"</span><span class="p">,</span><span class="w"> </span><span class="s2">"iam:CreatePolicy"</span><span class="p">,</span><span class="w"> </span><span class="s2">"iam:GetPolicy"</span><span class="p">,</span><span class="w"> </span><span class="s2">"iam:CreateRole"</span><span class="p">,</span><span class="w"> </span><span class="s2">"iam:GetRole"</span><span class="p">,</span><span class="w"> </span><span class="s2">"iam:AttachRolePolicy"</span><span class="w"> </span><span class="p">],</span><span class="w">
+        </span><span class="nt">"Resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
 
-<p>Insert second picture here - images/awsrole2.png</p>
+<ul>
+  <li>It is recommended that the AWS Access keys provided to CloudCoreo immediately be inactivated and deleted.</li>
+  <li>Optionally, AWS user account that generated the keys that were provided to CloudCoreo can also immediately be inactivated and/or deleted.</li>
+</ul>
 
-<p>How the CloudCoreo Service isolates Cloud Accounts, Teams, and Plans</p>
+<blockquote>
+  <h6 id="adding-a-cloud-account-using-a-access-keys-in-the-cloudcoreo-web-ui">Adding a Cloud Account Using a Access Keys in the CloudCoreo Web UI</h6>
+
+  <p><img src="http://kb.cloudcoreo.com/images/awsrole1.png" alt="Provide an IAM user’s Access and Secret Key" title="Adding a Cloud Account in the CloudCoreo Web UI" /></p>
+</blockquote>
+
+<hr />
+
+<h3 id="how-the-cloudcoreo-service-isolates-cloud-accounts-teams-and-plans">How the CloudCoreo Service isolates Cloud Accounts, Teams, and Plans</h3>
 
 <p>Internal to the CloudCoreo Service, there are separate EC2 instances that make the API calls to AWS on behalf of CloudCoreo Service users. These CloudCoreo Service EC2 instances have no ports open to the internet. The communication to AWS happens through queuing systems which are governed by AWS Roles.</p>
 
-<p>Does CloudCoreo Store or Back-Up the Results from my Plan Runs?</p>
+<hr />
+
+<h3 id="does-cloudcoreo-store-or-back-up-the-results-from-my-plan-runs">Does CloudCoreo Store or Back-Up the Results from my Plan Runs?</h3>
 
 <p>CloudCoreo Service Plan Run Results are stored for display purposes only. Results stored for display purposes may be deleted by the CloudCoreo Service at any time, however CloudCoreo does maintain encrypted backups of the Results database that may be retained up to 5 years.</p>
 
@@ -335,7 +376,7 @@ Optionally, AWS user account that generated the keys that were provided to Cloud
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 CloudCoreo. All rights reserved. <br />
-<span>Page last updated:</span> February 17, 2017<br/> Site last generated: Feb 17, 2017 <br />
+<span>Page last updated:</span> February 17, 2017<br/> Site last generated: Feb 23, 2017 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>

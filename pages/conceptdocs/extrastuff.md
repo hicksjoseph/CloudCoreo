@@ -298,3 +298,22 @@ This will return a string representing the region in which the AppStack instance
 
 ### Stack Variables
 Stack variables are set during runtime and can be used to access various values created during the stack creation/update runtime. Access STACK variables using `STACK::`.
+
+
+### Variable examples
+Example: "Which alerts would you like to check for? Default is all RDS alerts."
+
+Default Descriptions:
+*ALLOW_EMPTY: "Would you like to receive empty reports? Options - true / false. Default is false."
+
+*SEND_ON: "Send reports always or only when there is a change? Options - always / change. Default is change."
+
+*RECIPIENT: "Enter the email address(es) that will receive notifications. If more than one, separate each with a comma."
+
+*ROLLUP_REPORT: 
+"Would you like to send a rollup [[service]] report? This is a short email that summarizes the number of checks performed and the number of violations found. Options - notify / nothing. Default is nothing."
+
+*HTML_REPORT: "Would you like to send a full [[service]] report? This is an email that details any violations found and includes a list of the violating cloud objects. Options - notify / nothing. Default is notify."
+
+*OWNER_TAG: "Enter an AWS tag whose value is an email address of the owner of the [[service]] object. (Optional)"
+
