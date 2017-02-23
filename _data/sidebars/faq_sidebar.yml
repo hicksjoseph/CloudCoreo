@@ -4,7 +4,7 @@ entries:
 - title: sidebar
   product: CloudCoreo FAQs
   version:
-  folders: faq
+  folders:
 
   - title: General FAQs
     output: web
