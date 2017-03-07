@@ -276,33 +276,23 @@
 
 <h3 id="plan-runtime-variables">Plan Runtime Variables</h3>
 
-<p>Variables in the PLAN::variable_name namespace are read-only and contain information about the currently running plan.</p>
+<p>Variables in the <code class="highlighter-rouge">PLAN::</code> namespace are read-only and contain information about the currently running plan.</p>
 
-<p>Valid PLAN:: variable names are:<br />
-<strong>PLAN::run_id</strong><br />
-* The id of the current execution for this plan<br />
-<strong>PLAN::team_id</strong><br />
-* The id of the team which is running this plan<br />
-<strong>PLAN::team_name</strong><br />
-* The name of the team wich is running this plan<br />
-<strong>PLAN::cloud_account_name</strong><br />
-* The name of the cloud account assigned to this plan<br />
-<strong>PLAN::cloud_account_id</strong><br />
-* The id of the cloud account assigned to this plan<br />
-<strong>PLAN::cloud_account_arn</strong><br />
-* The ARN in AWS for the cloud account assigned to this plan<br />
-<strong>PLAN::revision</strong><br />
-* The git commit SHA for the composite being executed by this plan<br />
-<strong>PLAN::branch</strong><br />
-* The git branch name for the composite being executed by this plan<br />
-<strong>PLAN::id</strong><br />
-* The id of this plan<br />
-<strong>PLAN::name</strong><br />
-* The name of this plan<br />
-<strong>PLAN::stack_name</strong><br />
-* The name of this composite<br />
-<strong>PLAN::region</strong><br />
-* The AWS region that this plan is being executed in</p>
+<p><strong>Valid <code class="highlighter-rouge">PLAN::</code> variable names are:</strong><br />
+|Variable Name |Variable Description|
+|:——|:———–|
+|<strong>PLAN::run_id</strong>             |The id of the current execution for this plan|<br />
+|<strong>PLAN::team_id</strong>            |The id of the team which is running this plan|<br />
+|<strong>PLAN::team_name</strong>          |The name of the team wich is running this plan|<br />
+|<strong>PLAN::cloud_account_name</strong> |The name of the cloud account assigned to this plan|<br />
+|<strong>PLAN::cloud_account_id</strong>   |The id of the cloud account assigned to this plan|<br />
+|<strong>PLAN::cloud_account_arn</strong>  |The ARN in AWS for the cloud account assigned to this plan|<br />
+|<strong>PLAN::revision</strong>           |The git commit SHA for the composite being executed by this plan|<br />
+|<strong>PLAN::branch</strong>             |The git branch name for the composite being executed by this plan|<br />
+|<strong>PLAN::id</strong>                 |The id of this plan|<br />
+|<strong>PLAN::name</strong>               |The name of this plan|<br />
+|<strong>PLAN::stack_name</strong>         |The name of this composite|<br />
+|<strong>PLAN::region</strong>             |The AWS region that this plan is being executed in|</p>
 
 <h4 id="example-1-setting-the-default-region-for-a-variable-in-configyaml">Example 1: Setting the default region for a variable in config.yaml</h4>
 
@@ -328,7 +318,7 @@ Note that the variable name must be separated from other text by characters that
 
 <h3 id="composite-runtime-variables">Composite Runtime Variables</h3>
 
-<p>Variables in the COMPOSITE:: namespace are read/write and must be scoped to an existing resolved resource. These are identified as <code class="highlighter-rouge">COMPOSITE::coreo_resource_type.resource_name.variable_name</code> where <code class="highlighter-rouge">variable_name</code> may be arbitrarily nested using dot notation.</p>
+<p>Variables in the <code class="highlighter-rouge">COMPOSITE::</code> namespace are read/write and must be scoped to an existing resolved resource. These are identified as <code class="highlighter-rouge">COMPOSITE::coreo_resource_type.resource_name.variable_name</code> where <code class="highlighter-rouge">variable_name</code> may be arbitrarily nested using dot notation.</p>
 
 <p>These variables must be set using the <code class="highlighter-rouge">coreo_uni_util_variables</code> resource <em>after</em> that resource has been executed.</p>
 
@@ -363,7 +353,7 @@ coreoExport('endTime', Date.now());
 
 <h3 id="global-runtime-variables">Global Runtime Variables</h3>
 
-<p>Variables in the GLOBAL:: namespace are read/write, always user-generated, and do not need to be scoped to a resource. These can be used for storing metadata or aggregated information about other resources. GLOBAL variables can be nested map/hash data structures.</p>
+<p>Variables in the <code class="highlighter-rouge">GLOBAL::</code> namespace are read/write, always user-generated, and do not need to be scoped to a resource. These can be used for storing metadata or aggregated information about other resources. GLOBAL variables can be nested map/hash data structures.</p>
 
 <h4 id="example-1">Example:</h4>
 <p>Sum violations from multiple jsrunner resources</p>
