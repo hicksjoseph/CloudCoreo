@@ -28,7 +28,7 @@ Valid PLAN:: variable names are:
   PLAN::team_id             # The id of the team which is running this plan
   PLAN::team_name           # The name of the team wich is running this plan
   PLAN::cloud_account_id    # The id of the cloud account assigned to this plan
-  PLAN::cloud_accoun_name   # The name of the cloud account assigned to this plan
+  PLAN::cloud_account_name  # The name of the cloud account assigned to this plan
   PLAN::cloud_account_arn   # The ARN in AWS for the cloud account assigned to this plan
   PLAN::revision            # The git commit SHA for the composite being executed by this plan
   PLAN::branch              # The git branch name for the composite being executed by this plan
