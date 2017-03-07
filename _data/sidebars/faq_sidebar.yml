@@ -2,18 +2,18 @@
 
 entries:
 - title: sidebar
-  product: FAQ
+  product: CloudCoreo FAQs
   version:
   folders:
 
-  - title: Common FAQ
+  - title: General FAQs
     output: web
     folderitems:
 
-    - title: CloudCore AWS role policy
-      url: /awsrolepolicy.html
+    - title: Granting CloudCoreo permissions  
+      url: /faq_awsrolepolicy.html
       output: web
 
-    - title: Adding git keys for private repos
-      url: /addinggitkeys.html
+    - title: CloudCoreo Metadata Guidelines
+      url: /faq_cloudaudit_metadata.html
       output: web

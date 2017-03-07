@@ -1,6 +1,6 @@
 ---
-title: CloudCoreo Variables
-summary: CloudCoreo Variables
+title: CloudCoreo Compile-time Variables
+summary: CloudCoreo Compile-time Variables
 tags:
 keywords: ""
 last_updated: "January 3, 2017"
@@ -13,9 +13,9 @@ toc: false
 
 **Note:** Be careful when you edit your config.yaml file since this file **cannot contain tab characters**. When you do line spacing, use spaces instead. 
 
-## Composite Variables
+## Composite or Compile-time Variables
 
-Composite variables are a great way to enable a variety of user defined options for your Composites as you create Plans to build and audit your infrastructure. These variables are implemented with variable definitions in your Composite code and are exposed in the WebUI via the contents of the `<repository-directory>/config.yaml`. This file is optional for Composites, but required if you will be defining and exposing variables in your Composite.
+Composite variables are a great way to enable a variety of user defined options for your Composites as you create Plans to build and audit your infrastructure. These variables are implemented with variable definitions in your Composite code and are exposed in the WebUI via the contents of the `<repository-directory>/config.yaml`. This file is optional for Composites, but required if you will be defining and exposing variables in your Composite. These variables are evaluated at compile time. [Read about Runtime Variables here.](http://kb.cloudcoreo.com/conceptdocs_runtimevariables.html)
 
 ### Plan Variables
 There are a few fields in the `config.yaml` file that control the behavior of the WebUI. These are `required`, `description`, `default`, `type`, and `overrides`.
@@ -76,3 +76,5 @@ variables:
     type: array
 ~~~  
 
+
+There is a different type of CloudCoreo Variable that is evaluated at run time. You can [read about Runtime Variables here.](http://kb.cloudcoreo.com/conceptdocs_runtimevariables.html)

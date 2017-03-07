@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
+<meta name="description" content="CloudCoreo Runtime Variables">
 <meta name="keywords" content=" ">
-<title>Page Not Found | CloudCoreo Documentation</title>
+<title>CloudCoreo Runtime Variables | CloudCoreo Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -134,7 +134,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the Page Not Found page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the CloudCoreo Runtime Variables page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -150,7 +150,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Page Not Found">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="CloudCoreo Runtime Variables">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -246,7 +246,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Page Not Found</h1>
+   <h1 class="post-title-main">CloudCoreo Runtime Variables</h1>
 </div>
 
 
@@ -254,29 +254,8 @@
 <div class="post-content">
 
    
-
-    
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
+    <div class="summary">CloudCoreo Runtime Variables</div>
+   
 
     
 
@@ -284,13 +263,139 @@ $('#toc').on('click', 'a', function() {
 
     
 
-    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages//404.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/conceptdocs/conceptdocs_runtimevariables.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     
 
     
 
-  <p>Sorry, but the page you were trying to view does not exist. Try searching for it or looking at the URL to see if it looks correct.
-You can find us on <a href="http://www.cloudcoreo.com">http://www.cloudcoreo.com</a> or <a href="http://kb.cloudcoreo.com">http://kb.cloudcoreo.com</a> .</p>
+  <p><strong>Note:</strong> Be careful when you edit your config files since these files <strong>cannot contain tab characters</strong>. When you do line spacing, use spaces instead.</p>
+
+<h2 id="runtime-variables">Runtime Variables</h2>
+
+<p>There are several collections of variables which can be used in authoring composites that are evaluated at run time. These Runtime Variables are different than <a href="http://kb.cloudcoreo.com/conceptdocs_variables.html">compile time variables.</a></p>
+
+<h3 id="plan-runtime-variables">Plan Runtime Variables</h3>
+
+<p>Variables in the PLAN::<variable_name> namespace are read-only and contain information
+about the currently running plan.</variable_name></p>
+
+<p>Valid PLAN:: variable names are:
+  PLAN::run_id              # The id of the current execution for this plan
+  PLAN::team_id             # The id of the team which is running this plan
+  PLAN::team_name           # The name of the team wich is running this plan
+  PLAN::cloud_account_id    # The id of the cloud account assigned to this plan
+  PLAN::cloud_accoun_name   # The name of the cloud account assigned to this plan
+  PLAN::cloud_account_arn   # The ARN in AWS for the cloud account assigned to this plan
+  PLAN::revision            # The git commit SHA for the composite being executed by this plan
+  PLAN::branch              # The git branch name for the composite being executed by this plan
+  PLAN::id                  # The id of this plan
+  PLAN::name                # The name of this plan
+  PLAN::stack_name          # The name of this composite
+  PLAN::region              # The AWS region that this plan is being executed in</p>
+
+<p>Examples:
+  1. Set the default region for a variable in config.yaml</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  variables:
+    REGION:
+      default: "PLAN::region"
+      required: true
+      type: string
+</code></pre>
+</div>
+
+<ol>
+  <li>Use the plan name in naming resources
+Note that the variable name must be separated from other text by a character other
+than letters or <code class="highlighter-rouge">_</code></li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  coreo_aws_vpc_vpc "PLAN::name-vpc" do # will resolve the resource name to "&lt;planName&gt;-vpc"
+    # actions and attributes here
+  end
+</code></pre>
+</div>
+
+<h3 id="composite-runtime-variables">Composite Runtime Variables</h3>
+
+<p>Variables in the COMPOSITE:: namespace are read/write and must be scoped to an existing resolved resource. These are identified as
+<code class="highlighter-rouge">COMPOSITE::coreo_resource_type.resource_name.variable_name</code> where variable_name may be</p>
+
+<p>arbitrarily nested using dot notation. These variables must be set using the</p>
+
+<p><code class="highlighter-rouge">coreo_uni_util_variables</code> resource <em>after</em> that resource has been executed.</p>
+
+<p>NB: Setting COMPOSITE variables will not alter the deployed state of a resource since variable setting occurs after the resource has been executed.</p>
+
+<p>Examples:
+  1. Capture the run time of a jsrunner script
+     Variables exported by the jsrunner function <code class="highlighter-rouge">coreoExport()</code> are automatically stored
+     in a COMPOSITE:: variable on the jsrunner resource.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  coreo_uni_util_jsrunner "my_js_runner" do
+    acion :run
+    function &lt;&lt;-JAVASCRIPT
+let startTime = Date.now();
+
+// JSRunner behavior here
+
+coreoExport('startTime', startTime);
+coreoExport('endTime', Date.now());
+    JAVASCRIPT
+
+    # other jsrunner methods as needed
+  end
+
+  coreo_uni_util_variables "js_runner_vars" do
+    action :set
+    variables [
+      { 'COMPOSITE::coreo_uni_util_jsrunner.my_js_runner.runtime' =&gt;
+          'COMPOSITE::coreo_uni_util_jsrunner.my_js_runner.endTime' - 'COMPOSITE::coreo_uni_util_jsrunner.my_js_runner.startTime' }
+    ]
+  end
+</code></pre>
+</div>
+
+<h3 id="global-runtime-variables">Global Runtime Variables</h3>
+
+<p>Variables in the GLOBAL:: namespace are read/write, always user-generated, and do not need to be scoped to a resource. These can be used for storing metadata or aggregated information about other resources. GLOBAL variables can be nested map/hash data structures.</p>
+
+<p>Examples:
+  1. Sum violations from multiple jsrunner resources</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  coreo_uni_util_jsrunner "first_jsrunner" do
+    action :run
+    function &lt;&lt;-JAVASCRIPT1
+let violations = 0;
+
+// JSRunner behavior which counts violations and increments the variable
+
+coreoExport('violations', violations);
+    JAVASCRIPT1
+  end
+
+  coreo_uni_util_jsrunner "second_jsrunner" do
+    action :run
+    function &lt;&lt;-JAVASCRIPT2
+let violations = 0;
+
+// JSRunner behavior which counts violations and increments the variable
+
+coreoExport('violations', violations);
+    JAVASCRIPT2
+  end
+
+  coreo_uni_util_variables "violations" do
+    action :set
+    variables [
+      { 'GLOBAL::jsrunner_rollups.violations' =&gt;
+          'COMPOSITE::coreo_uni_util_jsrunner.first_jsrunner.violations' + 'COMPOSITE::coreo_uni_util_jsrunner.second_jsrunner.violations' }
+    ]
+  end
+</code></pre>
+</div>
+
+<p>Runtime variables are different than Compile Time Variables. Read more about <a href="http://kb.cloudcoreo.com/conceptdocs_variables.html">Compile Time Variables here.</a></p>
 
 
     <div class="tags">
@@ -307,7 +412,7 @@ You can find us on <a href="http://www.cloudcoreo.com">http://www.cloudcoreo.com
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 CloudCoreo. All rights reserved. <br />
- Site last generated: Mar 7, 2017 <br />
+<span>Page last updated:</span> March 7, 2017<br/> Site last generated: Mar 7, 2017 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>
