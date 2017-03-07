@@ -20,8 +20,8 @@ There are several collections of variables which can be used in authoring compos
 ### Plan Runtime Variables  
 
 Variables in the `PLAN::` namespace are read-only and contain information about the currently running plan.  
-
 **Valid `PLAN::` variable names are:**  
+
 |Variable Name |Variable Description|
 |:------|:-----------|
 |**PLAN::run_id**             |The id of the current execution for this plan|  

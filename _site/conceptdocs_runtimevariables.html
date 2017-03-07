@@ -276,23 +276,67 @@
 
 <h3 id="plan-runtime-variables">Plan Runtime Variables</h3>
 
-<p>Variables in the <code class="highlighter-rouge">PLAN::</code> namespace are read-only and contain information about the currently running plan.</p>
+<p>Variables in the <code class="highlighter-rouge">PLAN::</code> namespace are read-only and contain information about the currently running plan.<br />
+<strong>Valid <code class="highlighter-rouge">PLAN::</code> variable names are:</strong></p>
 
-<p><strong>Valid <code class="highlighter-rouge">PLAN::</code> variable names are:</strong><br />
-|Variable Name |Variable Description|
-|:——|:———–|
-|<strong>PLAN::run_id</strong>             |The id of the current execution for this plan|<br />
-|<strong>PLAN::team_id</strong>            |The id of the team which is running this plan|<br />
-|<strong>PLAN::team_name</strong>          |The name of the team wich is running this plan|<br />
-|<strong>PLAN::cloud_account_name</strong> |The name of the cloud account assigned to this plan|<br />
-|<strong>PLAN::cloud_account_id</strong>   |The id of the cloud account assigned to this plan|<br />
-|<strong>PLAN::cloud_account_arn</strong>  |The ARN in AWS for the cloud account assigned to this plan|<br />
-|<strong>PLAN::revision</strong>           |The git commit SHA for the composite being executed by this plan|<br />
-|<strong>PLAN::branch</strong>             |The git branch name for the composite being executed by this plan|<br />
-|<strong>PLAN::id</strong>                 |The id of this plan|<br />
-|<strong>PLAN::name</strong>               |The name of this plan|<br />
-|<strong>PLAN::stack_name</strong>         |The name of this composite|<br />
-|<strong>PLAN::region</strong>             |The AWS region that this plan is being executed in|</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Variable Name</th>
+      <th style="text-align: left">Variable Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::run_id</strong></td>
+      <td style="text-align: left">The id of the current execution for this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::team_id</strong></td>
+      <td style="text-align: left">The id of the team which is running this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::team_name</strong></td>
+      <td style="text-align: left">The name of the team wich is running this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::cloud_account_name</strong></td>
+      <td style="text-align: left">The name of the cloud account assigned to this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::cloud_account_id</strong></td>
+      <td style="text-align: left">The id of the cloud account assigned to this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::cloud_account_arn</strong></td>
+      <td style="text-align: left">The ARN in AWS for the cloud account assigned to this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::revision</strong></td>
+      <td style="text-align: left">The git commit SHA for the composite being executed by this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::branch</strong></td>
+      <td style="text-align: left">The git branch name for the composite being executed by this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::id</strong></td>
+      <td style="text-align: left">The id of this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::name</strong></td>
+      <td style="text-align: left">The name of this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::stack_name</strong></td>
+      <td style="text-align: left">The name of this composite</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::region</strong></td>
+      <td style="text-align: left">The AWS region that this plan is being executed in</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="example-1-setting-the-default-region-for-a-variable-in-configyaml">Example 1: Setting the default region for a variable in config.yaml</h4>
 
