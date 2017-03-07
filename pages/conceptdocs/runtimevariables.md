@@ -19,33 +19,23 @@ There are several collections of variables which can be used in authoring compos
 
 ### Plan Runtime Variables  
 
-Variables in the PLAN::variable_name namespace are read-only and contain information about the currently running plan.  
+Variables in the `PLAN::` namespace are read-only and contain information about the currently running plan.  
 
-Valid PLAN:: variable names are:  
-**PLAN::run_id**  
-* The id of the current execution for this plan  
-**PLAN::team_id**  
-* The id of the team which is running this plan  
-**PLAN::team_name**  
-* The name of the team wich is running this plan  
-**PLAN::cloud_account_name**  
-* The name of the cloud account assigned to this plan  
-**PLAN::cloud_account_id**  
-* The id of the cloud account assigned to this plan  
-**PLAN::cloud_account_arn**  
-* The ARN in AWS for the cloud account assigned to this plan  
-**PLAN::revision**  
-* The git commit SHA for the composite being executed by this plan  
-**PLAN::branch**  
-* The git branch name for the composite being executed by this plan  
-**PLAN::id**  
-* The id of this plan  
-**PLAN::name**  
-* The name of this plan  
-**PLAN::stack_name**  
-* The name of this composite  
-**PLAN::region**  
-* The AWS region that this plan is being executed in  
+**Valid `PLAN::` variable names are:**  
+|Variable Name |Variable Description|
+|:------|:-----------|
+|**PLAN::run_id**             |The id of the current execution for this plan|  
+|**PLAN::team_id**            |The id of the team which is running this plan|  
+|**PLAN::team_name**          |The name of the team wich is running this plan|  
+|**PLAN::cloud_account_name** |The name of the cloud account assigned to this plan|  
+|**PLAN::cloud_account_id**   |The id of the cloud account assigned to this plan|  
+|**PLAN::cloud_account_arn**  |The ARN in AWS for the cloud account assigned to this plan|  
+|**PLAN::revision**           |The git commit SHA for the composite being executed by this plan|  
+|**PLAN::branch**             |The git branch name for the composite being executed by this plan|  
+|**PLAN::id**                 |The id of this plan|  
+|**PLAN::name**               |The name of this plan|  
+|**PLAN::stack_name**         |The name of this composite|  
+|**PLAN::region**             |The AWS region that this plan is being executed in|  
 
 #### Example 1: Setting the default region for a variable in config.yaml  
 
@@ -72,7 +62,7 @@ For a Plan that is named "TEST", the code block above will resolve the resource 
 
 ### Composite Runtime Variables  
 
-Variables in the COMPOSITE:: namespace are read/write and must be scoped to an existing resolved resource. These are identified as `COMPOSITE::coreo_resource_type.resource_name.variable_name` where `variable_name` may be arbitrarily nested using dot notation.  
+Variables in the `COMPOSITE::` namespace are read/write and must be scoped to an existing resolved resource. These are identified as `COMPOSITE::coreo_resource_type.resource_name.variable_name` where `variable_name` may be arbitrarily nested using dot notation.  
 
 These variables must be set using the `coreo_uni_util_variables` resource _after_ that resource has been executed.
 
@@ -107,7 +97,7 @@ coreoExport('endTime', Date.now());
 
 ### Global Runtime Variables  
 
-Variables in the GLOBAL:: namespace are read/write, always user-generated, and do not need to be scoped to a resource. These can be used for storing metadata or aggregated information about other resources. GLOBAL variables can be nested map/hash data structures.  
+Variables in the `GLOBAL::` namespace are read/write, always user-generated, and do not need to be scoped to a resource. These can be used for storing metadata or aggregated information about other resources. GLOBAL variables can be nested map/hash data structures.  
 
 #### Example:
 Sum violations from multiple jsrunner resources  
