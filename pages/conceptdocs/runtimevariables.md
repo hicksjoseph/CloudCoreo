@@ -21,22 +21,31 @@ There are several collections of variables which can be used in authoring compos
 
 Variables in the PLAN::variable_name namespace are read-only and contain information about the currently running plan.  
 
-Valid PLAN:: variable names are:
-
-|Variable Name |Variable Description|
-|:------|:-----------|
-|PLAN::run_id             |The id of the current execution for this plan|  
-|PLAN::team_id            |The id of the team which is running this plan|  
-|PLAN::team_name          |The name of the team wich is running this plan|  
-|PLAN::cloud_account_name |The name of the cloud account assigned to this plan|  
-|PLAN::cloud_account_id   |The id of the cloud account assigned to this plan|  
-|PLAN::cloud_account_arn  |The ARN in AWS for the cloud account assigned to this plan|  
-|PLAN::revision           |The git commit SHA for the composite being executed by this plan|  
-|PLAN::branch             |The git branch name for the composite being executed by this plan|  
-|PLAN::id                 |The id of this plan|  
-|PLAN::name               |The name of this plan|  
-|PLAN::stack_name         |The name of this composite|  
-|PLAN::region             |The AWS region that this plan is being executed in|  
+Valid PLAN:: variable names are:  
+**PLAN::run_id**  
+* The id of the current execution for this plan  
+**PLAN::team_id**  
+* The id of the team which is running this plan  
+**PLAN::team_name**  
+* The name of the team wich is running this plan  
+**PLAN::cloud_account_name**  
+* The name of the cloud account assigned to this plan  
+**PLAN::cloud_account_id**  
+* The id of the cloud account assigned to this plan  
+**PLAN::cloud_account_arn**  
+* The ARN in AWS for the cloud account assigned to this plan  
+**PLAN::revision**  
+* The git commit SHA for the composite being executed by this plan  
+**PLAN::branch**  
+* The git branch name for the composite being executed by this plan  
+**PLAN::id**  
+* The id of this plan  
+**PLAN::name**  
+* The name of this plan  
+**PLAN::stack_name**  
+* The name of this composite  
+**PLAN::region**  
+* The AWS region that this plan is being executed in  
 
 #### Example 1: Setting the default region for a variable in config.yaml  
 
