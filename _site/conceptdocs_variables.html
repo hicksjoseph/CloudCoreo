@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CloudCoreo Variables">
+<meta name="description" content="CloudCoreo Compile-time Variables">
 <meta name="keywords" content=" ">
-<title>CloudCoreo Variables | CloudCoreo Documentation</title>
+<title>CloudCoreo Compile-time Variables | CloudCoreo Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -134,7 +134,7 @@
                 
                 
                 
-			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the CloudCoreo Variables page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the CloudCoreo Compile-time Variables page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
 
 		
                 <!--comment out this block if you want to hide search-->
@@ -150,7 +150,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="CloudCoreo Variables">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="CloudCoreo Compile-time Variables">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -246,7 +246,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">CloudCoreo Variables</h1>
+   <h1 class="post-title-main">CloudCoreo Compile-time Variables</h1>
 </div>
 
 
@@ -254,7 +254,7 @@
 <div class="post-content">
 
    
-    <div class="summary">CloudCoreo Variables</div>
+    <div class="summary">CloudCoreo Compile-time Variables</div>
    
 
     
@@ -270,9 +270,9 @@
 
   <p><strong>Note:</strong> Be careful when you edit your config.yaml file since this file <strong>cannot contain tab characters</strong>. When you do line spacing, use spaces instead.</p>
 
-<h2 id="composite-variables">Composite Variables</h2>
+<h2 id="composite-or-compile-time-variables">Composite or Compile-time Variables</h2>
 
-<p>Composite variables are a great way to enable a variety of user defined options for your Composites as you create Plans to build and audit your infrastructure. These variables are implemented with variable definitions in your Composite code and are exposed in the WebUI via the contents of the <code class="highlighter-rouge">&lt;repository-directory&gt;/config.yaml</code>. This file is optional for Composites, but required if you will be defining and exposing variables in your Composite.</p>
+<p>Composite variables are a great way to enable a variety of user defined options for your Composites as you create Plans to build and audit your infrastructure. These variables are implemented with variable definitions in your Composite code and are exposed in the WebUI via the contents of the <code class="highlighter-rouge">&lt;repository-directory&gt;/config.yaml</code>. This file is optional for Composites, but required if you will be defining and exposing variables in your Composite. These variables are evaluated at compile time. <a href="http://kb.cloudcoreo.com/conceptdocs_runtimevariables.html">Read about Runtime Variables here.</a></p>
 
 <h3 id="plan-variables">Plan Variables</h3>
 <p>There are a few fields in the <code class="highlighter-rouge">config.yaml</code> file that control the behavior of the WebUI. These are <code class="highlighter-rouge">required</code>, <code class="highlighter-rouge">description</code>, <code class="highlighter-rouge">default</code>, <code class="highlighter-rouge">type</code>, and <code class="highlighter-rouge">overrides</code>.</p>
@@ -339,6 +339,7 @@ You use the <code class="highlighter-rouge">type</code> field to define the type
 </code></pre>
 </div>
 
+<p>There is a different type of CloudCoreo Variable that is evaluated at run time. You can <a href="http://kb.cloudcoreo.com/conceptdocs_runtimevariables.html">read about Runtime Variables here.</a></p>
 
 
     <div class="tags">
@@ -355,7 +356,7 @@ You use the <code class="highlighter-rouge">type</code> field to define the type
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 CloudCoreo. All rights reserved. <br />
-<span>Page last updated:</span> January 3, 2017<br/> Site last generated: Feb 23, 2017 <br />
+<span>Page last updated:</span> January 3, 2017<br/> Site last generated: Mar 7, 2017 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>
