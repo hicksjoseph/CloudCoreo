@@ -1,0 +1,167 @@
+<p><strong>Note:</strong> Be careful when you edit your config files since these files <strong>cannot contain tab characters</strong>. When you do line spacing, use spaces instead.</p>
+
+<h2 id="runtime-variables">Runtime Variables</h2>
+
+<p>There are several collections of variables which can be used in authoring composites that are evaluated at run time. These Runtime Variables are different than <a href="http://kb.cloudcoreo.com/conceptdocs_variables.html">compile time variables.</a></p>
+
+<h3 id="plan-runtime-variables">Plan Runtime Variables</h3>
+
+<p>Variables in the <code class="highlighter-rouge">PLAN::</code> namespace are read-only and contain information about the currently running plan.<br />
+<strong>Valid <code class="highlighter-rouge">PLAN::</code> variable names are:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Variable Name</th>
+      <th style="text-align: left">Variable Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::run_id</strong></td>
+      <td style="text-align: left">The id of the current execution for this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::team_id</strong></td>
+      <td style="text-align: left">The id of the team which is running this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::team_name</strong></td>
+      <td style="text-align: left">The name of the team wich is running this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::cloud_account_name</strong></td>
+      <td style="text-align: left">The name of the cloud account assigned to this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::cloud_account_id</strong></td>
+      <td style="text-align: left">The id of the cloud account assigned to this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::cloud_account_arn</strong></td>
+      <td style="text-align: left">The ARN in AWS for the cloud account assigned to this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::revision</strong></td>
+      <td style="text-align: left">The git commit SHA for the composite being executed by this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::branch</strong></td>
+      <td style="text-align: left">The git branch name for the composite being executed by this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::id</strong></td>
+      <td style="text-align: left">The id of this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::name</strong></td>
+      <td style="text-align: left">The name of this plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::stack_name</strong></td>
+      <td style="text-align: left">The name of this composite</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PLAN::region</strong></td>
+      <td style="text-align: left">The AWS region that this plan is being executed in</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="example-1-setting-the-default-region-for-a-variable-in-configyaml">Example 1: Setting the default region for a variable in config.yaml</h4>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>       <span class="ss">variables:
+         </span><span class="no">REGION</span><span class="p">:</span>
+           <span class="ss">default: </span><span class="s2">"PLAN::region"</span>
+           <span class="ss">required: </span><span class="kp">true</span>
+           <span class="ss">type: </span><span class="n">string</span>
+</code></pre>
+</div>
+
+<h4 id="example-2--using-the-plan-name-for-naming-resources">Example 2:  Using the Plan name for naming resources</h4>
+<p>Consider using a dash <code class="highlighter-rouge">-</code> character to separate the variable from additional text.<br />
+Note that the variable name must be separated from other text by characters that are not regular letters or an underscore <code class="highlighter-rouge">_</code> character.</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>       <span class="n">coreo_aws_vpc_vpc</span> <span class="s2">"PLAN::name-vpc"</span> <span class="k">do</span>
+        <span class="c1"># actions and attributes here</span>
+      <span class="k">end</span>
+</code></pre>
+</div>
+
+<p>For a Plan that is named <code class="highlighter-rouge">TEST</code>, the code block above will resolve the resource name to <code class="highlighter-rouge">TEST-vpc</code>.</p>
+
+<h3 id="composite-runtime-variables">Composite Runtime Variables</h3>
+
+<p>Variables in the <code class="highlighter-rouge">COMPOSITE::</code> namespace are read/write and must be scoped to an existing resolved resource. These are identified as <code class="highlighter-rouge">COMPOSITE::coreo_resource_type.resource_name.variable_name</code> where <code class="highlighter-rouge">variable_name</code> may be alphanumeric characters, underscores, or dashes.</p>
+
+<p>These variables must be set using the <code class="highlighter-rouge">coreo_uni_util_variables</code> resource <em>after</em> <code class="highlighter-rouge">resource_name</code> has been executed.</p>
+
+<p><strong>Important:</strong> Setting COMPOSITE variables will not alter the deployed state of a resource since variable setting occurs after the resource has been executed.</p>
+
+<h4 id="example">Example:</h4>
+<p>Capture the run time of jsrunner script variables that are exported by the jsrunner function <code class="highlighter-rouge">coreoExport()</code> and are automatically stored in a <code class="highlighter-rouge">COMPOSITE::</code> variable on the jsrunner resource.</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="n">coreo_uni_util_jsrunner</span> <span class="s2">"my_js_runner"</span> <span class="k">do</span>
+    <span class="n">acion</span> <span class="ss">:run</span>
+    <span class="n">function</span> <span class="o">&lt;&lt;-</span><span class="no">JAVASCRIPT</span><span class="sh">
+let startTime = Date.now();
+
+// JSRunner behavior here
+
+coreoExport('startTime', startTime);
+coreoExport('endTime', Date.now());
+</span><span class="no">    JAVASCRIPT</span>
+
+    <span class="c1"># other jsrunner methods as needed</span>
+  <span class="k">end</span>
+
+  <span class="n">coreo_uni_util_variables</span> <span class="s2">"js_runner_vars"</span> <span class="k">do</span>
+    <span class="n">action</span> <span class="ss">:set</span>
+    <span class="n">variables</span> <span class="p">[</span>
+      <span class="p">{</span> <span class="s1">'COMPOSITE::coreo_uni_util_jsrunner.my_js_runner.runtime'</span> <span class="o">=&gt;</span>
+          <span class="s1">'COMPOSITE::coreo_uni_util_jsrunner.my_js_runner.endTime'</span> <span class="o">-</span> <span class="s1">'COMPOSITE::coreo_uni_util_jsrunner.my_js_runner.startTime'</span> <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="k">end</span>
+</code></pre>
+</div>
+
+<h3 id="global-runtime-variables">Global Runtime Variables</h3>
+
+<p>Variables in the <code class="highlighter-rouge">GLOBAL::</code> namespace are read/write, always user-generated, and do not need to be scoped to a resource. These can be used for storing metadata or aggregated information about other resources. GLOBAL variables can be nested using dot notation.</p>
+
+<h4 id="example-1">Example:</h4>
+<p>Sum violations from multiple jsrunner resources</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="n">coreo_uni_util_jsrunner</span> <span class="s2">"first_jsrunner"</span> <span class="k">do</span>
+    <span class="n">action</span> <span class="ss">:run</span>
+    <span class="n">function</span> <span class="o">&lt;&lt;-</span><span class="no">JAVASCRIPT1</span><span class="sh">
+let violations = 0;
+
+// JSRunner behavior which counts violations and increments the variable
+
+coreoExport('violations', violations);
+</span><span class="no">    JAVASCRIPT1</span>
+  <span class="k">end</span>
+
+  <span class="n">coreo_uni_util_jsrunner</span> <span class="s2">"second_jsrunner"</span> <span class="k">do</span>
+    <span class="n">action</span> <span class="ss">:run</span>
+    <span class="n">function</span> <span class="o">&lt;&lt;-</span><span class="no">JAVASCRIPT2</span><span class="sh">
+let violations = 0;
+
+// JSRunner behavior which counts violations and increments the variable
+
+coreoExport('violations', violations);
+</span><span class="no">    JAVASCRIPT2</span>
+  <span class="k">end</span>
+
+  <span class="n">coreo_uni_util_variables</span> <span class="s2">"violations"</span> <span class="k">do</span>
+    <span class="n">action</span> <span class="ss">:set</span>
+    <span class="n">variables</span> <span class="p">[</span>
+      <span class="p">{</span> <span class="s1">'GLOBAL::jsrunner_rollups.violations'</span> <span class="o">=&gt;</span>
+          <span class="s1">'COMPOSITE::coreo_uni_util_jsrunner.first_jsrunner.violations'</span> <span class="o">+</span> <span class="s1">'COMPOSITE::coreo_uni_util_jsrunner.second_jsrunner.violations'</span> <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="k">end</span>
+</code></pre>
+</div>
+
+<p>Remember that runtime variables are different than Compile Time Variables. Read more about <a href="http://kb.cloudcoreo.com/conceptdocs_variables.html">Compile Time Variables here.</a></p>

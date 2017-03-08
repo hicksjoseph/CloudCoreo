@@ -1,0 +1,74 @@
+<h2 id="composite-creation">Composite creation</h2>
+<p>CloudCoreo enables users to create and layer inheritable cloud reference designs called Composites.  Composites make it easy for teams to reuse, extend, combine, and distribute changes to any cloud infrastructure design. A Composite can specify a single micro-service, a group of services, a complex application, or entire data center definition. Composites include a true software based inheritance approach that makes them a better fundamental building block for cloud infrastructure lifecycle management. A Composite specifies the desired end state of your cloud deployment, including all required resources and service dependencies.  Any supported cloud resource can be included in your design from including networking, security, storage, compute as well as container and serverless functions offered by a cloud provider.</p>
+
+<h3 id="composites">Composites</h3>
+<p>There are a number of files and directories that comprise a Composite. These files are stored as part of a repository (repo) in git, the popular version control system. Github and Bitbucket are two examples of hosted git repository services.</p>
+
+<p>Cloud Resources are defined in the <code class="highlighter-rouge">config.rb</code> file. The <code class="highlighter-rouge">config.rb</code> file resides in the <code class="highlighter-rouge">&lt;repo-dir&gt;/services</code> directory and exists to define interactions within the cloud provider in which you are operating.</p>
+
+<p>We define a <strong><em>resource</em></strong> as the actual cloud service you are interacting with, such as a <a href="https://aws.amazon.com/vpc/"><em>VPC</em></a>. Cloud Resources are defined by the desired configuration within your cloud provider account.</p>
+
+<p>The structure of a Cloud Resource is:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">resource</span><span class="o">&gt;</span> <span class="s2">"&lt;name&gt;"</span> <span class="k">do</span>
+    <span class="o">&lt;</span><span class="n">property1</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">property2</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">property3</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>Here is an example of a VPC Cloud Resource:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">coreo_aws_vpc_vpc</span> <span class="s2">"my-vpc"</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:sustain</span>
+  <span class="n">cidr</span> <span class="s2">"12.0.0.0/16"</span>
+  <span class="n">internet_gateway</span> <span class="kp">true</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>This Cloud Resource will create a VPC with the CIDR address “12.0.0.0/16” and attach an <em>Internet gateway</em> to the VPC to allow traffic to a public subnet (the public subnet Cloud Resource is assumed to already exist in this example). This example shows statically created Cloud Resources. In many cases, it would be better to use variables which allow you to specify values such as the VPC name and VPC cidr address when you create Composite Plans for each part of your infrastructure.</p>
+
+<h3 id="composite-plans">Composite Plans</h3>
+<p>A Composite Plan (Plan) is an instance of your infrastructure design that includes your specified deployment variables and policy controls. The Coreo Engine uses a Plan to deploy and maintain the set of running cloud infrastructure resources.  Plans can be used to partition and drive separate infrastructure and cloud policies.</p>
+
+<p>Plans allow variables to be inserted into the system at runtime, allowing a single Composite to be used in many different environments. The Plan variables can be supplied in a number of ways:</p>
+
+<ul>
+  <li>Values provided at Plan creation / modification in the CloudCoreo WebUI</li>
+  <li>Values set during the use of the CloudCoreo CLI (called coreo)</li>
+  <li>Defaults set in the config.yaml file in the Composite Repository</li>
+</ul>
+
+<p>The look of the variables is similar to <em>bash</em> but many “bash-isms” do not apply. To define a variable use <code class="highlighter-rouge">${ }</code> to contain it, for example <code class="highlighter-rouge">${VARIABLE_NAME}</code>. Let’s see what the previous example of the VPC Cloud Resource would be look like with the use of variables for VPC name and VPC cidr octets:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">coreo_aws_vpc_vpc</span> <span class="s2">"${VPC_NAME}"</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:sustain</span>
+  <span class="n">cidr</span> <span class="s2">"${VPC_OCTETS}/16"</span>
+  <span class="n">internet_gateway</span> <span class="kp">true</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>Plan variables are defined in the <code class="highlighter-rouge">config.yaml</code> file which resides in the <code class="highlighter-rouge">&lt;repository-directory&gt;</code> base directory. Within the <code class="highlighter-rouge">config.yaml</code> file, you can now call out a <code class="highlighter-rouge">VPC_NAME</code> and <code class="highlighter-rouge">VPC_OCTETS</code> variables and apply defaults. In this case, the variable <code class="highlighter-rouge">VPC_NAME</code> and <code class="highlighter-rouge">VPC_OCTETS</code> will show up in the web UI for any users to modify.  This is what the <code class="highlighter-rouge">config.yaml</code> would look like in this case:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="ss">variables:
+    </span><span class="no">VPC_NAME</span><span class="p">:</span>
+        <span class="ss">required: </span><span class="kp">true</span>
+        <span class="ss">description: </span><span class="no">Enter</span> <span class="n">the</span> <span class="nb">name</span> <span class="n">of</span> <span class="n">the</span> <span class="no">VPC</span><span class="o">.</span> <span class="p">(</span><span class="no">Default</span> <span class="n">is</span> <span class="nb">test</span><span class="o">-</span><span class="n">vpc</span><span class="p">)</span>
+        <span class="ss">default: </span><span class="nb">test</span><span class="o">-</span><span class="n">vpc</span>
+    <span class="no">VPC_OCTETS</span><span class="p">:</span>
+        <span class="ss">required: </span><span class="kp">true</span>
+        <span class="ss">description: </span><span class="no">Enter</span> <span class="n">the</span> <span class="sr">/16 CIDR address /</span> <span class="n">network</span> <span class="n">of</span> <span class="n">the</span> <span class="no">VPC</span><span class="o">.</span> <span class="p">(</span><span class="no">Default</span> <span class="n">is</span> <span class="mi">10</span><span class="o">.</span><span class="mi">11</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
+        <span class="ss">default: </span><span class="mi">10</span><span class="o">.</span><span class="mi">11</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span>
+</code></pre>
+</div>
+
+<p>Read more about <a href="conceptdocs_variables.html">CloudCoreo Variables</a> .</p>
+
+<p><strong>Note:</strong> Be careful when you edit your config.yaml file since this file <strong>cannot contain tab characters</strong>. When you do line spacing, use spaces instead.</p>
+
+<hr />
+
+<p>These are the basics concepts of Composite creation. Learn more about Advanced Composite creation at <a href="conceptdocs_advancedcomposites.html"><em>Advanced Composites</em></a> .</p>

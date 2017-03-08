@@ -20,7 +20,6 @@ There are several collections of variables which can be used in authoring compos
 ### Plan Runtime Variables  
 
 Variables in the `PLAN::` namespace are read-only and contain information about the currently running plan.  
-
 **Valid `PLAN::` variable names are:**  
 
 |Variable Name |Variable Description|
@@ -45,12 +44,12 @@ Variables in the `PLAN::` namespace are read-only and contain information about 
          REGION:
            default: "PLAN::region"
            required: true
-           type: string
+          type: string
 ~~~  
 
 #### Example 2:  Using the Plan name for naming resources  
-Consider using a dash `-` character to separate the variable from additional text.  
-Note that the variable name must be separated from other text by characters that are not regular letters or an underscore `_` character.
+Consider using a dash "-" character to separate the variable from additional text.  
+Note that the variable name must be separated from other text by characters that are not regular letters or an underscore "_" character.
 
 ~~~ ruby  
        coreo_aws_vpc_vpc "PLAN::name-vpc" do
@@ -58,14 +57,14 @@ Note that the variable name must be separated from other text by characters that
       end
 ~~~  
 
-For a Plan that is named `TEST`, the code block above will resolve the resource name to `TEST-vpc`.  
+For a Plan that is named "TEST", the code block above will resolve the resource name to "TEST-vpc".  
 
 
 ### Composite Runtime Variables  
 
-Variables in the `COMPOSITE::` namespace are read/write and must be scoped to an existing resolved resource. These are identified as `COMPOSITE::coreo_resource_type.resource_name.variable_name` where `variable_name` may be alphanumeric characters, underscores, or dashes.  
+Variables in the `COMPOSITE::` namespace are read/write and must be scoped to an existing resolved resource. These are identified as `COMPOSITE::coreo_resource_type.resource_name.variable_name` where `variable_name` may be arbitrarily nested using dot notation.  
 
-These variables must be set using the `coreo_uni_util_variables` resource _after_ `resource_name` has been executed.
+These variables must be set using the `coreo_uni_util_variables` resource _after_ that resource has been executed.
 
 **Important:** Setting COMPOSITE variables will not alter the deployed state of a resource since variable setting occurs after the resource has been executed.
 
@@ -98,7 +97,7 @@ coreoExport('endTime', Date.now());
 
 ### Global Runtime Variables  
 
-Variables in the `GLOBAL::` namespace are read/write, always user-generated, and do not need to be scoped to a resource. These can be used for storing metadata or aggregated information about other resources. GLOBAL variables can be nested using dot notation.  
+Variables in the `GLOBAL::` namespace are read/write, always user-generated, and do not need to be scoped to a resource. These can be used for storing metadata or aggregated information about other resources. GLOBAL variables can be nested map/hash data structures.  
 
 #### Example:
 Sum violations from multiple jsrunner resources  

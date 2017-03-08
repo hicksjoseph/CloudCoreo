@@ -26,6 +26,12 @@ entries:
       url: /conceptdocs_advancedcomposites.html
       output: web
 
-    - title: Variables
+    - title: Compile Time Variables
       url: /conceptdocs_variables.html
       output: web
+
+    - title: Run Time Variables
+      url: /conceptdocs_runtimevariables.html
+      output: web
+
+

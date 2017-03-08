@@ -1,0 +1,57 @@
+<h2 id="composite--repository-directory-structure">Composite / Repository Directory Structure</h2>
+<p>CloudCoreo relies on convention over configuration for the most part, achieving simplicity and flexibility. Since the basic structure of a Composite is that only one Composite is contained within a particular repository, a repository can contain whatever code you would like to build your infrastructure using CloudCoreo. However, there are some directories that CloudCoreo reserves for certain functions.</p>
+
+<p>The CloudCoreo directory naming structure directly conveys what each CloudCoreo reserved directory actually does. For example, the <code class="highlighter-rouge">overrides</code> directory specifies which inherited directives will be overridden so as to enable modified inherited behavior or perhaps to not execute the inherited directives at all. Another example is the <code class="highlighter-rouge">boot-scripts</code> directory which contains and specifies the scripts that will run when a particular server boots.</p>
+
+<p>Here is a list of the CloudCoreo reserved directories and their function.</p>
+
+<h3 id="services">services</h3>
+<p>The <code class="highlighter-rouge">services</code> directory is where you can use code to definte cloud infrastructure such as servers, VPCs, Load Balancers, DNS, or other infrastructure. The <code class="highlighter-rouge">services</code> directory is also where you would define audit definitions for your cloud deployments. When using the <code class="highlighter-rouge">services</code> directory, infrastructure code goes into the <code class="highlighter-rouge">&lt;repository-dir&gt;/services/config.rb</code> file while variable definitions for the WebUI live in the <code class="highlighter-rouge">&lt;repository-dir&gt;/config.yaml</code> file.</p>
+
+<p>To learn more about the <code class="highlighter-rouge">services</code> directory, see <a href="conceptdocs_compositecreation.html">Composite Creation</a></p>
+
+<h3 id="extends">extends</h3>
+<p>The <code class="highlighter-rouge">extends</code> directory is a type of symbolic link that points to a different git repository. The <code class="highlighter-rouge">extends</code> directory enables you to inherit infrastructure definition from a different Composite (repositories) as a base Composite definition. By using the <code class="highlighter-rouge">extends</code> directory to point to other Composites (repositories), you can <strong>leverage the best practice code of others</strong> for use your own deployments. Many Composites are based on and inherited from other Composites via use of the <code class="highlighter-rouge">extends</code> directory. “Golden Master” Composites can be created for commonly created infrastructure so that other people can extend them to create Composites that combines many “Golden Master” Composites that can be used for day-to-day deployment and operation of their infrastructure.</p>
+
+<p>Any code in the <code class="highlighter-rouge">extends</code> directory will execute first before any other code in the current Composite (repository) in which it is contained. The use of this directory is required when inheriting from a different Composite, but is optional otherwise. Only one <code class="highlighter-rouge">extends</code> directory can exist at the root level of a Composite repository, however a Composite may have other <code class="highlighter-rouge">extends</code> directories contained within some of the other directories listed below.</p>
+
+<h3 id="stack">stack</h3>
+<p>The stack- directory is a way to organize related infrastructure components into a modular and easy to understand structure. You may want to group certain similar configuration components together in a <code class="highlighter-rouge">stack-</code> directory for ease of understanding, editing, and related execution order. An example of the usage of a <code class="highlighter-rouge">stack-</code> directory would be to group together  configuration for a tomcat server deployment and might be labeled <code class="highlighter-rouge">stack-tomcat</code>. Other examples of a <code class="highlighter-rouge">stack-</code> directory might be for a MySQL deployment, labelled <code class="highlighter-rouge">stack-mysql</code> or a time-series Cassandra deployment, labelled <code class="highlighter-rouge">stack-cassandra-timeseries</code>. You can create <code class="highlighter-rouge">stack-</code> directories with anything following <code class="highlighter-rouge">stack-</code> (<code class="highlighter-rouge">stack-example</code>). The use of this directory is optional otherwise.</p>
+
+<p>The configuration in a <code class="highlighter-rouge">stack-</code> directory is executed after the code in the root repository <code class="highlighter-rouge">extends</code> directory (if exists) and before any other code in the rest of the resposity. You may have multiple <code class="highlighter-rouge">stack-</code> directories in a Composite / repository, but their execution order will be indeterminate. There are no limits on the number of <code class="highlighter-rouge">stack-</code> directories you can have in a composite. The use of <code class="highlighter-rouge">stack-</code> directories can be very powerful for creating infrastructure, including constructs where you can include an <code class="highlighter-rouge">extends-</code> directory inside of a <code class="highlighter-rouge">stack-</code> directory or even have nested <code class="highlighter-rouge">stack-</code> directories. Learn more about this in <a href="http://kb.cloudcoreo.com">Composite Tricks and Tips</a>.</p>
+
+<h3 id="boot-scripts">boot-scripts</h3>
+<p>The <code class="highlighter-rouge">&lt;repository-dir&gt;/boot-scripts</code> directory is used for scripts that define boot time configuration of a server. The use of this directory is optional otherwise.</p>
+
+<p>To add a script to the boot time execution of scripts that run at server start up, copy the file(s) to the <code class="highlighter-rouge">boot-scripts</code> directory and add the file name to the correct <code class="highlighter-rouge">order.yaml</code> file. Here is an example <code class="highlighter-rouge">order.yaml</code> file containing the list of scripts in the correct execution order.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>script-order:
+ - install_docker.sh
+ - start_docker.sh
+ - update_route_tables.sh  
+</code></pre>
+</div>
+
+<p>The overall order that boot scripts will be run is defined by:<br />
+1. The directory structure.<br />
+2. Then the order defined in the <code class="highlighter-rouge">order.yaml</code> file within this directory</p>
+
+<p>For example, boot scripts in the <code class="highlighter-rouge">&lt;repository-dir&gt;/extends</code> will run before scripts at the root of the Composite.</p>
+
+<p>Note: A script must be copied to the appropriate <code class="highlighter-rouge">boot-script</code> directory and defined in the correct <code class="highlighter-rouge">order.yaml</code> file for it to run at server startup. Any file that is placed into the boot-scripts directory will be copied to the server at boot time.</p>
+
+<h3 id="operational-scripts">operational-scripts</h3>
+<p>The <code class="highlighter-rouge">&lt;repository-dir&gt;/operational-scripts</code> directory is used for scripts that you may want to run on the server on an ad-hoc basis from the CloudCoreo GUI or CLI. The use of this directory is optional otherwise.</p>
+
+<h3 id="shutdown-scripts">shutdown-scripts</h3>
+<p>The <code class="highlighter-rouge">&lt;repository-dir&gt;/shutdown-scripts</code> directory contains scripts that you want to run when a server shuts down. CloudCoreo will attempt to run these scripts, but their execution is not guaranteed due to unpredicatble server shutdown by the cloud and other situations that improperly terminate a server.</p>
+
+<h3 id="overrides">overrides</h3>
+<p>The <code class="highlighter-rouge">&lt;repository-dir&gt;/overrides</code> directory contains code and files that will override the execution plan from inherited Composites or preceding directories.</p>
+
+<p>Read more about how overrides work in <a href="http://kb.cloudcoreo.com/">Introduction to overrides</a> .</p>
+
+<p>The CloudCoreo CLI is an essential tool if you will be creating Composites from the very beginning. The CLI can initialize a repository with all of the directories required for proper Composite construction ( use <code class="highlighter-rouge">coreo init</code> ).  Otherwise, cloning an existing repository or or creating the appropriate directories manually can also be a useful way to get started with Composites.</p>
+
+<p>Read more about the <a href="conceptdocs_cli.html">CloudCoreo CLI</a> .</p>
+
