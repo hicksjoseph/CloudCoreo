@@ -222,7 +222,14 @@
             
             
             
-            <li><a href="conceptdocs_variables.html">Variables</a></li>
+            <li><a href="conceptdocs_variables.html">Compile Time Variables</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="conceptdocs_runtimevariables.html">Run Time Variables</a></li>
             
             
             
@@ -276,8 +283,9 @@
 
 <h3 id="plan-runtime-variables">Plan Runtime Variables</h3>
 
-<p>Variables in the <code class="highlighter-rouge">PLAN::</code> namespace are read-only and contain information about the currently running plan.<br />
-<strong>Valid <code class="highlighter-rouge">PLAN::</code> variable names are:</strong></p>
+<p>Variables in the <code class="highlighter-rouge">PLAN::</code> namespace are read-only and contain information about the currently running plan.</p>
+
+<p><strong>Valid <code class="highlighter-rouge">PLAN::</code> variable names are:</strong></p>
 
 <table>
   <thead>
@@ -344,13 +352,13 @@
          </span><span class="no">REGION</span><span class="p">:</span>
            <span class="ss">default: </span><span class="s2">"PLAN::region"</span>
            <span class="ss">required: </span><span class="kp">true</span>
-          <span class="ss">type: </span><span class="n">string</span>
+           <span class="ss">type: </span><span class="n">string</span>
 </code></pre>
 </div>
 
 <h4 id="example-2--using-the-plan-name-for-naming-resources">Example 2:  Using the Plan name for naming resources</h4>
-<p>Consider using a dash “-“ character to separate the variable from additional text.<br />
-Note that the variable name must be separated from other text by characters that are not regular letters or an underscore “_” character.</p>
+<p>Consider using a dash <code class="highlighter-rouge">-</code> character to separate the variable from additional text.<br />
+Note that the variable name must be separated from other text by characters that are not regular letters or an underscore <code class="highlighter-rouge">_</code> character.</p>
 
 <div class="language-ruby highlighter-rouge"><pre class="highlight"><code>       <span class="n">coreo_aws_vpc_vpc</span> <span class="s2">"PLAN::name-vpc"</span> <span class="k">do</span>
         <span class="c1"># actions and attributes here</span>
@@ -358,13 +366,13 @@ Note that the variable name must be separated from other text by characters that
 </code></pre>
 </div>
 
-<p>For a Plan that is named “TEST”, the code block above will resolve the resource name to “TEST-vpc”.</p>
+<p>For a Plan that is named <code class="highlighter-rouge">TEST</code>, the code block above will resolve the resource name to <code class="highlighter-rouge">TEST-vpc</code>.</p>
 
 <h3 id="composite-runtime-variables">Composite Runtime Variables</h3>
 
-<p>Variables in the <code class="highlighter-rouge">COMPOSITE::</code> namespace are read/write and must be scoped to an existing resolved resource. These are identified as <code class="highlighter-rouge">COMPOSITE::coreo_resource_type.resource_name.variable_name</code> where <code class="highlighter-rouge">variable_name</code> may be arbitrarily nested using dot notation.</p>
+<p>Variables in the <code class="highlighter-rouge">COMPOSITE::</code> namespace are read/write and must be scoped to an existing resolved resource. These are identified as <code class="highlighter-rouge">COMPOSITE::coreo_resource_type.resource_name.variable_name</code> where <code class="highlighter-rouge">variable_name</code> may be alphanumeric characters, underscores, or dashes.</p>
 
-<p>These variables must be set using the <code class="highlighter-rouge">coreo_uni_util_variables</code> resource <em>after</em> that resource has been executed.</p>
+<p>These variables must be set using the <code class="highlighter-rouge">coreo_uni_util_variables</code> resource <em>after</em> <code class="highlighter-rouge">resource_name</code> has been executed.</p>
 
 <p><strong>Important:</strong> Setting COMPOSITE variables will not alter the deployed state of a resource since variable setting occurs after the resource has been executed.</p>
 
@@ -397,7 +405,7 @@ coreoExport('endTime', Date.now());
 
 <h3 id="global-runtime-variables">Global Runtime Variables</h3>
 
-<p>Variables in the <code class="highlighter-rouge">GLOBAL::</code> namespace are read/write, always user-generated, and do not need to be scoped to a resource. These can be used for storing metadata or aggregated information about other resources. GLOBAL variables can be nested map/hash data structures.</p>
+<p>Variables in the <code class="highlighter-rouge">GLOBAL::</code> namespace are read/write, always user-generated, and do not need to be scoped to a resource. These can be used for storing metadata or aggregated information about other resources. GLOBAL variables can be nested using dot notation.</p>
 
 <h4 id="example-1">Example:</h4>
 <p>Sum violations from multiple jsrunner resources</p>
@@ -451,7 +459,7 @@ coreoExport('violations', violations);
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 CloudCoreo. All rights reserved. <br />
-<span>Page last updated:</span> March 7, 2017<br/> Site last generated: Mar 7, 2017 <br />
+<span>Page last updated:</span> March 7, 2017<br/> Site last generated: Mar 8, 2017 <br />
 <p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
                 </div>
             </div>

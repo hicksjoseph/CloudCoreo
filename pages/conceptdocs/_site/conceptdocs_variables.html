@@ -1,0 +1,72 @@
+<p><strong>Note:</strong> Be careful when you edit your config.yaml file since this file <strong>cannot contain tab characters</strong>. When you do line spacing, use spaces instead.</p>
+
+<h2 id="composite-or-compile-time-variables">Composite or Compile-time Variables</h2>
+
+<p>Composite variables are a great way to enable a variety of user defined options for your Composites as you create Plans to build and audit your infrastructure. These variables are implemented with variable definitions in your Composite code and are exposed in the WebUI via the contents of the <code class="highlighter-rouge">&lt;repository-directory&gt;/config.yaml</code>. This file is optional for Composites, but required if you will be defining and exposing variables in your Composite. These variables are evaluated at compile time. <a href="http://kb.cloudcoreo.com/conceptdocs_runtimevariables.html">Read about Runtime Variables here.</a></p>
+
+<h3 id="plan-variables">Plan Variables</h3>
+<p>There are a few fields in the <code class="highlighter-rouge">config.yaml</code> file that control the behavior of the WebUI. These are <code class="highlighter-rouge">required</code>, <code class="highlighter-rouge">description</code>, <code class="highlighter-rouge">default</code>, <code class="highlighter-rouge">type</code>, and <code class="highlighter-rouge">overrides</code>.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">default:</code>
+You use the <code class="highlighter-rouge">default</code> field to pre-populate the default value for your particular variable when a Plan is created and when no other value has been entered. Valid entries for this field are whatever is appropriate for your particular variable. If a value for a particular variable is set via the WebUI, that value will be used instead of the value specified in <code class="highlighter-rouge">default</code>.</li>
+</ul>
+
+<p>Example entries for the <code class="highlighter-rouge">default:</code> field include:<br />
+<code class="highlighter-rouge">default: 10.11.0.0</code><br />
+<code class="highlighter-rouge">default: us-east-1,eu-west-1,ap-southeast-1</code> <br />
+<code class="highlighter-rouge">default: notify</code></p>
+
+<ul>
+  <li><code class="highlighter-rouge">required:</code>
+You use the <code class="highlighter-rouge">required</code> field to indicate whether the WebUI requires this variable to have a value entered when a Plan is created. Valid entries for this field are true or false.  Required variables <em>must</em> be supplied in order to Add and Run a Plan. If required variables are not supplied, CloudCoreo will display an error in the WebUI.</li>
+</ul>
+
+<p>Example entries for the <code class="highlighter-rouge">required:</code> field include:<br />
+<code class="highlighter-rouge">required: true</code><br />
+<code class="highlighter-rouge">required: false</code></p>
+
+<p>Example entries for the <code class="highlighter-rouge">description:</code> field include:<br />
+* <code class="highlighter-rouge">description:</code>
+You use the <code class="highlighter-rouge">description</code> field to enter a human readable description that will show as a tooltip in the WebUI for the particular variable when a Plan is created. Valid entries for this field are any plain text (yaml compatible) enclosed in double quotes <code class="highlighter-rouge">" "</code>.</p>
+
+<p><code class="highlighter-rouge">description: "This is a sample description"</code><br />
+<code class="highlighter-rouge">description: "Enter the value for this variable. Valid values are apple, ball, and/or cat."</code></p>
+
+<ul>
+  <li><code class="highlighter-rouge">type:</code>
+You use the <code class="highlighter-rouge">type</code> field to define the type of input that this variable accepts. The type will also change how the variable input is displayed in the WebUI. Valid entries for this field include <code class="highlighter-rouge">array</code>, <code class="highlighter-rouge">string</code>, <code class="highlighter-rouge">number</code>, and <code class="highlighter-rouge">case</code>.</li>
+</ul>
+
+<p>Example entries for the <code class="highlighter-rouge">type:</code> field include:</p>
+
+<p><code class="highlighter-rouge">type: string</code><br />
+<code class="highlighter-rouge">type: array</code></p>
+
+<p>Here is an example <code class="highlighter-rouge">config.yaml</code> file showing a few different <code class="highlighter-rouge">type:</code> statements :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>variables:
+  MY_DNS_ZONE:
+    default: example.com
+    description: This dns zone variable is used for setting up Route53 DNS entries.
+    required: true
+    type: string
+
+  SWAP_SIZE_IN_GB:
+    default: 2
+    description: What size swap file would you like to create? (Gigabytes)
+    required: false
+    type: number
+
+  SERVER_AMI:
+    description: Which AMI should the instance be launched from?
+    switch: INSTANCE::region
+    cases:
+      us-east-1: ami-1ecae776
+      us-west-1: ami-d114f295
+      us-west-2: ami-e7527ed7
+    type: array
+</code></pre>
+</div>
+
+<p>There is a different type of CloudCoreo Variable that is evaluated at run time. You can <a href="http://kb.cloudcoreo.com/conceptdocs_runtimevariables.html">read about Runtime Variables here.</a></p>
