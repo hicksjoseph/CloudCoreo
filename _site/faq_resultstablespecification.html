@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CloudCoreo Results Table specification">
+<meta name="keywords" content=" ">
+<title>CloudCoreo Results Table specification | CloudCoreo Documentation</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://kb.cloudcoreo.comfeed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> CloudCoreo Documentation</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">CloudCoreo Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://www.cloudcoreo.com" target="_blank">Website</a></li>
+                        
+                        
+                        
+                        <li><a href="https://github.com/CloudCoreo" target="_blank">Github Repo</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="mydoc_cloudtrail-service-disabled.html">CloudAudit</a></li>
+                        
+                        
+                        
+                        <li><a href="conceptdocs_overview.html">Concept Docs</a></li>
+                        
+                        
+                        
+                        <li><a href="faq_awsrolepolicy.html">FAQs</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li><a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:info@cloudcoreo.com?subject=CloudCoreo feedback f eedback&body=I have some feedback about the CloudCoreo Results Table specification page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a><li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="CloudCoreo Results Table specification">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">CloudCoreo Concepts </li>
+    
+    
+    
+    <li>
+        <a href="#">Composite Concepts</a>
+        <ul>
+            
+            
+            
+            <li><a href="conceptdocs_overview.html">Overview</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_compositecreation.html">Composite Creation</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_directorystructure.html">Directory Structure</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_advancedcomposites.html">Overriding Inheritance and Anchoring</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_variables.html">Compile Time Variables</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="conceptdocs_runtimevariables.html">Run Time Variables</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">CloudCoreo Results Table specification</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">CloudCoreo Results Table specification</div>
+   
+
+    
+
+    
+
+    
+
+    <a target="_blank" href="https://github.com/CloudCoreo/CloudCoreo/tree/gh-pages/pages/_pages/faq/faq_resultstablespecification.html.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    
+
+    
+
+  <h2 id="result-tables-specification">Result Tables Specification</h2>
+
+<p>CloudCoreo users would like to be able to specify what to display for results behind the Results Cards that are displayed in CloudCoreo Audit HTML email reports and/or an Audit Results Panel. CloudCoreo provides the ability to be able to display any data collected, instead of simply displaying a fixed set of generic information with generic header labels. There is a specification for tables per rule definition, that is specified in a table.yaml file that is stored in the Composite root directory.</p>
+
+<p>For each Alert Rule, you should provide an entry for:<br />
+  <code class="highlighter-rouge">column_header : column_spec</code></p>
+
+<p>For example<br />
+  <code class="highlighter-rouge">rds-short-backup-retention-period: "AWS Tags": "__TAGS__"</code></p>
+
+<p>In the column_specs several “macros” and special characters are processed:</p>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">__OBJECT__</code><br />
+  The violating object id at the top of the result structure - corresponds to the id_map</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">__TAGS__</code><br />
+  tag=value space delimited list of all AWS tags on the object</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">__RULE__</code><br />
+  The alert-id, for example, rds-db-publicly-accessible</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">__TAGKEYS__</code><br />
+  Space delimited list of all AWS tag keys on the object - does not include the tag values</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">tilde ~</code><br />
+  Denotes a hyperlink. The text to the left of the <code class="highlighter-rouge">~</code> is the display text and the text to the right is the hyperlink HREF</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">dotted notation</code><br />
+  specifies a “key” into the JSON return structure<br />
+  The path delimited with +’s is looked up in the results structure and the result of the lookup is substituted<br />
+  Example: <code class="highlighter-rouge">+(a.b.c.d.e)+</code></p>
+  </li>
+</ul>
+
+<p><strong>The output is a JSON object with an element for each Result Card.</strong></p>
+
+<p>Here is an example <a href="https://github.com/CloudCoreo/audit-aws-rds/blob/master/table.yaml">table.yaml</a> for the RDS service as a component in the <code class="highlighter-rouge">audit-aws-rds</code> Composite:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>rds-short-backup-retention-period:
+  "RDS Instance": "__OBJECT__~https://console.aws.amazon.com/rds/home?region=+__OBJECT__.violations.__RULE__.region+#dbinstances:id=__OBJECT__;sf=all"
+  "Backup Retention Period": "+__OBJECT__.violations.__RULE__.result_info.0.object.backup_retention_period+"
+  "AWS Region": "+__OBJECT__.violations.__RULE__.region+"
+  "AWS Tags": "__TAGS__"
+rds-no-auto-minor-version-upgrade:
+  "RDS Instance": "__OBJECT__~https://console.aws.amazon.com/rds/home?region=+__OBJECT__.violations.__RULE__.region+#dbinstances:id=__OBJECT__;sf=all"
+  "AWS Region": "+__OBJECT__.violations.__RULE__.region+"
+  "AWS Tags": "__TAGS__"
+rds-db-publicly-accessible:
+  "RDS Instance": "__OBJECT__~https://console.aws.amazon.com/rds/home?region=+__OBJECT__.violations.__RULE__.region+#dbinstances:id=__OBJECT__;sf=all"
+  "AWS Region": "+__OBJECT__.violations.__RULE__.region+"
+  "AWS Tags": "__TAGS__"
+rds-inventory:
+  "RDS Instance": "__OBJECT__~https://console.aws.amazon.com/rds/home?region=+__OBJECT__.violations.__RULE__.region+#dbinstances:id=__OBJECT__;sf=all"
+  "AWS Region": "+__OBJECT__.violations.__RULE__.region+"
+  "Engine Type": "+__OBJECT__.violations.__RULE__.result_info.0.object.engine+"
+  "Engine Version": "+__OBJECT__.violations.__RULE__.result_info.0.object.engine_version+"
+  "Instance Type": "+__OBJECT__.violations.__RULE__.result_info.0.object.db_instance_class+"
+  "AWS Tags": "__TAGS__"  
+</code></pre>
+</div>
+
+<p>Here is an example of JSON output from this RDS audit-aws-rds table.yaml :</p>
+
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 CloudCoreo. All rights reserved. <br />
+<span>Page last updated:</span> March 8, 2017<br/> Site last generated: Mar 8, 2017 <br />
+<p><img src="images/company_logo.png" alt="CloudCoreo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>
