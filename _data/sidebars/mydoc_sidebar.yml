@@ -118,6 +118,10 @@ entries:
       url: /mydoc_iam-user-attached-policies.html
       output: web
 
+    - title: User passwords not changed recently
+      url: /mydoc_iam-user-password-not-changed.html
+      output: web
+
   - title: RDS
     output: web
     folderitems:
