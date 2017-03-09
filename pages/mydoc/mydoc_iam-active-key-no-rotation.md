@@ -2,7 +2,7 @@
 title: Active user Access Key not rotated
 tags:
 keywords: ""
-last_updated: "September 17, 2016"
+last_updated: "March 9, 2017"
 summary: User has active keys that have not been rotated in the last 90 days.
 published: true
 sidebar: mydoc_sidebar
@@ -17,7 +17,7 @@ As a security best practice, we recommend that you, an administrator, regularly 
 You can also apply a password policy to your account to require that all of your IAM users periodically rotate their passwords,. You can choose how often they must do so. For more information, see [Setting an Account Password Policy for IAM Users](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html).  
 
 ### Suggested Action  
-We recommend that you also regularly rotate them user account keys. Ideally, you should reduce or eliminate your use of AWS keys and reduce the number of keys used entirely. In many scenarios, you don't need a long-term access key that never expires (as you have with an IAM user). Instead, you can create IAM roles and generate temporary security credentials.  
+We recommend that you also regularly rotate user account keys. Ideally, you should reduce or eliminate your use of AWS keys and reduce the number of keys used entirely. In many scenarios, you don't need a long-term access key that never expires (as you have with an IAM user). Instead, you can create IAM roles and generate temporary security credentials.  
 [http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access keys.html#Using_RotateAccessKey](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access keys.html#Using_RotateAccessKey)
 [http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html](http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html)  
 

@@ -346,6 +346,16 @@
 
 
 {
+"title": "Active user passwords not changed recently",
+"tags": "",
+"keywords": "",
+"url": "mydoc_iam-user-password-not-changed.html",
+"summary": "User has active password that have not been changed within specified time."
+},
+
+
+
+{
 "title": "IAM User Password Not Used Recently",
 "tags": "",
 "keywords": "",
