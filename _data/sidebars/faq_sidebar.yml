@@ -17,3 +17,7 @@ entries:
     - title: CloudCoreo Metadata Guidelines
       url: /faq_cloudaudit_metadata.html
       output: web
+
+    - title: Results Table Specifications
+      url: /faq_resultstablespecification.html
+      output: web

@@ -93,9 +93,8 @@ defaults:
 
 sidebars:
 - home_sidebar
-- mydoc_sidebar
-- jobs_sidebar
 - faq_sidebar
+- mydoc_sidebar
 - conceptdocs_sidebar
 
 description: "CloudCoreo Documentation"
