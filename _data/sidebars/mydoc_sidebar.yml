@@ -122,6 +122,10 @@ entries:
       url: /mydoc_iam-user-password-not-changed.html
       output: web
 
+    - title: Password Not Changed since Cloudbleed
+      url: /mydoc_iam-cloudbleed-password-not-rotated.html
+      output: web
+
   - title: RDS
     output: web
     folderitems:

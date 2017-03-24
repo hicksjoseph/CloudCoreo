@@ -236,6 +236,16 @@
 
 
 {
+"title": "Password Not Changed since Cloudbleed",
+"tags": "",
+"keywords": "iam, cloudbleed",
+"url": "mydoc_iam-cloudbleed-password-not-rotated.html",
+"summary": "User may still be at risk from the CloudBleed exploit"
+},
+
+
+
+{
 "title": "Passwords not set to expire",
 "tags": "",
 "keywords": "",
