@@ -1,9 +1,9 @@
 ---
-title: Creating a new user creates access keys by default
+title: Access key created by default
 tags:
 keywords: "iam, cis"
 last_updated: “March 27, 2017"
-summary:  The AWS console is enabled to set up access keys during initial user setup
+summary:  An access key was created by default during initial user setup
 published: true
 sidebar: mydoc_sidebar
 permalink: mydoc_iam-initialization-access-key.html
