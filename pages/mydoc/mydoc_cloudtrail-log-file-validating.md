@@ -1,7 +1,7 @@
 ---
 title: Cloudtrail log file validation not enabled
 tags:
-keywords: "iam, cis"
+keywords: "cloudtrail, cis"
 last_updated: “March 27, 2017"
 summary:  Cloudtrail log file validation is not enabled
 published: true
