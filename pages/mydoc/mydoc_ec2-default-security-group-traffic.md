@@ -6,7 +6,7 @@ last_updated: “March 28, 2017"
 summary:  Default VPC security group does not restrict all traffic
 published: true
 sidebar: mydoc_sidebar
-permalink: ec2-default-security-group-traffic.html
+permalink: mydoc_ec2-default-security-group-traffic.html
 folder: mydoc
 toc: false
 ---
