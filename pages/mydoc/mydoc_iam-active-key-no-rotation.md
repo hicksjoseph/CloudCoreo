@@ -2,7 +2,7 @@
 title: Active user Access Key not rotated
 tags:
 keywords: ""
-last_updated: "March 9, 2017"
+last_updated: "March 29, 2017"
 summary: User has active keys that have not been rotated in the last 90 days.
 published: true
 sidebar: mydoc_sidebar
@@ -12,6 +12,9 @@ toc: false
 ---
 
 ### Details  
+This rule checks for adherence to [Center for Internet Security (CIS)](https://www.cisecurity.org/) Recommendation 1.4, Ensure access keys are rotated every 90 days or less.  
+[https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=18](https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=18)
+
 As a security best practice, we recommend that you, an administrator, regularly rotate (change) the access keys for IAM users in your account. If your users have the necessary permissions, they can rotate their own access keys. For information about how to give your users permissions to rotate their own access keys, see [Allow Users to Manage Their Own Passwords, Access Keys, and SSH Keys](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_delegate-permissions_examples.html#creds-policies-credentials).  
 
 You can also apply a password policy to your account to require that all of your IAM users periodically rotate their passwords,. You can choose how often they must do so. For more information, see [Setting an Account Password Policy for IAM Users](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html).  
