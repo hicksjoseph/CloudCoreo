@@ -26,5 +26,6 @@ You should set a password policy on your AWS account to specify complexity requi
 
 ### Suggested Action  
 Configure a strong password policy for your users so that they can't reuse old passwords.  
+
 If you allow users to change their own passwords, require that they create strong passwords, that they rotate their passwords periodically, and don't reuse old passwords. On the Account Settings page of the IAM console, you can create a password policy for your account. You can use the password policy to define password requirements, such as minimum length, whether it requires non-alphabetic characters, how frequently it must be rotated, and so on.  
 [http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#configure-strong-password-policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#configure-strong-password-policy)
