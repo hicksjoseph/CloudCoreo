@@ -2,7 +2,7 @@
 title: Account using inline policies
 tags:
 keywords: ""
-last_updated: "September 17, 2016"
+last_updated: "March 29, 2017"
 summary: User account is using custom inline policies versus using IAM group managed policies.
 published: true
 sidebar: mydoc_sidebar
@@ -12,6 +12,9 @@ toc: false
 ---
 
 ### Details  
+This rule checks for adherence to [Center for Internet Security (CIS)](https://www.cisecurity.org/) Recommendation 1.16, Ensure IAM policies are attached only to groups or roles.  
+[https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=42](https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=42)  
+
 Different types of policies are for different use cases. In most cases, we recommend that you use managed policies instead of inline policies. Managed policies provide the following features: Reusability, Central change management, Versioning and rolling back, and Delegating permissions management."
 [http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#choosing-managed-or-inline](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#choosing-managed-or-inline)
 

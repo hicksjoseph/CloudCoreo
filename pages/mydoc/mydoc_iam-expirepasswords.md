@@ -2,7 +2,7 @@
 title: Passwords not set to expire
 tags:
 keywords: ""
-last_updated: "September 17, 2016"
+last_updated: "March 29, 2017"
 summary: The current password policy doesn't require users to regularly change their passwords. User passwords are set to never expire.
 published: true
 sidebar: mydoc_sidebar
@@ -12,6 +12,9 @@ toc: false
 ---
 
 ### Details  
+This rule checks for adherence to [Center for Internet Security (CIS)](https://www.cisecurity.org/) Recommendation 1.11, Ensure IAM password policy expires passwords within 90 days or less.  
+[https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=32](https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=32)  
+
 You should set a password policy on your AWS account to specify complexity requirements and mandatory rotation periods for your IAM users' passwords. You can use a password policy to do these things:
 - Set a minimum password length.
 - Require specific character types, including uppercase letters, lowercase letters, numbers, and non-alphanumeric characters.

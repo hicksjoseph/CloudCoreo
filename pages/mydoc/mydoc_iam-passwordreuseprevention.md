@@ -2,7 +2,7 @@
 title: Users can reuse old passwords
 tags:
 keywords: ""
-last_updated: "September 17, 2016"
+last_updated: "March 29, 2017"
 summary: The current password policy doesn't prevent users from reusing their old passwords.
 published: true
 sidebar: mydoc_sidebar
@@ -12,6 +12,9 @@ toc: false
 ---
 
 ### Details  
+This rule checks for adherence to [Center for Internet Security (CIS)](https://www.cisecurity.org/) Recommendation 1.10, Ensure IAM password policy prevents password reuse.  
+[https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=30](https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=30)  
+
 You should set a password policy on your AWS account to specify complexity requirements and mandatory rotation periods for your IAM users' passwords. You can use a password policy to do these things:  
 * Set a minimum password length.  
 * Require specific character types, including uppercase letters, lowercase letters, numbers, and non-alphanumeric characters.  
@@ -23,5 +26,6 @@ You should set a password policy on your AWS account to specify complexity requi
 
 ### Suggested Action  
 Configure a strong password policy for your users so that they can't reuse old passwords.  
+
 If you allow users to change their own passwords, require that they create strong passwords, that they rotate their passwords periodically, and don't reuse old passwords. On the Account Settings page of the IAM console, you can create a password policy for your account. You can use the password policy to define password requirements, such as minimum length, whether it requires non-alphabetic characters, how frequently it must be rotated, and so on.  
 [http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#configure-strong-password-policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#configure-strong-password-policy)
