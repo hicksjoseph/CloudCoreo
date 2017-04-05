@@ -1,0 +1,233 @@
+---
+title: Cloud Audit Table of Contents
+tags: 
+last_updated: April 5, 2017
+keywords: cloud-audit
+summary: "CloudCoreo offers a Cloud Audit for AWS accounts. We leverage the AWS API to scan your cloud infrastructure and report back on any best practice violations we find. Below you'll find a list of all the best practice rules our Cloud Audit checks for."
+permalink: cloud-audit-toc.html
+sidebar: mydoc_sidebar
+folder: mydoc
+---
+
+
+
+{% if site.output == "pdf" %}
+{{site.data.alerts.note}} {{site.data.alerts.end}}
+{% endif %}
+
+{% unless site.output == "pdf" %}
+<script src="js/jquery.shuffle.min.js"></script>
+<script src="js/jquery.ba-throttle-debounce.min.js"></script>
+{% endunless %}
+
+      <div class="filter-options">
+      <button class="btn btn-primary" data-group="all">All</button>
+      <button class="btn btn-primary" data-group="cis">CIS</button>
+      <button class="btn btn-primary" data-group="cloudtrail">CloudTrail</button>
+      <button class="btn btn-primary" data-group="ec2">EC2</button>
+      <button class="btn btn-primary" data-group="elb">ELB</button>
+      <button class="btn btn-primary" data-group="iam">IAM</button>
+      <button class="btn btn-primary" data-group="rds">RDS</button>
+      <button class="btn btn-primary" data-group="redshift">Redshift</button>
+      <button class="btn btn-primary" data-group="s3">S3</button>
+      <button class="btn btn-primary" data-group="inventory">Inventory</button>
+    </div>      
+
+<div id="grid" class="row">
+
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["getting_started"]'>
+
+               <div class="panel panel-default">
+               <div class="panel-heading">CIS</div>
+               <div class="panel-body">
+                  These rules check for adherence to the <a href="https://benchmarks.cisecurity.org/" target="_blank">CIS Security Benchmarks</a> recommendations.
+                  <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "cis" %}
+                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+                  </ul>
+               </div>
+            </div>
+    
+    </div>
+   
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["cloudtrail"]'>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">CloudTrail</div>
+            <div class="panel-body">
+                These are all the best practice rules Cloud Audit checks for related to AWS CloudTrail.
+                <ul>
+                    {% for page in site.pages %}
+                    {% for tag in page.tags %}
+                    {% if tag == "cloudtrail" %}
+                    <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["ec2"]'>
+
+                <div class="panel panel-default">
+               <div class="panel-heading">EC2</div>
+               <div class="panel-body">
+                  These are all the best practice rules Cloud Audit checks for related to AWS Elastic Compute Cloud (EC2). 
+                  <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "ec2" %}
+                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+                  </ul>
+               </div>
+            </div>
+
+    </div>
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["elb"]'>
+         
+      <div class="panel panel-default">
+               <div class="panel-heading">ELB</div>
+               <div class="panel-body">
+               These are all the best practice rules Cloud Audit checks for related to AWS Elastic Load Balancer (ELB).
+               <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "elb" %}
+                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+               </ul>
+            </div>
+         </div>
+
+    </div>
+
+       <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["iam"]'>
+
+           <div class="panel panel-default">
+               <div class="panel-heading">IAM</div>
+               <div class="panel-body">
+               These are all the best practice rules Cloud Audit checks for related to AWS Identity and Access Management (IAM).
+                   <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "iam" %}
+                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+                   </ul>
+               </div>
+            </div>
+
+    </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["rds"]'>
+
+             <div class="panel panel-default">
+               <div class="panel-heading">RDS</div>
+               <div class="panel-body">
+                  These are all the best practice rules Cloud Audit checks for related to AWS Relationable Database Service (RDS).
+                  <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "rds" %}
+                     <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+                  </ul>
+               </div>
+            </div>
+
+    </div>
+    
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["redshift"]'>
+
+             <div class="panel panel-default">
+               <div class="panel-heading">Redshift</div>
+               <div class="panel-body">
+                  These are all the best practice rules Cloud Audit checks for related to Amazon Redshift, AWS's Data Warehouse Service.
+                  <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "redshift" %}
+                     <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+                  </ul>
+               </div>
+            </div>
+
+    </div>
+    
+        <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["s3"]'>
+
+             <div class="panel panel-default">
+               <div class="panel-heading">S3</div>
+               <div class="panel-body">
+                  These are all the best practice rules Cloud Audit checks for related to AWS Simple Storage Service (S3).
+                  <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "s3" %}
+                     <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+                  </ul>
+               </div>
+            </div>
+
+    </div>
+    
+            <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["inventory"]'>
+
+             <div class="panel panel-default">
+               <div class="panel-heading">Inventory</div>
+               <div class="panel-body">
+                  These are all the rules Cloud Audit uses to provide inventories on what is actually running in your cloud infrastructure.
+                  <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "inventory" %}
+                     <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+                  </ul>
+               </div>
+            </div>
+
+    </div>
+    
+    
+          <!-- sizer -->
+      <div class="col-xs-6 col-sm-4 col-md-1 shuffle_sizer"></div>          
+
+
+    </div><!-- /#grid -->
+
+{% unless site.output == "pdf" %}
+{% include initialize_shuffle.html %}
+{% endunless %}
+
+{{site.data.alerts.note}} Don't see a rule you need? <a href="mailto:info@cloudcoreo.com?Subject=Custom%20Rule%20Request">Drop us a line</a> and let us know what you're looking for.{{site.data.alerts.end}}
