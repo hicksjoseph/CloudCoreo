@@ -1,6 +1,6 @@
 ---
 title: Redshift cluster is publicly accessible
-tags:
+tags: [redshift]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: The affected Redshift cluster is publicly accessible to the world.
