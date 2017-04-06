@@ -1,6 +1,6 @@
 ---
 title: Cloudtrail Service is disabled
-tags:
+tags: [cloudtrail, cis]
 keywords: "cloudtrail, cis"
 last_updated: “December 22, 2016"
 summary: CloudTrail logging is not enabled for this region. It should be enabled.
