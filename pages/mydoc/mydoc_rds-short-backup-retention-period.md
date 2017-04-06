@@ -1,6 +1,6 @@
 ---
 title: RDS short backup retention period
-tags:
+tags: [rds]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: The affected RDS database has a short backup retention period (less than 30 days).
