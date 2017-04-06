@@ -1,6 +1,6 @@
 ---
 title: Not monitoring for CMKs that have been disabled or scheduled for deletion
-tags:
+tags: [cis]
 keywords: "cloudtrail, cloudwatch, cis"
 last_updated: “March 28, 2017"
 summary:  Not monitoring API calls for Customer Master Keys (CMKs) that have been disabled or scheduled for deletion
