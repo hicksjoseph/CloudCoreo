@@ -1,6 +1,6 @@
 ---
 title: Password policy does not have a minimum length of 14 or greater
-tags:
+tags: [iam, cis]
 keywords: "iam, cis"
 last_updated: “March 27, 2017"
 summary:  The current IAM password policy does not require a minimum length of 14 or greater
