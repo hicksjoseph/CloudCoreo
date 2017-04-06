@@ -1,6 +1,6 @@
 ---
 title: Redshift automatic major version upgrades not enabled
-tags:
+tags: [redshift]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Redshift automatic major version upgrades not enabled.
