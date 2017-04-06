@@ -1,6 +1,6 @@
 ---
 title: ELB is using old SSL policy
-tags:
+tags: [elb]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Elastic Load Balancing (ELB) SSL policy is not the latest Amazon predefined SSL policy or is a custom ELB SSL policy.
