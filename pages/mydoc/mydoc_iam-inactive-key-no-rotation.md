@@ -1,6 +1,6 @@
 ---
 title: Inactive user Access Key not rotated
-tags:
+tags: [iam]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: User has inactive keys that have not been rotated in the last 90 days.
