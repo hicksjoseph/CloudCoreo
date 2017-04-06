@@ -1,6 +1,6 @@
 ---
 title: Support role has not been created
-tags:
+tags: [iam, cis]
 keywords: "iam, cis"
 last_updated: “March 27, 2017"
 summary:  An IAM support role has not been created to allow authorized users to manage incidents with AWS Support
