@@ -1,6 +1,6 @@
 ---
 title: Classic ELB Inventory results
-tags:
+tags: [elb]
 keywords: ""
 last_updated: "December 29, 2016"
 summary: Classic Elastic Load Balancing (ELB) Inventory results.
