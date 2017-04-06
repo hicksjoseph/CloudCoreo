@@ -1,6 +1,6 @@
 ---
 title: Unused EC2 Security Group
-tags:
+tags: [ec2]
 keywords: ""
 last_updated: "January 3, 2017"
 summary: EC2 Security Group is unused 
