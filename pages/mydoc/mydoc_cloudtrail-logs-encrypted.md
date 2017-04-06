@@ -1,6 +1,6 @@
 ---
 title: Cloudtrail logs not configured to use SSE-KMS
-tags:
+tags: [cloudtrail, cis]
 keywords: "cloudtrail, cis"
 last_updated: “March 27, 2017"
 summary:  Cloudtrail logs not configured to use SSE-KMS (Server-Side Encryption, AWS Key Management Service)
