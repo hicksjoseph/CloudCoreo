@@ -1,6 +1,6 @@
 ---
 title: Password policy doesn't exist
-tags:
+tags: [iam]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: There currently isn't a password policy to require a certain password length, password expiration, prevent password reuse, and other parameters.
