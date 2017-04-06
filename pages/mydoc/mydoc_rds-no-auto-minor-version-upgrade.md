@@ -1,6 +1,6 @@
 ---
 title: RDS not set to automatically upgrade
-tags:
+tags: [rds]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: RDS is not set to automatically upgrade minor versions on your database instance
