@@ -1,6 +1,6 @@
 ---
 title: Root user has active Access Key
-tags:
+tags: [iam]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Root user has an Access Key that is active
