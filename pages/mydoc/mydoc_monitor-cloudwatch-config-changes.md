@@ -1,6 +1,6 @@
 ---
 title: Not monitoring AWS Config configuration changes
-tags:
+tags: [cis]
 keywords: "cloudtrail, cloudwatch, cis"
 last_updated: “March 28, 2017"
 summary:  Not monitoring API calls for changes to AWS Config configuration
