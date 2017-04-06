@@ -1,6 +1,6 @@
 ---
 title: Global Cloudtrail is not enabled
-tags:
+tags: [cloudtrail]
 keywords: ""
 last_updated: “December 27, 2016"
 summary: Global CloudTrail logging is not enabled. It should be enabled.
