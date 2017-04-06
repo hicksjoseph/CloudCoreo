@@ -1,6 +1,6 @@
 ---
 title: Multi-Factor Authentication not enabled for root account
-tags:
+tags: [iam]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Root user does not have Multi-Factor Authentication enabled on their cloud account
