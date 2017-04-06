@@ -1,6 +1,6 @@
 ---
 title: CloudTrail trails not integrated with CloudWatch logs
-tags:
+tags: [cloudtrail, cis]
 keywords: "cloudtrail, cis"
 last_updated: “March 27, 2017"
 summary:  CloudTrail trails not integrated with CloudWatch logs
