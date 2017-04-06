@@ -1,6 +1,6 @@
 ---
 title: Not monitoring management console sign-in without MFA
-tags:
+tags: [cis]
 keywords: "cloudtrail, cloudwatch, cis"
 last_updated: “March 28, 2017"
 summary:  Not monitoring API calls for management console sign-in without MFA
