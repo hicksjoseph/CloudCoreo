@@ -1,6 +1,6 @@
 ---
 title: Security group allows unrestricted traffic
-tags:
+tags: [ec2]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: All IP addresses are allowed to access resources in the affected security group.                                                     
