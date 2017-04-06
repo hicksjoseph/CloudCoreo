@@ -1,6 +1,6 @@
 ---
 title: MFA not enabled for all IAM users with console password
-tags:
+tags: [iam, cis]
 keywords: "iam, cis"
 last_updated: “March 28, 2017"
 summary:  Multi-Factor Authentication (MFA) not enabled for all IAM users that have a console password
