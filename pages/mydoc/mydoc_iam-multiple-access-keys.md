@@ -1,6 +1,6 @@
 ---
 title: Account has multiple active access keys
-tags:
+tags: [iam]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: The affected account has multiple active AWS access keys.
