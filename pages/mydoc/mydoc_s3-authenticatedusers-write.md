@@ -1,6 +1,6 @@
 ---
 title: All authenticated AWS users can write to the affected bucket
-tags:
+tags: [s3]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Bucket has permissions which lets any AWS users write to the bucket.
