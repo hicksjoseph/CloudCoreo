@@ -1,6 +1,6 @@
 ---
 title: Not monitoring VPC changes
-tags:
+tags: [cis]
 keywords: "cloudtrail, cloudwatch, vpc, cis"
 last_updated: “March 28, 2017"
 summary:  Not monitoring API calls for VPC changes to ensure authentication and authorization controls remain intact
