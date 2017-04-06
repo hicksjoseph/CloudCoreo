@@ -197,27 +197,7 @@ folder: mydoc
                </div>
             </div>
 
-    </div>
-    
-            <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["inventory"]'>
-
-             <div class="panel panel-default">
-               <div class="panel-heading">Inventory</div>
-               <div class="panel-body">
-                  These are all the rules Cloud Audit uses to provide inventories on what is actually running in your cloud infrastructure.
-                  <ul>
-                {% for page in site.pages %}
-                {% for tag in page.tags %}
-                {% if tag == "inventory" %}
-                     <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
-                {% endif %}
-                {% endfor %}
-                {% endfor %} 
-                  </ul>
-               </div>
-            </div>
-
-    </div>
+      </div>
     
     
           <!-- sizer -->
