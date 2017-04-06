@@ -1,6 +1,6 @@
 ---
 title: Redshift connections not SSL
-tags:
+tags: [redshift]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Connections to Redshift aren't set to require the use of SSL encryption.
