@@ -1,6 +1,6 @@
 ---
 title: VPC flow logging not enabled in all VPCs
-tags:
+tags: [ec2, cis]
 keywords: "cloudwatch, vpc, cis"
 last_updated: “March 28, 2017"
 summary:  VPC flow logging not enabled in all VPCs
