@@ -1,6 +1,6 @@
 ---
 title: Users can reuse old passwords
-tags:
+tags: [iam, cis]
 keywords: ""
 last_updated: "March 29, 2017"
 summary: The current password policy doesn't prevent users from reusing their old passwords.
