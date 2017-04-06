@@ -1,6 +1,6 @@
 ---
 title: Access key created by default
-tags:
+tags: [iam, cis]
 keywords: "iam, cis"
 last_updated: “March 27, 2017"
 summary:  An access key was created by default during initial user setup
