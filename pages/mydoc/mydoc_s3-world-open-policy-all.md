@@ -1,6 +1,6 @@
 ---
 title: Bucket policy gives world Get, Put, List, and Delete permission
-tags:
+tags: [s3]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Bucket policy allows the world to get, put, list, and delete the affected bucket.
