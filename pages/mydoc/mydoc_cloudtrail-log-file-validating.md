@@ -1,6 +1,6 @@
 ---
 title: Cloudtrail log file validation not enabled
-tags:
+tags: [cloudtrail, cis]
 keywords: "cloudtrail, cis"
 last_updated: “March 27, 2017"
 summary:  Cloudtrail log file validation is not enabled
