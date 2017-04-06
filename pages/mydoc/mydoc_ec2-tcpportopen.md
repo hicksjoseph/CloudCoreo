@@ -1,6 +1,6 @@
 ---
 title: TCP port is open
-tags:
+tags: [ec2, cis]
 keywords: "TCP port open Security Groups, cis"
 last_updated: "March 29, 2017"
 summary: Important TCP port is open, potentially to the world.
