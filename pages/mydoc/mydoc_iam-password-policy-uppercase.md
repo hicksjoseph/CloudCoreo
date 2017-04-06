@@ -1,6 +1,6 @@
 ---
 title: Password policy does not require uppercase
-tags:
+tags: [iam, cis]
 keywords: "iam, cis"
 last_updated: “March 27, 2017"
 summary:  The current IAM password policy does not require at least one uppercase letter
