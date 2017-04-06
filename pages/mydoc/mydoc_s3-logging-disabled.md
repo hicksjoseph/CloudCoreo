@@ -1,6 +1,6 @@
 ---
 title: S3 bucket logging not enabled
-tags:
+tags: [s3]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: S3 bucket logging has not been enabled for the affected resource.
