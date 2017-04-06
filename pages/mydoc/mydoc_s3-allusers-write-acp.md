@@ -1,6 +1,6 @@
 ---
 title: All users can write the bucket ACP / ACL
-tags:
+tags: [s3]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Bucket has permissions (ACP / ACL) which let all users modify the permissions
