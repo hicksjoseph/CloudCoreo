@@ -1,6 +1,6 @@
 ---
 title: EC2 instance not launched from latest Amazon Linux AMI
-tags:
+tags: [ec2]
 keywords: ""
 last_updated: "January 3, 2017"
 summary: Alerts if an EC2 instance was not launched from the latest Amazon Linux AMI
