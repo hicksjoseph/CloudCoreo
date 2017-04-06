@@ -1,6 +1,6 @@
 ---
 title: Root user has active password
-tags:
+tags: [iam]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Root user has been logging in with a password.
