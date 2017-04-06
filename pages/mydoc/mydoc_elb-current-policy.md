@@ -1,6 +1,6 @@
 ---
 title: ELB is using most recent Amazon SSL policy
-tags:
+tags: [elb]
 keywords: ""
 last_updated: "December 29, 2016"
 summary: Elastic Load Balancing (ELB) SSL policy is current (most recent Amazon predefined SSL policy).
