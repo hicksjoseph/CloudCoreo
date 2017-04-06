@@ -1,6 +1,6 @@
 ---
 title: Multi-Factor Authentication not enabled
-tags:
+tags: [iam]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Affected user does not have Multi-Factor Authentication enabled on their account
