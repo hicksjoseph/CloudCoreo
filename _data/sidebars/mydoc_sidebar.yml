@@ -74,20 +74,64 @@ entries:
       url: /mydoc_iam-active-key-no-rotation.html
       output: web
 
-    - title: Passwords not set to expire
-      url: /mydoc_iam-expirepasswords.html
+    - title: Multiple active access keys
+      url: /mydoc_iam-multiple-access-keys.html
       output: web
-
+      
     - title: Inactive user Access Key not rotated
       url: /mydoc_iam-inactive-key-no-rotation.html
+      output: web
+
+    - title: Root user has active Access Key
+      url: /mydoc_iam-root-active-key.html
       output: web
 
     - title: Password policy doesn't exist
       url: /mydoc_iam-missing-password-policy.html
       output: web
 
-    - title: Multiple active access keys
-      url: /mydoc_iam-multiple-access-keys.html
+    - title: Passwords not set to expire
+      url: /mydoc_iam-expirepasswords.html
+      output: web
+
+    - title: Password policy does not require uppercase
+      url: /mydoc_iam-password-policy-uppercase.html
+      output: web
+
+    - title: Password policy does not require lowercase
+      url: /mydoc_iam-password-policy-lowercase.html
+      output: web
+
+    - title: Password policy does not require a symbol
+      url: /mydoc_iam-password-policy-symbol.html
+      output: web
+
+    - title: Password policy does not require a number
+      url: /mydoc_iam-password-policy-number.html
+      output: web
+
+    - title: Password policy does not have a minimum length of 14 or greater
+      url: /mydoc_iam-password-policy-min-length.html
+      output: web
+
+    - title: Users can reuse old passwords
+      url: /mydoc_iam-passwordreuseprevention.html
+      output: web
+
+    - title: User passwords not changed recently
+      url: /mydoc_iam-user-password-not-changed.html
+      output: web
+
+    - title: Password not changed since Cloudbleed
+      url: /mydoc_iam-cloudbleed-password-not-rotated.html
+      output: web
+
+    - title: Root user has active password
+      url: /mydoc_iam-root-active-password.html
+      output: web
+
+    - title: Root Account Usage
+      url: /mydoc_iam-active-root-user.html
       output: web
 
     - title: MFA not enabled
@@ -98,16 +142,12 @@ entries:
       url: /mydoc_iam-root-no-mfa.html
       output: web
 
-    - title: Root user has active password
-      url: /mydoc_iam-root-active-password.html
+    - title: MFA not enabled for all IAM users with console password
+      url: /mydoc_iam-mfa-password-holders.html
       output: web
 
-    - title: Root user has active Access Key
-      url: /mydoc_iam-root-active-key.html
-      output: web
-
-    - title: Users can reuse old passwords
-      url: /mydoc_iam-passwordreuseprevention.html
+    - title: Unused access credentials
+      url: /mydoc_iam-unused-access.html
       output: web
 
     - title: Unused or empty IAM group
@@ -116,14 +156,6 @@ entries:
 
     - title: Account using inline policies
       url: /mydoc_iam-user-attached-policies.html
-      output: web
-
-    - title: User passwords not changed recently
-      url: /mydoc_iam-user-password-not-changed.html
-      output: web
-
-    - title: Password Not Changed since Cloudbleed
-      url: /mydoc_iam-cloudbleed-password-not-rotated.html
       output: web
 
   - title: RDS
