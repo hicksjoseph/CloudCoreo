@@ -18,6 +18,34 @@ entries:
       url: /mydoc_cloudtrail-trail-with-global.html
       output: web
 
+    - title: Cloudtrail logs not encrypted at rest
+      url: /mydoc_cloudtrail-logs-encrypted.html
+      output: web
+
+    - title: CloudTrail not integrated with CloudWatch
+      url: /mydoc_cloudtrail-logs-cloudwatch.html
+      output: web
+     
+    - title: Cloudtrail log file validation not enabled
+      url: /mydoc_cloudtrail-log-file-validating.html
+      output: web
+
+    - title: Cloudtrail S3 bucket access logging not enabled
+      url: /mydoc_s3-cloudtrail-no-logging.html
+      output: web
+
+    - title: Cloudtrail S3 bucket is publicly accessible
+      url: /mydoc_s3-cloudtrail-public-access.html
+      output: web
+
+  - title: Config
+    output: web
+    folderitems:
+
+    - title: AWS Config not enabled in all regions
+      url: /mydoc_config-enabled-rule.html
+      output: web
+
   - title: EC2
     output: web
     folderitems:
@@ -86,6 +114,10 @@ entries:
       url: /mydoc_iam-root-active-key.html
       output: web
 
+    - title: IAM Initialization Access
+      url: /mydoc_iam-initialization-access-key.html
+      output: web
+
     - title: Password policy doesn't exist
       url: /mydoc_iam-missing-password-policy.html
       output: web
@@ -134,14 +166,22 @@ entries:
       url: /mydoc_iam-active-root-user.html
       output: web
 
+    - title: Root Access Key
+      url: /mydoc_iam-root-key-access.html
+      output: web
+      
     - title: MFA not enabled
       url: /mydoc_iam-no-mfa.html
       output: web
 
-    - title: Root MFA not enabled
-      url: /mydoc_iam-root-no-mfa.html
+    - title: Root account MFA not enabled
+      url: /mydoc_iam-root-no-mfa-cis.html
       output: web
-
+      
+    - title: Hardware MFA not enabled for root account
+      url: /mydoc_iam-no-hardware-mfa-root.html
+      output: web
+      
     - title: MFA not enabled for all IAM users with console password
       url: /mydoc_iam-mfa-password-holders.html
       output: web
@@ -156,6 +196,18 @@ entries:
 
     - title: Account using inline policies
       url: /mydoc_iam-user-attached-policies.html
+      output: web
+      
+    - title: IAM Support Role
+      url: /mydoc_iam-support-role.html
+      output: web
+
+  - title: KMS
+    output: web
+    folderitems:
+
+    - title: KMS key rotation not enabled
+      url: /mydoc_kms-key-rotates.html
       output: web
 
   - title: RDS
