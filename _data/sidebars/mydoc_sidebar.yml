@@ -66,8 +66,12 @@ entries:
       url: /mydoc_ec2-unrestricted-traffic.html
       output: web
 
-    - title: EC2 Inventory
-      url: /mydoc_ec2-inventory.html
+    - title: Flow logging not enabled in all VPCs
+      url: /mydoc_ec2-vpc-flow-logs.html
+      output: web
+
+    - title: Default VPC security group does not restrict all traffic
+      url: /mydoc_ec2-default-security-group-traffic.html
       output: web
 
     - title: EC2 instance - Alert to Kill
@@ -76,6 +80,10 @@ entries:
 
     - title: Instance not from latest Amazon Linux AMI
       url: /mydoc_ec2-amazon-linux-not-latest.html
+      output: web
+
+    - title: EC2 Inventory
+      url: /mydoc_ec2-inventory.html
       output: web
 
   - title: ELB
@@ -208,6 +216,106 @@ entries:
 
     - title: KMS key rotation not enabled
       url: /mydoc_kms-key-rotates.html
+      output: web
+
+  - title: Manual Checks
+    output: web
+    folderitems:
+
+    - title: Check the AWS account has security questions
+      url: /mydoc_manual-ensure-security-questions.html
+      output: web
+
+    - title: Check detailed billing is enabled
+      url: /mydoc_manual-detailed-billing.html
+      output: web
+
+    - title: Check IAM Master and IAM Manager roles are active
+      url: /mydoc_manual-strategic-iam-roles.html
+      output: web
+
+    - title: Check contact details are up-to-date
+      url: /mydoc_manual-contact-details.html
+      output: web
+
+    - title: Check security-specific contact information is specified
+      url: /mydoc_manual-security-contact.html
+      output: web
+
+    - title: Check role-permissions are being used for instances
+      url: /mydoc_manual-resource-instance-access.html
+      output: web
+
+    - title: Check if any IAM policies allow full admin privileges
+      url: /mydoc_manual-full-privilege-user.html
+      output: web
+
+    - title: Review subscriber lists for SNS topics
+      url: /mydoc_manual-appropriate-sns-subscribers.html
+      output: web
+
+    - title: Review routing tables to ensure least access
+      url: /mydoc_manual-least-access-routing-tables.html
+      output: web
+
+  - title: Multiple Services
+    output: web
+    folderitems:
+
+    - title: Not monitoring unauthorized API calls
+      url: /mydoc_monitor-unauthorized-api-calls.html
+      output: web
+
+    - title: Not monitoring security group changes
+      url: /mydoc_monitor-security-group-changes.html
+      output: web
+
+    - title: Not monitoring changes to NACL
+      url: /mydoc_monitor-nacl-changes.html
+      output: web
+
+    - title: Not monitoring changes to network gateways
+      url: /mydoc_monitor-network-gateway-changes.html
+      output: web
+
+    - title: Not monitoring route table changes
+      url: /mydoc_monitor-route-table-changes.html
+      output: web
+
+    - title: Not monitoring VPC changes
+      url: /mydoc_monitor-vpc-changes.html
+      output: web
+
+    - title: Not monitoring console sign-in without MFA
+      url: /mydoc_monitor-console-login-without-mfa.html
+      output: web
+
+    - title: Not monitoring root login attempts
+      url: /mydoc_monitor-root-account-usage.html
+      output: web
+
+    - title: Not monitoring changes made to IAM policies
+      url: /mydoc_monitor-iam-policy-changes.html
+      output: web
+
+    - title: Not monitoring changes to CloudTrail's configurations
+      url: /mydoc_monitor-cloudtrail-config-changes.html
+      output: web
+
+    - title: Not monitoring failed AWS console authentication attempts
+      url: /mydoc_monitor-console-auth-failures.html
+      output: web
+
+    - title: Not monitoring for CMKs that have been disabled or scheduled for deletion
+      url: /mydoc_monitor-cmk-change-delete.html
+      output: web
+
+    - title: Not monitoring changes to S3 bucket policies
+      url: /mydoc_monitor-s3-bucket-policy-changes.html
+      output: web
+
+    - title: Not monitoring AWS Config configuration changes
+      url: /mydoc_monitor-cloudwatch-config-changes.html
       output: web
 
   - title: RDS
