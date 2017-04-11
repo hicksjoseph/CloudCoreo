@@ -1,8 +1,9 @@
+---
 title: Inventory Rule
 tags:
 keywords: "inventory"
 last_updated: “April 11th, 2017"
-summary:  Inventory rules list all of a given resource type
+summary:  Inventory rules list each of a given resource type
 published: true
 sidebar: mydoc_sidebar
 permalink: mydoc_all-inventory.html
