@@ -1,5 +1,5 @@
 ---
-title: Manually detailed billing is enabled
+title: Manually check detailed billing is enabled
 tags:
 keywords: "manual-check, cis"
 last_updated: “March 28, 2017"
