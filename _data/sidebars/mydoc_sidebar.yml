@@ -2,7 +2,8 @@
 
 entries:
 - title: sidebar
-  product: CloudAudit Definitions
+  product: CloudAudit
+  url: /cloud-audit-toc.html
   version:
   folders:
 
