@@ -13,7 +13,7 @@ topnav_dropdowns:
     - title: Documentation
       folderitems:
         - title: CloudAudit
-          url: /mydoc_cloudtrail-service-disabled.html
+          url: /cloud-audit-toc.html
         - title: Concept Docs
           url: /conceptdocs_overview.html
         - title: FAQs
