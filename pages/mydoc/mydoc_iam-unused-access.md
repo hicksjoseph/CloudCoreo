@@ -1,6 +1,6 @@
 ---
 title: Unused access credentials
-tags:
+tags: [iam, cis]
 keywords: "iam, cis"
 last_updated: “March 27, 2017"
 summary: Ensure credentials unused for 90 days or greater are disabled.

@@ -1,6 +1,6 @@
 ---
 title: Bucket policy gives world Put permission
-tags:
+tags: [s3]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Bucket policy allows the world to put data into the affected bucket.

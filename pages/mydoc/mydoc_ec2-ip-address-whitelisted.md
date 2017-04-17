@@ -1,6 +1,6 @@
 ---
 title: Security Group contains IP address
-tags:
+tags: [ec2]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Security Group contains IP address

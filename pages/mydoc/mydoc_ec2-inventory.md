@@ -1,6 +1,6 @@
 ---
 title: EC2 Inventory results
-tags:
+tags: [ec2]
 keywords: ""
 last_updated: "December 29, 2016"
 summary: EC2 Inventory results.

@@ -1,6 +1,6 @@
 ---
 title: Redshift default TCP port 5439 is open to the world
-tags:
+tags: [redshift]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Redshift default TCP port 5439 is open, potentially to the world.

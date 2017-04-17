@@ -2,7 +2,8 @@
 
 entries:
 - title: sidebar
-  product: CloudAudit Definitions
+  product: CloudAudit
+  url: /cloud-audit-toc.html
   version:
   folders:
 
@@ -16,6 +17,34 @@ entries:
 
     - title: Global Cloudtrail not enabled
       url: /mydoc_cloudtrail-trail-with-global.html
+      output: web
+
+    - title: Cloudtrail logs not encrypted at rest
+      url: /mydoc_cloudtrail-logs-encrypted.html
+      output: web
+
+    - title: CloudTrail not integrated with CloudWatch
+      url: /mydoc_cloudtrail-logs-cloudwatch.html
+      output: web
+     
+    - title: Cloudtrail log file validation not enabled
+      url: /mydoc_cloudtrail-log-file-validating.html
+      output: web
+
+    - title: Cloudtrail S3 bucket access logging not enabled
+      url: /mydoc_s3-cloudtrail-no-logging.html
+      output: web
+
+    - title: Cloudtrail S3 bucket is publicly accessible
+      url: /mydoc_s3-cloudtrail-public-access.html
+      output: web
+
+  - title: Config
+    output: web
+    folderitems:
+
+    - title: AWS Config not enabled in all regions
+      url: /mydoc_config-enabled-rule.html
       output: web
 
   - title: EC2
@@ -38,8 +67,12 @@ entries:
       url: /mydoc_ec2-unrestricted-traffic.html
       output: web
 
-    - title: EC2 Inventory
-      url: /mydoc_ec2-inventory.html
+    - title: Flow logging not enabled in all VPCs
+      url: /mydoc_ec2-vpc-flow-logs.html
+      output: web
+
+    - title: Default VPC security group does not restrict all traffic
+      url: /mydoc_ec2-default-security-group-traffic.html
       output: web
 
     - title: EC2 instance - Alert to Kill
@@ -48,6 +81,10 @@ entries:
 
     - title: Instance not from latest Amazon Linux AMI
       url: /mydoc_ec2-amazon-linux-not-latest.html
+      output: web
+
+    - title: EC2 Inventory
+      url: /mydoc_ec2-inventory.html
       output: web
 
   - title: ELB
@@ -74,40 +111,92 @@ entries:
       url: /mydoc_iam-active-key-no-rotation.html
       output: web
 
-    - title: Passwords not set to expire
-      url: /mydoc_iam-expirepasswords.html
-      output: web
-
-    - title: Inactive user Access Key not rotated
-      url: /mydoc_iam-inactive-key-no-rotation.html
-      output: web
-
-    - title: Password policy doesn't exist
-      url: /mydoc_iam-missing-password-policy.html
-      output: web
-
     - title: Multiple active access keys
       url: /mydoc_iam-multiple-access-keys.html
       output: web
-
-    - title: MFA not enabled
-      url: /mydoc_iam-no-mfa.html
-      output: web
-
-    - title: Root MFA not enabled
-      url: /mydoc_iam-root-no-mfa.html
-      output: web
-
-    - title: Root user has active password
-      url: /mydoc_iam-root-active-password.html
+      
+    - title: Inactive user Access Key not rotated
+      url: /mydoc_iam-inactive-key-no-rotation.html
       output: web
 
     - title: Root user has active Access Key
       url: /mydoc_iam-root-active-key.html
       output: web
 
+    - title: IAM Initialization Access
+      url: /mydoc_iam-initialization-access-key.html
+      output: web
+
+    - title: Password policy doesn't exist
+      url: /mydoc_iam-missing-password-policy.html
+      output: web
+
+    - title: Passwords not set to expire
+      url: /mydoc_iam-expirepasswords.html
+      output: web
+
+    - title: Password policy does not require uppercase
+      url: /mydoc_iam-password-policy-uppercase.html
+      output: web
+
+    - title: Password policy does not require lowercase
+      url: /mydoc_iam-password-policy-lowercase.html
+      output: web
+
+    - title: Password policy does not require a symbol
+      url: /mydoc_iam-password-policy-symbol.html
+      output: web
+
+    - title: Password policy does not require a number
+      url: /mydoc_iam-password-policy-number.html
+      output: web
+
+    - title: Password policy does not have a minimum length of 14 or greater
+      url: /mydoc_iam-password-policy-min-length.html
+      output: web
+
     - title: Users can reuse old passwords
       url: /mydoc_iam-passwordreuseprevention.html
+      output: web
+
+    - title: User passwords not changed recently
+      url: /mydoc_iam-user-password-not-changed.html
+      output: web
+
+    - title: Password not changed since Cloudbleed
+      url: /mydoc_iam-cloudbleed-password-not-rotated.html
+      output: web
+
+    - title: Root user has active password
+      url: /mydoc_iam-root-active-password.html
+      output: web
+
+    - title: Root Account Usage
+      url: /mydoc_iam-active-root-user.html
+      output: web
+
+    - title: Root Access Key
+      url: /mydoc_iam-root-key-access.html
+      output: web
+      
+    - title: MFA not enabled
+      url: /mydoc_iam-no-mfa.html
+      output: web
+
+    - title: Root account MFA not enabled
+      url: /mydoc_iam-root-no-mfa-cis.html
+      output: web
+      
+    - title: Hardware MFA not enabled for root account
+      url: /mydoc_iam-no-hardware-mfa-root.html
+      output: web
+      
+    - title: MFA not enabled for all IAM users with console password
+      url: /mydoc_iam-mfa-password-holders.html
+      output: web
+
+    - title: Unused access credentials
+      url: /mydoc_iam-unused-access.html
       output: web
 
     - title: Unused or empty IAM group
@@ -117,13 +206,117 @@ entries:
     - title: Account using inline policies
       url: /mydoc_iam-user-attached-policies.html
       output: web
-
-    - title: User passwords not changed recently
-      url: /mydoc_iam-user-password-not-changed.html
+      
+    - title: IAM Support Role
+      url: /mydoc_iam-support-role.html
       output: web
 
-    - title: Password Not Changed since Cloudbleed
-      url: /mydoc_iam-cloudbleed-password-not-rotated.html
+  - title: KMS
+    output: web
+    folderitems:
+
+    - title: KMS key rotation not enabled
+      url: /mydoc_kms-key-rotates.html
+      output: web
+
+  - title: Manual Checks
+    output: web
+    folderitems:
+
+    - title: Check the AWS account has security questions
+      url: /mydoc_manual-ensure-security-questions.html
+      output: web
+
+    - title: Check detailed billing is enabled
+      url: /mydoc_manual-detailed-billing.html
+      output: web
+
+    - title: Check IAM Master and IAM Manager roles are active
+      url: /mydoc_manual-strategic-iam-roles.html
+      output: web
+
+    - title: Check contact details are up-to-date
+      url: /mydoc_manual-contact-details.html
+      output: web
+
+    - title: Check security-specific contact information is specified
+      url: /mydoc_manual-security-contact.html
+      output: web
+
+    - title: Check role-permissions are being used for instances
+      url: /mydoc_manual-resource-instance-access.html
+      output: web
+
+    - title: Check if any IAM policies allow full admin privileges
+      url: /mydoc_manual-full-privilege-user.html
+      output: web
+
+    - title: Review subscriber lists for SNS topics
+      url: /mydoc_manual-appropriate-sns-subscribers.html
+      output: web
+
+    - title: Review routing tables to ensure least access
+      url: /mydoc_manual-least-access-routing-tables.html
+      output: web
+
+  - title: Multiple Services
+    output: web
+    folderitems:
+
+    - title: Not monitoring unauthorized API calls
+      url: /mydoc_monitor-unauthorized-api-calls.html
+      output: web
+
+    - title: Not monitoring security group changes
+      url: /mydoc_monitor-security-group-changes.html
+      output: web
+
+    - title: Not monitoring changes to NACL
+      url: /mydoc_monitor-nacl-changes.html
+      output: web
+
+    - title: Not monitoring changes to network gateways
+      url: /mydoc_monitor-network-gateway-changes.html
+      output: web
+
+    - title: Not monitoring route table changes
+      url: /mydoc_monitor-route-table-changes.html
+      output: web
+
+    - title: Not monitoring VPC changes
+      url: /mydoc_monitor-vpc-changes.html
+      output: web
+
+    - title: Not monitoring console sign-in without MFA
+      url: /mydoc_monitor-console-login-without-mfa.html
+      output: web
+
+    - title: Not monitoring root login attempts
+      url: /mydoc_monitor-root-account-usage.html
+      output: web
+
+    - title: Not monitoring changes made to IAM policies
+      url: /mydoc_monitor-iam-policy-changes.html
+      output: web
+
+    - title: Not monitoring changes to CloudTrail's configurations
+      url: /mydoc_monitor-cloudtrail-config-changes.html
+      output: web
+
+    - title: Not monitoring failed AWS console authentication attempts
+      url: /mydoc_monitor-console-auth-failures.html
+      output: web
+
+    - title: Not monitoring for CMKs that have been disabled or scheduled for deletion
+      url: /mydoc_monitor-cmk-change-delete.html
+      output: web
+
+    - title: Not monitoring changes to S3 bucket policies
+      url: /mydoc_monitor-s3-bucket-policy-changes.html
+      output: web
+
+    - title: Not monitoring AWS Config configuration changes
+      url: /mydoc_monitor-cloudwatch-config-changes.html
       output: web
 
   - title: RDS

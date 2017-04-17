@@ -1,6 +1,6 @@
 ---
 title: Not monitoring changes to network gateways
-tags:
+tags: [cis]
 keywords: "cloudtrail, cloudwatch, monitor, cis"
 last_updated: “March 27, 2017"
 summary:  Not monitoring changes to network gateways

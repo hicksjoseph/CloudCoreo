@@ -1,6 +1,6 @@
 ---
 title: Unused or empty IAM group
-tags:
+tags: [iam]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: There is an IAM group defined without any users in it and therefore unused.

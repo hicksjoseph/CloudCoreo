@@ -1,6 +1,6 @@
 ---
 title: AWS Config not enabled in all regions
-tags:
+tags: [cis]
 keywords: "config, cis"
 last_updated: “March 27, 2017"
 summary:  AWS Config (configuration management of supported AWS resources) is not enabled in all regions

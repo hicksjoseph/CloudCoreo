@@ -1,6 +1,6 @@
 ---
 title: Passwords not set to expire
-tags:
+tags: [iam, cis]
 keywords: ""
 last_updated: "March 29, 2017"
 summary: The current password policy doesn't require users to regularly change their passwords. User passwords are set to never expire.

@@ -1,6 +1,6 @@
 ---
 title: All authenticated AWS users can change bucket permissions
-tags:
+tags: [s3]
 keywords: ""
 last_updated: "September 17, 2016"
 summary:  Bucket has permissions which let any AWS authenticated user modify the permissions.

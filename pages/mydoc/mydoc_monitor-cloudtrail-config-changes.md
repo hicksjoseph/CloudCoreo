@@ -1,6 +1,6 @@
 ---
 title: Not monitoring changes to CloudTrail's configurations
-tags:
+tags: [cis]
 keywords: "cloudtrail, cloudwatch, cis"
 last_updated: “March 28, 2017"
 summary:  Not monitoring API calls for changes to CloudTrail's configurations

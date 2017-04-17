@@ -1,6 +1,6 @@
 ---
 title: Not monitoring for unauthorized API calls
-tags:
+tags: [cis]
 keywords: "cloudtrail, cloudwatch, monitor, cis"
 last_updated: “March 27, 2017"
 summary:  Not monitoring for unauthorized API calls

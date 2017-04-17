@@ -1,6 +1,6 @@
 ---
 title: Redshift user activity logging disabled
-tags:
+tags: [redshift]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Redshift user activity logging is disabled.

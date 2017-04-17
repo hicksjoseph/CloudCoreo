@@ -1,6 +1,6 @@
 ---
 title: MFA not enabled for root account
-tags:
+tags: [iam, cis]
 keywords: "iam, cis"
 last_updated: “March 27, 2017"
 summary:  Root account does not require multi-factor authentication (MFA)

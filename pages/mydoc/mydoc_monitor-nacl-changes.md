@@ -1,6 +1,6 @@
 ---
 title: Not monitoring changes to NACL
-tags:
+tags: [cis]
 keywords: "cloudtrail, cloudwatch, monitor, cis"
 last_updated: “March 27, 2017"
 summary:  Not monitoring changes to Network Access Control Lists (NACL)

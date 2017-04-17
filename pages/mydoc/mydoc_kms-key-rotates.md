@@ -1,6 +1,6 @@
 ---
 title: KMS key rotation not enabled
-tags:
+tags: [kms, cis]
 keywords: "kms, cis"
 last_updated: “March 27, 2017"
 summary:  KMS (AWS Key Management Service) key rotation is not enabled

@@ -1,6 +1,6 @@
 ---
 title: All users can list the affected bucket
-tags:
+tags: [s3]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Bucket has permissions (ACL) which let anyone list the bucket contents.

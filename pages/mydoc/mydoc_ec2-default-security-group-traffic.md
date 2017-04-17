@@ -1,6 +1,6 @@
 ---
 title: Default VPC security group does not restrict all traffic
-tags:
+tags: [ec2, cis]
 keywords: "vpc, cis"
 last_updated: “March 28, 2017"
 summary:  Default VPC security group does not restrict all traffic

@@ -1,6 +1,6 @@
 ---
 title: Not monitoring changes made to IAM policies
-tags:
+tags: [cis]
 keywords: "cloudtrail, cloudwatch, iam, cis"
 last_updated: “March 28, 2017"
 summary:  Not monitoring API calls for changes made to Identity and Access Management (IAM) policies

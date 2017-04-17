@@ -1,6 +1,6 @@
 ---
 title: IAM User Password Not Used Recently
-tags:
+tags: [iam]
 keywords: ""
 last_updated: "March 2, 2017"
 summary: Lists all IAM users whose password has not used in {X} days.

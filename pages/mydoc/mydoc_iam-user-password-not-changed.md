@@ -1,6 +1,6 @@
 ---
 title: Active user passwords not changed recently
-tags:
+tags: [iam]
 keywords: ""
 last_updated: "March 9, 2017"
 summary: User has active password that have not been changed within specified time.

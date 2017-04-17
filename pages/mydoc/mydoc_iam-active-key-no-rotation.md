@@ -1,6 +1,6 @@
 ---
 title: Active user Access Key not rotated
-tags:
+tags: [iam, cis]
 keywords: ""
 last_updated: "March 29, 2017"
 summary: User has active keys that have not been rotated in the last 90 days.

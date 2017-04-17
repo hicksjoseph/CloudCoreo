@@ -1,6 +1,6 @@
 ---
 title: Redshift cluster data is not encrypted at rest
-tags:
+tags: [redshift]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Redshift cluster data in the affected cluster is not encrypted at rest.

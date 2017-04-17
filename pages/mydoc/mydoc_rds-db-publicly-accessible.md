@@ -1,6 +1,6 @@
 ---
 title: RDS is Publicly Accessible to the world
-tags:
+tags: [rds]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: The affected RDS database is Publicly Accessible to the world.

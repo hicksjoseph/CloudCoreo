@@ -1,6 +1,6 @@
 ---
 title: Bucket policy uses IP addresses to grant permission
-tags:
+tags: [s3]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Bucket policy grants permissions to any user at an IP address or range to perform operations on objects in the affected bucket.

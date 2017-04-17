@@ -1,6 +1,6 @@
 ---
 title: Not monitoring changes to S3 bucket policies
-tags:
+tags: [cis]
 keywords: "cloudtrail, cloudwatch, s3, cis"
 last_updated: “March 28, 2017"
 summary:  Not monitoring API calls for changes to S3 bucket policies

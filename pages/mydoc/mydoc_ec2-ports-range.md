@@ -1,6 +1,6 @@
 ---
 title: Security group contains a port range
-tags:
+tags: [ec2]
 keywords: ""
 last_updated: "September 17, 2016"
 summary: Security group contains a port range rather than specifying individual ports.

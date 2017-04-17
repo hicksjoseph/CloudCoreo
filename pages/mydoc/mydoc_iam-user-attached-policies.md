@@ -1,6 +1,6 @@
 ---
 title: Account using inline policies
-tags:
+tags: [iam, cis]
 keywords: ""
 last_updated: "March 29, 2017"
 summary: User account is using custom inline policies versus using IAM group managed policies.

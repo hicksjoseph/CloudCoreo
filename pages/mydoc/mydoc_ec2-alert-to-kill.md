@@ -1,6 +1,6 @@
 ---
 title: EC2 instance - Alert to Kill
-tags:
+tags: [ec2]
 keywords: ""
 last_updated: "December 30, 2016"
 summary: EC2 - Alert to Kill - Checks for instances with improper or no tags then kills any matching instances within the first 5 minutes.

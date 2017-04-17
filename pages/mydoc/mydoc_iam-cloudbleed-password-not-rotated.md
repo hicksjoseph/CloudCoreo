@@ -1,6 +1,6 @@
 ---
 title: Password Not Changed since Cloudbleed
-tags: 
+tags: [iam]
 keywords: "iam, cloudbleed"
 last_updated: "March 22, 2017"
 summary: User may still be at risk from the CloudBleed exploit

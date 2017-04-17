@@ -1,6 +1,6 @@
 ---
 title: Root Account Usage
-tags:
+tags: [iam, cis]
 keywords: "iam, cis"
 last_updated: “March 27, 2017"
 summary:  The root account, which has unrestricted access to the AWS account, is being used

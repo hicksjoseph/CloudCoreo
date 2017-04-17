@@ -1,6 +1,6 @@
 ---
 title: Root account has access keys
-tags:
+tags: [iam, cis]
 keywords: "iam, cis"
 last_updated: “March 28, 2017"
 summary:  Root account has access keys that provide programmatic access with full privileges
