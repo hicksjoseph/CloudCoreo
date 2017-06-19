@@ -22,6 +22,8 @@ To install and use the proxy, you will need:
 * Docker
 * AWS CLI or AWS SDK
 
-To download the script that will install and configure the proxy, [log in](https://app.cloudcoreo.com/login) to your CloudCoreo account, click the team dropdown in the upper left, and select 'My Account.'
+To download the script that will install and configure the proxy, [log in](https://app.cloudcoreo.com/login) to your CloudCoreo account, click the team dropdown in the upper left (1), and select 'My Account' (2).
+
+![Navigate to My Account](https://assets.cloudcoreo.com/wp-content/uploads/2017/06/nav-to_My-Account.jpg)
 
 Then, follow the instructions to complete the installation. If you have any issues, please contact us at [info@cloudcoreo.com](mailto:info@cloudcoreo.com) and we will help you get set up.
