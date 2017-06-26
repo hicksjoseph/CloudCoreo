@@ -12,4 +12,4 @@ toc: false
 ---
 
 ### Details  
-This rule checks for adherence to [Center for Internet Security (CIS)](https://www.cisecurity.org/) Recommendation 2.2, Ensure CloudTrail log file validation is enabled. [https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=73](https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=73) 
+This rule checks for adherence to [Center for Internet Security (CIS)](https://www.cisecurity.org/) Recommendation 2.2, Ensure CloudTrail log file validation is enabled. [https://d0.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf#page=73](https://d0.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf#page=73) 
