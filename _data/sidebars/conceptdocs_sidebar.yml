@@ -33,3 +33,7 @@ entries:
     - title: Run Time Variables
       url: /conceptdocs_runtimevariables.html
       output: web
+ 
+     - title: Coreo Proxy & Dev Time Checks
+      url: /conceptdocs_coreoproxy.html
+      output: web
