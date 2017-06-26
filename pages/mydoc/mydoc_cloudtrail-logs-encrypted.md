@@ -12,4 +12,4 @@ toc: false
 ---
 
 ### Details  
-This rule checks for adherence to [Center for Internet Security (CIS)](https://www.cisecurity.org/) Recommendation 2.7, Ensure CloudTrail logs are encrypted at rest using KMS CMKs. [https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=84](https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=84) 
+This rule checks for adherence to [Center for Internet Security (CIS)](https://www.cisecurity.org/) Recommendation 2.7, Ensure CloudTrail logs are encrypted at rest using KMS CMKs. [https://d0.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf#page=84](https://d0.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf#page=84) 

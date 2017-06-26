@@ -13,7 +13,7 @@ toc: false
 
 ### Details  
 This rule checks for adherence to [Center for Internet Security (CIS)](https://www.cisecurity.org/) Recommendation 2.1, Ensure CloudTrail is enabled in all regions.  
-[https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=71](https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=71)  
+[https://d0.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf#page=71](https://d0.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf#page=71)  
 
 CloudTrail logging is not enabled for this region. It should be enabled.
 

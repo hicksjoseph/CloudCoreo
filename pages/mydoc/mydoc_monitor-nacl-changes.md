@@ -12,4 +12,4 @@ toc: false
 ---
 
 ### Details  
-This rule checks for adherence to [Center for Internet Security (CIS)](https://www.cisecurity.org/) Recommendation 3.11, Ensure a log metric filter and alarm exist for changes to Network Access Control Lists (NACL) . [https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=117](https://benchmarks.cisecurity.org/tools2/amazon/CIS_Amazon_Web_Services_Foundations_Benchmark_v1.1.0.pdf#page=117) 
+This rule checks for adherence to [Center for Internet Security (CIS)](https://www.cisecurity.org/) Recommendation 3.11, Ensure a log metric filter and alarm exist for changes to Network Access Control Lists (NACL) . [https://d0.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf#page=117](https://d0.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf#page=117) 
