@@ -6,7 +6,7 @@ last_updated: “November 3, 2017"
 summary:  Instances with no associated reserved instance
 published: true
 sidebar: mydoc_sidebar
-permalink: mydoc_ec2-unused-ris.html
+permalink: mydoc_ec2-instances-no-ri.html
 folder: mydoc
 toc: false
 ---
