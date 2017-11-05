@@ -12,5 +12,5 @@ toc: false
 ---
 
 ### Details  
-Root account has multiple access keys. Given the broad permissions of the root account, surface area of security risk should be minimised. It is pertinent to be aware of the presence of each root access key and users may also consider limiting root account to one active access key.
+Root account has multiple access keys. Given the broad permissions of the root account, surface area of security risk should be minimised. It is pertinent to be aware of the presence of each root access key and users may also consider limiting the root account to having one active access key.
 
