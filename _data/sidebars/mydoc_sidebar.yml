@@ -39,6 +39,10 @@ entries:
       url: /mydoc_s3-cloudtrail-public-access.html
       output: web
 
+    - title: Cloudtrail is not enabled in all regions
+      url: /mydoc_cloudtrail-trail-with-global.html
+      output: web
+
   - title: Config
     output: web
     folderitems:
@@ -87,6 +91,26 @@ entries:
       url: /mydoc_ec2-inventory.html
       output: web
 
+    - title: Default VPC security group does not restrict all traffic
+      url: /mydoc_ec2-default-security-group-traffic.html
+      output: web
+
+    - title: EC2 reserved instance going unused
+      url: /mydoc_ec2-unused-ris.html
+      output: web
+
+    - title: EC2 instance without Reserved Instance
+      url: /mydoc_ec2-instances-no-ri.html
+      output: web
+
+    - title: EC2 instance with Reserved Instance
+      url: /mydoc_ec2-covered-by-ris.html
+      output: web
+
+    - title: The proportion of Reserved Instance utilization
+      url: /mydoc_ec2-percent-used-ris.html
+      output: web
+
   - title: ELB
     output: web
     folderitems:
@@ -121,6 +145,14 @@ entries:
 
     - title: Root user has active Access Key
       url: /mydoc_iam-root-active-key.html
+      output: web
+
+    - title: IAM user has administrative privileges
+      url: /mydoc_iam-user-is-admin.html
+      output: web
+
+    - title: IAM user * (omnipotent) privileges
+      url: /mydoc_iam-omnipotent-policy.html
       output: web
 
     - title: IAM Initialization Access
@@ -159,8 +191,8 @@ entries:
       url: /mydoc_iam-passwordreuseprevention.html
       output: web
 
-    - title: User passwords not changed recently
-      url: /mydoc_iam-user-password-not-changed.html
+    - title: User passwords not used recently
+      url: /mydoc_iam-user-password-not-used.html
       output: web
 
     - title: Password not changed since Cloudbleed
@@ -177,6 +209,10 @@ entries:
 
     - title: Root Access Key
       url: /mydoc_iam-root-key-access.html
+      output: web
+
+    - title: Root has multiple access keys
+      url: /mydoc_iam-root-multiple-keys.html
       output: web
       
     - title: MFA not enabled
@@ -205,6 +241,10 @@ entries:
 
     - title: Account using inline policies
       url: /mydoc_iam-user-attached-policies.html
+      output: web
+
+    - title: Account has two active access keys
+      url: /mydoc_iam-multiple-keys.html
       output: web
       
     - title: IAM Support Role
@@ -258,6 +298,55 @@ entries:
     - title: Review routing tables to ensure least access
       url: /mydoc_manual-least-access-routing-tables.html
       output: web
+
+    - title: Ensure that authentication info is obscured during login
+      url: /mydoc_manual-obscure-auth-info.html
+      output: web
+
+    - title: Ensure maintenance activities approved and monitored
+      url: /mydoc_manual-approved-monitored-maintenance.html
+      output: web
+
+    - title: Ensure that component removal requires documented approval
+      url: /mydoc_manual-component-removal-approval.html
+      output: web
+
+    - title: Ensure a full CloudCoreo Inventory has been performed
+      url: /mydoc_manual-full-inventory-performed.html
+      output: web
+
+    - title: Carry out encryption audit
+      url: /mydoc_manual-encryption-audit-performed.html
+      output: web
+
+    - title: Outline controls to protect session communications
+      url: /mydoc_manual-communication-session-authenticity.html
+      output: web
+
+    - title: Check that remote access points are secured
+      url: /mydoc_manual-remote-access-points-secured.html
+      output: web
+
+    - title: Ensure that remote access is only through VPN
+      url: /mydoc_manual-access-through-vpn.html
+      output: web
+
+    - title: Implement mobile device guideline
+      url: /mydoc_manual-mobile-device-guidelines.html
+      output: web
+
+    - title: Ensure that all mobile devices are encrypted
+      url: /mydoc_manual-mobile-device-cui-encryption.html
+      output: web
+
+    - title: Ensure that a full cloud inventory performed
+      url: /mydoc_manual-inventory-performed.html
+      output: web
+
+    - title: Ensure that all systems maintained and that this is monitored 
+      url: /mydoc_manual-maintenance-records.html
+      output: web
+
 
   - title: Multiple Services
     output: web
