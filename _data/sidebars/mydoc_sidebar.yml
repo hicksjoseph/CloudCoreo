@@ -456,6 +456,14 @@ entries:
       url: /mydoc_redshift-security-group.html
       output: web
 
+    - title: Redshift no logging to S3
+      url: /mydoc_redshift-no-s3-logging.html
+      output: web
+
+    - title: Redshift no logging to S3
+      url: /mydoc_redshift-snapshot-retention.html
+      output: web
+
   - title: S3
     output: web, pdf
     folderitems:
@@ -484,6 +492,10 @@ entries:
       url: /mydoc_s3-authenticatedusers-write.html
       output: web
 
+    - title: All AWS users can access bucket
+      url: /mydoc_s3-s3-authenticatedusers-access.html
+      output: web
+
     - title: Bucket logging not enabled
       url: /mydoc_s3-logging-disabled.html
       output: web
@@ -510,4 +522,8 @@ entries:
 
     - title: Bucket policy world can Put
       url: /mydoc_s3-world-open-policy-put.html
+      output: web
+
+    - title: Bucket policy allows all users full control
+      url: /mydoc_s3-allusers-full-control.html
       output: web
